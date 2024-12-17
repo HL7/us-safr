@@ -1,0 +1,52 @@
+@startuml
+
+
+
+package "Healthcare Facility One" {
+    node "Data Source (EHR)" as EHR1
+}
+
+package "Healthcare Facility Two" {
+    node "Data Source (EHR)" as EHR2
+}
+
+package "Healthcare Facility Three" {
+    node "Data Source (EHR)" as EHR3
+}
+
+package "Healthcare Facility Four" {
+    node "Data Source (EHR)" as EHR4
+}
+
+package "Jurisdiction One" {
+    node "dQM Evaluation Engine" as dQM1
+    node "MeasureReport Recipient" as Recipient1
+    node "Data Aggregator" as DA1
+}
+
+package "Jurisdiction Two" {
+    node "dQM Evaluation Engine" as dQM2
+    node "MeasureReport Recipient" as Recipient2
+}
+
+package "NHSN" {
+    node "MeasureReport Recipient and Other NHSN Systems" as Recipient
+    node "Measure Source" as MS
+}
+
+EHR1 <-- DA1 : (2)\n Query Data Source
+EHR2 <-- DA1 : (2)\n Query Data Source
+DA1 -right-> dQM1 : (2)\n Aggregate Data\nvia FHIR or other API
+dQM1 -down-> MS : (1)\n Retrieve Measure Bundle
+dQM1 -right-> Recipient1 : (3)\n Submit MeasureReport Bundle
+
+EHR3 <-up- dQM2 : (2)\n Query Data Source
+EHR4 <-up- dQM2 : (2)\n Query Data Source
+dQM2 -up-> MS : (1)\n Retrieve Measure Bundle
+dQM2 -right-> Recipient2 : (3) Submit MeasureReport Bundle
+
+
+dQM1 -down--> Recipient : (4)\n Submit MeasureReport Bundle
+dQM2 -up--> Recipient : (4)\n Submit MeasureReport Bundle
+
+@enduml
