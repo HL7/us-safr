@@ -32,7 +32,7 @@
 <page key="downloads" name="Downloads"/>
 <page key="index" name="Home"/>
 <page key="security" name="Security"/>
-<page key="spcification" name="Spcification"/>
+<page key="specification" name="Specification"/>
 <page key="toc" name="Table of Contents"/>
 <page key="usecases" name="Usecases"/>
 </specification>
