@@ -15,8 +15,7 @@ submitting organization, submitting device, individual MeasureReports."
 * entry contains
     submitting-organization 1..1 and
     submitting-device 0..1 and
-    subject-list 0..* and
-    individual-measurereport 0..*
+    individual-measurereport 1..1
 * entry[submitting-organization]
   * ^short = "The Submitting Organization: the organization that is the source of the data"
   * resource 1..
@@ -27,12 +26,6 @@ submitting organization, submitting device, individual MeasureReports."
   * resource 1..
   * resource only CRMISoftwareSystemDevice
     * ^short = "Bundle entry for submitting device"
-* entry[subject-list]
-  * ^short = "Summary Measure Report: For each measure, there is one Summary MeasureReport. 
-  The Summary MeasureReport includes the population count and a link to the List of Individual MeasureReports that are included in the summary"
-  * resource 1..
-  * resource only DEQMSubjectListMeasureReport
-    * ^short = "Bundle entry for a Summary Measure Report"
 * entry[individual-measurereport]
   * ^short = "Individual Measure Report: each Individual MeasureReport refers to one Patient and one measure included in the Individual Measure Report List"
   * resource 1..
