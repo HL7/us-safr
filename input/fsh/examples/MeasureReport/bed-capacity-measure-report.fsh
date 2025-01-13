@@ -85,7 +85,7 @@ Usage: #example
 * group[+].code = SAFRHealthareCapacityCS#AdultICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 2
-* group[+].code = SAFRHealthareCapacityCS#AdultICU_LOCOccupied
+* group[+].code = SAFRHealthareCapacityCS#AdultICULOCOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 32
 * group[+].code = SAFRHealthareCapacityCS#AdultNonICUOccupied
@@ -129,7 +129,7 @@ Usage: #example
 * group[+].code = SAFRHealthareCapacityCS#PedsICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsICU_LOCOccupied
+* group[+].code = SAFRHealthareCapacityCS#PedsICULOCOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
 * group[+].code = SAFRHealthareCapacityCS#PedsNonICUOccupied
@@ -351,7 +351,7 @@ Usage: #example
 * group[+].code = SAFRHealthareCapacityCS#AdultICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 2
-* group[+].code = SAFRHealthareCapacityCS#AdultICU_LOCOccupied
+* group[+].code = SAFRHealthareCapacityCS#AdultICULOCOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 32
 * group[+].code = SAFRHealthareCapacityCS#AdultNonICUOccupied
@@ -400,7 +400,7 @@ Usage: #example
 * group[+].code = SAFRHealthareCapacityCS#PedsICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsICU_LOCOccupied
+* group[+].code = SAFRHealthareCapacityCS#PedsICULOCOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
 * group[+].code = SAFRHealthareCapacityCS#PedsNonICUOccupied
@@ -618,7 +618,7 @@ Usage: #example
 * group[+].code = SAFRHealthareCapacityCS#AdultICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 2
-* group[+].code = SAFRHealthareCapacityCS#AdultICU_LOCOccupied
+* group[+].code = SAFRHealthareCapacityCS#AdultICULOCOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 32
 * group[+].code = SAFRHealthareCapacityCS#AdultNonICUOccupied
@@ -664,7 +664,7 @@ Usage: #example
 * group[+].code = SAFRHealthareCapacityCS#PedsICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 12
-* group[+].code = SAFRHealthareCapacityCS#PedsICU_LOCOccupied
+* group[+].code = SAFRHealthareCapacityCS#PedsICULOCOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 12
 * group[+].code = SAFRHealthareCapacityCS#PedsNonICUOccupied

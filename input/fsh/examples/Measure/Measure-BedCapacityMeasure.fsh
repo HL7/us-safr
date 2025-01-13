@@ -59,7 +59,7 @@ Usage: #example
 * group[=].population.code = $measure-population#initial-population "Initial Population"
 * group[=].population.criteria.language = #text/cql-identifier
 * group[=].population.criteria.expression = "Adult ICU Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AdultICU_LOCOccupied
+* group[+].code = SAFRHealthareCapacityCS#AdultICULOCOccupied
 * group[=].population.id = "d2e4764"
 * group[=].population.code = $measure-population#initial-population "Initial Population"
 * group[=].population.criteria.language = #text/cql-identifier
@@ -124,7 +124,7 @@ Usage: #example
 * group[=].population.code = $measure-population#initial-population "Initial Population"
 * group[=].population.criteria.language = #text/cql-identifier
 * group[=].population.criteria.expression = "Peds ICU Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#PedsICU_LOCOccupied
+* group[+].code = SAFRHealthareCapacityCS#PedsICULOCOccupied
 * group[=].population.id = "d2e5844"
 * group[=].population.code = $measure-population#initial-population "Initial Population"
 * group[=].population.criteria.language = #text/cql-identifier
