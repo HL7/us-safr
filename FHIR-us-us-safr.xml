@@ -19,6 +19,7 @@
 <artifact id="CapabilityStatement/SafrCapabilityStatementEvaluationEngine" key="CapabilityStatement-SafrCapabilityStatementEvaluationEngine" name="US SAFR Data Evaluation Engine CapabilityStatement"/>
 <artifact id="CapabilityStatement/SafrCapabilityStatementDataSource" key="CapabilityStatement-SafrCapabilityStatementDataSource" name="US SAFR Data Source CapabilityStatement"/>
 <artifact id="CodeSystem/SAFRFacilityCS" key="CodeSystem-SAFRFacilityCS" name="US SAFR Facility Reporting Code System"/>
+<artifact id="ValueSet/SAFRFacilityVS" key="ValueSet-SAFRFacilityVS" name="US SAFR Facility Reporting ValueSet"/>
 <artifact id="StructureDefinition/us-safr-measure-bundle" key="StructureDefinition-us-safr-measure-bundle" name="US SAFR Measure Bundle"/>
 <artifact id="StructureDefinition/safr-measurereport-bundle" key="StructureDefinition-safr-measurereport-bundle" name="US SAFR Measure Report Bundle"/>
 <artifact id="CapabilityStatement/SafrCapabilityStatementMeasureSource" key="CapabilityStatement-SafrCapabilityStatementMeasureSource" name="US SAFR Measure Source CapabilityStatement"/>
