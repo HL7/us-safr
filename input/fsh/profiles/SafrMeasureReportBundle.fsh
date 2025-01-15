@@ -13,9 +13,9 @@ submitting organization, submitting device, individual MeasureReports."
   * ^slicing.description = ""
   * ^slicing.ordered = false
 * entry contains
-    submitting-organization 1..1 and
-    submitting-device 0..1 and
-    individual-measurereport 1..1
+    submitting-organization 1..* and
+    submitting-device 0..* and
+    individual-measurereport 1..*
 * entry[submitting-organization]
   * ^short = "The Submitting Organization: the organization that is the source of the data"
   * resource 1..
