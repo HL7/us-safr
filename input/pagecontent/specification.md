@@ -39,7 +39,7 @@ The full set of profiles defined in this IG can be found by following the links 
 
 #### Reporting Scenarios
 
-The following reporting scenarios use the Actors defined on the [Actors](actors.html) and [Use Cases](uscases.html) pages.
+The following reporting scenarios use the Actors defined on the [Actors](actors.html) and [Use Cases](usecases.html) pages.
 
 #### Push to NHSN
 
