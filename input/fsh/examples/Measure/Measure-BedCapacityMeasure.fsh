@@ -9,7 +9,7 @@ Usage: #example
 
 
 Instance: BedCapacityMeasure
-InstanceOf: CRMIShareableMeasure
+InstanceOf: Measure
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm"
 * contained[+] = cqf-tooling
@@ -23,7 +23,7 @@ Usage: #example
 * extension[=].valueReference = Reference(bed-capacity-effective-data-requirements)
 // * extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 // * extension[=].valueCode = #pher
-* url = "http://hl7.org/fhir/us/safr/Measure/BedCapacityMeasure"
+* url = "http://hl7.org/fhir/us-safr/Measure/BedCapacityMeasure"
 * version = "1.0.0"
 * name = "BedCapacityMeasure"
 * title = "Bed Capacity for US Situational Awareness Framework for Reporting"
@@ -36,7 +36,7 @@ Usage: #example
 * contact.telecom.value = "http://www.hl7.org/Special/committees/pher"
 * description = "US Situational Awareness Framework for Reporting - Bed Capacity Measure"
 * jurisdiction = urn:iso:std:iso:3166#US "United States of America"
-* library = "http://hl7.org/fhir/us/safr/Library/BedCapacityLibrary"
+* library = "http://hl7.org/fhir/us-safr/Library/BedCapacityLibrary"
 * scoring = $measure-scoring#cohort "Cohort"
 * group[0].code = SAFRHealthareCapacityCS#AllBedsOccupied
 * group[=].population.id = "d2e4301"
@@ -1286,7 +1286,7 @@ Usage: #inline
 * relatedArtifact[=].resource = "http://terminology.hl7.org/CodeSystem/location-physical-type"
 * relatedArtifact[+].type = #depends-on
 * relatedArtifact[=].display = "Code system HealthcareCapacity"
-* relatedArtifact[=].resource = "http://hl7.org/fhir/us/safr/CodeSystem/SAFRHealthareCapacityCS"
+* relatedArtifact[=].resource = "http://hl7.org/fhir/us-safr/CodeSystem/SAFRHealthareCapacityCS"
 * relatedArtifact[+].type = #depends-on
 * relatedArtifact[=].display = "Value set Emergency Department Visit"
 * relatedArtifact[=].resource = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.292"
