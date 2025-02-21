@@ -7,7 +7,7 @@ Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-popul
 Alias: $location-physical-type = http://terminology.hl7.org/CodeSystem/location-physical-type
 Alias: $library-type = http://terminology.hl7.org/CodeSystem/library-type
 
-Alias: $SAFRHealthareCapacityCS = http://hl7.org/fhir/us-safr/CodeSystem/SAFRHealthareCapacityCS
+Alias: $SAFRHealthareCapacityCS = http://hl7.org/fhir/us/safr/CodeSystem/SAFRHealthareCapacityCS
 
 Alias: $library-type = http://terminology.hl7.org/CodeSystem/library-type
 

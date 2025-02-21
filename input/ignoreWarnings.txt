@@ -17,3 +17,9 @@ INFORMATION: StructureDefinition/nhsn-submitting-organization: StructureDefiniti
 
 # 3 - Information Message regarding a deprecated extension (maxValueSet), that was inherited through the FHIR R4 standard itself.
 INFORMATION: StructureDefinition/nhsn-submitting-organization: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+
+# 4 - Information Message about using draft CodeSystem. The code of interest is being used by real world systems today. 
+INFORMATION: Bundle/BedCapacityMeasure-bundle-example: Bundle.entry[0].resource.contained[1]/*Library/bed-capacity-effective-data-requirements*/.extension[0].value.ofType(Coding): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/location-physical-type|2.0.0
+INFORMATION: Bundle/HrdMeasure-bundle-example: Bundle.entry[0].resource.contained[1]/*Library/bed-capacity-effective-data-requirements*/.extension[0].value.ofType(Coding): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/location-physical-type|2.0.0
+INFORMATION: Measure/BedCapacityMeasure: Measure.contained[1]/*Library/bed-capacity-effective-data-requirements*/.extension[0].value.ofType(Coding): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/location-physical-type|2.0.0
+INFORMATION: Measure/HrdMeasure: Measure.contained[1]/*Library/bed-capacity-effective-data-requirements*/.extension[0].value.ofType(Coding): Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/location-physical-type|2.0.0

@@ -38,7 +38,7 @@ Usage: #example
 * contained[0] = hrd-location-1
 * status = #complete
 * type = #individual
-* measure = "http://hl7.org/fhir/us/us-safr/Measure/HrdMeasure"
+* measure = "http://hl7.org/fhir/us/us/safr/Measure/HrdMeasure"
 * subject.identifier.system = "http://www.example.org/location"
 * subject.identifier.value = "123"
 * date = "2023-08-28T07:01:07.563Z"

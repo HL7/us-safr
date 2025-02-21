@@ -80,7 +80,7 @@ Usage: #example
 * contained[0] = hosp-location-example-bed-capacity
 * status = #complete
 * type = #individual
-* measure = "http://hl7.org/fhir/us-safr/Measure/BedCapacityMeasure"
+* measure = "http://hl7.org/fhir/us/safr/Measure/BedCapacityMeasure"
 //* measure = Canonical(BedCapacityMeasure)
 // Uncomment the line below when DEQM is updated to allow non-patient subjects in individual reports
 // * subject = Reference(hosp-location-example-bed-capacity)
@@ -345,7 +345,7 @@ Usage: #example
 * contained[0] = ipf-location-example-bed-capacity
 * status = #complete
 * type = #individual
-* measure = "http://hl7.org/fhir/us-safr/Measure/BedCapacityMeasure"
+* measure = "http://hl7.org/fhir/us/safr/Measure/BedCapacityMeasure"
 // Uncomment the line below when DEQM is updated to allow non-patient subjects in individual reports
 // * subject = Reference(hosp-location-example-bed-capacity)
 * subject.identifier.system = "http://www.example.org/location"
@@ -612,7 +612,7 @@ Usage: #example
 * contained[0] = chld-location-example-bed-capacity
 * status = #complete
 * type = #individual
-* measure = "http://hl7.org/fhir/us-safr/Measure/BedCapacityMeasure"
+* measure = "http://hl7.org/fhir/us/safr/Measure/BedCapacityMeasure"
 // Uncomment the line below when DEQM is updated to allow non-patient subjects in individual reports
 // * subject = Reference(hosp-location-example-bed-capacity)
 * subject.identifier.system = "http://www.example.org/location"
