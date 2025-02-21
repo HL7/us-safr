@@ -34,6 +34,6 @@ a [DEQM Reporter Client](https://www.hl7.org/fhir/us/davinci-deqm/STU4/Capabilit
       * extension[+]
         * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
         * valueCode = #SHALL
-      * name = "evaluate-measure"
-      * definition = "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/deqm.evaluate-measure"
+      * name = "evaluate"
+      * definition = "http://hl7.org/fhir/us/davinci-deqm/OperationDefinition/evaluate"
   

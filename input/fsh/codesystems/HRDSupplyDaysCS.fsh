@@ -1,7 +1,7 @@
 CodeSystem: HRDSupplyDaysCS
 Title: "Hospital Respiratory Data Supply Days Code System"
 * ^copyright = "This Valueset is not copyrighted."
-* ^experimental = true
+* ^experimental = false
 * ^description = "This CodeSystem defines coded concepts for supply days in Hospital Respiratory Data reporting for US SAFR IG."
 * ^caseSensitive = false
 * #"0 DAYS" "0 Days" "0 Days"

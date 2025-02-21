@@ -20,7 +20,7 @@ during public health emergencies.
 ### Background ###
 The COVID-19 pandemic revealed significant gaps in the ability to monitor healthcare system stress and capacity. This project integrates and generalizes previous initiatives, 
 including [SANER - Situational Awareness for Novel Epidemic Response IG (universal realm)](https://build.fhir.org/ig/HL7/fhir-saner/index.html) and 
-[DEQM - Data Exchange for Quality Measure IG (US realm)](https://www.hl7.org/fhir/us/davinci-deqm/index.html), into a unified framework tailored for the US. Key highlights include:
+[DEQM - Data Exchange for Quality Measure IG (US realm)]({{site.data.fhir.ver.deqm}}/index.html), into a unified framework tailored for the US. Key highlights include:
 
 1. Standardized definitions of healthcare bed capacity and other metrics.
 2. Compatibility with existing federal systems and regulatory requirements.
@@ -53,7 +53,7 @@ The guide ensures alignment with existing initiatives, such as SANER and DEQM, w
 The US SAFR IG harmonizes with and extends the following standards:
 
 1. **[SANER (Universal Realm):](https://build.fhir.org/ig/HL7/fhir-saner/index.html)** Provides the foundation for situational awareness reporting globally. US SAFR adapts SANER for US-specific requirements while maintaining interoperability.
-2. **[DEQM (US Realm):](https://www.hl7.org/fhir/us/davinci-deqm/index.html)** Ensures alignment with existing US-specific quality measurement standards.
+2. **[DEQM (US Realm):]({{site.data.fhir.ver.deqm}}/index.html)** Ensures alignment with existing US-specific quality measurement standards.
 3. **[NHSN Bed Connectivity Initiative:](https://www.cdc.gov/nhsn/bed-capacity/index.html)** Standardizes real-time bed capacity reporting across hospitals and jurisdictions.
 4. **[Hospital Respiratory Data Reporting:](https://www.cdc.gov/nhsn/psc/hospital-respiratory-reporting.html)** Establishes reporting standards for COVID-19, influenza, RSV, and related data.
 

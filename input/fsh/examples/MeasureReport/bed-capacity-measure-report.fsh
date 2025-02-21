@@ -2,6 +2,28 @@
 
 // TODO, try SANER Measure Profile for the Measure Profile these are using - https://build.fhir.org/ig/HL7/fhir-saner/StructureDefinition-PublicHealthMeasure.html
 
+
+Instance: bed-capacity-bundle-example
+InstanceOf: SafrMeasureReportBundle
+Title: "HRD MeasureReport Bundle Example 1"
+Description: "This Bundle resource is an example of a Bed Capacity MeasureReport Bundle for the US SAFR IG. This example includes MeasureReport from two different Individual MeasureReports representing two different kinds of location."
+Usage: #example
+* type = #collection
+* entry[submitting-organization][+].fullUrl = "http://example.org/fhir/Organization/organization-example-submitting-organization"
+* entry[submitting-organization][=].resource = organization-example-submitting-organization
+
+* entry[submitting-device][+].fullUrl = "http://example.org/fhir/Device/cqf-tooling"
+* entry[submitting-device][=].resource = cqf-tooling
+
+* entry[individual-measurereport][+].fullUrl = "http://example.org/fhir/MeasureReport/bed-capacity-measurereport-example-hosp"
+* entry[individual-measurereport][=].resource = bed-capacity-measurereport-example-hosp
+
+* entry[individual-measurereport][+].fullUrl = "http://example.org/fhir/MeasureReport/bed-capacity-measurereport-example-ipf"
+* entry[individual-measurereport][=].resource = bed-capacity-measurereport-example-ipf
+
+
+
+
 Instance: hosp-location-example-bed-capacity
 InstanceOf: QICoreLocation
 Title: "Location - Entire Hospital"
@@ -34,6 +56,8 @@ Usage: #inline
 * status = #active
 * name = "Children's/Pediatrics at XYZ Hospital"
 * type = SAFRHealthareCapacityCS#CHLD "Children's or Pediatric"
+
+
 
 
 Instance: bed-capacity-measurereport-example-hosp

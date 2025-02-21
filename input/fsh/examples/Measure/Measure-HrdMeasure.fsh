@@ -1,11 +1,22 @@
+Instance: HrdMeasure-bundle-example
+InstanceOf: SafrMeasureBundle
+Title: "HRD Measure Bundle Example 1"
+Description: "This Bundle resource is an example of a Hospital Respiratory Data (HRD) Measure Bundle for the US SAFR IG."
+Usage: #example
+* type = #collection
+* entry[measure][+].fullUrl = "http://example.org/fhir/Measure/HrdMeasure"
+* entry[measure][=].resource = HrdMeasure
+
+
 
 Instance: HrdMeasure
-InstanceOf: Measure
+InstanceOf: CRMIShareableMeasure
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm"
-* contained = bed-capacity-effective-data-requirements
+* contained[+] = cqf-tooling
+* contained[+] = bed-capacity-effective-data-requirements
 * extension[0].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"
-* extension[=].valueReference = Reference(Device/cqf-tooling)
+* extension[=].valueReference = Reference(cqf-tooling)
 * extension[+].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis"
 * extension[=].valueCode = #boolean
 * extension[+].id = "bed-capacity-effective-data-requirements"

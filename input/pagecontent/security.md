@@ -1,6 +1,6 @@
 ### Privacy and Security Considerations
 
 Implementers **SHOULD** be familiar with and adhere primarily to any security and privacy guidelines defined below:
-* [Security & Privacy module](http://hl7.org/fhir/R4/secpriv-module.html)
-* [Security Principles](http://hl7.org/fhir/R4/security.html)
-* [Implementer's Checklist](http://hl7.org/fhir/R4/safety.html)
+* [Security & Privacy module]({{site.data.fhir.path}}secpriv-module.html)
+* [Security Principles]({{site.data.fhir.path}}security.html)
+* [Implementer's Checklist]({{site.data.fhir.path}}safety.html)

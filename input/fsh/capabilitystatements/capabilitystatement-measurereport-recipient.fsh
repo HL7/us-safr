@@ -18,7 +18,7 @@ the result against the profiles in this implementation guide, and potentially ot
 MeasureReport and other related resources, and implements the $validate operation."
 * jurisdiction = urn:iso:std:iso:3166#US
 * kind = #requirements
-* imports = "http://hl7.org/fhir/us/davinci-deqm/CapabilityStatement/receiver-server|4.0.0" //http://hl7.org/fhir/us/cqfmeasures/CapabilityStatement/publishable-measure-repository  CQFMPublishableMeasureRepository|3.0.0)
+* imports = "http://hl7.org/fhir/us/davinci-deqm/CapabilityStatement/receiver-server|5.0.0-ballot" //http://hl7.org/fhir/us/cqfmeasures/CapabilityStatement/publishable-measure-repository  CQFMPublishableMeasureRepository|3.0.0)
 * fhirVersion = #4.0.1
 * format[+] = #json
 * format[+] = #xml
