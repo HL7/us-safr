@@ -1,0 +1,14 @@
+{
+    "package-id": "hl7.fhir.us.safr",
+    "version": "1.0.0-ballot",
+    "path": "http://hl7.org/fhir/us/safr/2025May",
+    "mode": "working",
+    "status": "ballot",
+    "sequence": "STU 1",
+    "first": true,
+    "desc": "US Situational Awareness Framework for Reporting (US SAFR) Implementation Guide, 1.0.0 Ballot - US Realm STU",
+	"category": "Public Health",
+	"title": "US Situational Awareness Framework for Reporting (US SAFR) Implementation Guide",
+	"ci-build": "https://build.fhir.org/ig/HL7/us-safr/",
+	"introduction": "The US Situational Awareness Framework for Reporting (US SAFR) Implementation Guide (IG) establishes a standardized, FHIR-based approach to support public health decision-making during emergencies. By enhancing situational awareness, this IG aims to provide a real-time, national view of healthcare system capacity, respiratory disease trends, and other critical public health metrics. The guide is designed to facilitate seamless data exchange between healthcare facilities, public health authorities, and federal agencies, thereby strengthening the nation's emergency preparedness and response capabilities."
+}
