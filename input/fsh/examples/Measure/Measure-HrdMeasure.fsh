@@ -10,7 +10,7 @@ Usage: #example
 
 
 Instance: HrdMeasure
-InstanceOf: Measure
+InstanceOf: CRMIShareableMeasure
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm"
 * contained[+] = cqf-tooling
