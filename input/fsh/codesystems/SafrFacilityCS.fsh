@@ -1,3 +1,6 @@
+
+/*
+This CS seems to be duplicative of codes in SAFRHealthareCapacityCS
 CodeSystem: SAFRFacilityCS
 //Id: healthcare-capacity-codes
 Title: "US SAFR Facility Reporting Code System"
@@ -10,3 +13,4 @@ Title: "US SAFR Facility Reporting Code System"
 * #IPF "Inpatient Psychiatric" "Inpatient Psychiatric"
 * #CH "Children's or Pediatric" "Children's or Pediatric"
 * #OTH "Other facility-within-facility or subunit" "Other facility-within-facility or subunit"
+*/

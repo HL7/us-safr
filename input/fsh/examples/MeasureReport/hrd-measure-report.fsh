@@ -23,7 +23,7 @@ Usage: #inline
 * identifier.value = "123"
 * status = #active
 * name = "XYZ Hospital"
-* type = SAFRFacilityCS#HOSP "Hospital"
+* type = SAFRHealthareCapacityCS#HOSP "Hospital"
 
 
 Instance: hrd-measurereport-example-1
