@@ -1,15 +1,15 @@
-Instance: HrdMeasure-bundle-example
+Instance: HrdMeasure-bundle-example1
 InstanceOf: SafrMeasureBundle
 Title: "HRD Measure Bundle Example 1"
 Description: "This Bundle resource is an example of a Hospital Respiratory Data (HRD) Measure Bundle for the US SAFR IG."
 Usage: #example
 * type = #collection
-* entry[measure][+].fullUrl = "http://example.org/fhir/Measure/HrdMeasure"
-* entry[measure][=].resource = HrdMeasure
+* entry[measure][+].fullUrl = "http://example.org/fhir/Measure/NHSNSAFRHospitalRespiratoryDataInitialPopulation"
+* entry[measure][=].resource = NHSNSAFRHospitalRespiratoryDataInitialPopulation
 
 
 
-Instance: HrdMeasure
+Instance: NHSNSAFRHospitalRespiratoryDataInitialPopulation
 InstanceOf: CRMIShareableMeasure
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm"
@@ -24,10 +24,10 @@ Usage: #example
 * extension[=].valueReference = Reference(bed-capacity-effective-data-requirements)
 // * extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 // * extension[=].valueCode = #pher
-* url = "http://hl7.org/fhir/us/us/safr/Measure/HrdMeasure"
+* url = "http://hl7.org/fhir/us/us/safr/Measure/NHSNSAFRHospitalRespiratoryDataInitialPopulation"
 * version = "1.0.0"
-* name = "HRDMeasure"
-* title = "Hospital Respiratory Data Measure for US Situational Awareness Framework for Reporting"
+* name = "NHSNSAFRHospitalRespiratoryDataInitialPopulation"
+* title = "Measure - Hospital Respiratory Data Initial Population"
 * status = #draft
 * experimental = true
 * date = "2024-12-14T17:37:47-04:00"
@@ -37,7 +37,7 @@ Usage: #example
 * contact.telecom.value = "http://www.hl7.org/Special/committees/pher"
 * description = "US Situational Awareness Framework for Reporting - Hospital Respiratory Data Measure"
 * jurisdiction = urn:iso:std:iso:3166#US "United States of America"
-* library = "http://hl7.org/fhir/us/safr/Library/HrdMeasureLibrary"
+* library = "http://hl7.org/fhir/us/safr/Library/NHSNSAFRHospitalRespiratoryDataInitialPopulationLibrary"
 * scoring = $measure-scoring#cohort "Cohort"
 * type = $MeasureTypeCS#structure "Structure"
 * group[0].code = SAFRHRDCS#numInPtBeds

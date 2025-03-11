@@ -1,14 +1,14 @@
 
-Instance: HrdMeasureLibrary
+Instance: NHSNSAFRHospitalRespiratoryDataInitialPopulationLibrary
 InstanceOf: Library
-Description: "Example Library of Hospital Respiratory Data Measure"
+Description: "Library - Hospital Respiratory Data Initial Population"
 Usage: #example
 * contained = hrd-options
 * extension.url = "http://hl7.org/fhir/StructureDefinition/cqf-cqlOptions"
 * extension.valueReference = Reference(hrd-options)
 * version = "1.0.0"
 * status = #active 
-* name = "HrdMeasureLibrary"
+* name = "NHSNSAFRHospitalRespiratoryDataInitialPopulationLibrary"
 * type = $library-type#logic-library
 * relatedArtifact[0].type = #depends-on
 * relatedArtifact[=].display = "FHIR model information"

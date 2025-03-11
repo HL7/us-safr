@@ -1,6 +1,6 @@
-Instance: BedCapacityMeasure-bundle-example
+Instance: BedCapacityMeasure-bundle-example1
 InstanceOf: SafrMeasureBundle
-Title: "Bed Capacity MeasureReport Bundle Example 1"
+Title: "Bed Capacity Measure Bundle Example 1"
 Description: "This Bundle resource is an example of a Bed Capacity Measure Bundle for the US SAFR IG."
 Usage: #example
 * type = #collection
@@ -26,7 +26,7 @@ Usage: #example
 * url = "http://hl7.org/fhir/us/safr/Measure/BedCapacityMeasure"
 * version = "1.0.0"
 * name = "BedCapacityMeasure"
-* title = "Bed Capacity for US Situational Awareness Framework for Reporting"
+* title = "Bed Capacity Measure for US Situational Awareness Framework for Reporting"
 * status = #draft
 * experimental = true
 * date = "2024-06-25T17:37:47-04:00"
@@ -38,6 +38,7 @@ Usage: #example
 * jurisdiction = urn:iso:std:iso:3166#US "United States of America"
 * library = "http://hl7.org/fhir/us/safr/Library/BedCapacityLibrary"
 * scoring = $measure-scoring#cohort "Cohort"
+* type = $MeasureTypeCS#structure "Structure"
 * group[0].code = SAFRHealthareCapacityCS#AllBedsOccupied
 * group[=].population.id = "d2e4301"
 * group[=].population.code = $measure-population#initial-population "Initial Population"

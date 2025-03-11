@@ -3,10 +3,10 @@
 // TODO, try SANER Measure Profile for the Measure Profile these are using - https://build.fhir.org/ig/HL7/fhir-saner/StructureDefinition-PublicHealthMeasure.html
 
 
-Instance: bed-capacity-bundle-example
+Instance: bed-capacity-measurereport-bundle-example1
 InstanceOf: SafrMeasureReportBundle
-Title: "HRD MeasureReport Bundle Example 1"
-Description: "This Bundle resource is an example of a Bed Capacity MeasureReport Bundle for the US SAFR IG. This example includes MeasureReport from two different Individual MeasureReports representing two different kinds of location."
+Title: "Bundle - Hospital Bed Capacity MeasureReport Bundle Example 1"
+Description: "This Bundle resource is an example of an Bed Capacity MeasureReport Bundle for the US SAFR IG. This example includes MeasureReport from two different Individual MeasureReports representing two different kinds of location."
 Usage: #example
 * type = #collection
 * entry[submitting-organization][+].fullUrl = "http://example.org/fhir/Organization/organization-example-submitting-organization"
@@ -62,7 +62,7 @@ Usage: #inline
 
 Instance: bed-capacity-measurereport-example-hosp
 InstanceOf: DEQMIndividualMeasureReportProfile
-Title: "MeasureReport - Hospital Bed Capacity Individual Measure Report"
+Title: "MeasureReport - Hospital Bed Capacity Example 2"
 Description: "Example MeasureReport - Hospital Bed Capacity Individual Measure Report"
 Usage: #example
 
@@ -334,7 +334,7 @@ Usage: #example
 
 Instance: bed-capacity-measurereport-example-ipf
 InstanceOf: DEQMIndividualMeasureReportProfile
-Title: "MeasureReport - Inpatient Psychiatric Facility Bed Capacity Individual Measure Report"
+Title: "MeasureReport - Hospital Bed Capacity Example 3"
 Description: "Example MeasureReport - Inpatient Psychiatric Facility Bed Capacity Individual Measure Report"
 Usage: #example
 
@@ -601,7 +601,7 @@ Usage: #example
 
 Instance: bed-capacity-measurereport-example-chld
 InstanceOf: DEQMIndividualMeasureReportProfile
-Title: "MeasureReport - Children's Hospital Bed Capacity Individual Measure Report"
+Title: "MeasureReport - Hospital Bed Capacity Example 1"
 Description: "Example MeasureReport - Children's Hospital Bed Capacity Individual Measure Report"
 Usage: #example
 

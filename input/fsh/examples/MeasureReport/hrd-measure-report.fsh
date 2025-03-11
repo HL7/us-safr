@@ -1,6 +1,6 @@
-Instance: hrd-bundle-example-hosp
+Instance: hrd-measurereport-bundle-example-hosp1
 InstanceOf: SafrMeasureReportBundle
-Title: "HRD MeasureReport Bundle Example 1"
+Title: "Bundle - Hospital Respiratory Data MeasureReport Bundle Example 1"
 Description: "This Bundle resource is an example of a Hospital Respiratory Data (HRD) MeasureReport Bundle for the US SAFR IG."
 Usage: #example
 * type = #collection
@@ -28,7 +28,7 @@ Usage: #inline
 
 Instance: hrd-measurereport-example-1
 InstanceOf: DEQMIndividualMeasureReportProfile
-Title: "HRD Measure Report Example 1"
+Title: "MeasureReport - Hospital Respiratory Data Example 1"
 Description: "This MeasureReport resource is an example of a Hospital Respiratory Data (HRD) Measure Report for the US SAFR IG."
 Usage: #example
 * extension[location].url = "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"
@@ -38,7 +38,7 @@ Usage: #example
 * contained[0] = hrd-location-1
 * status = #complete
 * type = #individual
-* measure = "http://hl7.org/fhir/us/us/safr/Measure/HrdMeasure"
+* measure = "http://hl7.org/fhir/us/us/safr/Measure/NHSNSAFRHospitalRespiratoryDataInitialPopulation"
 * subject.identifier.system = "http://www.example.org/location"
 * subject.identifier.value = "123"
 * date = "2023-08-28T07:01:07.563Z"
