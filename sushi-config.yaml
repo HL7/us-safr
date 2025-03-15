@@ -33,8 +33,17 @@ publisher:
 #
 dependencies:
   hl7.fhir.us.core: 
-    version: 6.1.0
+    version: 7.0.0
+    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
     id: uscore 
+  hl7.fhir.us.core.v610: 
+    version: 6.1.0
+    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+    id: uscore_6
+  hl7.fhir.us.core.v311: 
+    version: 3.1.1
+    uri: http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core
+    id: uscore_3 
   fhir.cqf.common:
     version: 4.0.1
     uri: http://fhir.org/guides/cqf/common/ImplementationGuide/cqf.fhir.common
@@ -43,13 +52,15 @@ dependencies:
     version: 1.0.0
     id: crmi
   hl7.fhir.us.cqfmeasures:
-    version: 4.0.0
+    version: 5.0.0
+    uri: https://hl7.org/fhir/us/cqfmeasures/ImplementationGuide/hl7.fhir.us.cqfmeasures
     id: cqfm
   hl7.fhir.us.davinci-deqm:
     version: 5.0.0-ballot
     id: deqm
   hl7.fhir.us.qicore: 6.0.0
   hl7.fhir.uv.extensions.r4:  5.2.0
+  hl7.terminology.r4: 6.2.0
   
 #
 #

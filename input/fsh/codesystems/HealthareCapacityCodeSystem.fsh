@@ -1,8 +1,8 @@
-CodeSystem: SAFRHealthareCapacityCS
+CodeSystem: SAFRHealthareCapacityCSExample
 //Id: healthcare-capacity-codes
 Title: "Healthcare Capacity Reporting Code System"
 * ^copyright = "This Valueset is not copyrighted."
-* ^experimental = false
+* ^experimental = true
 * ^description = "This CodeSystem defines coded concepts for Healthcare Capacity reporting to US SAFR. This CodeSystem is experimental, and is expected to be replaced by LOINC codes once they have been assigned."
 * ^caseSensitive = false
 * #HOSP "Hospital" "Hospital Facility"
@@ -10,6 +10,9 @@ Title: "Healthcare Capacity Reporting Code System"
 * #IPF "Inpatient Psychiatric" "Inpatient Psychiatric Facility"
 * #CHLD "Children's or Pediatric" "Children's or Pediatric Facility"
 * #OTH "Other facility-within-facility or subunit" "Other facility-within-facility or subunit"
+* #ICU "Intensive Care Unit" "Intensive Care Unit"
+* #ED "Emergency Department" "Emergency Department"
+* #PEDS "Pediatric" "Pediatric"
 * #BedCapacityReporting "Bed Capacity Reporting" "Hospital bed capacity report"
 * #AllBedsOccupied "All Beds Census" "Census across all beds, including all specialty beds (i.e., CMS-certified rehabilitation, CMS-certified psychiatric, obstetrics, NICU [all levels], and nursery beds)."
 * #AllBedsUnoccupied "All Beds Unoccupied" "Count of unoccupied staffed and unblocked beds across all beds, including specialty beds (i.e., CMS-certified rehabilitation, CMS-certified psychiatric, obstetrics, NICU [all levels], and nursery)."

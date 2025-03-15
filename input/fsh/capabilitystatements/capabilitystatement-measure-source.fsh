@@ -13,7 +13,7 @@ Usage: #definition
 * contact.telecom.value = "http://www.hl7.org/Special/committees/pher"
 * description = "This statement defines the expected capabilities of a system at NHSN that stores FHIR resources such as Measure, Library, ValueSet, etc. that are used for 
 dQM Reporting. The dQM Evaluation Engine queries the Measure Source for the latest Measure content before querying the Patient Data Source and performing measure evaluation. 
-The Measure Source acts as a [DEQM Publishable Measure Repository](https://hl7.org/fhir/us/cqfmeasures/STU4/measure-repository-service.html)."
+The Measure Source acts as a [CQFM Publishable Measure Repository](https://hl7.org/fhir/us/cqfmeasures/measure-repository-service.html#publishable-measure-repository)."
 * jurisdiction = urn:iso:std:iso:3166#US
 * kind = #requirements
 * imports = "http://hl7.org/fhir/us/cqfmeasures/CapabilityStatement/publishable-measure-repository|3.0.0" 
@@ -30,7 +30,7 @@ The Measure Source acts as a [DEQM Publishable Measure Repository](https://hl7.o
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
       * valueCode = #SHOULD
-    * supportedProfile = Canonical(CQFMLibrary)
+    * supportedProfile = Canonical(CRMIComputableLibrary|1.0.0)
     * supportedProfile.extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
       * valueCode = #SHALL
@@ -51,7 +51,7 @@ The Measure Source acts as a [DEQM Publishable Measure Repository](https://hl7.o
     * extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
       * valueCode = #SHOULD
-    * supportedProfile = Canonical(CQFMMeasure)
+    * supportedProfile = Canonical(CQFMComputableMeasure)
     * supportedProfile.extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
       * valueCode = #SHALL

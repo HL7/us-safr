@@ -1,3 +1,4 @@
+/*
 Instance: HrdMeasure-bundle-example1
 InstanceOf: SafrMeasureBundle
 Title: "HRD Measure Bundle Example 1"
@@ -10,9 +11,9 @@ Usage: #example
 
 
 Instance: NHSNSAFRHospitalRespiratoryDataInitialPopulation
-InstanceOf: CRMIShareableMeasure
+InstanceOf: CQFMContinuousVariableMeasure|5.0.0
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm"
+* meta.profile[+] = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cv-measure-cqfm|5.0.0"
 * contained[+] = cqf-tooling
 * contained[+] = bed-capacity-effective-data-requirements
 * extension[0].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"
@@ -37,7 +38,7 @@ Usage: #example
 * contact.telecom.value = "http://www.hl7.org/Special/committees/pher"
 * description = "US Situational Awareness Framework for Reporting - Hospital Respiratory Data Measure"
 * jurisdiction = urn:iso:std:iso:3166#US "United States of America"
-* library = "http://hl7.org/fhir/us/safr/Library/NHSNSAFRHospitalRespiratoryDataInitialPopulationLibrary"
+* library = Canonical(NHSNSAFRHospitalRespiratoryDataInitialPopulationLibrary)
 * scoring = $measure-scoring#cohort "Cohort"
 * type = $MeasureTypeCS#structure "Structure"
 * group[0].code = SAFRHRDCS#numInPtBeds
@@ -315,3 +316,4 @@ Usage: #example
 * group[=].population.code = $measure-population#initial-population "Initial Population"
 * group[=].population.criteria.language = #text/cql-identifier
 * group[=].population.criteria.expression = "Are you able to MAINTAIN at least a 3-day supply of these items (y/n/N/A)? Exam gloves (sterile and non-sterile)"
+*/

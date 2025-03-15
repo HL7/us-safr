@@ -17,7 +17,7 @@ retrieved from the Measure Source. The resulting MeasureReport bundle and relate
 a [DEQM Reporter Client](https://www.hl7.org/fhir/us/davinci-deqm/STU4/CapabilityStatement-reporter-client.html), and implements the $evaluation-measure operation"
 * jurisdiction = urn:iso:std:iso:3166#US
 * kind = #requirements
-* imports[+] = "http://hl7.org/fhir/us/core/CapabilityStatement/us-core-client" 
+* imports[+] = "http://hl7.org/fhir/us/core/CapabilityStatement/us-core-client|6.1.0" 
 * imports[+] = "http://hl7.org/fhir/us/davinci-deqm/CapabilityStatement/reporter-client" 
 * fhirVersion = #4.0.1
 * format[+] = #json

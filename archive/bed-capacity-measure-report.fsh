@@ -1,7 +1,7 @@
 
 
 // TODO, try SANER Measure Profile for the Measure Profile these are using - https://build.fhir.org/ig/HL7/fhir-saner/StructureDefinition-PublicHealthMeasure.html
-
+/*
 
 Instance: bed-capacity-measurereport-bundle-example1
 InstanceOf: SafrMeasureReportBundle
@@ -15,53 +15,56 @@ Usage: #example
 * entry[submitting-device][+].fullUrl = "http://example.org/fhir/Device/cqf-tooling"
 * entry[submitting-device][=].resource = cqf-tooling
 
-* entry[individual-measurereport][+].fullUrl = "http://example.org/fhir/MeasureReport/bed-capacity-measurereport-example-hosp"
-* entry[individual-measurereport][=].resource = bed-capacity-measurereport-example-hosp
+* entry[measurereport][+].fullUrl = "http://example.org/fhir/MeasureReport/bed-capacity-measurereport-example-hosp"
+* entry[measurereport][=].resource = bed-capacity-measurereport-example-hosp
 
-* entry[individual-measurereport][+].fullUrl = "http://example.org/fhir/MeasureReport/bed-capacity-measurereport-example-ipf"
-* entry[individual-measurereport][=].resource = bed-capacity-measurereport-example-ipf
-
-
+* entry[measurereport][+].fullUrl = "http://example.org/fhir/MeasureReport/bed-capacity-measurereport-example-ipf"
+* entry[measurereport][=].resource = bed-capacity-measurereport-example-ipf
 
 
+
+*/
 Instance: hosp-location-example-bed-capacity
-InstanceOf: QICoreLocation
+InstanceOf: QICoreLocation|6.0.0
 Title: "Location - Entire Hospital"
 Description: "Hospital-wide"
 Usage: #inline
+* meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
 * identifier.system = "http://www.example.org/location"
 * identifier.value = "123"
 * status = #active
 * name = "XYZ Hospital"
-* type = SAFRHealthareCapacityCS#HOSP "Hospital"
+* type = SAFRHealthareCapacityCSExample#HOSP "Hospital"
 
 Instance: ipf-location-example-bed-capacity
-InstanceOf: QICoreLocation
+InstanceOf: QICoreLocation|6.0.0
 Title: "Location - Inpatient Psychiatric"
 Description: "Inpatient Psych (IPF)"
 Usage: #inline
+* meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
 * identifier.system = "http://www.example.org/location"
 * identifier.value = "456"
 * status = #active
 * name = "Inpatient Psych at XYZ Hospital"
-* type = SAFRHealthareCapacityCS#IPF "Inpatient Psychiatric"
+* type = SAFRHealthareCapacityCSExample#IPF "Inpatient Psychiatric"
 
 Instance: chld-location-example-bed-capacity
-InstanceOf: QICoreLocation
+InstanceOf: QICoreLocation|6.0.0
 Title: "Location - Children's or Pediatrics Dept."
 Description: "Pediatric (CHLD)"
 Usage: #inline
+* meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
 * identifier.system = "http://www.example.org/location"
 * identifier.value = "789"
 * status = #active
 * name = "Children's/Pediatrics at XYZ Hospital"
-* type = SAFRHealthareCapacityCS#CHLD "Children's or Pediatric"
+* type = SAFRHealthareCapacityCSExample#CHLD "Children's or Pediatric"
 
 
-
+/*
 
 Instance: bed-capacity-measurereport-example-hosp
-InstanceOf: DEQMIndividualMeasureReportProfile
+InstanceOf: DEQMSummaryMeasureReportProfile
 Title: "MeasureReport - Hospital Bed Capacity Example 2"
 Description: "Example MeasureReport - Hospital Bed Capacity Individual Measure Report"
 Usage: #example
@@ -71,7 +74,7 @@ Usage: #example
 // * contained.identifier.system = "http://www.example.org/location"
 // * contained.identifier.value = "123"
 // * contained.name = "XYZ Hospital"
-// * contained.type = SAFRHealthareCapacityCS#HOSP "Hospital"
+// * contained.type = SAFRHealthareCapacityCSExample#HOSP "Hospital"
 * extension[location].url = "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"
 * extension[location].valueReference = Reference(hosp-location-example-bed-capacity)
 // TODO, determine if this is actually necessary. DEQM Invariant deqm-3 seems to be incorrectly written
@@ -79,256 +82,256 @@ Usage: #example
 * extension[=].valueCodeableConcept = $measure-scoring#cohort "Cohort"
 * contained[0] = hosp-location-example-bed-capacity
 * status = #complete
-* type = #individual
-* measure = "http://hl7.org/fhir/us/safr/Measure/BedCapacityMeasure"
+* type = #summary
+* measure = Canonical(BedCapacityMeasure)
 //* measure = Canonical(BedCapacityMeasure)
 // Uncomment the line below when DEQM is updated to allow non-patient subjects in individual reports
 // * subject = Reference(hosp-location-example-bed-capacity)
-* subject.identifier.system = "http://www.example.org/location"
-* subject.identifier.value = "123"
+//* subject.identifier.system = "http://www.example.org/location"
+//* subject.identifier.value = "123"
 * date = "2023-08-28T07:01:07.563Z"
 * reporter = Reference(organization-example-submitting-organization)
 * period.start = "2023-08-28T07:01:07.563Z"
 * period.end = "2023-08-28T19:01:07.561Z"
-//* group.code = SAFRHealthareCapacityCS#BedCapacityReporting
-* group[0].code = SAFRHealthareCapacityCS#AllBedsOccupied
+//* group.code = SAFRHealthareCapacityCSExample#BedCapacityReporting
+* group[0].code = SAFRHealthareCapacityCSExample#AllBedsOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 177
-* group[+].code = SAFRHealthareCapacityCS#AllBedsUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AllBedsUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 5
-* group[+].code = SAFRHealthareCapacityCS#AdultTotalOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultTotalOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 177
-* group[+].code = SAFRHealthareCapacityCS#AdultTotalUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultTotalUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 5
-* group[+].code = SAFRHealthareCapacityCS#AdultICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 32
-* group[+].code = SAFRHealthareCapacityCS#AdultICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 2
-* group[+].code = SAFRHealthareCapacityCS#AdultICULOCOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultICULOCOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 32
-* group[+].code = SAFRHealthareCapacityCS#AdultNonICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultNonICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 3
-* group[+].code = SAFRHealthareCapacityCS#AdultNonICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultNonICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultPCUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultPCUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#AdultPCUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultPCUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 145
-* group[+].code = SAFRHealthareCapacityCS#AdultMTMSOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultMTMSOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 3
-* group[+].code = SAFRHealthareCapacityCS#AdultMTMSUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultMTMSUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#AdultObsOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultObsOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultObsUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultObsUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsTotalOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsTotalOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#PedsTotalUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsTotalUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#PedsICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#PedsICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsICULOCOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsICULOCOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsNonICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsNonICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#PedsNonICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsNonICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#PedsPCUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsPCUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 110
-* group[+].code = SAFRHealthareCapacityCS#PedsPCUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsPCUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#PedsMTMSOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsMTMSOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 145
-* group[+].code = SAFRHealthareCapacityCS#PedsMTMSUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsMTMSUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsObsOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsObsOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#PedsObsUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsObsUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 11
-* group[+].code = SAFRHealthareCapacityCS#SpecialtyTotalOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SpecialtyTotalOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#SpecialtyTotalUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SpecialtyTotalUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#SpecialtyNonCribOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SpecialtyNonCribOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#SpecialtyNonCribUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SpecialtyNonCribUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#OBOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#OBOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#OBUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#OBUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#NICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU4Occupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU4Occupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU4Unoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU4Unoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU3PlusOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU3PlusOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 18
-* group[+].code = SAFRHealthareCapacityCS#NICU3PlusUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU3PlusUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 2
-* group[+].code = SAFRHealthareCapacityCS#NICU3Occupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU3Occupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU3Unoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU3Unoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU2Occupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU2Occupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU2Unoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU2Unoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU1Occupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU1Occupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU1Unoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU1Unoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NurseryOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NurseryOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NurseryUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NurseryUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#AdultPsychOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultPsychOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#AdultPsychUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultPsychUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsPsychOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsPsychOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsPsychUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsPsychUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#RehabOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#RehabOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#RehabUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#RehabUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveTotalOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeActiveTotalOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveTotalUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeActiveTotalUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveTotalOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeInactiveTotalOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveTotalUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeInactiveTotalUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeActiveICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeActiveICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeInactiveICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveNonICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeActiveNonICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveNonICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeActiveNonICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveNonICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeInactiveNonICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveNonICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeInactiveNonICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#BurnOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#BurnOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 18
-* group[+].code = SAFRHealthareCapacityCS#BurnUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#BurnUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NegativePressureOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NegativePressureOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 18
-* group[+].code = SAFRHealthareCapacityCS#NegativePressureUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NegativePressureUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 1
-* group[+].code = SAFRHealthareCapacityCS#AdultEDCensus
+* group[+].code = SAFRHealthareCapacityCSExample#AdultEDCensus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 2
-* group[+].code = SAFRHealthareCapacityCS#AdultEDAdmittedCensus
+* group[+].code = SAFRHealthareCapacityCSExample#AdultEDAdmittedCensus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsEDCensus
+* group[+].code = SAFRHealthareCapacityCSExample#PedsEDCensus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 18
-* group[+].code = SAFRHealthareCapacityCS#PedsEDAdmittedCensus
+* group[+].code = SAFRHealthareCapacityCSExample#PedsEDAdmittedCensus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 1
-* group[+].code = SAFRHealthareCapacityCS#TotalEDCensus
+* group[+].code = SAFRHealthareCapacityCSExample#TotalEDCensus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 412
-* group[+].code = SAFRHealthareCapacityCS#TotalEDAdmittedCensus
+* group[+].code = SAFRHealthareCapacityCSExample#TotalEDAdmittedCensus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 1921
 
@@ -345,7 +348,7 @@ Usage: #example
 * contained[0] = ipf-location-example-bed-capacity
 * status = #complete
 * type = #individual
-* measure = "http://hl7.org/fhir/us/safr/Measure/BedCapacityMeasure"
+* measure = Canonical(BedCapacityMeasure)
 // Uncomment the line below when DEQM is updated to allow non-patient subjects in individual reports
 // * subject = Reference(hosp-location-example-bed-capacity)
 * subject.identifier.system = "http://www.example.org/location"
@@ -354,248 +357,248 @@ Usage: #example
 * reporter = Reference(organization-example-submitting-organization)
 * period.start = "2023-08-28T07:01:07.563Z"
 * period.end = "2023-08-28T19:01:07.562Z"
-* group[0].code = SAFRHealthareCapacityCS#AllBedsOccupied
+* group[0].code = SAFRHealthareCapacityCSExample#AllBedsOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 91
-* group[+].code = SAFRHealthareCapacityCS#AllBedsUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AllBedsUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 16
-* group[+].code = SAFRHealthareCapacityCS#AdultTotalOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultTotalOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultTotalUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultTotalUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 2
-* group[+].code = SAFRHealthareCapacityCS#AdultICULOCOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultICULOCOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 32
-* group[+].code = SAFRHealthareCapacityCS#AdultNonICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultNonICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultNonICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultNonICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultPCUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultPCUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultPCUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultPCUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultMTMSOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultMTMSOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultMTMSUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultMTMSUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultObsOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultObsOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultObsUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultObsUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsTotalOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsTotalOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#PedsTotalUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsTotalUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#PedsICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#PedsICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsICULOCOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsICULOCOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsNonICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsNonICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#PedsNonICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsNonICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#PedsPCUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsPCUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 110
-* group[+].code = SAFRHealthareCapacityCS#PedsPCUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsPCUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#PedsMTMSOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsMTMSOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 145
-* group[+].code = SAFRHealthareCapacityCS#PedsMTMSUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsMTMSUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsObsOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsObsOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#PedsObsUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsObsUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 11
-* group[+].code = SAFRHealthareCapacityCS#SpecialtyTotalOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SpecialtyTotalOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 91
-* group[+].code = SAFRHealthareCapacityCS#SpecialtyTotalUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SpecialtyTotalUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 16
-* group[+].code = SAFRHealthareCapacityCS#SpecialtyNonCribOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SpecialtyNonCribOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 91
-* group[+].code = SAFRHealthareCapacityCS#SpecialtyNonCribUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SpecialtyNonCribUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 16
-* group[+].code = SAFRHealthareCapacityCS#OBOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#OBOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#OBUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#OBUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#NICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU4Occupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU4Occupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU4Unoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU4Unoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU3PlusOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU3PlusOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 18
-* group[+].code = SAFRHealthareCapacityCS#NICU3PlusUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU3PlusUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 2
-* group[+].code = SAFRHealthareCapacityCS#NICU3Occupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU3Occupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU3Unoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU3Unoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU2Occupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU2Occupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU2Unoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU2Unoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU1Occupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU1Occupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU1Unoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU1Unoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NurseryOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NurseryOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NurseryUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NurseryUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#AdultPsychOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultPsychOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 91
-* group[+].code = SAFRHealthareCapacityCS#AdultPsychUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultPsychUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 16
-* group[+].code = SAFRHealthareCapacityCS#PedsPsychOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsPsychOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsPsychUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsPsychUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#RehabOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#RehabOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#RehabUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#RehabUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveTotalOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeActiveTotalOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveTotalUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeActiveTotalUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveTotalOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeInactiveTotalOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveTotalUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeInactiveTotalUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeActiveICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeActiveICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeInactiveICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveNonICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeActiveNonICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveNonICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeActiveNonICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveNonICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeInactiveNonICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveNonICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeInactiveNonICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#BurnOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#BurnOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 18
-* group[+].code = SAFRHealthareCapacityCS#BurnUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#BurnUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NegativePressureOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NegativePressureOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 1
-* group[+].code = SAFRHealthareCapacityCS#NegativePressureUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NegativePressureUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 1
-* group[+].code = SAFRHealthareCapacityCS#AdultEDCensus
+* group[+].code = SAFRHealthareCapacityCSExample#AdultEDCensus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 29
-* group[+].code = SAFRHealthareCapacityCS#AdultEDAdmittedCensus
+* group[+].code = SAFRHealthareCapacityCSExample#AdultEDAdmittedCensus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsEDCensus
+* group[+].code = SAFRHealthareCapacityCSExample#PedsEDCensus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 18
-* group[+].code = SAFRHealthareCapacityCS#PedsEDAdmittedCensus
+* group[+].code = SAFRHealthareCapacityCSExample#PedsEDAdmittedCensus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 1
-* group[+].code = SAFRHealthareCapacityCS#TotalEDCensus
+* group[+].code = SAFRHealthareCapacityCSExample#TotalEDCensus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 29
-* group[+].code = SAFRHealthareCapacityCS#TotalEDAdmittedCensus
+* group[+].code = SAFRHealthareCapacityCSExample#TotalEDAdmittedCensus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
 
@@ -612,7 +615,7 @@ Usage: #example
 * contained[0] = chld-location-example-bed-capacity
 * status = #complete
 * type = #individual
-* measure = "http://hl7.org/fhir/us/safr/Measure/BedCapacityMeasure"
+* measure = Canonical(BedCapacityMeasure)
 // Uncomment the line below when DEQM is updated to allow non-patient subjects in individual reports
 // * subject = Reference(hosp-location-example-bed-capacity)
 * subject.identifier.system = "http://www.example.org/location"
@@ -621,244 +624,244 @@ Usage: #example
 * reporter = Reference(organization-example-submitting-organization)
 * period.start = "2023-08-28T07:01:07.563Z"
 * period.end = "2023-08-28T19:01:07.562Z"
-* group[0].code = SAFRHealthareCapacityCS#AllBedsOccupied
+* group[0].code = SAFRHealthareCapacityCSExample#AllBedsOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 104
-* group[+].code = SAFRHealthareCapacityCS#AllBedsUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AllBedsUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 86
-* group[+].code = SAFRHealthareCapacityCS#AdultTotalOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultTotalOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultTotalUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultTotalUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 2
-* group[+].code = SAFRHealthareCapacityCS#AdultICULOCOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultICULOCOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 32
-* group[+].code = SAFRHealthareCapacityCS#AdultNonICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultNonICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultNonICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultNonICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultPCUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultPCUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultPCUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultPCUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultMTMSOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultMTMSOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultMTMSUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultMTMSUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultObsOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultObsOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#AdultObsUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultObsUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsTotalOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsTotalOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 56
-* group[+].code = SAFRHealthareCapacityCS#PedsTotalUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsTotalUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 53
-* group[+].code = SAFRHealthareCapacityCS#PedsICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 12
-* group[+].code = SAFRHealthareCapacityCS#PedsICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 12
-* group[+].code = SAFRHealthareCapacityCS#PedsICULOCOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsICULOCOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 12
-* group[+].code = SAFRHealthareCapacityCS#PedsNonICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsNonICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 44
-* group[+].code = SAFRHealthareCapacityCS#PedsNonICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsNonICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 41
-* group[+].code = SAFRHealthareCapacityCS#PedsPCUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsPCUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsPCUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsPCUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#PedsMTMSOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsMTMSOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#PedsMTMSUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsMTMSUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 41
-* group[+].code = SAFRHealthareCapacityCS#PedsObsOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsObsOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#PedsObsUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsObsUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 11
-* group[+].code = SAFRHealthareCapacityCS#SpecialtyTotalOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SpecialtyTotalOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 91
-* group[+].code = SAFRHealthareCapacityCS#SpecialtyTotalUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SpecialtyTotalUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 16
-* group[+].code = SAFRHealthareCapacityCS#SpecialtyNonCribOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SpecialtyNonCribOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 91
-* group[+].code = SAFRHealthareCapacityCS#SpecialtyNonCribUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SpecialtyNonCribUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 16
-* group[+].code = SAFRHealthareCapacityCS#OBOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#OBOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#OBUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#OBUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count.extension.url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
 * group[=].population[=].count.extension.valueCode = #not-applicable
-* group[+].code = SAFRHealthareCapacityCS#NICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU4Occupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU4Occupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU4Unoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU4Unoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU3PlusOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU3PlusOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 18
-* group[+].code = SAFRHealthareCapacityCS#NICU3PlusUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU3PlusUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 2
-* group[+].code = SAFRHealthareCapacityCS#NICU3Occupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU3Occupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU3Unoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU3Unoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU2Occupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU2Occupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU2Unoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU2Unoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU1Occupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU1Occupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NICU1Unoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NICU1Unoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NurseryOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NurseryOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NurseryUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NurseryUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#AdultPsychOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultPsychOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 91
-* group[+].code = SAFRHealthareCapacityCS#AdultPsychUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#AdultPsychUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 16
-* group[+].code = SAFRHealthareCapacityCS#PedsPsychOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsPsychOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsPsychUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#PedsPsychUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#RehabOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#RehabOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#RehabUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#RehabUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveTotalOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeActiveTotalOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveTotalUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeActiveTotalUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveTotalOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeInactiveTotalOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveTotalUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeInactiveTotalUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeActiveICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeActiveICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeInactiveICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveNonICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeActiveNonICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveNonICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeActiveNonICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveNonICUOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeInactiveNonICUOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveNonICUUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#SurgeInactiveNonICUUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#BurnOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#BurnOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 18
-* group[+].code = SAFRHealthareCapacityCS#BurnUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#BurnUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#NegativePressureOccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NegativePressureOccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 9
-* group[+].code = SAFRHealthareCapacityCS#NegativePressureUnoccupied
+* group[+].code = SAFRHealthareCapacityCSExample#NegativePressureUnoccupied
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 1
-* group[+].code = SAFRHealthareCapacityCS#AdultEDCensus
+* group[+].code = SAFRHealthareCapacityCSExample#AdultEDCensus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 29
-* group[+].code = SAFRHealthareCapacityCS#AdultEDAdmittedCensus
+* group[+].code = SAFRHealthareCapacityCSExample#AdultEDAdmittedCensus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#PedsEDCensus
+* group[+].code = SAFRHealthareCapacityCSExample#PedsEDCensus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 5
-* group[+].code = SAFRHealthareCapacityCS#PedsEDAdmittedCensus
+* group[+].code = SAFRHealthareCapacityCSExample#PedsEDAdmittedCensus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#TotalEDCensus
+* group[+].code = SAFRHealthareCapacityCSExample#TotalEDCensus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-* group[+].code = SAFRHealthareCapacityCS#TotalEDAdmittedCensus
+* group[+].code = SAFRHealthareCapacityCSExample#TotalEDAdmittedCensus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
 

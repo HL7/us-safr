@@ -1,6 +1,6 @@
 
 /*
-This CS seems to be duplicative of codes in SAFRHealthareCapacityCS
+This CS seems to be duplicative of codes in SAFRHealthareCapacityCSExample
 CodeSystem: SAFRFacilityCS
 //Id: healthcare-capacity-codes
 Title: "US SAFR Facility Reporting Code System"

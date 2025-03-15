@@ -61,11 +61,11 @@ MeasureReport and other related resources, and implements the $validate operatio
     * supportedProfile[=].extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
       * valueCode = #SHALL
-    * supportedProfile[+] = Canonical(DEQMIndividualMeasureReportProfile)
+    * supportedProfile[+] = Canonical(DEQMSummaryMeasureReportProfile)
     * supportedProfile[=].extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
       * valueCode = #SHALL
-    * supportedProfile[+] = Canonical(DEQMSummaryMeasureReportProfile)
+    * supportedProfile[+] = Canonical(DEQMIndividualMeasureReportProfile)
     * supportedProfile[=].extension[+]
       * url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
       * valueCode = #MAY

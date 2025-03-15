@@ -13,3 +13,24 @@ Usage: #example
 * telecom.system = #phone
 * telecom.value = "5555555551"
 * telecom.rank = 1
+
+
+// Define the reporting organization
+Instance: MemorialHospitalOrganization
+InstanceOf: SafrSubmittingOrganization
+Title: "Organization - Example Hospital Organization"
+Description: "Organization - Example Hospital Organization"
+Usage: #example
+* identifier.system = "http://hl7.org/fhir/sid/us-npi"
+* identifier.value = "9941339100"
+* active = true
+* name = "Memorial Hospital"
+* address.line = "123 Healthcare Drive"
+* address.city = "Springfield"
+* address.state = "IL"
+* address.postalCode = "62701"
+* address.country = "USA"
+* telecom.system = #phone
+* telecom.value = "+1-555-123-4567"
+* telecom.use = #work
+* type = http://terminology.hl7.org/CodeSystem/organization-type#prov "Healthcare Provider"

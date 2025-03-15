@@ -1,3 +1,4 @@
+/*
 Instance: hrd-measurereport-bundle-example-hosp1
 InstanceOf: SafrMeasureReportBundle
 Title: "Bundle - Hospital Respiratory Data MeasureReport Bundle Example 1"
@@ -10,24 +11,25 @@ Usage: #example
 * entry[submitting-device][+].fullUrl = "http://example.org/fhir/Device/cqf-tooling"
 * entry[submitting-device][=].resource = cqf-tooling
 
-* entry[individual-measurereport][+].fullUrl = "http://example.org/fhir/MeasureReport/hrd-measurereport-example-1"
-* entry[individual-measurereport][=].resource = hrd-measurereport-example-1
+* entry[measurereport][+].fullUrl = "http://example.org/fhir/MeasureReport/hrd-measurereport-example-1"
+* entry[measurereport][=].resource = hrd-measurereport-example-1
 
 
 Instance: hrd-location-1
-InstanceOf: QICoreLocation
+InstanceOf: QICoreLocation|6.0.0
 Title: "Location - Entire Hospital"
 Description: "Hospital-wide"
 Usage: #inline
+* meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
 * identifier.system = "http://www.example.org/location"
 * identifier.value = "123"
 * status = #active
 * name = "XYZ Hospital"
-* type = SAFRHealthareCapacityCS#HOSP "Hospital"
+* type = SAFRHealthareCapacityCSExample#HOSP "Hospital"
 
 
 Instance: hrd-measurereport-example-1
-InstanceOf: DEQMIndividualMeasureReportProfile
+InstanceOf: DEQMIndividualMeasureReportProfile // TODO, needs to change to an HRD MeasureReport profile
 Title: "MeasureReport - Hospital Respiratory Data Example 1"
 Description: "This MeasureReport resource is an example of a Hospital Respiratory Data (HRD) Measure Report for the US SAFR IG."
 Usage: #example
@@ -38,7 +40,7 @@ Usage: #example
 * contained[0] = hrd-location-1
 * status = #complete
 * type = #individual
-* measure = "http://hl7.org/fhir/us/us/safr/Measure/NHSNSAFRHospitalRespiratoryDataInitialPopulation"
+* measure = Canonical(NHSNSAFRHospitalRespiratoryDataInitialPopulation)
 * subject.identifier.system = "http://www.example.org/location"
 * subject.identifier.value = "123"
 * date = "2023-08-28T07:01:07.563Z"
@@ -210,3 +212,4 @@ Usage: #example
 * group[+].code = SAFRHRDCS#glove3DaySupply
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 1
+*/

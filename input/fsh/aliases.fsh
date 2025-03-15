@@ -4,15 +4,25 @@ Alias: $CRMISoftwareSystemDevice = http://hl7.org/fhir/uv/crmi/StructureDefiniti
 Alias: $measure-scoring = http://terminology.hl7.org/CodeSystem/measure-scoring
 
 Alias: $measure-population = http://terminology.hl7.org/CodeSystem/measure-population
-Alias: $location-physical-type = http://terminology.hl7.org/CodeSystem/location-physical-type
+Alias: $location-physical-type = http://terminology.hl7.org/CodeSystem/location-physical-type|2.0.1
 Alias: $library-type = http://terminology.hl7.org/CodeSystem/library-type
-
-Alias: $SAFRHealthareCapacityCS = http://hl7.org/fhir/us/safr/CodeSystem/SAFRHealthareCapacityCS
-
-Alias: $library-type = http://terminology.hl7.org/CodeSystem/library-type
-
-Alias: $USCoreOrganization = http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization
+Alias: $resource-type = http://hl7.org/fhir/resource-types
 
 Alias: $organization-type = http://terminology.hl7.org/CodeSystem/organization-type
 
 Alias: $MeasureTypeCS = http://terminology.hl7.org/CodeSystem/measure-type
+
+
+Alias: $measure-report-status = http://hl7.org/fhir/measure-report-status
+Alias: $measure-report-type = http://hl7.org/fhir/measure-report-type
+
+Alias: $cqfm-scoringUnit = http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoringUnit
+
+Alias: $aggregate-method = http://hl7.org/fhir/us/cqfmeasures/CodeSystem/aggregate-method
+Alias: $cqfm-criteriaReference = http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-criteriaReference
+Alias: $cqfm-aggregateMethod = http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-aggregateMethod
+Alias: $reporting-frequency = http://hl7.org/fhir/us/safr/StructureDefinition/reporting-frequency
+Alias: $emergency-activation = http://hl7.org/fhir/us/safr/StructureDefinition/emergency-activation
+Alias: $ucum = http://unitsofmeasure.org
+
+Alias: $MeasureImprovementNotation = http://terminology.hl7.org/CodeSystem/measure-improvement-notation 

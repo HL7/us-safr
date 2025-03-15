@@ -9,1902 +9,1069 @@ Usage: #example
 
 
 Instance: BedCapacityMeasure
-InstanceOf: CRMIShareableMeasure
+InstanceOf: CQFMContinuousVariableMeasure
+Title: "Hospital Multi-Bed Type Capacity Measure Example"
+Description: "Example of a bed capacity measure for ICU, ED, and Pediatric beds for NHSN reporting"
 Usage: #example
-* meta.profile = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm"
-* contained[+] = cqf-tooling
-* contained[+] = bed-capacity-effective-data-requirements
-* extension[0].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"
-* extension[=].valueReference = Reference(cqf-tooling)
+
 * extension[+].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis"
 * extension[=].valueCode = #boolean
-* extension[+].id = "bed-capacity-effective-data-requirements"
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements"
-* extension[=].valueReference = Reference(bed-capacity-effective-data-requirements)
-// * extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
-// * extension[=].valueCode = #pher
-* url = "http://hl7.org/fhir/us/safr/Measure/BedCapacityMeasure"
+
+* url = Canonical(BedCapacityMeasure)
 * version = "1.0.0"
 * name = "BedCapacityMeasure"
-* title = "Bed Capacity Measure for US Situational Awareness Framework for Reporting"
-* status = #draft
-* experimental = true
-* date = "2024-06-25T17:37:47-04:00"
-* publisher = "HL7 International / Public Health"
-* contact.name = "HL7 International / Public Health"
-* contact.telecom.system = #url
-* contact.telecom.value = "http://www.hl7.org/Special/committees/pher"
-* description = "US Situational Awareness Framework for Reporting - Bed Capacity Measure"
-* jurisdiction = urn:iso:std:iso:3166#US "United States of America"
-* library = "http://hl7.org/fhir/us/safr/Library/BedCapacityLibrary"
-* scoring = $measure-scoring#cohort "Cohort"
-* type = $MeasureTypeCS#structure "Structure"
-* group[0].code = SAFRHealthareCapacityCS#AllBedsOccupied
-* group[=].population.id = "d2e4301"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "All Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AllBedsUnoccupied
-* group[=].population.id = "d2e4378"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "All Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AdultTotalOccupied
-* group[=].population.id = "d2e4455"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Adult Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AdultTotalUnoccupied
-* group[=].population.id = "d2e4533"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Adult Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AdultICUOccupied
-* group[=].population.id = "d2e4610"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Adult ICU Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AdultICUUnoccupied
-* group[=].population.id = "d2e4687"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Adult ICU Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AdultICULOCOccupied
-* group[=].population.id = "d2e4764"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Adult ICULOC Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AdultNonICUOccupied
-* group[=].population.id = "d2e4918"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Adult NonICU Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AdultNonICUUnoccupied
-* group[=].population.id = "d2e4996"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Adult NonICU Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AdultPCUOccupied
-* group[=].population.id = "d2e5073"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Adult PCU Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AdultPCUUnoccupied
-* group[=].population.id = "d2e5150"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Adult PCU Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AdultMTMSOccupied
-* group[=].population.id = "d2e5227"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Adult MTMS Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AdultMTMSUnoccupied
-* group[=].population.id = "d2e5304"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Adult MTMS Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AdultObsOccupied
-* group[=].population.id = "d2e5381"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Adult Obs Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AdultObsUnoccupied
-* group[=].population.id = "d2e5459"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Adult Obs Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#PedsTotalOccupied
-* group[=].population.id = "d2e5536"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Peds Total Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#PedsTotalUnoccupied
-* group[=].population.id = "d2e5613"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Peds Total Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#PedsICUOccupied
-* group[=].population.id = "d2e5690"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Peds ICU Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#PedsICUUnoccupied
-* group[=].population.id = "d2e5767"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Peds ICU Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#PedsICULOCOccupied
-* group[=].population.id = "d2e5844"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Peds ICULOC Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#PedsNonICUOccupied
-* group[=].population.id = "d2e5999"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Peds NonICU Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#PedsNonICUUnoccupied
-* group[=].population.id = "d2e6076"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Peds NonICU Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#PedsPCUOccupied
-* group[=].population.id = "d2e6153"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Peds PCU Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#PedsPCUUnoccupied
-* group[=].population.id = "d2e6230"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Peds PCU Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#PedsMTMSOccupied
-* group[=].population.id = "d2e6307"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Peds MTMS Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#PedsMTMSUnoccupied
-* group[=].population.id = "d2e6385"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Peds MTMS Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#PedsObsOccupied
-* group[=].population.id = "d2e6462"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Peds Obs Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#PedsObsUnoccupied
-* group[=].population.id = "d2e6539"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Peds Obs Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#SpecialtyTotalOccupied
-* group[=].population.id = "d2e6616"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Specialty Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#SpecialtyTotalUnoccupied
-* group[=].population.id = "d2e6693"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Specialty Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#SpecialtyNonCribOccupied
-* group[=].population.id = "d2e6770"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Specialty NonCrib Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#SpecialtyNonCribUnoccupied
-* group[=].population.id = "d2e6848"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Specialty NonCrib Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#OBOccupied
-* group[=].population.id = "d2e6925"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "OB Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#OBUnoccupied
-* group[=].population.id = "d2e7002"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "OB Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#NICUOccupied
-* group[=].population.id = "d2e7079"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "NICU Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#NICUUnoccupied
-* group[=].population.id = "d2e7156"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "NICU Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#NICU4Occupied
-* group[=].population.id = "d2e7233"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "NICU4 Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#NICU4Unoccupied
-* group[=].population.id = "d2e7311"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "NICU4 Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#NICU3PlusOccupied
-* group[=].population.id = "d2e7388"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "NICU3Plus Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#NICU3PlusUnoccupied
-* group[=].population.id = "d2e7465"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "NICU3Plus Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#NICU3Occupied
-* group[=].population.id = "d2e7542"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "NICU3 Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#NICU3Unoccupied
-* group[=].population.id = "d2e7619"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "NICU3 Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#NICU2Occupied
-* group[=].population.id = "d2e7696"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "NICU2 Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#NICU2Unoccupied
-* group[=].population.id = "d2e7774"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "NICU2 Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#NICU1Occupied
-* group[=].population.id = "d2e7851"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "NICU1 Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#NICU1Unoccupied
-* group[=].population.id = "d2e7928"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "NICU1 Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#NurseryOccupied
-* group[=].population.id = "d2e8005"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Nursery Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#NurseryUnoccupied
-* group[=].population.id = "d2e8082"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Nursery Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AdultPsychOccupied
-* group[=].population.id = "d2e8159"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Adult Psych Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AdultPsychUnoccupied
-* group[=].population.id = "d2e8237"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Adult Psych Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#PedsPsychOccupied
-* group[=].population.id = "d2e8314"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Peds Psych Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#PedsPsychUnoccupied
-* group[=].population.id = "d2e8391"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Peds Psych Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#RehabOccupied
-* group[=].population.id = "d2e8468"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Rehab Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#RehabUnoccupied
-* group[=].population.id = "d2e8545"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Rehab Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveTotalOccupied
-* group[=].population.id = "d2e8622"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Surge Active Total Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveTotalUnoccupied
-* group[=].population.id = "d2e8700"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Surge Active Total Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveTotalOccupied
-* group[=].population.id = "d2e8777"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Surge Inactive Total Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveTotalUnoccupied
-* group[=].population.id = "d2e8854"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Surge Inactive Total Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveICUOccupied
-* group[=].population.id = "d2e8931"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Surge Active ICU Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveICUUnoccupied
-* group[=].population.id = "d2e9008"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Surge Active ICU Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveICUUnoccupied
-* group[=].population.id = "d2e9163"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Surge Inactive ICU Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveNonICUOccupied
-* group[=].population.id = "d2e9240"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Surge Active NonICU Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#SurgeActiveNonICUUnoccupied
-* group[=].population.id = "d2e9317"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Surge Active NonICU Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveNonICUOccupied
-* group[=].population.id = "d2e9394"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Surge Inactive NonICU Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#SurgeInactiveNonICUUnoccupied
-* group[=].population.id = "d2e9471"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Surge Inactive NonICU Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#BurnOccupied
-* group[=].population.id = "d2e9548"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Burn Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#BurnUnoccupied
-* group[=].population.id = "d2e9626"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Burn Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#NegativePressureOccupied
-* group[=].population.id = "d2e9703"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Negative Pressure Beds Occupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#NegativePressureUnoccupied
-* group[=].population.id = "d2e9780"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Negative Pressure Beds Unoccupied Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AdultEDCensus
-* group[=].population.id = "d2e9857"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Adult ED Census Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#AdultEDAdmittedCensus
-* group[=].population.id = "d2e9934"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Adult ED Admitted Census Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#PedsEDCensus
-* group[=].population.id = "d2e10011"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Peds ED Census Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#PedsEDAdmittedCensus
-* group[=].population.id = "d2e10089"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Peds ED Admitted Census Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#TotalEDCensus
-* group[=].population.id = "d2e10166"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Total ED Census Initial Population"
-* group[+].code = SAFRHealthareCapacityCS#TotalEDAdmittedCensus
-* group[=].population.id = "d2e10243"
-* group[=].population.code = $measure-population#initial-population "Initial Population"
-* group[=].population.criteria.language = #text/cql-identifier
-* group[=].population.criteria.expression = "Total ED Admitted Census Initial Population"
-
-Instance: bed-capacity-effective-data-requirements
-InstanceOf: module-definition-library-cqfm
-Usage: #inline
-* extension[0].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode"
-* extension[=].valueCoding = $location-physical-type#bd "Bed"
-* extension[+].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode"
-* extension[=].valueCoding = SAFRHealthareCapacityCS#CHLD "Children's or Pediatric"
-* extension[+].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode"
-* extension[=].valueCoding = SAFRHealthareCapacityCS#IPF "Inpatient Psychiatric"
-* extension[+].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode"
-* extension[=].valueCoding = SAFRHealthareCapacityCS#OTH "Other facility-within-facility or subunit"
-* extension[+].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode"
-* extension[=].valueCoding = SAFRHealthareCapacityCS#HOSP "Hospital"
-* extension[+].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode"
-* extension[=].valueCoding = SAFRHealthareCapacityCS#IRF "Inpatient Rehabilitation"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "IsBedLocation"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"IsBedLocation\":\n  Location.physicalType ~ \"Bed\""
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 0
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Encounters"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Encounters\":\n  [Encounter]"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 1
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "EncounterCheck"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define EncounterCheck:\n  exists(\"Encounters\" Encounters\n  where exists(LocationMatch(Encounters.location))\n    and Encounters.period overlaps \"Measurement Period\")"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 2
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "LocationIsCHLD"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"LocationIsCHLD\":\n  exists(\n    Location.type types\n    where types ~ \"CHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 3
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Peds Total Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Peds Total Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsCHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 4
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "NoEncounterCheck"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define NoEncounterCheck:\n  exists(\"Encounters\" Encounters\n  where not exists(LocationMatch(Encounters.location))\n    and Encounters.period overlaps \"Measurement Period\")"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 5
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "All Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"All Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 6
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Peds ED Census Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Peds ED Census Initial Population\":\n  IsBedLocation\n  and exists(\n    [Encounter: \"Emergency Department Visit\"] EDVisit\n    where exists(LocationMatch(EDVisit.location))\n      and EDVisit.period overlaps \"Measurement Period\"\n    )\n  and exists(\n    Location.type types\n    where \"LocationIsCHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 7
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "LocationIsIPF"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"LocationIsIPF\":\n  exists(\n    Location.type types\n    where types ~ \"IPF\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 8
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "LocationIsOTH"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"LocationIsOTH\":\n  exists(\n    Location.type types\n    where types ~ \"OTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 9
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Adult PCU Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Adult PCU Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsIPF\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 10
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "LocationIsHOSP"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"LocationIsHOSP\":\n  exists(\n    Location.type types\n    where types ~ \"HOSP\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 11
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Peds ICU Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Peds ICU Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsCHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 12
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Negative Pressure Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Negative Pressure Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 13
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Adult PCU Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Adult PCU Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsIPF\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 14
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Peds PCU Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Peds PCU Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 15
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "LocationIsIRF"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"LocationIsIRF\":\n  exists(\n    Location.type types\n    where types ~ \"IRF\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 16
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "OB Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"OB Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsIRF\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 17
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Surge Inactive NonICU Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Surge Inactive NonICU Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsCHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 18
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "NICU3 Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"NICU3 Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsCHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 19
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Peds ICULOC Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Peds ICULOC Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 20
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Surge Inactive Total Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Surge Inactive Total Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 21
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Peds NonICU Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Peds NonICU Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsIPF\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 22
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Peds MTMS Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Peds MTMS Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 23
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Peds NonICU Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Peds NonICU Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsIPF\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 24
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Peds Psych Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Peds Psych Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIPF\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 25
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Surge Inactive Total Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Surge Inactive Total Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 26
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Specialty Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Specialty Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 27
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Surge Active ICU Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Surge Active ICU Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 28
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Adult NonICU Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Adult NonICU Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 29
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Specialty NonCrib Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Specialty NonCrib Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 30
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Peds Psych Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Peds Psych Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIPF\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 31
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Peds ICULOC Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Peds ICULOC Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 32
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Rehab Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Rehab Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsIRF\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 33
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Adult MTMS Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Adult MTMS Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 34
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "NICU3 Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"NICU3 Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsCHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 35
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Adult Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Adult Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsIPF\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 36
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Burn Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Burn Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 37
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Peds ICU Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Peds ICU Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsCHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 38
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "NICU1 Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"NICU1 Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 39
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Negative Pressure Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Negative Pressure Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 40
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Adult ICU Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Adult ICU Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 41
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "NICU4 Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"NICU4 Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 42
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Adult ICULOC Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Adult ICULOC Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIPF\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 43
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Adult Obs Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Adult Obs Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 44
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Adult NonICU Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Adult NonICU Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 45
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Peds Obs Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Peds Obs Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 46
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "NICU Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"NICU Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 47
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "NICU Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"NICU Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 48
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Nursery Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Nursery Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsIRF\"\n      and \"LocationIsCHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 49
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Adult Psych Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Adult Psych Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIPF\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 50
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Adult ED Admitted Census Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Adult ED Admitted Census Initial Population\":\n  IsBedLocation\n  and exists(\n    [Encounter: \"Emergency Department Visit\"] EDVisit\n    where exists(LocationMatch(EDVisit.location))\n      and EDVisit.period overlaps \"Measurement Period\"\n      and EDVisit.status in {'arrived', 'triaged', 'in-progress'}\n    )\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 51
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "NICU3Plus Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"NICU3Plus Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsCHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 52
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Surge Active NonICU Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Surge Active NonICU Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsCHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 53
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Rehab Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Rehab Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsIRF\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 54
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Surge Active Total Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Surge Active Total Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 55
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Specialty NonCrib Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Specialty NonCrib Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 56
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Adult ED Census Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Adult ED Census Initial Population\":\n  IsBedLocation\n  and exists(\n    [Encounter: \"Emergency Department Visit\"] EDVisit\n    where exists(LocationMatch(EDVisit.location))\n      and EDVisit.period overlaps \"Measurement Period\"\n    )\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 57
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "OB Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"OB Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsIRF\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 58
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Peds PCU Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Peds PCU Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 59
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Peds MTMS Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Peds MTMS Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 60
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Total ED Census Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Total ED Census Initial Population\":\n  IsBedLocation\n  and exists(\n    [Encounter: \"Emergency Department Visit\"] EDVisit\n    where exists(LocationMatch(EDVisit.location))\n      and EDVisit.period overlaps \"Measurement Period\"\n    )\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 61
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Burn Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Burn Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 62
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Adult ICULOC Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Adult ICULOC Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIPF\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 63
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Adult Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Adult Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where LocationIsHOSP\n      and \"LocationIsIRF\"\n      and \"LocationIsIPF\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 64
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Surge Inactive ICU Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Surge Inactive ICU Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 65
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Specialty Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Specialty Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 66
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "NICU3Plus Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"NICU3Plus Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsCHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 67
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "NICU1 Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"NICU1 Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 68
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Adult Psych Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Adult Psych Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIPF\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 69
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Adult Obs Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Adult Obs Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 70
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Surge Active Total Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Surge Active Total Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 71
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Surge Active NonICU Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Surge Active NonICU Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsCHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 72
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Surge Inactive NonICU Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Surge Inactive NonICU Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsCHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 73
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Adult ICU Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Adult ICU Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 74
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Adult MTMS Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Adult MTMS Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 75
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Peds Total Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Peds Total Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsCHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 76
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Total ED Admitted Census Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Total ED Admitted Census Initial Population\":\n  IsBedLocation\n  and exists(\n    [Encounter: \"Emergency Department Visit\"] EDVisit\n    where exists(LocationMatch(EDVisit.location))\n      and EDVisit.period overlaps \"Measurement Period\"\n      and EDVisit.status in {'arrived', 'triaged', 'in-progress'}\n    )\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 77
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Nursery Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Nursery Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsIRF\"\n      and \"LocationIsCHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 78
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "NICU4 Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"NICU4 Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 79
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "All Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"All Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 80
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Peds Obs Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Peds Obs Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsCHLD\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 81
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Surge Active ICU Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Surge Active ICU Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 82
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Surge Inactive ICU Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Surge Inactive ICU Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsOTH\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 83
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "NICU2 Beds Unoccupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"NICU2 Beds Unoccupied Initial Population\":\n  IsBedLocation\n  and NoEncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsCHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 84
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "NICU2 Beds Occupied Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"NICU2 Beds Occupied Initial Population\":\n  IsBedLocation\n  and EncounterCheck\n  and exists(\n    Location.type types\n    where \"LocationIsHOSP\"\n      and \"LocationIsIRF\"\n      and \"LocationIsCHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 85
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "Peds ED Admitted Census Initial Population"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define \"Peds ED Admitted Census Initial Population\":\n  IsBedLocation\n  and exists(\n    [Encounter: \"Emergency Department Visit\"] EDVisit\n    where exists(LocationMatch(EDVisit.location))\n      and EDVisit.period overlaps \"Measurement Period\"\n      and EDVisit.status in {'arrived', 'triaged', 'in-progress'}\n    )\n  and exists(\n    Location.type types\n    where \"LocationIsCHLD\"\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 86
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "FHIRHelpers"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "ToConcept"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define function ToConcept(concept FHIR.CodeableConcept):\n    if concept is null then\n        null\n    else\n        System.Concept {\n            codes: concept.coding C return ToCode(C),\n            display: concept.text.value\n        }"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 87
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "LocationMatch"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define function LocationMatch(locations List<FHIR.Encounter.Location>):\n  locations l\n  where GetLocation(l.location).id = Location.id"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 88
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "GetLocation"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define function \"GetLocation\"(reference Reference ):\n  singleton from (\n    [Location] L where L.id = GetId(reference.reference)\n  )"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 89
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "FHIRHelpers"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "ToString"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define function ToString(value string): value.value"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 90
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "BedCapacityMeasure"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "GetId"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define function \"GetId\"(uri String ):\n  Last(Split(uri, '/'))"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 91
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "FHIRHelpers"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "ToInterval"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define function ToInterval(period FHIR.Period):\n    if period is null then\n        null\n    else\n        if period.\"start\" is null then\n            Interval(period.\"start\".value, period.\"end\".value]\n        else\n            Interval[period.\"start\".value, period.\"end\".value]"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 92
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* extension[+].extension[0].url = "libraryName"
-* extension[=].extension[=].valueString = "FHIRHelpers"
-* extension[=].extension[+].url = "name"
-* extension[=].extension[=].valueString = "ToString"
-* extension[=].extension[+].url = "statement"
-* extension[=].extension[=].valueString = "define function ToString(value EncounterStatus): value.value"
-* extension[=].extension[+].url = "displaySequence"
-* extension[=].extension[=].valueInteger = 93
-* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-logicDefinition"
-* name = "EffectiveDataRequirements"
+* title = "Hospital Multi-Bed Type Capacity Measure"
 * status = #active
-* type = $library-type#module-definition
-* relatedArtifact[0].type = #depends-on
-* relatedArtifact[=].display = "Library FHIRHelpers"
-* relatedArtifact[=].resource = "http://fhir.org/guides/cqf/common/Library/FHIRHelpers"
-* relatedArtifact[+].type = #depends-on
-* relatedArtifact[=].display = "Code system LocationPhysicalType"
-* relatedArtifact[=].resource = "http://terminology.hl7.org/CodeSystem/location-physical-type"
-* relatedArtifact[+].type = #depends-on
-* relatedArtifact[=].display = "Code system HealthcareCapacity"
-* relatedArtifact[=].resource = "http://hl7.org/fhir/us/safr/CodeSystem/SAFRHealthareCapacityCS"
-* relatedArtifact[+].type = #depends-on
-* relatedArtifact[=].display = "Value set Emergency Department Visit"
-* relatedArtifact[=].resource = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.292"
-* parameter[0].name = #"Measurement Period"
-* parameter[=].use = #in
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #Period
-* parameter[+].name = #"Peds Total Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"All Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Peds ED Census Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Adult PCU Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Peds ICU Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Negative Pressure Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Adult PCU Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Peds PCU Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"OB Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Surge Inactive NonICU Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"NICU3 Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Peds ICULOC Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Surge Inactive Total Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Peds NonICU Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Peds MTMS Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Peds NonICU Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Peds Psych Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Surge Inactive Total Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Specialty Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Surge Active ICU Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Adult NonICU Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Specialty NonCrib Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Peds Psych Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Peds ICULOC Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Rehab Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Adult MTMS Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"NICU3 Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Adult Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Burn Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Peds ICU Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"NICU1 Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Negative Pressure Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Adult ICU Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"NICU4 Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Adult ICULOC Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Adult Obs Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Adult NonICU Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Peds Obs Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"NICU Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"NICU Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Nursery Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Adult Psych Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Adult ED Admitted Census Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"NICU3Plus Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Surge Active NonICU Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Rehab Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Surge Active Total Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Specialty NonCrib Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Adult ED Census Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"OB Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Peds PCU Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Peds MTMS Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Total ED Census Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Burn Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Adult ICULOC Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Adult Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Surge Inactive ICU Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Specialty Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"NICU3Plus Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"NICU1 Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Adult Psych Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Adult Obs Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Surge Active Total Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Surge Active NonICU Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Surge Inactive NonICU Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Adult ICU Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Adult MTMS Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Peds Total Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Total ED Admitted Census Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Nursery Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"NICU4 Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"All Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Peds Obs Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Surge Active ICU Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Surge Inactive ICU Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"NICU2 Beds Unoccupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"NICU2 Beds Occupied Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* parameter[+].name = #"Peds ED Admitted Census Initial Population"
-* parameter[=].use = #out
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].type = #boolean
-* dataRequirement[0].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Encounter
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Encounter"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[=].mustSupport = "id"
-* dataRequirement[+].type = #Encounter
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Encounter"
-* dataRequirement[=].mustSupport[0] = "location"
-* dataRequirement[=].mustSupport[+] = "period"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Encounter
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Encounter"
-* dataRequirement[=].mustSupport[0] = "location"
-* dataRequirement[=].mustSupport[+] = "period"
-* dataRequirement[+].type = #Encounter
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Encounter"
-* dataRequirement[=].mustSupport[0] = "type"
-* dataRequirement[=].mustSupport[+] = "location"
-* dataRequirement[=].mustSupport[+] = "period"
-* dataRequirement[=].codeFilter.path = "type"
-* dataRequirement[=].codeFilter.valueSet = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.292"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Encounter
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Encounter"
-* dataRequirement[=].mustSupport[0] = "type"
-* dataRequirement[=].mustSupport[+] = "location"
-* dataRequirement[=].mustSupport[+] = "period"
-* dataRequirement[=].mustSupport[+] = "status"
-* dataRequirement[=].codeFilter.path = "type"
-* dataRequirement[=].codeFilter.valueSet = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.292"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Encounter
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Encounter"
-* dataRequirement[=].mustSupport[0] = "type"
-* dataRequirement[=].mustSupport[+] = "location"
-* dataRequirement[=].mustSupport[+] = "period"
-* dataRequirement[=].codeFilter.path = "type"
-* dataRequirement[=].codeFilter.valueSet = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.292"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Encounter
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Encounter"
-* dataRequirement[=].mustSupport[0] = "type"
-* dataRequirement[=].mustSupport[+] = "location"
-* dataRequirement[=].mustSupport[+] = "period"
-* dataRequirement[=].codeFilter.path = "type"
-* dataRequirement[=].codeFilter.valueSet = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.292"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Encounter
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Encounter"
-* dataRequirement[=].mustSupport[0] = "type"
-* dataRequirement[=].mustSupport[+] = "location"
-* dataRequirement[=].mustSupport[+] = "period"
-* dataRequirement[=].mustSupport[+] = "status"
-* dataRequirement[=].codeFilter.path = "type"
-* dataRequirement[=].codeFilter.valueSet = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.292"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
-* dataRequirement[+].type = #Encounter
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Encounter"
-* dataRequirement[=].mustSupport[0] = "type"
-* dataRequirement[=].mustSupport[+] = "location"
-* dataRequirement[=].mustSupport[+] = "period"
-* dataRequirement[=].mustSupport[+] = "status"
-* dataRequirement[=].codeFilter.path = "type"
-* dataRequirement[=].codeFilter.valueSet = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.292"
-* dataRequirement[+].type = #Location
-* dataRequirement[=].profile = "http://hl7.org/fhir/StructureDefinition/Location"
+* experimental = false
+* date = "2025-03-05"
+* publisher = "National Healthcare Safety Network (NHSN)"
+* description = "This measure tracks hospital bed capacity including occupied and unoccupied beds across ICU, ED, and Pediatric bed types for emergency response coordination."
+* useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#task "Workflow Task"
+* useContext.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#EMER "emergency"
+* purpose = "To provide situational awareness, support capacity planning, and enable load balancing during normal operations and emergencies."
+// Measure-specific elements
+* scoring = $measure-scoring#continuous-variable
+* type = http://terminology.hl7.org/CodeSystem/measure-type#structure "Structure"
+* improvementNotation = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#increase "Increased score indicates improvement"
+* riskAdjustment = "No risk adjustment applied"
+* rateAggregation = "Aggregate by facility and bed type"
+// Library reference for the CQL library containing the logic
+//* library = "http://hl7.org/fhir/us/safr/Library/BedCapacityLibrary"
+* library = Canonical(BedCapacityLibrary)
+// Extensions - using the correct SAFR URLs
+//* extension[reportingFrequency].url = $reporting-frequency
+//* extension[reportingFrequency].valueCodeableConcept = $ucum#d "per day"
+//* extension[emergencyActivation].url = $emergency-activation
+//* extension[emergencyActivation].valueBoolean = false
+// Add scoring unit using cqfm-scoringUnit extension
+* extension[+].url = $cqfm-scoringUnit
+* extension[=].valueCodeableConcept = $ucum#{Number} "{Number}"
+
+
+///////////// Group AllBeds /////////////
+* group[+].id = "AllBeds-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AllBeds "All Beds Census"  // TODO Replace with a Group Display
+* group[=].description = "All Beds Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AllBeds-initial-population"
+* group[=].population[initialPopulation].description = "All All Beds Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "AllBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "AllBeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of All Beds Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalAllBedsBeds"
+* group[=].population[measureObservation].id = "AllBeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedAllBedsBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "AllBeds-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "AllBeds-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "AllBeds Bed Status"
+* group[=].stratifier[=].description = "Stratifies AllBeds beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "AllBedsBedStatusStratifier"
+
+///////////// Group AdultTotal /////////////
+* group[+].id = "AdultTotal-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultTotal "Adult Total Census"  // TODO Replace with a Group Display
+* group[=].description = "Adult Total Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AdultTotal-initial-population"
+* group[=].population[initialPopulation].description = "All Adult Total Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "AdultTotalInitialPopulation"
+* group[=].population[measurePopulation].id = "AdultTotal-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Adult Total Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalAdultTotalBeds"
+* group[=].population[measureObservation].id = "AdultTotal-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedAdultTotalBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "AdultTotal-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "AdultTotal-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "AdultTotal Bed Status"
+* group[=].stratifier[=].description = "Stratifies AdultTotal beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "AdultTotalBedStatusStratifier"
+
+///////////// Group AdultICU /////////////
+* group[+].id = "AdultICU-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultICU "Adult ICU Census"  // TODO Replace with a Group Display
+* group[=].description = "Adult ICU Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AdultICU-initial-population"
+* group[=].population[initialPopulation].description = "All Adult ICU Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "AdultICUInitialPopulation"
+* group[=].population[measurePopulation].id = "AdultICU-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Adult ICU Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalAdultICUBeds"
+* group[=].population[measureObservation].id = "AdultICU-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedAdultICUBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "AdultICU-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "AdultICU-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "AdultICU Bed Status"
+* group[=].stratifier[=].description = "Stratifies AdultICU beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "AdultICUBedStatusStratifier"
+
+///////////// Group AdultICULOC /////////////
+* group[+].id = "AdultICULOC-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultICULOC "Adult ICU-LOC Census"  // TODO Replace with a Group Display
+* group[=].description = "Adult ICU-LOC Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AdultICULOC-initial-population"
+* group[=].population[initialPopulation].description = "All Adult ICU-LOC Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "AdultICULOCInitialPopulation"
+* group[=].population[measurePopulation].id = "AdultICULOC-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Adult ICU-LOC Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalAdultICULOCBeds"
+* group[=].population[measureObservation].id = "AdultICULOC-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedAdultICULOCBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "AdultICULOC-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "AdultICULOC-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "AdultICULOC Bed Status"
+* group[=].stratifier[=].description = "Stratifies AdultICULOC beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "AdultICULOCBedStatusStratifier"
+
+///////////// Group AdultNonICU /////////////
+* group[+].id = "AdultNonICU-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultNonICU "Adult Non- ICU Census"  // TODO Replace with a Group Display
+* group[=].description = "Adult Non- ICU Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AdultNonICU-initial-population"
+* group[=].population[initialPopulation].description = "All Adult Non- ICU Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "AdultNonICUInitialPopulation"
+* group[=].population[measurePopulation].id = "AdultNonICU-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Adult Non- ICU Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalAdultNonICUBeds"
+* group[=].population[measureObservation].id = "AdultNonICU-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedAdultNonICUBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "AdultNonICU-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "AdultNonICU-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "AdultNonICU Bed Status"
+* group[=].stratifier[=].description = "Stratifies AdultNonICU beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "AdultNonICUBedStatusStratifier"
+
+///////////// Group AdultPCU /////////////
+* group[+].id = "AdultPCU-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultPCU "Adult PCU Census"  // TODO Replace with a Group Display
+* group[=].description = "Adult PCU Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AdultPCU-initial-population"
+* group[=].population[initialPopulation].description = "All Adult PCU Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "AdultPCUInitialPopulation"
+* group[=].population[measurePopulation].id = "AdultPCU-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Adult PCU Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalAdultPCUBeds"
+* group[=].population[measureObservation].id = "AdultPCU-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedAdultPCUBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "AdultPCU-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "AdultPCU-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "AdultPCU Bed Status"
+* group[=].stratifier[=].description = "Stratifies AdultPCU beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "AdultPCUBedStatusStratifier"
+
+///////////// Group AdultMTMS /////////////
+* group[+].id = "AdultMTMS-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultMTMS "Adult MT/MS Census"  // TODO Replace with a Group Display
+* group[=].description = "Adult MT/MS Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AdultMTMS-initial-population"
+* group[=].population[initialPopulation].description = "All Adult MT/MS Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "AdultMTMSInitialPopulation"
+* group[=].population[measurePopulation].id = "AdultMTMS-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Adult MT/MS Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalAdultMTMSBeds"
+* group[=].population[measureObservation].id = "AdultMTMS-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedAdultMTMSBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "AdultMTMS-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "AdultMTMS-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "AdultMTMS Bed Status"
+* group[=].stratifier[=].description = "Stratifies AdultMTMS beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "AdultMTMSBedStatusStratifier"
+
+///////////// Group AdultObs /////////////
+* group[+].id = "AdultObs-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultObs "Adult OBS Census"  // TODO Replace with a Group Display
+* group[=].description = "Adult OBS Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AdultObs-initial-population"
+* group[=].population[initialPopulation].description = "All Adult OBS Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "AdultObsInitialPopulation"
+* group[=].population[measurePopulation].id = "AdultObs-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Adult OBS Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalAdultObsBeds"
+* group[=].population[measureObservation].id = "AdultObs-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedAdultObsBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "AdultObs-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "AdultObs-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "AdultObs Bed Status"
+* group[=].stratifier[=].description = "Stratifies AdultObs beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "AdultObsBedStatusStratifier"
+
+///////////// Group PedsTotal /////////////
+* group[+].id = "PedsTotal-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsTotal "Peds Total Census"  // TODO Replace with a Group Display
+* group[=].description = "Peds Total Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "PedsTotal-initial-population"
+* group[=].population[initialPopulation].description = "All Peds Total Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "PedsTotalInitialPopulation"
+* group[=].population[measurePopulation].id = "PedsTotal-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Peds Total Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalPedsTotalBeds"
+* group[=].population[measureObservation].id = "PedsTotal-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedPedsTotalBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "PedsTotal-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "PedsTotal-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "PedsTotal Bed Status"
+* group[=].stratifier[=].description = "Stratifies PedsTotal beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "PedsTotalBedStatusStratifier"
+
+///////////// Group PedsICU /////////////
+* group[+].id = "PedsICU-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsICU "Peds ICU Census"  // TODO Replace with a Group Display
+* group[=].description = "Peds ICU Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "PedsICU-initial-population"
+* group[=].population[initialPopulation].description = "All Peds ICU Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "PedsICUInitialPopulation"
+* group[=].population[measurePopulation].id = "PedsICU-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Peds ICU Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalPedsICUBeds"
+* group[=].population[measureObservation].id = "PedsICU-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedPedsICUBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "PedsICU-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "PedsICU-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "PedsICU Bed Status"
+* group[=].stratifier[=].description = "Stratifies PedsICU beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "PedsICUBedStatusStratifier"
+
+///////////// Group PedsICULOC /////////////
+* group[+].id = "PedsICULOC-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsICULOC "Peds ICU- LOC Census"  // TODO Replace with a Group Display
+* group[=].description = "Peds ICU- LOC Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "PedsICULOC-initial-population"
+* group[=].population[initialPopulation].description = "All Peds ICU- LOC Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "PedsICULOCInitialPopulation"
+* group[=].population[measurePopulation].id = "PedsICULOC-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Peds ICU- LOC Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalPedsICULOCBeds"
+* group[=].population[measureObservation].id = "PedsICULOC-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedPedsICULOCBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "PedsICULOC-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "PedsICULOC-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "PedsICULOC Bed Status"
+* group[=].stratifier[=].description = "Stratifies PedsICULOC beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "PedsICULOCBedStatusStratifier"
+
+///////////// Group PedsNonICU /////////////
+* group[+].id = "PedsNonICU-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsNonICU "Peds Non- ICU Census"  // TODO Replace with a Group Display
+* group[=].description = "Peds Non- ICU Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "PedsNonICU-initial-population"
+* group[=].population[initialPopulation].description = "All Peds Non- ICU Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "PedsNonICUInitialPopulation"
+* group[=].population[measurePopulation].id = "PedsNonICU-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Peds Non- ICU Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalPedsNonICUBeds"
+* group[=].population[measureObservation].id = "PedsNonICU-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedPedsNonICUBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "PedsNonICU-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "PedsNonICU-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "PedsNonICU Bed Status"
+* group[=].stratifier[=].description = "Stratifies PedsNonICU beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "PedsNonICUBedStatusStratifier"
+
+///////////// Group PedsPCU /////////////
+* group[+].id = "PedsPCU-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsPCU "Peds PCU Census"  // TODO Replace with a Group Display
+* group[=].description = "Peds PCU Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "PedsPCU-initial-population"
+* group[=].population[initialPopulation].description = "All Peds PCU Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "PedsPCUInitialPopulation"
+* group[=].population[measurePopulation].id = "PedsPCU-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Peds PCU Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalPedsPCUBeds"
+* group[=].population[measureObservation].id = "PedsPCU-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedPedsPCUBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "PedsPCU-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "PedsPCU-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "PedsPCU Bed Status"
+* group[=].stratifier[=].description = "Stratifies PedsPCU beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "PedsPCUBedStatusStratifier"
+
+///////////// Group PedsMTMS /////////////
+* group[+].id = "PedsMTMS-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsMTMS "Peds MT/MS Census"  // TODO Replace with a Group Display
+* group[=].description = "Peds MT/MS Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "PedsMTMS-initial-population"
+* group[=].population[initialPopulation].description = "All Peds MT/MS Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "PedsMTMSInitialPopulation"
+* group[=].population[measurePopulation].id = "PedsMTMS-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Peds MT/MS Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalPedsMTMSBeds"
+* group[=].population[measureObservation].id = "PedsMTMS-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedPedsMTMSBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "PedsMTMS-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "PedsMTMS-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "PedsMTMS Bed Status"
+* group[=].stratifier[=].description = "Stratifies PedsMTMS beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "PedsMTMSBedStatusStratifier"
+
+///////////// Group PedsObs /////////////
+* group[+].id = "PedsObs-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsObs "Peds OBS Census"  // TODO Replace with a Group Display
+* group[=].description = "Peds OBS Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "PedsObs-initial-population"
+* group[=].population[initialPopulation].description = "All Peds OBS Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "PedsObsInitialPopulation"
+* group[=].population[measurePopulation].id = "PedsObs-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Peds OBS Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalPedsObsBeds"
+* group[=].population[measureObservation].id = "PedsObs-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedPedsObsBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "PedsObs-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "PedsObs-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "PedsObs Bed Status"
+* group[=].stratifier[=].description = "Stratifies PedsObs beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "PedsObsBedStatusStratifier"
+
+///////////// Group SpecialtyTotal /////////////
+* group[+].id = "SpecialtyTotal-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SpecialtyTotal "Specialty Total Census"  // TODO Replace with a Group Display
+* group[=].description = "Specialty Total Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "SpecialtyTotal-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty Total Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "SpecialtyTotalInitialPopulation"
+* group[=].population[measurePopulation].id = "SpecialtyTotal-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty Total Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalSpecialtyTotalBeds"
+* group[=].population[measureObservation].id = "SpecialtyTotal-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedSpecialtyTotalBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "SpecialtyTotal-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "SpecialtyTotal-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "SpecialtyTotal Bed Status"
+* group[=].stratifier[=].description = "Stratifies SpecialtyTotal beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "SpecialtyTotalBedStatusStratifier"
+
+///////////// Group SpecialtyNonCrib /////////////
+* group[+].id = "SpecialtyNonCrib-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SpecialtyNonCrib "Specialty (Non-Crib) Census"  // TODO Replace with a Group Display
+* group[=].description = "Specialty (Non-Crib) Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "SpecialtyNonCrib-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty (Non-Crib) Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "SpecialtyNonCribInitialPopulation"
+* group[=].population[measurePopulation].id = "SpecialtyNonCrib-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty (Non-Crib) Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalSpecialtyNonCribBeds"
+* group[=].population[measureObservation].id = "SpecialtyNonCrib-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedSpecialtyNonCribBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "SpecialtyNonCrib-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "SpecialtyNonCrib-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "SpecialtyNonCrib Bed Status"
+* group[=].stratifier[=].description = "Stratifies SpecialtyNonCrib beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "SpecialtyNonCribBedStatusStratifier"
+
+///////////// Group OB /////////////
+* group[+].id = "OB-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#OB "Specialty OB Census"  // TODO Replace with a Group Display
+* group[=].description = "Specialty OB Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "OB-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty OB Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "OBInitialPopulation"
+* group[=].population[measurePopulation].id = "OB-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty OB Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalOBBeds"
+* group[=].population[measureObservation].id = "OB-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedOBBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "OB-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "OB-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "OB Bed Status"
+* group[=].stratifier[=].description = "Stratifies OB beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "OBBedStatusStratifier"
+
+///////////// Group NICU /////////////
+* group[+].id = "NICU-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU "Specialty NICU Census"  // TODO Replace with a Group Display
+* group[=].description = "Specialty NICU Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "NICU-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty NICU Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "NICUInitialPopulation"
+* group[=].population[measurePopulation].id = "NICU-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty NICU Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalNICUBeds"
+* group[=].population[measureObservation].id = "NICU-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedNICUBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "NICU-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "NICU-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "NICU Bed Status"
+* group[=].stratifier[=].description = "Stratifies NICU beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "NICUBedStatusStratifier"
+
+///////////// Group NICU4 /////////////
+* group[+].id = "NICU4-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU4 "Specialty NICU 4 Census"  // TODO Replace with a Group Display
+* group[=].description = "Specialty NICU 4 Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "NICU4-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty NICU 4 Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "NICU4InitialPopulation"
+* group[=].population[measurePopulation].id = "NICU4-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty NICU 4 Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalNICU4Beds"
+* group[=].population[measureObservation].id = "NICU4-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedNICU4Beds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "NICU4-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "NICU4-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "NICU4 Bed Status"
+* group[=].stratifier[=].description = "Stratifies NICU4 beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "NICU4BedStatusStratifier"
+
+///////////// Group NICU3 /////////////
+* group[+].id = "NICU3-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU3 "Specialty NICU 3 Occupied"  // TODO Replace with a Group Display
+* group[=].description = "Specialty NICU 3 Occupied bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "NICU3-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty NICU 3 Occupied"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "NICU3InitialPopulation"
+* group[=].population[measurePopulation].id = "NICU3-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty NICU 3 Occupied beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalNICU3Beds"
+* group[=].population[measureObservation].id = "NICU3-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedNICU3Beds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "NICU3-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "NICU3-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "NICU3 Bed Status"
+* group[=].stratifier[=].description = "Stratifies NICU3 beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "NICU3BedStatusStratifier"
+
+///////////// Group NICU3Plus /////////////
+* group[+].id = "NICU3Plus-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU3Plus "Specialty NICU 3 Plus Census"  // TODO Replace with a Group Display
+* group[=].description = "Specialty NICU 3 Plus Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "NICU3Plus-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty NICU 3 Plus Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "NICU3PlusInitialPopulation"
+* group[=].population[measurePopulation].id = "NICU3Plus-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty NICU 3 Plus Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalNICU3PlusBeds"
+* group[=].population[measureObservation].id = "NICU3Plus-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedNICU3PlusBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "NICU3Plus-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "NICU3Plus-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "NICU3Plus Bed Status"
+* group[=].stratifier[=].description = "Stratifies NICU3Plus beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "NICU3PlusBedStatusStratifier"
+
+///////////// Group NICU2 /////////////
+* group[+].id = "NICU2-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU2 "Specialty NICU 2 Census"  // TODO Replace with a Group Display
+* group[=].description = "Specialty NICU 2 Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "NICU2-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty NICU 2 Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "NICU2InitialPopulation"
+* group[=].population[measurePopulation].id = "NICU2-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty NICU 2 Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalNICU2Beds"
+* group[=].population[measureObservation].id = "NICU2-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedNICU2Beds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "NICU2-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "NICU2-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "NICU2 Bed Status"
+* group[=].stratifier[=].description = "Stratifies NICU2 beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "NICU2BedStatusStratifier"
+
+///////////// Group Nursery /////////////
+* group[+].id = "Nursery-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#Nursery "Specialty Nursery Census"  // TODO Replace with a Group Display
+* group[=].description = "Specialty Nursery Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "Nursery-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty Nursery Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "NurseryInitialPopulation"
+* group[=].population[measurePopulation].id = "Nursery-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty Nursery Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalNurseryBeds"
+* group[=].population[measureObservation].id = "Nursery-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedNurseryBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "Nursery-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "Nursery-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "Nursery Bed Status"
+* group[=].stratifier[=].description = "Stratifies Nursery beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "NurseryBedStatusStratifier"
+
+///////////// Group NICU1 /////////////
+* group[+].id = "NICU1-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU1 "Specialty NICU 1 Census"  // TODO Replace with a Group Display
+* group[=].description = "Specialty NICU 1 Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "NICU1-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty NICU 1 Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "NICU1InitialPopulation"
+* group[=].population[measurePopulation].id = "NICU1-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty NICU 1 Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalNICU1Beds"
+* group[=].population[measureObservation].id = "NICU1-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedNICU1Beds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "NICU1-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "NICU1-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "NICU1 Bed Status"
+* group[=].stratifier[=].description = "Stratifies NICU1 beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "NICU1BedStatusStratifier"
+
+///////////// Group AdultPsych /////////////
+* group[+].id = "AdultPsych-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultPsych "Specialty Adult Psych Census"  // TODO Replace with a Group Display
+* group[=].description = "Specialty Adult Psych Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AdultPsych-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty Adult Psych Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "AdultPsychInitialPopulation"
+* group[=].population[measurePopulation].id = "AdultPsych-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty Adult Psych Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalAdultPsychBeds"
+* group[=].population[measureObservation].id = "AdultPsych-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedAdultPsychBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "AdultPsych-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "AdultPsych-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "AdultPsych Bed Status"
+* group[=].stratifier[=].description = "Stratifies AdultPsych beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "AdultPsychBedStatusStratifier"
+
+///////////// Group PedsPsych /////////////
+* group[+].id = "PedsPsych-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsPsych "Specialty Peds Psych Census"  // TODO Replace with a Group Display
+* group[=].description = "Specialty Peds Psych Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "PedsPsych-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty Peds Psych Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "PedsPsychInitialPopulation"
+* group[=].population[measurePopulation].id = "PedsPsych-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty Peds Psych Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalPedsPsychBeds"
+* group[=].population[measureObservation].id = "PedsPsych-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedPedsPsychBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "PedsPsych-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "PedsPsych-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "PedsPsych Bed Status"
+* group[=].stratifier[=].description = "Stratifies PedsPsych beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "PedsPsychBedStatusStratifier"
+
+///////////// Group Rehab /////////////
+* group[+].id = "Rehab-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#Rehab "Specialty Rehab Census"  // TODO Replace with a Group Display
+* group[=].description = "Specialty Rehab Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "Rehab-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty Rehab Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "RehabInitialPopulation"
+* group[=].population[measurePopulation].id = "Rehab-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty Rehab Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalRehabBeds"
+* group[=].population[measureObservation].id = "Rehab-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedRehabBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "Rehab-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "Rehab-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "Rehab Bed Status"
+* group[=].stratifier[=].description = "Stratifies Rehab beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "RehabBedStatusStratifier"
+
+///////////// Group SurgeActiveTotal /////////////
+* group[+].id = "SurgeActiveTotal-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeActiveTotal "Surge Total Active Census"  // TODO Replace with a Group Display
+* group[=].description = "Surge Total Active Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "SurgeActiveTotal-initial-population"
+* group[=].population[initialPopulation].description = "All Surge Total Active Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "SurgeActiveTotalInitialPopulation"
+* group[=].population[measurePopulation].id = "SurgeActiveTotal-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Surge Total Active Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalSurgeActiveTotalBeds"
+* group[=].population[measureObservation].id = "SurgeActiveTotal-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedSurgeActiveTotalBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "SurgeActiveTotal-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "SurgeActiveTotal-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "SurgeActiveTotal Bed Status"
+* group[=].stratifier[=].description = "Stratifies SurgeActiveTotal beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "SurgeActiveTotalBedStatusStratifier"
+
+///////////// Group SurgeInactiveTotal /////////////
+* group[+].id = "SurgeInactiveTotal-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeInactiveTotal "Surge Total Inactive Occupied"  // TODO Replace with a Group Display
+* group[=].description = "Surge Total Inactive Occupied bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "SurgeInactiveTotal-initial-population"
+* group[=].population[initialPopulation].description = "All Surge Total Inactive Occupied"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "SurgeInactiveTotalInitialPopulation"
+* group[=].population[measurePopulation].id = "SurgeInactiveTotal-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Surge Total Inactive Occupied beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalSurgeInactiveTotalBeds"
+* group[=].population[measureObservation].id = "SurgeInactiveTotal-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedSurgeInactiveTotalBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "SurgeInactiveTotal-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "SurgeInactiveTotal-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "SurgeInactiveTotal Bed Status"
+* group[=].stratifier[=].description = "Stratifies SurgeInactiveTotal beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "SurgeInactiveTotalBedStatusStratifier"
+
+///////////// Group SurgeActiveICU /////////////
+* group[+].id = "SurgeActiveICU-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeActiveICU "Surge ICU Active Census"  // TODO Replace with a Group Display
+* group[=].description = "Surge ICU Active Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "SurgeActiveICU-initial-population"
+* group[=].population[initialPopulation].description = "All Surge ICU Active Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "SurgeActiveICUInitialPopulation"
+* group[=].population[measurePopulation].id = "SurgeActiveICU-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Surge ICU Active Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalSurgeActiveICUBeds"
+* group[=].population[measureObservation].id = "SurgeActiveICU-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedSurgeActiveICUBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "SurgeActiveICU-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "SurgeActiveICU-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "SurgeActiveICU Bed Status"
+* group[=].stratifier[=].description = "Stratifies SurgeActiveICU beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "SurgeActiveICUBedStatusStratifier"
+
+///////////// Group SurgeInactiveICU /////////////
+* group[+].id = "SurgeInactiveICU-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeInactiveICU "Surge ICU Inactive Occupied"  // TODO Replace with a Group Display
+* group[=].description = "Surge ICU Inactive Occupied bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "SurgeInactiveICU-initial-population"
+* group[=].population[initialPopulation].description = "All Surge ICU Inactive Occupied"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "SurgeInactiveICUInitialPopulation"
+* group[=].population[measurePopulation].id = "SurgeInactiveICU-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Surge ICU Inactive Occupied beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalSurgeInactiveICUBeds"
+* group[=].population[measureObservation].id = "SurgeInactiveICU-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedSurgeInactiveICUBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "SurgeInactiveICU-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "SurgeInactiveICU-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "SurgeInactiveICU Bed Status"
+* group[=].stratifier[=].description = "Stratifies SurgeInactiveICU beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "SurgeInactiveICUBedStatusStratifier"
+
+///////////// Group SurgeActiveNonICU /////////////
+* group[+].id = "SurgeActiveNonICU-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeActiveNonICU "Surge Non- ICU Active Census"  // TODO Replace with a Group Display
+* group[=].description = "Surge Non- ICU Active Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "SurgeActiveNonICU-initial-population"
+* group[=].population[initialPopulation].description = "All Surge Non- ICU Active Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "SurgeActiveNonICUInitialPopulation"
+* group[=].population[measurePopulation].id = "SurgeActiveNonICU-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Surge Non- ICU Active Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalSurgeActiveNonICUBeds"
+* group[=].population[measureObservation].id = "SurgeActiveNonICU-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedSurgeActiveNonICUBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "SurgeActiveNonICU-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "SurgeActiveNonICU-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "SurgeActiveNonICU Bed Status"
+* group[=].stratifier[=].description = "Stratifies SurgeActiveNonICU beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "SurgeActiveNonICUBedStatusStratifier"
+
+///////////// Group SurgeInactiveNonICU /////////////
+* group[+].id = "SurgeInactiveNonICU-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeInactiveNonICU "Surge Non- ICU Inactive Occupied"  // TODO Replace with a Group Display
+* group[=].description = "Surge Non- ICU Inactive Occupied bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "SurgeInactiveNonICU-initial-population"
+* group[=].population[initialPopulation].description = "All Surge Non- ICU Inactive Occupied"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "SurgeInactiveNonICUInitialPopulation"
+* group[=].population[measurePopulation].id = "SurgeInactiveNonICU-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Surge Non- ICU Inactive Occupied beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalSurgeInactiveNonICUBeds"
+* group[=].population[measureObservation].id = "SurgeInactiveNonICU-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedSurgeInactiveNonICUBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "SurgeInactiveNonICU-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "SurgeInactiveNonICU-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "SurgeInactiveNonICU Bed Status"
+* group[=].stratifier[=].description = "Stratifies SurgeInactiveNonICU beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "SurgeInactiveNonICUBedStatusStratifier"
+
+///////////// Group Burn /////////////
+* group[+].id = "Burn-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#Burn "Burn Bed Census"  // TODO Replace with a Group Display
+* group[=].description = "Burn Bed Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "Burn-initial-population"
+* group[=].population[initialPopulation].description = "All Burn Bed Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "BurnInitialPopulation"
+* group[=].population[measurePopulation].id = "Burn-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Burn Bed Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalBurnBeds"
+* group[=].population[measureObservation].id = "Burn-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedBurnBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "Burn-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "Burn-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "Burn Bed Status"
+* group[=].stratifier[=].description = "Stratifies Burn beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "BurnBedStatusStratifier"
+
+///////////// Group NegativePressure /////////////
+* group[+].id = "NegativePressure-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NegativePressure "Neg Pressure Bed Census"  // TODO Replace with a Group Display
+* group[=].description = "Neg Pressure Bed Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "NegativePressure-initial-population"
+* group[=].population[initialPopulation].description = "All Neg Pressure Bed Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "NegativePressureInitialPopulation"
+* group[=].population[measurePopulation].id = "NegativePressure-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Neg Pressure Bed Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalNegativePressureBeds"
+* group[=].population[measureObservation].id = "NegativePressure-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedNegativePressureBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "NegativePressure-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "NegativePressure-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "NegativePressure Bed Status"
+* group[=].stratifier[=].description = "Stratifies NegativePressure beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "NegativePressureBedStatusStratifier"
+
+///////////// Group AdultED /////////////
+* group[+].id = "AdultED-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultED "Adult ED Total Census"  // TODO Replace with a Group Display
+* group[=].description = "Adult ED Total Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AdultED-initial-population"
+* group[=].population[initialPopulation].description = "All Adult ED Total Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "AdultEDInitialPopulation"
+* group[=].population[measurePopulation].id = "AdultED-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Adult ED Total Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalAdultEDBeds"
+* group[=].population[measureObservation].id = "AdultED-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedAdultEDBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "AdultED-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "AdultED-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "AdultED Bed Status"
+* group[=].stratifier[=].description = "Stratifies AdultED beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "AdultEDBedStatusStratifier"
+
+///////////// Group PedsED /////////////
+* group[+].id = "PedsED-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsED "Peds ED Census"  // TODO Replace with a Group Display
+* group[=].description = "Peds ED Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "PedsED-initial-population"
+* group[=].population[initialPopulation].description = "All Peds ED Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "PedsEDInitialPopulation"
+* group[=].population[measurePopulation].id = "PedsED-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Peds ED Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalPedsEDBeds"
+* group[=].population[measureObservation].id = "PedsED-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedPedsEDBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "PedsED-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "PedsED-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "PedsED Bed Status"
+* group[=].stratifier[=].description = "Stratifies PedsED beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "PedsEDBedStatusStratifier"
+
+///////////// Group TotalED /////////////
+* group[+].id = "TotalED-bed-capacity-group"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#TotalED "Total ED Census"  // TODO Replace with a Group Display
+* group[=].description = "Total ED Census bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "TotalED-initial-population"
+* group[=].population[initialPopulation].description = "All Total ED Census"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.language = #text/cql-identifier
+* group[=].population[initialPopulation].criteria.expression = "TotalEDInitialPopulation"
+* group[=].population[measurePopulation].id = "TotalED-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Total ED Census beds"  // TODO Replace with a Group Display
+* group[=].population[measurePopulation].criteria.language = #text/cql-identifier
+* group[=].population[measurePopulation].criteria.expression = "TotalTotalEDBeds"
+* group[=].population[measureObservation].id = "TotalED-measure-observation"
+* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].criteria.language = #text/cql-identifier
+* group[=].population[measureObservation].criteria.expression = "OccupiedTotalEDBeds"
+* group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
+* group[=].population[measureObservation].extension[=].valueString = "TotalED-measure-population"
+* group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
+* group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
+* group[=].stratifier[+].id = "TotalED-bed-status-stratifier"
+* group[=].stratifier[=].code.text = "TotalED Bed Status"
+* group[=].stratifier[=].description = "Stratifies TotalED beds by occupancy status"
+* group[=].stratifier[=].criteria.language = #text/cql-identifier
+* group[=].stratifier[=].criteria.expression = "TotalEDBedStatusStratifier"
+
+
+
+// Supplemental data elements with required ids
+* supplementalData[+].id = "hospital-type"
+* supplementalData[=].code.text = "Hospital Type"
+* supplementalData[=].description = "Type of healthcare facility"
+* supplementalData[=].criteria.language = #text/cql-identifier
+* supplementalData[=].criteria.expression = "HospitalType"
+* supplementalData[+].id = "geographic-region"
+* supplementalData[=].code.text = "Geographic Region"
+* supplementalData[=].description = "Geographic region of the hospital"
+* supplementalData[=].criteria.language = #text/cql-identifier
+* supplementalData[=].criteria.expression = "GeographicRegion"
