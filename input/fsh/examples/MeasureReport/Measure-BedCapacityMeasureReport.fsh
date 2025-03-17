@@ -67,7 +67,7 @@ TODO, will need output with summary
 * group[=].population[=].count = 182
 * group[=].population[+].id = "AllBeds-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
-* group[=].population[=].count = 177
+* group[=].population[=].count = 5
 * group[=].stratifier[0].id = "AllBeds-bed-status-stratifier"
 * group[=].stratifier[0].code.text = "AllBeds Bed Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
@@ -94,7 +94,7 @@ TODO, will need output with summary
 * group[=].population[=].count = 182
 * group[=].population[+].id = "AdultTotal-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
-* group[=].population[=].count = 177
+* group[=].population[=].count = 5
 * group[=].stratifier[0].id = "AdultTotal-bed-status-stratifier"
 * group[=].stratifier[0].code.text = "AdultTotal Bed Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
@@ -121,7 +121,7 @@ TODO, will need output with summary
 * group[=].population[=].count = 34
 * group[=].population[+].id = "AdultICU-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
-* group[=].population[=].count = 32
+* group[=].population[=].count = 2
 * group[=].stratifier[0].id = "AdultICU-bed-status-stratifier"
 * group[=].stratifier[0].code.text = "AdultICU Bed Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
@@ -148,7 +148,7 @@ TODO, will need output with summary
 * group[=].population[=].count = 35
 * group[=].population[+].id = "AdultICULOC-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
-* group[=].population[=].count = 32
+* group[=].population[=].count = 3
 * group[=].stratifier[0].id = "AdultICULOC-bed-status-stratifier"
 * group[=].stratifier[0].code.text = "AdultICULOC Bed Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
@@ -175,7 +175,7 @@ TODO, will need output with summary
 * group[=].population[=].count = 302
 * group[=].population[+].id = "AdultNonICU-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
-* group[=].population[=].count = 256
+* group[=].population[=].count = 46
 * group[=].stratifier[0].id = "AdultNonICU-bed-status-stratifier"
 * group[=].stratifier[0].code.text = "AdultNonICU Bed Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
@@ -202,7 +202,7 @@ TODO, will need output with summary
 * group[=].population[=].count = 145
 * group[=].population[+].id = "AdultPCU-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
-* group[=].population[=].count = 0
+* group[=].population[=].count = 145
 * group[=].stratifier[0].id = "AdultPCU-bed-status-stratifier"
 * group[=].stratifier[0].code.text = "AdultPCU Bed Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
@@ -229,7 +229,7 @@ TODO, will need output with summary
 * group[=].population[=].count = 3
 * group[=].population[+].id = "AdultMTMS-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
-* group[=].population[=].count = 3
+* group[=].population[=].count = 0
 * group[=].stratifier[0].id = "AdultMTMS-bed-status-stratifier"
 * group[=].stratifier[0].code.text = "AdultMTMS Bed Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
@@ -256,7 +256,7 @@ TODO, will need output with summary
 * group[=].population[=].count = 145
 * group[=].population[+].id = "AdultObs-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
-* group[=].population[=].count = 100
+* group[=].population[=].count = 45
 * group[=].stratifier[0].id = "AdultObs-bed-status-stratifier"
 * group[=].stratifier[0].code.text = "AdultObs Bed Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
@@ -472,7 +472,7 @@ TODO, will need output with summary
 * group[=].population[=].count = 36
 * group[=].population[+].id = "SpecialtyTotal-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
-* group[=].population[=].count = 24
+* group[=].population[=].count = 12
 * group[=].stratifier[0].id = "SpecialtyTotal-bed-status-stratifier"
 * group[=].stratifier[0].code.text = "SpecialtyTotal Bed Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
@@ -742,7 +742,7 @@ TODO, will need output with summary
 * group[=].population[=].count = 20
 * group[=].population[+].id = "AdultPsych-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
-* group[=].population[=].count = 2
+* group[=].population[=].count = 18
 * group[=].stratifier[0].id = "AdultPsych-bed-status-stratifier"
 * group[=].stratifier[0].code.text = "AdultPsych Bed Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
@@ -877,7 +877,7 @@ TODO, will need output with summary
 * group[=].population[=].count = 10
 * group[=].population[+].id = "SurgeActiveICU-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
-* group[=].population[=].count = 2
+* group[=].population[=].count = 8
 * group[=].stratifier[0].id = "SurgeActiveICU-bed-status-stratifier"
 * group[=].stratifier[0].code.text = "SurgeActiveICU Bed Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
@@ -931,7 +931,7 @@ TODO, will need output with summary
 * group[=].population[=].count = 10
 * group[=].population[+].id = "SurgeActiveNonICU-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
-* group[=].population[=].count = 4
+* group[=].population[=].count = 6
 * group[=].stratifier[0].id = "SurgeActiveNonICU-bed-status-stratifier"
 * group[=].stratifier[0].code.text = "SurgeActiveNonICU Bed Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
@@ -985,7 +985,7 @@ TODO, will need output with summary
 * group[=].population[=].count = 10
 * group[=].population[+].id = "Burn-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
-* group[=].population[=].count = 1
+* group[=].population[=].count = 9
 * group[=].stratifier[0].id = "Burn-bed-status-stratifier"
 * group[=].stratifier[0].code.text = "Burn Bed Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
@@ -1039,7 +1039,7 @@ TODO, will need output with summary
 * group[=].population[=].count = 30
 * group[=].population[+].id = "AdultED-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
-* group[=].population[=].count = 10
+* group[=].population[=].count = 20
 * group[=].stratifier[0].id = "AdultED-bed-status-stratifier"
 * group[=].stratifier[0].code.text = "AdultED Bed Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
@@ -1093,7 +1093,7 @@ TODO, will need output with summary
 * group[=].population[=].count = 30
 * group[=].population[+].id = "TotalED-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
-* group[=].population[=].count = 10
+* group[=].population[=].count = 20
 * group[=].stratifier[0].id = "TotalED-bed-status-stratifier"
 * group[=].stratifier[0].code.text = "TotalED Bed Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
