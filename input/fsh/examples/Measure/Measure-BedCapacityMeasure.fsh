@@ -26,7 +26,7 @@ Usage: #example
 * date = "2025-03-05"
 * publisher = "National Healthcare Safety Network (NHSN)"
 * description = "This measure tracks hospital bed capacity including occupied and unoccupied beds across ICU, ED, and Pediatric bed types for emergency response coordination."
-* useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#task "Workflow Task"
+* useContext.code = $usage-context-type#task "Workflow Task"
 * useContext.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#EMER "emergency"
 * purpose = "To provide situational awareness, support capacity planning, and enable load balancing during normal operations and emergencies."
 // Measure-specific elements
@@ -48,1019 +48,1019 @@ Usage: #example
 * extension[=].valueCodeableConcept = $ucum#{Number} "{Number}"
 
 
-///////////// Group AllBeds /////////////
+///////////// Group Beds /////////////
 * group[+].id = "AllBeds-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AllBeds "All Beds Census"  // TODO Replace with a Group Display
-* group[=].description = "All Beds Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "AllBeds-initial-population"
-* group[=].population[initialPopulation].description = "All All Beds Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AllBeds "All Beds"  // TODO Replace with a Group Display
+* group[=].description = "All Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "Beds-initial-population"
+* group[=].population[initialPopulation].description = "All Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "AllBedsInitialPopulation"
-* group[=].population[measurePopulation].id = "AllBeds-measure-population"
-* group[=].population[measurePopulation].description = "Total number of All Beds Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "BedsInitialPopulation"
+* group[=].population[measurePopulation].id = "Beds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of All Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
-* group[=].population[measurePopulation].criteria.expression = "TotalAllBedsBeds"
-* group[=].population[measureObservation].id = "AllBeds-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measurePopulation].criteria.expression = "TotalBeds"
+* group[=].population[measureObservation].id = "Beds-measure-observation"
+* group[=].population[measureObservation].description = "Number of All Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedAllBedsBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedBedsBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "AllBeds-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "Beds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "AllBeds-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "AllBeds Bed Status"
-* group[=].stratifier[=].description = "Stratifies AllBeds beds by occupancy status"
+* group[=].stratifier[+].id = "Beds-status-stratifier"
+* group[=].stratifier[=].code.text = "All Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies All Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "AllBedsBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "BedsStatusStratifier"
 
 ///////////// Group AdultTotal /////////////
 * group[+].id = "AdultTotal-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultTotal "Adult Total Census"  // TODO Replace with a Group Display
-* group[=].description = "Adult Total Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "AdultTotal-initial-population"
-* group[=].population[initialPopulation].description = "All Adult Total Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultTotal "Adult Total Beds"  // TODO Replace with a Group Display
+* group[=].description = "Adult Total Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AdultTotalbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Adult Total Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "AdultTotalInitialPopulation"
-* group[=].population[measurePopulation].id = "AdultTotal-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Adult Total Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "AdultTotalBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "AdultTotalbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Adult Total Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalAdultTotalBeds"
-* group[=].population[measureObservation].id = "AdultTotal-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "AdultTotalbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Adult Total Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedAdultTotalBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedAdultTotalAdultTotalBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "AdultTotal-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "AdultTotalbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "AdultTotal-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "AdultTotal Bed Status"
-* group[=].stratifier[=].description = "Stratifies AdultTotal beds by occupancy status"
+* group[=].stratifier[+].id = "AdultTotal-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Adult Total Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Adult Total Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "AdultTotalBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "AdultTotalBedsStatusStratifier"
 
 ///////////// Group AdultICU /////////////
 * group[+].id = "AdultICU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultICU "Adult ICU Census"  // TODO Replace with a Group Display
-* group[=].description = "Adult ICU Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "AdultICU-initial-population"
-* group[=].population[initialPopulation].description = "All Adult ICU Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultICU "Adult ICU Beds"  // TODO Replace with a Group Display
+* group[=].description = "Adult ICU Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AdultICUbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Adult ICU Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "AdultICUInitialPopulation"
-* group[=].population[measurePopulation].id = "AdultICU-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Adult ICU Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "AdultICUBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "AdultICUbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Adult ICU Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalAdultICUBeds"
-* group[=].population[measureObservation].id = "AdultICU-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "AdultICUbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Adult ICU Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedAdultICUBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedAdultICUAdultICUBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "AdultICU-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "AdultICUbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "AdultICU-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "AdultICU Bed Status"
-* group[=].stratifier[=].description = "Stratifies AdultICU beds by occupancy status"
+* group[=].stratifier[+].id = "AdultICU-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Adult ICU Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Adult ICU Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "AdultICUBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "AdultICUBedsStatusStratifier"
 
 ///////////// Group AdultICULOC /////////////
 * group[+].id = "AdultICULOC-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultICULOC "Adult ICU-LOC Census"  // TODO Replace with a Group Display
-* group[=].description = "Adult ICU-LOC Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "AdultICULOC-initial-population"
-* group[=].population[initialPopulation].description = "All Adult ICU-LOC Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultICULOC "Adult ICU-LOC Beds"  // TODO Replace with a Group Display
+* group[=].description = "Adult ICU-LOC Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AdultICULOCbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Adult ICU-LOC Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "AdultICULOCInitialPopulation"
-* group[=].population[measurePopulation].id = "AdultICULOC-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Adult ICU-LOC Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "AdultICULOCBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "AdultICULOCbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Adult ICU-LOC Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalAdultICULOCBeds"
-* group[=].population[measureObservation].id = "AdultICULOC-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "AdultICULOCbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Adult ICU-LOC Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedAdultICULOCBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedAdultICULOCAdultICULOCBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "AdultICULOC-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "AdultICULOCbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "AdultICULOC-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "AdultICULOC Bed Status"
-* group[=].stratifier[=].description = "Stratifies AdultICULOC beds by occupancy status"
+* group[=].stratifier[+].id = "AdultICULOC-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Adult ICU-LOC Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Adult ICU-LOC Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "AdultICULOCBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "AdultICULOCBedsStatusStratifier"
 
 ///////////// Group AdultNonICU /////////////
 * group[+].id = "AdultNonICU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultNonICU "Adult Non- ICU Census"  // TODO Replace with a Group Display
-* group[=].description = "Adult Non- ICU Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "AdultNonICU-initial-population"
-* group[=].population[initialPopulation].description = "All Adult Non- ICU Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultNonICU "Adult Non-ICU Beds"  // TODO Replace with a Group Display
+* group[=].description = "Adult Non-ICU Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AdultNonICUbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Adult Non-ICU Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "AdultNonICUInitialPopulation"
-* group[=].population[measurePopulation].id = "AdultNonICU-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Adult Non- ICU Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "AdultNonICUBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "AdultNonICUbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Adult Non-ICU Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalAdultNonICUBeds"
-* group[=].population[measureObservation].id = "AdultNonICU-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "AdultNonICUbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Adult Non-ICU Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedAdultNonICUBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedAdultNonICUAdultNonICUBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "AdultNonICU-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "AdultNonICUbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "AdultNonICU-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "AdultNonICU Bed Status"
-* group[=].stratifier[=].description = "Stratifies AdultNonICU beds by occupancy status"
+* group[=].stratifier[+].id = "AdultNonICU-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Adult Non-ICU Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Adult Non-ICU Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "AdultNonICUBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "AdultNonICUBedsStatusStratifier"
 
 ///////////// Group AdultPCU /////////////
 * group[+].id = "AdultPCU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultPCU "Adult PCU Census"  // TODO Replace with a Group Display
-* group[=].description = "Adult PCU Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "AdultPCU-initial-population"
-* group[=].population[initialPopulation].description = "All Adult PCU Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultPCU "Adult PCU Beds"  // TODO Replace with a Group Display
+* group[=].description = "Adult PCU Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AdultPCUbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Adult PCU Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "AdultPCUInitialPopulation"
-* group[=].population[measurePopulation].id = "AdultPCU-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Adult PCU Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "AdultPCUBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "AdultPCUbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Adult PCU Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalAdultPCUBeds"
-* group[=].population[measureObservation].id = "AdultPCU-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "AdultPCUbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Adult PCU Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedAdultPCUBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedAdultPCUAdultPCUBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "AdultPCU-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "AdultPCUbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "AdultPCU-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "AdultPCU Bed Status"
-* group[=].stratifier[=].description = "Stratifies AdultPCU beds by occupancy status"
+* group[=].stratifier[+].id = "AdultPCU-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Adult PCU Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Adult PCU Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "AdultPCUBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "AdultPCUBedsStatusStratifier"
 
 ///////////// Group AdultMTMS /////////////
 * group[+].id = "AdultMTMS-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultMTMS "Adult MT/MS Census"  // TODO Replace with a Group Display
-* group[=].description = "Adult MT/MS Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "AdultMTMS-initial-population"
-* group[=].population[initialPopulation].description = "All Adult MT/MS Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultMTMS "Adult MT/MS Beds"  // TODO Replace with a Group Display
+* group[=].description = "Adult MT/MS Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AdultMTMSbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Adult MT/MS Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "AdultMTMSInitialPopulation"
-* group[=].population[measurePopulation].id = "AdultMTMS-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Adult MT/MS Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "AdultMTMSBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "AdultMTMSbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Adult MT/MS Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalAdultMTMSBeds"
-* group[=].population[measureObservation].id = "AdultMTMS-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "AdultMTMSbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Adult MT/MS Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedAdultMTMSBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedAdultMTMSAdultMTMSBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "AdultMTMS-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "AdultMTMSbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "AdultMTMS-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "AdultMTMS Bed Status"
-* group[=].stratifier[=].description = "Stratifies AdultMTMS beds by occupancy status"
+* group[=].stratifier[+].id = "AdultMTMS-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Adult MT/MS Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Adult MT/MS Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "AdultMTMSBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "AdultMTMSBedsStatusStratifier"
 
 ///////////// Group AdultObs /////////////
 * group[+].id = "AdultObs-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultObs "Adult OBS Census"  // TODO Replace with a Group Display
-* group[=].description = "Adult OBS Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "AdultObs-initial-population"
-* group[=].population[initialPopulation].description = "All Adult OBS Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultObs "Adult OBS Beds"  // TODO Replace with a Group Display
+* group[=].description = "Adult OBS Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AdultObsbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Adult OBS Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "AdultObsInitialPopulation"
-* group[=].population[measurePopulation].id = "AdultObs-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Adult OBS Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "AdultObsBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "AdultObsbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Adult OBS Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalAdultObsBeds"
-* group[=].population[measureObservation].id = "AdultObs-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "AdultObsbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Adult OBS Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedAdultObsBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedAdultObsAdultObsBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "AdultObs-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "AdultObsbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "AdultObs-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "AdultObs Bed Status"
-* group[=].stratifier[=].description = "Stratifies AdultObs beds by occupancy status"
+* group[=].stratifier[+].id = "AdultObs-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Adult OBS Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Adult OBS Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "AdultObsBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "AdultObsBedsStatusStratifier"
 
 ///////////// Group PedsTotal /////////////
 * group[+].id = "PedsTotal-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsTotal "Peds Total Census"  // TODO Replace with a Group Display
-* group[=].description = "Peds Total Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "PedsTotal-initial-population"
-* group[=].population[initialPopulation].description = "All Peds Total Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsTotal "Peds Total Beds"  // TODO Replace with a Group Display
+* group[=].description = "Peds Total Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "PedsTotalbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Peds Total Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "PedsTotalInitialPopulation"
-* group[=].population[measurePopulation].id = "PedsTotal-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Peds Total Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "PedsTotalBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "PedsTotalbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Peds Total Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalPedsTotalBeds"
-* group[=].population[measureObservation].id = "PedsTotal-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "PedsTotalbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Peds Total Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedPedsTotalBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedPedsTotalPedsTotalBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "PedsTotal-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "PedsTotalbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "PedsTotal-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "PedsTotal Bed Status"
-* group[=].stratifier[=].description = "Stratifies PedsTotal beds by occupancy status"
+* group[=].stratifier[+].id = "PedsTotal-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Peds Total Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Peds Total Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "PedsTotalBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "PedsTotalBedsStatusStratifier"
 
 ///////////// Group PedsICU /////////////
 * group[+].id = "PedsICU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsICU "Peds ICU Census"  // TODO Replace with a Group Display
-* group[=].description = "Peds ICU Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "PedsICU-initial-population"
-* group[=].population[initialPopulation].description = "All Peds ICU Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsICU "Peds ICU Beds"  // TODO Replace with a Group Display
+* group[=].description = "Peds ICU Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "PedsICUbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Peds ICU Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "PedsICUInitialPopulation"
-* group[=].population[measurePopulation].id = "PedsICU-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Peds ICU Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "PedsICUBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "PedsICUbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Peds ICU Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalPedsICUBeds"
-* group[=].population[measureObservation].id = "PedsICU-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "PedsICUbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Peds ICU Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedPedsICUBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedPedsICUPedsICUBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "PedsICU-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "PedsICUbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "PedsICU-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "PedsICU Bed Status"
-* group[=].stratifier[=].description = "Stratifies PedsICU beds by occupancy status"
+* group[=].stratifier[+].id = "PedsICU-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Peds ICU Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Peds ICU Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "PedsICUBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "PedsICUBedsStatusStratifier"
 
 ///////////// Group PedsICULOC /////////////
 * group[+].id = "PedsICULOC-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsICULOC "Peds ICU- LOC Census"  // TODO Replace with a Group Display
-* group[=].description = "Peds ICU- LOC Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "PedsICULOC-initial-population"
-* group[=].population[initialPopulation].description = "All Peds ICU- LOC Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsICULOC "Peds ICU-LOC Beds"  // TODO Replace with a Group Display
+* group[=].description = "Peds ICU-LOC Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "PedsICULOCbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Peds ICU-LOC Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "PedsICULOCInitialPopulation"
-* group[=].population[measurePopulation].id = "PedsICULOC-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Peds ICU- LOC Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "PedsICULOCBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "PedsICULOCbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Peds ICU-LOC Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalPedsICULOCBeds"
-* group[=].population[measureObservation].id = "PedsICULOC-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "PedsICULOCbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Peds ICU-LOC Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedPedsICULOCBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedPedsICULOCPedsICULOCBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "PedsICULOC-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "PedsICULOCbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "PedsICULOC-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "PedsICULOC Bed Status"
-* group[=].stratifier[=].description = "Stratifies PedsICULOC beds by occupancy status"
+* group[=].stratifier[+].id = "PedsICULOC-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Peds ICU-LOC Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Peds ICU-LOC Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "PedsICULOCBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "PedsICULOCBedsStatusStratifier"
 
 ///////////// Group PedsNonICU /////////////
 * group[+].id = "PedsNonICU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsNonICU "Peds Non- ICU Census"  // TODO Replace with a Group Display
-* group[=].description = "Peds Non- ICU Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "PedsNonICU-initial-population"
-* group[=].population[initialPopulation].description = "All Peds Non- ICU Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsNonICU "Peds Non-ICU Beds"  // TODO Replace with a Group Display
+* group[=].description = "Peds Non-ICU Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "PedsNonICUbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Peds Non-ICU Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "PedsNonICUInitialPopulation"
-* group[=].population[measurePopulation].id = "PedsNonICU-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Peds Non- ICU Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "PedsNonICUBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "PedsNonICUbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Peds Non-ICU Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalPedsNonICUBeds"
-* group[=].population[measureObservation].id = "PedsNonICU-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "PedsNonICUbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Peds Non-ICU Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedPedsNonICUBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedPedsNonICUPedsNonICUBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "PedsNonICU-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "PedsNonICUbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "PedsNonICU-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "PedsNonICU Bed Status"
-* group[=].stratifier[=].description = "Stratifies PedsNonICU beds by occupancy status"
+* group[=].stratifier[+].id = "PedsNonICU-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Peds Non-ICU Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Peds Non-ICU Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "PedsNonICUBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "PedsNonICUBedsStatusStratifier"
 
 ///////////// Group PedsPCU /////////////
 * group[+].id = "PedsPCU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsPCU "Peds PCU Census"  // TODO Replace with a Group Display
-* group[=].description = "Peds PCU Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "PedsPCU-initial-population"
-* group[=].population[initialPopulation].description = "All Peds PCU Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsPCU "Peds PCU Beds"  // TODO Replace with a Group Display
+* group[=].description = "Peds PCU Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "PedsPCUbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Peds PCU Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "PedsPCUInitialPopulation"
-* group[=].population[measurePopulation].id = "PedsPCU-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Peds PCU Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "PedsPCUBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "PedsPCUbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Peds PCU Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalPedsPCUBeds"
-* group[=].population[measureObservation].id = "PedsPCU-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "PedsPCUbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Peds PCU Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedPedsPCUBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedPedsPCUPedsPCUBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "PedsPCU-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "PedsPCUbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "PedsPCU-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "PedsPCU Bed Status"
-* group[=].stratifier[=].description = "Stratifies PedsPCU beds by occupancy status"
+* group[=].stratifier[+].id = "PedsPCU-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Peds PCU Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Peds PCU Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "PedsPCUBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "PedsPCUBedsStatusStratifier"
 
 ///////////// Group PedsMTMS /////////////
 * group[+].id = "PedsMTMS-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsMTMS "Peds MT/MS Census"  // TODO Replace with a Group Display
-* group[=].description = "Peds MT/MS Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "PedsMTMS-initial-population"
-* group[=].population[initialPopulation].description = "All Peds MT/MS Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsMTMS "Peds MT/MS Beds"  // TODO Replace with a Group Display
+* group[=].description = "Peds MT/MS Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "PedsMTMSbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Peds MT/MS Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "PedsMTMSInitialPopulation"
-* group[=].population[measurePopulation].id = "PedsMTMS-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Peds MT/MS Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "PedsMTMSBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "PedsMTMSbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Peds MT/MS Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalPedsMTMSBeds"
-* group[=].population[measureObservation].id = "PedsMTMS-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "PedsMTMSbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Peds MT/MS Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedPedsMTMSBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedPedsMTMSPedsMTMSBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "PedsMTMS-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "PedsMTMSbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "PedsMTMS-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "PedsMTMS Bed Status"
-* group[=].stratifier[=].description = "Stratifies PedsMTMS beds by occupancy status"
+* group[=].stratifier[+].id = "PedsMTMS-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Peds MT/MS Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Peds MT/MS Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "PedsMTMSBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "PedsMTMSBedsStatusStratifier"
 
 ///////////// Group PedsObs /////////////
 * group[+].id = "PedsObs-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsObs "Peds OBS Census"  // TODO Replace with a Group Display
-* group[=].description = "Peds OBS Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "PedsObs-initial-population"
-* group[=].population[initialPopulation].description = "All Peds OBS Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsObs "Peds OBS Beds"  // TODO Replace with a Group Display
+* group[=].description = "Peds OBS Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "PedsObsbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Peds OBS Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "PedsObsInitialPopulation"
-* group[=].population[measurePopulation].id = "PedsObs-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Peds OBS Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "PedsObsBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "PedsObsbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Peds OBS Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalPedsObsBeds"
-* group[=].population[measureObservation].id = "PedsObs-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "PedsObsbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Peds OBS Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedPedsObsBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedPedsObsPedsObsBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "PedsObs-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "PedsObsbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "PedsObs-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "PedsObs Bed Status"
-* group[=].stratifier[=].description = "Stratifies PedsObs beds by occupancy status"
+* group[=].stratifier[+].id = "PedsObs-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Peds OBS Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Peds OBS Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "PedsObsBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "PedsObsBedsStatusStratifier"
 
 ///////////// Group SpecialtyTotal /////////////
 * group[+].id = "SpecialtyTotal-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#SpecialtyTotal "Specialty Total Census"  // TODO Replace with a Group Display
-* group[=].description = "Specialty Total Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "SpecialtyTotal-initial-population"
-* group[=].population[initialPopulation].description = "All Specialty Total Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SpecialtyTotal "Specialty Total Beds"  // TODO Replace with a Group Display
+* group[=].description = "Specialty Total Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "SpecialtyTotalbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty Total Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "SpecialtyTotalInitialPopulation"
-* group[=].population[measurePopulation].id = "SpecialtyTotal-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Specialty Total Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "SpecialtyTotalBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "SpecialtyTotalbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty Total Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalSpecialtyTotalBeds"
-* group[=].population[measureObservation].id = "SpecialtyTotal-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "SpecialtyTotalbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Specialty Total Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedSpecialtyTotalBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedSpecialtyTotalSpecialtyTotalBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "SpecialtyTotal-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "SpecialtyTotalbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "SpecialtyTotal-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "SpecialtyTotal Bed Status"
-* group[=].stratifier[=].description = "Stratifies SpecialtyTotal beds by occupancy status"
+* group[=].stratifier[+].id = "SpecialtyTotal-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Specialty Total Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Specialty Total Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "SpecialtyTotalBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "SpecialtyTotalBedsStatusStratifier"
 
 ///////////// Group SpecialtyNonCrib /////////////
 * group[+].id = "SpecialtyNonCrib-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#SpecialtyNonCrib "Specialty (Non-Crib) Census"  // TODO Replace with a Group Display
-* group[=].description = "Specialty (Non-Crib) Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "SpecialtyNonCrib-initial-population"
-* group[=].population[initialPopulation].description = "All Specialty (Non-Crib) Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SpecialtyNonCrib "Specialty (Non-Crib) Beds"  // TODO Replace with a Group Display
+* group[=].description = "Specialty (Non-Crib) Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "SpecialtyNonCribbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty (Non-Crib) Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "SpecialtyNonCribInitialPopulation"
-* group[=].population[measurePopulation].id = "SpecialtyNonCrib-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Specialty (Non-Crib) Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "SpecialtyNonCribBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "SpecialtyNonCribbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty (Non-Crib) Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalSpecialtyNonCribBeds"
-* group[=].population[measureObservation].id = "SpecialtyNonCrib-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "SpecialtyNonCribbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Specialty (Non-Crib) Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedSpecialtyNonCribBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedSpecialtyNonCribSpecialtyNonCribBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "SpecialtyNonCrib-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "SpecialtyNonCribbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "SpecialtyNonCrib-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "SpecialtyNonCrib Bed Status"
-* group[=].stratifier[=].description = "Stratifies SpecialtyNonCrib beds by occupancy status"
+* group[=].stratifier[+].id = "SpecialtyNonCrib-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Specialty (Non-Crib) Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Specialty (Non-Crib) Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "SpecialtyNonCribBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "SpecialtyNonCribBedsStatusStratifier"
 
 ///////////// Group OB /////////////
 * group[+].id = "OB-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#OB "Specialty OB Census"  // TODO Replace with a Group Display
-* group[=].description = "Specialty OB Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "OB-initial-population"
-* group[=].population[initialPopulation].description = "All Specialty OB Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#OB "Specialty OB Beds"  // TODO Replace with a Group Display
+* group[=].description = "Specialty OB Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "OBbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty OB Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "OBInitialPopulation"
-* group[=].population[measurePopulation].id = "OB-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Specialty OB Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "OBBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "OBbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty OB Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalOBBeds"
-* group[=].population[measureObservation].id = "OB-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "OBbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Specialty OB Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedOBBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedOBOBBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "OB-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "OBbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "OB-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "OB Bed Status"
-* group[=].stratifier[=].description = "Stratifies OB beds by occupancy status"
+* group[=].stratifier[+].id = "OB-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Specialty OB Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Specialty OB Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "OBBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "OBBedsStatusStratifier"
 
 ///////////// Group NICU /////////////
 * group[+].id = "NICU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU "Specialty NICU Census"  // TODO Replace with a Group Display
-* group[=].description = "Specialty NICU Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "NICU-initial-population"
-* group[=].population[initialPopulation].description = "All Specialty NICU Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU "Specialty NICU Beds"  // TODO Replace with a Group Display
+* group[=].description = "Specialty NICU Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "NICUbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty NICU Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "NICUInitialPopulation"
-* group[=].population[measurePopulation].id = "NICU-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Specialty NICU Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "NICUBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "NICUbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty NICU Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalNICUBeds"
-* group[=].population[measureObservation].id = "NICU-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "NICUbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Specialty NICU Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedNICUBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedNICUNICUBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "NICU-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "NICUbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "NICU-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "NICU Bed Status"
-* group[=].stratifier[=].description = "Stratifies NICU beds by occupancy status"
+* group[=].stratifier[+].id = "NICU-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Specialty NICU Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Specialty NICU Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "NICUBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "NICUBedsStatusStratifier"
 
 ///////////// Group NICU4 /////////////
 * group[+].id = "NICU4-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU4 "Specialty NICU 4 Census"  // TODO Replace with a Group Display
-* group[=].description = "Specialty NICU 4 Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "NICU4-initial-population"
-* group[=].population[initialPopulation].description = "All Specialty NICU 4 Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU4 "Specialty NICU 4 Beds"  // TODO Replace with a Group Display
+* group[=].description = "Specialty NICU 4 Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "NICU4beds-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty NICU 4 Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "NICU4InitialPopulation"
-* group[=].population[measurePopulation].id = "NICU4-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Specialty NICU 4 Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "NICU4BedsInitialPopulation"
+* group[=].population[measurePopulation].id = "NICU4beds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty NICU 4 Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalNICU4Beds"
-* group[=].population[measureObservation].id = "NICU4-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "NICU4beds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Specialty NICU 4 Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedNICU4Beds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedNICU4NICU4Beds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "NICU4-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "NICU4beds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "NICU4-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "NICU4 Bed Status"
-* group[=].stratifier[=].description = "Stratifies NICU4 beds by occupancy status"
+* group[=].stratifier[+].id = "NICU4-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Specialty NICU 4 Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Specialty NICU 4 Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "NICU4BedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "NICU4BedsStatusStratifier"
 
 ///////////// Group NICU3 /////////////
 * group[+].id = "NICU3-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU3 "Specialty NICU 3 Occupied"  // TODO Replace with a Group Display
-* group[=].description = "Specialty NICU 3 Occupied bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "NICU3-initial-population"
-* group[=].population[initialPopulation].description = "All Specialty NICU 3 Occupied"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU3 "Specialty NICU 3 Occupied Beds"  // TODO Replace with a Group Display
+* group[=].description = "Specialty NICU 3 Occupied Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "NICU3beds-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty NICU 3 Occupied Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "NICU3InitialPopulation"
-* group[=].population[measurePopulation].id = "NICU3-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Specialty NICU 3 Occupied beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "NICU3BedsInitialPopulation"
+* group[=].population[measurePopulation].id = "NICU3beds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty NICU 3 Occupied Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalNICU3Beds"
-* group[=].population[measureObservation].id = "NICU3-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "NICU3beds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Specialty NICU 3 Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedNICU3Beds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedNICU3NICU3Beds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "NICU3-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "NICU3beds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "NICU3-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "NICU3 Bed Status"
-* group[=].stratifier[=].description = "Stratifies NICU3 beds by occupancy status"
+* group[=].stratifier[+].id = "NICU3-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Specialty NICU 3 Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Specialty NICU 3 Occupied Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "NICU3BedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "NICU3BedsStatusStratifier"
 
 ///////////// Group NICU3Plus /////////////
 * group[+].id = "NICU3Plus-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU3Plus "Specialty NICU 3 Plus Census"  // TODO Replace with a Group Display
-* group[=].description = "Specialty NICU 3 Plus Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "NICU3Plus-initial-population"
-* group[=].population[initialPopulation].description = "All Specialty NICU 3 Plus Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU3Plus "Specialty NICU 3 Plus Beds"  // TODO Replace with a Group Display
+* group[=].description = "Specialty NICU 3 Plus Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "NICU3Plusbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty NICU 3 Plus Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "NICU3PlusInitialPopulation"
-* group[=].population[measurePopulation].id = "NICU3Plus-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Specialty NICU 3 Plus Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "NICU3PlusBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "NICU3Plusbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty NICU 3 Plus Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalNICU3PlusBeds"
-* group[=].population[measureObservation].id = "NICU3Plus-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "NICU3Plusbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Specialty NICU 3 Plus Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedNICU3PlusBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedNICU3PlusNICU3PlusBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "NICU3Plus-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "NICU3Plusbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "NICU3Plus-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "NICU3Plus Bed Status"
-* group[=].stratifier[=].description = "Stratifies NICU3Plus beds by occupancy status"
+* group[=].stratifier[+].id = "NICU3Plus-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Specialty NICU 3 Plus Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Specialty NICU 3 Plus Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "NICU3PlusBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "NICU3PlusBedsStatusStratifier"
 
 ///////////// Group NICU2 /////////////
 * group[+].id = "NICU2-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU2 "Specialty NICU 2 Census"  // TODO Replace with a Group Display
-* group[=].description = "Specialty NICU 2 Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "NICU2-initial-population"
-* group[=].population[initialPopulation].description = "All Specialty NICU 2 Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU2 "Specialty NICU 2 Beds"  // TODO Replace with a Group Display
+* group[=].description = "Specialty NICU 2 Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "NICU2beds-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty NICU 2 Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "NICU2InitialPopulation"
-* group[=].population[measurePopulation].id = "NICU2-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Specialty NICU 2 Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "NICU2BedsInitialPopulation"
+* group[=].population[measurePopulation].id = "NICU2beds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty NICU 2 Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalNICU2Beds"
-* group[=].population[measureObservation].id = "NICU2-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "NICU2beds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Specialty NICU 2 Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedNICU2Beds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedNICU2NICU2Beds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "NICU2-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "NICU2beds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "NICU2-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "NICU2 Bed Status"
-* group[=].stratifier[=].description = "Stratifies NICU2 beds by occupancy status"
+* group[=].stratifier[+].id = "NICU2-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Specialty NICU 2 Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Specialty NICU 2 Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "NICU2BedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "NICU2BedsStatusStratifier"
 
 ///////////// Group Nursery /////////////
 * group[+].id = "Nursery-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#Nursery "Specialty Nursery Census"  // TODO Replace with a Group Display
-* group[=].description = "Specialty Nursery Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "Nursery-initial-population"
-* group[=].population[initialPopulation].description = "All Specialty Nursery Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#Nursery "Specialty Nursery Beds"  // TODO Replace with a Group Display
+* group[=].description = "Specialty Nursery Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "Nurserybeds-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty Nursery Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "NurseryInitialPopulation"
-* group[=].population[measurePopulation].id = "Nursery-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Specialty Nursery Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "NurseryBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "Nurserybeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty Nursery Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalNurseryBeds"
-* group[=].population[measureObservation].id = "Nursery-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "Nurserybeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Specialty Nursery Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedNurseryBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedNurseryNurseryBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "Nursery-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "Nurserybeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "Nursery-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "Nursery Bed Status"
-* group[=].stratifier[=].description = "Stratifies Nursery beds by occupancy status"
+* group[=].stratifier[+].id = "Nursery-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Specialty Nursery Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Specialty Nursery Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "NurseryBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "NurseryBedsStatusStratifier"
 
 ///////////// Group NICU1 /////////////
 * group[+].id = "NICU1-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU1 "Specialty NICU 1 Census"  // TODO Replace with a Group Display
-* group[=].description = "Specialty NICU 1 Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "NICU1-initial-population"
-* group[=].population[initialPopulation].description = "All Specialty NICU 1 Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU1 "Specialty NICU 1 Beds"  // TODO Replace with a Group Display
+* group[=].description = "Specialty NICU 1 Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "NICU1beds-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty NICU 1 Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "NICU1InitialPopulation"
-* group[=].population[measurePopulation].id = "NICU1-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Specialty NICU 1 Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "NICU1BedsInitialPopulation"
+* group[=].population[measurePopulation].id = "NICU1beds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty NICU 1 Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalNICU1Beds"
-* group[=].population[measureObservation].id = "NICU1-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "NICU1beds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Specialty NICU 1 Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedNICU1Beds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedNICU1NICU1Beds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "NICU1-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "NICU1beds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "NICU1-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "NICU1 Bed Status"
-* group[=].stratifier[=].description = "Stratifies NICU1 beds by occupancy status"
+* group[=].stratifier[+].id = "NICU1-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Specialty NICU 1 Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Specialty NICU 1 Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "NICU1BedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "NICU1BedsStatusStratifier"
 
 ///////////// Group AdultPsych /////////////
 * group[+].id = "AdultPsych-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultPsych "Specialty Adult Psych Census"  // TODO Replace with a Group Display
-* group[=].description = "Specialty Adult Psych Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "AdultPsych-initial-population"
-* group[=].population[initialPopulation].description = "All Specialty Adult Psych Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultPsych "Specialty Adult Psych Beds"  // TODO Replace with a Group Display
+* group[=].description = "Specialty Adult Psych Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AdultPsychbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty Adult Psych Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "AdultPsychInitialPopulation"
-* group[=].population[measurePopulation].id = "AdultPsych-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Specialty Adult Psych Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "AdultPsychBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "AdultPsychbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty Adult Psych Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalAdultPsychBeds"
-* group[=].population[measureObservation].id = "AdultPsych-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "AdultPsychbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Specialty Adult Psych Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedAdultPsychBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedAdultPsychAdultPsychBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "AdultPsych-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "AdultPsychbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "AdultPsych-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "AdultPsych Bed Status"
-* group[=].stratifier[=].description = "Stratifies AdultPsych beds by occupancy status"
+* group[=].stratifier[+].id = "AdultPsych-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Specialty Adult Psych Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Specialty Adult Psych Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "AdultPsychBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "AdultPsychBedsStatusStratifier"
 
 ///////////// Group PedsPsych /////////////
 * group[+].id = "PedsPsych-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsPsych "Specialty Peds Psych Census"  // TODO Replace with a Group Display
-* group[=].description = "Specialty Peds Psych Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "PedsPsych-initial-population"
-* group[=].population[initialPopulation].description = "All Specialty Peds Psych Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsPsych "Specialty Peds Psych Beds"  // TODO Replace with a Group Display
+* group[=].description = "Specialty Peds Psych Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "PedsPsychbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty Peds Psych Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "PedsPsychInitialPopulation"
-* group[=].population[measurePopulation].id = "PedsPsych-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Specialty Peds Psych Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "PedsPsychBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "PedsPsychbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty Peds Psych Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalPedsPsychBeds"
-* group[=].population[measureObservation].id = "PedsPsych-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "PedsPsychbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Specialty Peds Psych Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedPedsPsychBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedPedsPsychPedsPsychBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "PedsPsych-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "PedsPsychbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "PedsPsych-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "PedsPsych Bed Status"
-* group[=].stratifier[=].description = "Stratifies PedsPsych beds by occupancy status"
+* group[=].stratifier[+].id = "PedsPsych-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Specialty Peds Psych Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Specialty Peds Psych Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "PedsPsychBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "PedsPsychBedsStatusStratifier"
 
 ///////////// Group Rehab /////////////
 * group[+].id = "Rehab-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#Rehab "Specialty Rehab Census"  // TODO Replace with a Group Display
-* group[=].description = "Specialty Rehab Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "Rehab-initial-population"
-* group[=].population[initialPopulation].description = "All Specialty Rehab Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#Rehab "Specialty Rehab Beds"  // TODO Replace with a Group Display
+* group[=].description = "Specialty Rehab Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "Rehabbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Specialty Rehab Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "RehabInitialPopulation"
-* group[=].population[measurePopulation].id = "Rehab-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Specialty Rehab Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "RehabBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "Rehabbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Specialty Rehab Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalRehabBeds"
-* group[=].population[measureObservation].id = "Rehab-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "Rehabbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Specialty Rehab Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedRehabBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedRehabRehabBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "Rehab-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "Rehabbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "Rehab-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "Rehab Bed Status"
-* group[=].stratifier[=].description = "Stratifies Rehab beds by occupancy status"
+* group[=].stratifier[+].id = "Rehab-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Specialty Rehab Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Specialty Rehab Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "RehabBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "RehabBedsStatusStratifier"
 
 ///////////// Group SurgeActiveTotal /////////////
 * group[+].id = "SurgeActiveTotal-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeActiveTotal "Surge Total Active Census"  // TODO Replace with a Group Display
-* group[=].description = "Surge Total Active Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "SurgeActiveTotal-initial-population"
-* group[=].population[initialPopulation].description = "All Surge Total Active Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeActiveTotal "Surge Total Active Beds"  // TODO Replace with a Group Display
+* group[=].description = "Surge Total Active Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "SurgeActiveTotalbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Surge Total Active Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "SurgeActiveTotalInitialPopulation"
-* group[=].population[measurePopulation].id = "SurgeActiveTotal-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Surge Total Active Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "SurgeActiveTotalBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "SurgeActiveTotalbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Surge Total Active Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalSurgeActiveTotalBeds"
-* group[=].population[measureObservation].id = "SurgeActiveTotal-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "SurgeActiveTotalbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Surge Total Active Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedSurgeActiveTotalBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedSurgeActiveTotalSurgeActiveTotalBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "SurgeActiveTotal-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "SurgeActiveTotalbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "SurgeActiveTotal-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "SurgeActiveTotal Bed Status"
-* group[=].stratifier[=].description = "Stratifies SurgeActiveTotal beds by occupancy status"
+* group[=].stratifier[+].id = "SurgeActiveTotal-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Surge Total Active Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Surge Total Active Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "SurgeActiveTotalBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "SurgeActiveTotalBedsStatusStratifier"
 
 ///////////// Group SurgeInactiveTotal /////////////
 * group[+].id = "SurgeInactiveTotal-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeInactiveTotal "Surge Total Inactive Occupied"  // TODO Replace with a Group Display
-* group[=].description = "Surge Total Inactive Occupied bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "SurgeInactiveTotal-initial-population"
-* group[=].population[initialPopulation].description = "All Surge Total Inactive Occupied"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeInactiveTotal "Surge Total Inactive Occupied Beds"  // TODO Replace with a Group Display
+* group[=].description = "Surge Total Inactive Occupied Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "SurgeInactiveTotalbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Surge Total Inactive Occupied Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "SurgeInactiveTotalInitialPopulation"
-* group[=].population[measurePopulation].id = "SurgeInactiveTotal-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Surge Total Inactive Occupied beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "SurgeInactiveTotalBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "SurgeInactiveTotalbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Surge Total Inactive Occupied Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalSurgeInactiveTotalBeds"
-* group[=].population[measureObservation].id = "SurgeInactiveTotal-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "SurgeInactiveTotalbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Surge Total Inactive Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedSurgeInactiveTotalBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedSurgeInactiveTotalSurgeInactiveTotalBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "SurgeInactiveTotal-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "SurgeInactiveTotalbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "SurgeInactiveTotal-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "SurgeInactiveTotal Bed Status"
-* group[=].stratifier[=].description = "Stratifies SurgeInactiveTotal beds by occupancy status"
+* group[=].stratifier[+].id = "SurgeInactiveTotal-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Surge Total Inactive Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Surge Total Inactive Occupied Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "SurgeInactiveTotalBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "SurgeInactiveTotalBedsStatusStratifier"
 
 ///////////// Group SurgeActiveICU /////////////
 * group[+].id = "SurgeActiveICU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeActiveICU "Surge ICU Active Census"  // TODO Replace with a Group Display
-* group[=].description = "Surge ICU Active Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "SurgeActiveICU-initial-population"
-* group[=].population[initialPopulation].description = "All Surge ICU Active Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeActiveICU "Surge ICU Active Beds"  // TODO Replace with a Group Display
+* group[=].description = "Surge ICU Active Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "SurgeActiveICUbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Surge ICU Active Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "SurgeActiveICUInitialPopulation"
-* group[=].population[measurePopulation].id = "SurgeActiveICU-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Surge ICU Active Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "SurgeActiveICUBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "SurgeActiveICUbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Surge ICU Active Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalSurgeActiveICUBeds"
-* group[=].population[measureObservation].id = "SurgeActiveICU-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "SurgeActiveICUbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Surge ICU Active Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedSurgeActiveICUBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedSurgeActiveICUSurgeActiveICUBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "SurgeActiveICU-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "SurgeActiveICUbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "SurgeActiveICU-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "SurgeActiveICU Bed Status"
-* group[=].stratifier[=].description = "Stratifies SurgeActiveICU beds by occupancy status"
+* group[=].stratifier[+].id = "SurgeActiveICU-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Surge ICU Active Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Surge ICU Active Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "SurgeActiveICUBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "SurgeActiveICUBedsStatusStratifier"
 
 ///////////// Group SurgeInactiveICU /////////////
 * group[+].id = "SurgeInactiveICU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeInactiveICU "Surge ICU Inactive Occupied"  // TODO Replace with a Group Display
-* group[=].description = "Surge ICU Inactive Occupied bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "SurgeInactiveICU-initial-population"
-* group[=].population[initialPopulation].description = "All Surge ICU Inactive Occupied"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeInactiveICU "Surge ICU Inactive Occupied Beds"  // TODO Replace with a Group Display
+* group[=].description = "Surge ICU Inactive Occupied Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "SurgeInactiveICUbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Surge ICU Inactive Occupied Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "SurgeInactiveICUInitialPopulation"
-* group[=].population[measurePopulation].id = "SurgeInactiveICU-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Surge ICU Inactive Occupied beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "SurgeInactiveICUBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "SurgeInactiveICUbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Surge ICU Inactive Occupied Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalSurgeInactiveICUBeds"
-* group[=].population[measureObservation].id = "SurgeInactiveICU-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "SurgeInactiveICUbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Surge ICU Inactive Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedSurgeInactiveICUBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedSurgeInactiveICUSurgeInactiveICUBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "SurgeInactiveICU-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "SurgeInactiveICUbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "SurgeInactiveICU-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "SurgeInactiveICU Bed Status"
-* group[=].stratifier[=].description = "Stratifies SurgeInactiveICU beds by occupancy status"
+* group[=].stratifier[+].id = "SurgeInactiveICU-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Surge ICU Inactive Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Surge ICU Inactive Occupied Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "SurgeInactiveICUBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "SurgeInactiveICUBedsStatusStratifier"
 
 ///////////// Group SurgeActiveNonICU /////////////
 * group[+].id = "SurgeActiveNonICU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeActiveNonICU "Surge Non- ICU Active Census"  // TODO Replace with a Group Display
-* group[=].description = "Surge Non- ICU Active Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "SurgeActiveNonICU-initial-population"
-* group[=].population[initialPopulation].description = "All Surge Non- ICU Active Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeActiveNonICU "Surge Non-ICU Active Beds"  // TODO Replace with a Group Display
+* group[=].description = "Surge Non-ICU Active Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "SurgeActiveNonICUbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Surge Non-ICU Active Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "SurgeActiveNonICUInitialPopulation"
-* group[=].population[measurePopulation].id = "SurgeActiveNonICU-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Surge Non- ICU Active Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "SurgeActiveNonICUBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "SurgeActiveNonICUbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Surge Non-ICU Active Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalSurgeActiveNonICUBeds"
-* group[=].population[measureObservation].id = "SurgeActiveNonICU-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "SurgeActiveNonICUbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Surge Non-ICU Active Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedSurgeActiveNonICUBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedSurgeActiveNonICUSurgeActiveNonICUBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "SurgeActiveNonICU-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "SurgeActiveNonICUbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "SurgeActiveNonICU-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "SurgeActiveNonICU Bed Status"
-* group[=].stratifier[=].description = "Stratifies SurgeActiveNonICU beds by occupancy status"
+* group[=].stratifier[+].id = "SurgeActiveNonICU-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Surge Non-ICU Active Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Surge Non-ICU Active Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "SurgeActiveNonICUBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "SurgeActiveNonICUBedsStatusStratifier"
 
 ///////////// Group SurgeInactiveNonICU /////////////
 * group[+].id = "SurgeInactiveNonICU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeInactiveNonICU "Surge Non- ICU Inactive Occupied"  // TODO Replace with a Group Display
-* group[=].description = "Surge Non- ICU Inactive Occupied bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "SurgeInactiveNonICU-initial-population"
-* group[=].population[initialPopulation].description = "All Surge Non- ICU Inactive Occupied"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeInactiveNonICU "Surge Non-ICU Inactive Occupied Beds"  // TODO Replace with a Group Display
+* group[=].description = "Surge Non-ICU Inactive Occupied Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "SurgeInactiveNonICUbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Surge Non-ICU Inactive Occupied Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "SurgeInactiveNonICUInitialPopulation"
-* group[=].population[measurePopulation].id = "SurgeInactiveNonICU-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Surge Non- ICU Inactive Occupied beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "SurgeInactiveNonICUBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "SurgeInactiveNonICUbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Surge Non-ICU Inactive Occupied Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalSurgeInactiveNonICUBeds"
-* group[=].population[measureObservation].id = "SurgeInactiveNonICU-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "SurgeInactiveNonICUbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Surge Non-ICU Inactive Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedSurgeInactiveNonICUBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedSurgeInactiveNonICUSurgeInactiveNonICUBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "SurgeInactiveNonICU-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "SurgeInactiveNonICUbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "SurgeInactiveNonICU-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "SurgeInactiveNonICU Bed Status"
-* group[=].stratifier[=].description = "Stratifies SurgeInactiveNonICU beds by occupancy status"
+* group[=].stratifier[+].id = "SurgeInactiveNonICU-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Surge Non-ICU Inactive Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Surge Non-ICU Inactive Occupied Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "SurgeInactiveNonICUBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "SurgeInactiveNonICUBedsStatusStratifier"
 
 ///////////// Group Burn /////////////
 * group[+].id = "Burn-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#Burn "Burn Bed Census"  // TODO Replace with a Group Display
-* group[=].description = "Burn Bed Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "Burn-initial-population"
-* group[=].population[initialPopulation].description = "All Burn Bed Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#Burn "Burn Beds"  // TODO Replace with a Group Display
+* group[=].description = "Burn Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "Burnbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Burn Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "BurnInitialPopulation"
-* group[=].population[measurePopulation].id = "Burn-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Burn Bed Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "BurnBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "Burnbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Burn Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalBurnBeds"
-* group[=].population[measureObservation].id = "Burn-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "Burnbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Burn Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedBurnBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedBurnBurnBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "Burn-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "Burnbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "Burn-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "Burn Bed Status"
-* group[=].stratifier[=].description = "Stratifies Burn beds by occupancy status"
+* group[=].stratifier[+].id = "Burn-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Burn Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Burn Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "BurnBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "BurnBedsStatusStratifier"
 
 ///////////// Group NegativePressure /////////////
 * group[+].id = "NegativePressure-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#NegativePressure "Neg Pressure Bed Census"  // TODO Replace with a Group Display
-* group[=].description = "Neg Pressure Bed Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "NegativePressure-initial-population"
-* group[=].population[initialPopulation].description = "All Neg Pressure Bed Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NegativePressure "Neg Pressure Beds"  // TODO Replace with a Group Display
+* group[=].description = "Neg Pressure Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "NegativePressurebeds-initial-population"
+* group[=].population[initialPopulation].description = "All Neg Pressure Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "NegativePressureInitialPopulation"
-* group[=].population[measurePopulation].id = "NegativePressure-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Neg Pressure Bed Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "NegativePressureBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "NegativePressurebeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Neg Pressure Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalNegativePressureBeds"
-* group[=].population[measureObservation].id = "NegativePressure-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "NegativePressurebeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Neg Pressure Unoccupied Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedNegativePressureBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedNegativePressureNegativePressureBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "NegativePressure-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "NegativePressurebeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "NegativePressure-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "NegativePressure Bed Status"
-* group[=].stratifier[=].description = "Stratifies NegativePressure beds by occupancy status"
+* group[=].stratifier[+].id = "NegativePressure-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Neg Pressure Unoccupied Beds Status"
+* group[=].stratifier[=].description = "Stratifies Neg Pressure Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "NegativePressureBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "NegativePressureBedsStatusStratifier"
 
 ///////////// Group AdultED /////////////
 * group[+].id = "AdultED-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultED "Adult ED Total Census"  // TODO Replace with a Group Display
-* group[=].description = "Adult ED Total Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "AdultED-initial-population"
-* group[=].population[initialPopulation].description = "All Adult ED Total Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultED "Adult ED Total Beds"  // TODO Replace with a Group Display
+* group[=].description = "Adult ED Total Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "AdultEDbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Adult ED Total Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "AdultEDInitialPopulation"
-* group[=].population[measurePopulation].id = "AdultED-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Adult ED Total Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "AdultEDBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "AdultEDbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Adult ED Total Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalAdultEDBeds"
-* group[=].population[measureObservation].id = "AdultED-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "AdultEDbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Adult ED Admitted Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedAdultEDBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedAdultEDAdultEDBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "AdultED-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "AdultEDbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "AdultED-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "AdultED Bed Status"
-* group[=].stratifier[=].description = "Stratifies AdultED beds by occupancy status"
+* group[=].stratifier[+].id = "AdultED-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Adult ED Admitted Beds Status"
+* group[=].stratifier[=].description = "Stratifies Adult ED Total Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "AdultEDBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "AdultEDBedsStatusStratifier"
 
 ///////////// Group PedsED /////////////
 * group[+].id = "PedsED-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsED "Peds ED Census"  // TODO Replace with a Group Display
-* group[=].description = "Peds ED Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "PedsED-initial-population"
-* group[=].population[initialPopulation].description = "All Peds ED Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsED "Peds ED Beds"  // TODO Replace with a Group Display
+* group[=].description = "Peds ED Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "PedsEDbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Peds ED Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "PedsEDInitialPopulation"
-* group[=].population[measurePopulation].id = "PedsED-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Peds ED Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "PedsEDBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "PedsEDbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Peds ED Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalPedsEDBeds"
-* group[=].population[measureObservation].id = "PedsED-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "PedsEDbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Peds ED Admitted Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedPedsEDBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedPedsEDPedsEDBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "PedsED-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "PedsEDbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "PedsED-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "PedsED Bed Status"
-* group[=].stratifier[=].description = "Stratifies PedsED beds by occupancy status"
+* group[=].stratifier[+].id = "PedsED-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Peds ED Admitted Beds Status"
+* group[=].stratifier[=].description = "Stratifies Peds ED Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "PedsEDBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "PedsEDBedsStatusStratifier"
 
 ///////////// Group TotalED /////////////
 * group[+].id = "TotalED-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#TotalED "Total ED Census"  // TODO Replace with a Group Display
-* group[=].description = "Total ED Census bed capacity measurement"  // TODO Replace with a Group Display
-* group[=].population[initialPopulation].id = "TotalED-initial-population"
-* group[=].population[initialPopulation].description = "All Total ED Census"  // TODO Replace with a Group Display
+* group[=].code = SAFRHealthareCapacityGroupCSExample#TotalED "Total ED Beds"  // TODO Replace with a Group Display
+* group[=].description = "Total ED Beds - bed capacity measurement"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].id = "TotalEDbeds-initial-population"
+* group[=].population[initialPopulation].description = "All Total ED Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
-* group[=].population[initialPopulation].criteria.expression = "TotalEDInitialPopulation"
-* group[=].population[measurePopulation].id = "TotalED-measure-population"
-* group[=].population[measurePopulation].description = "Total number of Total ED Census beds"  // TODO Replace with a Group Display
+* group[=].population[initialPopulation].criteria.expression = "TotalEDBedsInitialPopulation"
+* group[=].population[measurePopulation].id = "TotalEDbeds-measure-population"
+* group[=].population[measurePopulation].description = "Total number of Total ED Beds"  // TODO Replace with a Group Display
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "TotalTotalEDBeds"
-* group[=].population[measureObservation].id = "TotalED-measure-observation"
-* group[=].population[measureObservation].description = "Number of occupied ICU beds"
+* group[=].population[measureObservation].id = "TotalEDbeds-measure-observation"
+* group[=].population[measureObservation].description = "Number of Total ED Admitted Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
-* group[=].population[measureObservation].criteria.expression = "OccupiedTotalEDBeds"
+* group[=].population[measureObservation].criteria.expression = "OccupiedTotalEDTotalEDBeds"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
-* group[=].population[measureObservation].extension[=].valueString = "TotalED-measure-population"
+* group[=].population[measureObservation].extension[=].valueString = "TotalEDbeds-measure-population"
 * group[=].population[measureObservation].extension[+].url = $cqfm-aggregateMethod
 * group[=].population[measureObservation].extension[=].valueCode = $aggregate-method#count "Count"
-* group[=].stratifier[+].id = "TotalED-bed-status-stratifier"
-* group[=].stratifier[=].code.text = "TotalED Bed Status"
-* group[=].stratifier[=].description = "Stratifies TotalED beds by occupancy status"
+* group[=].stratifier[+].id = "TotalED-beds-status-stratifier"
+* group[=].stratifier[=].code.text = "Total ED Admitted Beds Status"
+* group[=].stratifier[=].description = "Stratifies Total ED Beds by occupancy status"
 * group[=].stratifier[=].criteria.language = #text/cql-identifier
-* group[=].stratifier[=].criteria.expression = "TotalEDBedStatusStratifier"
+* group[=].stratifier[=].criteria.expression = "TotalEDBedsStatusStratifier"
 
 
 

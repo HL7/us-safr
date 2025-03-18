@@ -52,24 +52,24 @@ TODO, will need output with summary
 * improvementNotation = $MeasureImprovementNotation#increase "Increased score indicates improvement"
 
 
-///////////// Group AllBeds /////////////
+///////////// Group Beds /////////////
 * group[+].id = "AllBeds-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AllBeds "All Beds Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AllBeds "All Beds"
 * group[=].measureScore.value = 97.25274725274726
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
 * group[=].measureScore.system = "http://unitsofmeasure.org"
-* group[=].population[+].id = "AllBeds-initial-population"
+* group[=].population[+].id = "Beds-initial-population"
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 182
-* group[=].population[+].id = "AllBeds-measure-population"
+* group[=].population[+].id = "Beds-measure-population"
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
 * group[=].population[=].count = 182
-* group[=].population[+].id = "AllBeds-measure-observation" 
+* group[=].population[+].id = "Beds-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 5
-* group[=].stratifier[0].id = "AllBeds-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "AllBeds Bed Status"
+* group[=].stratifier[0].id = "Beds-status-stratifier"
+* group[=].stratifier[0].code.text = "All Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "AllBedsOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -81,7 +81,7 @@ TODO, will need output with summary
 
 ///////////// Group AdultTotal /////////////
 * group[+].id = "AdultTotal-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultTotal "Adult Total Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultTotal "Adult Total Beds"
 * group[=].measureScore.value = 97.25274725274726
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -95,8 +95,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "AdultTotal-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 5
-* group[=].stratifier[0].id = "AdultTotal-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "AdultTotal Bed Status"
+* group[=].stratifier[0].id = "AdultTotal-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Adult Total Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "AdultTotalOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -108,7 +108,7 @@ TODO, will need output with summary
 
 ///////////// Group AdultICU /////////////
 * group[+].id = "AdultICU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultICU "Adult ICU Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultICU "Adult ICU Beds"
 * group[=].measureScore.value = 94.11764705882352
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -122,8 +122,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "AdultICU-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 2
-* group[=].stratifier[0].id = "AdultICU-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "AdultICU Bed Status"
+* group[=].stratifier[0].id = "AdultICU-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Adult ICU Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "AdultICUOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -135,7 +135,7 @@ TODO, will need output with summary
 
 ///////////// Group AdultICULOC /////////////
 * group[+].id = "AdultICULOC-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultICULOC "Adult ICU-LOC Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultICULOC "Adult ICU-LOC Beds"
 * group[=].measureScore.value = 91.42857142857143
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -149,8 +149,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "AdultICULOC-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 3
-* group[=].stratifier[0].id = "AdultICULOC-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "AdultICULOC Bed Status"
+* group[=].stratifier[0].id = "AdultICULOC-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Adult ICU-LOC Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "AdultICULOCOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -162,7 +162,7 @@ TODO, will need output with summary
 
 ///////////// Group AdultNonICU /////////////
 * group[+].id = "AdultNonICU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultNonICU "Adult Non- ICU Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultNonICU "Adult Non-ICU Beds"
 * group[=].measureScore.value = 84.76821192052981
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -176,8 +176,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "AdultNonICU-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 46
-* group[=].stratifier[0].id = "AdultNonICU-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "AdultNonICU Bed Status"
+* group[=].stratifier[0].id = "AdultNonICU-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Adult Non-ICU Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "AdultNonICUOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -189,7 +189,7 @@ TODO, will need output with summary
 
 ///////////// Group AdultPCU /////////////
 * group[+].id = "AdultPCU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultPCU "Adult PCU Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultPCU "Adult PCU Beds"
 * group[=].measureScore.value = 0.0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -203,8 +203,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "AdultPCU-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 145
-* group[=].stratifier[0].id = "AdultPCU-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "AdultPCU Bed Status"
+* group[=].stratifier[0].id = "AdultPCU-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Adult PCU Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "AdultPCUOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -216,7 +216,7 @@ TODO, will need output with summary
 
 ///////////// Group AdultMTMS /////////////
 * group[+].id = "AdultMTMS-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultMTMS "Adult MT/MS Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultMTMS "Adult MT/MS Beds"
 * group[=].measureScore.value = 100.0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -230,8 +230,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "AdultMTMS-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "AdultMTMS-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "AdultMTMS Bed Status"
+* group[=].stratifier[0].id = "AdultMTMS-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Adult MT/MS Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "AdultMTMSOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -243,7 +243,7 @@ TODO, will need output with summary
 
 ///////////// Group AdultObs /////////////
 * group[+].id = "AdultObs-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultObs "Adult OBS Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultObs "Adult OBS Beds"
 * group[=].measureScore.value = 68.96551724137932
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -257,8 +257,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "AdultObs-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 45
-* group[=].stratifier[0].id = "AdultObs-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "AdultObs Bed Status"
+* group[=].stratifier[0].id = "AdultObs-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Adult OBS Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "AdultObsOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -270,7 +270,7 @@ TODO, will need output with summary
 
 ///////////// Group PedsTotal /////////////
 * group[+].id = "PedsTotal-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsTotal "Peds Total Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsTotal "Peds Total Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -284,8 +284,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "PedsTotal-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "PedsTotal-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "PedsTotal Bed Status"
+* group[=].stratifier[0].id = "PedsTotal-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Peds Total Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "PedsTotalOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -297,7 +297,7 @@ TODO, will need output with summary
 
 ///////////// Group PedsICU /////////////
 * group[+].id = "PedsICU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsICU "Peds ICU Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsICU "Peds ICU Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -311,8 +311,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "PedsICU-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "PedsICU-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "PedsICU Bed Status"
+* group[=].stratifier[0].id = "PedsICU-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Peds ICU Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "PedsICUOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -324,7 +324,7 @@ TODO, will need output with summary
 
 ///////////// Group PedsICULOC /////////////
 * group[+].id = "PedsICULOC-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsICULOC "Peds ICU- LOC Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsICULOC "Peds ICU-LOC Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -338,8 +338,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "PedsICULOC-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "PedsICULOC-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "PedsICULOC Bed Status"
+* group[=].stratifier[0].id = "PedsICULOC-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Peds ICU-LOC Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "PedsICULOCOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -351,7 +351,7 @@ TODO, will need output with summary
 
 ///////////// Group PedsNonICU /////////////
 * group[+].id = "PedsNonICU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsNonICU "Peds Non- ICU Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsNonICU "Peds Non-ICU Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -365,8 +365,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "PedsNonICU-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "PedsNonICU-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "PedsNonICU Bed Status"
+* group[=].stratifier[0].id = "PedsNonICU-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Peds Non-ICU Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "PedsNonICUOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -378,7 +378,7 @@ TODO, will need output with summary
 
 ///////////// Group PedsPCU /////////////
 * group[+].id = "PedsPCU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsPCU "Peds PCU Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsPCU "Peds PCU Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -392,8 +392,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "PedsPCU-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "PedsPCU-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "PedsPCU Bed Status"
+* group[=].stratifier[0].id = "PedsPCU-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Peds PCU Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "PedsPCUOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -405,7 +405,7 @@ TODO, will need output with summary
 
 ///////////// Group PedsMTMS /////////////
 * group[+].id = "PedsMTMS-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsMTMS "Peds MT/MS Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsMTMS "Peds MT/MS Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -419,8 +419,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "PedsMTMS-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "PedsMTMS-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "PedsMTMS Bed Status"
+* group[=].stratifier[0].id = "PedsMTMS-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Peds MT/MS Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "PedsMTMSOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -432,7 +432,7 @@ TODO, will need output with summary
 
 ///////////// Group PedsObs /////////////
 * group[+].id = "PedsObs-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsObs "Peds OBS Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsObs "Peds OBS Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -446,8 +446,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "PedsObs-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "PedsObs-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "PedsObs Bed Status"
+* group[=].stratifier[0].id = "PedsObs-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Peds OBS Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "PedsObsOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -459,7 +459,7 @@ TODO, will need output with summary
 
 ///////////// Group SpecialtyTotal /////////////
 * group[+].id = "SpecialtyTotal-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#SpecialtyTotal "Specialty Total Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SpecialtyTotal "Specialty Total Beds"
 * group[=].measureScore.value = 66.66666666666666
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -473,8 +473,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "SpecialtyTotal-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 12
-* group[=].stratifier[0].id = "SpecialtyTotal-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "SpecialtyTotal Bed Status"
+* group[=].stratifier[0].id = "SpecialtyTotal-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Specialty Total Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "SpecialtyTotalOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -486,7 +486,7 @@ TODO, will need output with summary
 
 ///////////// Group SpecialtyNonCrib /////////////
 * group[+].id = "SpecialtyNonCrib-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#SpecialtyNonCrib "Specialty (Non-Crib) Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SpecialtyNonCrib "Specialty (Non-Crib) Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -500,8 +500,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "SpecialtyNonCrib-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "SpecialtyNonCrib-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "SpecialtyNonCrib Bed Status"
+* group[=].stratifier[0].id = "SpecialtyNonCrib-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Specialty (Non-Crib) Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "SpecialtyNonCribOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -513,7 +513,7 @@ TODO, will need output with summary
 
 ///////////// Group OB /////////////
 * group[+].id = "OB-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#OB "Specialty OB Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#OB "Specialty OB Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -527,8 +527,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "OB-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "OB-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "OB Bed Status"
+* group[=].stratifier[0].id = "OB-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Specialty OB Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "OBOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -540,7 +540,7 @@ TODO, will need output with summary
 
 ///////////// Group NICU /////////////
 * group[+].id = "NICU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU "Specialty NICU Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU "Specialty NICU Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -554,8 +554,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "NICU-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "NICU-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "NICU Bed Status"
+* group[=].stratifier[0].id = "NICU-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Specialty NICU Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "NICUOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -567,7 +567,7 @@ TODO, will need output with summary
 
 ///////////// Group NICU4 /////////////
 * group[+].id = "NICU4-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU4 "Specialty NICU 4 Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU4 "Specialty NICU 4 Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -581,8 +581,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "NICU4-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "NICU4-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "NICU4 Bed Status"
+* group[=].stratifier[0].id = "NICU4-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Specialty NICU 4 Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "NICU4Occupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -594,7 +594,7 @@ TODO, will need output with summary
 
 ///////////// Group NICU3 /////////////
 * group[+].id = "NICU3-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU3 "Specialty NICU 3 Occupied"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU3 "Specialty NICU 3 Occupied Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -608,8 +608,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "NICU3-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "NICU3-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "NICU3 Bed Status"
+* group[=].stratifier[0].id = "NICU3-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Specialty NICU 3 Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "NICU3Occupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -621,7 +621,7 @@ TODO, will need output with summary
 
 ///////////// Group NICU3Plus /////////////
 * group[+].id = "NICU3Plus-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU3Plus "Specialty NICU 3 Plus Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU3Plus "Specialty NICU 3 Plus Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -635,8 +635,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "NICU3Plus-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "NICU3Plus-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "NICU3Plus Bed Status"
+* group[=].stratifier[0].id = "NICU3Plus-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Specialty NICU 3 Plus Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "NICU3PlusOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -648,7 +648,7 @@ TODO, will need output with summary
 
 ///////////// Group NICU2 /////////////
 * group[+].id = "NICU2-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU2 "Specialty NICU 2 Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU2 "Specialty NICU 2 Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -662,8 +662,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "NICU2-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "NICU2-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "NICU2 Bed Status"
+* group[=].stratifier[0].id = "NICU2-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Specialty NICU 2 Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "NICU2Occupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -675,7 +675,7 @@ TODO, will need output with summary
 
 ///////////// Group Nursery /////////////
 * group[+].id = "Nursery-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#Nursery "Specialty Nursery Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#Nursery "Specialty Nursery Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -689,8 +689,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "Nursery-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "Nursery-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "Nursery Bed Status"
+* group[=].stratifier[0].id = "Nursery-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Specialty Nursery Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "NurseryOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -702,7 +702,7 @@ TODO, will need output with summary
 
 ///////////// Group NICU1 /////////////
 * group[+].id = "NICU1-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU1 "Specialty NICU 1 Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NICU1 "Specialty NICU 1 Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -716,8 +716,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "NICU1-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "NICU1-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "NICU1 Bed Status"
+* group[=].stratifier[0].id = "NICU1-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Specialty NICU 1 Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "NICU1Occupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -729,7 +729,7 @@ TODO, will need output with summary
 
 ///////////// Group AdultPsych /////////////
 * group[+].id = "AdultPsych-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultPsych "Specialty Adult Psych Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultPsych "Specialty Adult Psych Beds"
 * group[=].measureScore.value = 10.0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -743,8 +743,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "AdultPsych-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 18
-* group[=].stratifier[0].id = "AdultPsych-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "AdultPsych Bed Status"
+* group[=].stratifier[0].id = "AdultPsych-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Specialty Adult Psych Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "AdultPsychOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -756,7 +756,7 @@ TODO, will need output with summary
 
 ///////////// Group PedsPsych /////////////
 * group[+].id = "PedsPsych-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsPsych "Specialty Peds Psych Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsPsych "Specialty Peds Psych Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -770,8 +770,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "PedsPsych-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "PedsPsych-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "PedsPsych Bed Status"
+* group[=].stratifier[0].id = "PedsPsych-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Specialty Peds Psych Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "PedsPsychOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -783,7 +783,7 @@ TODO, will need output with summary
 
 ///////////// Group Rehab /////////////
 * group[+].id = "Rehab-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#Rehab "Specialty Rehab Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#Rehab "Specialty Rehab Beds"
 * group[=].measureScore.value = 50.0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -797,8 +797,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "Rehab-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 15
-* group[=].stratifier[0].id = "Rehab-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "Rehab Bed Status"
+* group[=].stratifier[0].id = "Rehab-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Specialty Rehab Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "RehabOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -810,7 +810,7 @@ TODO, will need output with summary
 
 ///////////// Group SurgeActiveTotal /////////////
 * group[+].id = "SurgeActiveTotal-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeActiveTotal "Surge Total Active Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeActiveTotal "Surge Total Active Beds"
 * group[=].measureScore.value = 50.0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -824,8 +824,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "SurgeActiveTotal-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 10
-* group[=].stratifier[0].id = "SurgeActiveTotal-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "SurgeActiveTotal Bed Status"
+* group[=].stratifier[0].id = "SurgeActiveTotal-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Surge Total Active Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "SurgeActiveTotalOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -837,7 +837,7 @@ TODO, will need output with summary
 
 ///////////// Group SurgeInactiveTotal /////////////
 * group[+].id = "SurgeInactiveTotal-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeInactiveTotal "Surge Total Inactive Occupied"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeInactiveTotal "Surge Total Inactive Occupied Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -851,8 +851,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "SurgeInactiveTotal-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "SurgeInactiveTotal-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "SurgeInactiveTotal Bed Status"
+* group[=].stratifier[0].id = "SurgeInactiveTotal-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Surge Total Inactive Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "SurgeInactiveTotalOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -864,7 +864,7 @@ TODO, will need output with summary
 
 ///////////// Group SurgeActiveICU /////////////
 * group[+].id = "SurgeActiveICU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeActiveICU "Surge ICU Active Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeActiveICU "Surge ICU Active Beds"
 * group[=].measureScore.value = 20.0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -878,8 +878,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "SurgeActiveICU-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 8
-* group[=].stratifier[0].id = "SurgeActiveICU-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "SurgeActiveICU Bed Status"
+* group[=].stratifier[0].id = "SurgeActiveICU-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Surge ICU Active Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "SurgeActiveICUOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -891,7 +891,7 @@ TODO, will need output with summary
 
 ///////////// Group SurgeInactiveICU /////////////
 * group[+].id = "SurgeInactiveICU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeInactiveICU "Surge ICU Inactive Occupied"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeInactiveICU "Surge ICU Inactive Occupied Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -905,8 +905,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "SurgeInactiveICU-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "SurgeInactiveICU-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "SurgeInactiveICU Bed Status"
+* group[=].stratifier[0].id = "SurgeInactiveICU-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Surge ICU Inactive Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "SurgeInactiveICUOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -918,7 +918,7 @@ TODO, will need output with summary
 
 ///////////// Group SurgeActiveNonICU /////////////
 * group[+].id = "SurgeActiveNonICU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeActiveNonICU "Surge Non- ICU Active Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeActiveNonICU "Surge Non-ICU Active Beds"
 * group[=].measureScore.value = 40.0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -932,8 +932,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "SurgeActiveNonICU-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 6
-* group[=].stratifier[0].id = "SurgeActiveNonICU-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "SurgeActiveNonICU Bed Status"
+* group[=].stratifier[0].id = "SurgeActiveNonICU-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Surge Non-ICU Active Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "SurgeActiveNonICUOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -945,7 +945,7 @@ TODO, will need output with summary
 
 ///////////// Group SurgeInactiveNonICU /////////////
 * group[+].id = "SurgeInactiveNonICU-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeInactiveNonICU "Surge Non- ICU Inactive Occupied"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeInactiveNonICU "Surge Non-ICU Inactive Occupied Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -959,8 +959,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "SurgeInactiveNonICU-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "SurgeInactiveNonICU-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "SurgeInactiveNonICU Bed Status"
+* group[=].stratifier[0].id = "SurgeInactiveNonICU-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Surge Non-ICU Inactive Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "SurgeInactiveNonICUOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -972,7 +972,7 @@ TODO, will need output with summary
 
 ///////////// Group Burn /////////////
 * group[+].id = "Burn-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#Burn "Burn Bed Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#Burn "Burn Beds"
 * group[=].measureScore.value = 10.0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -986,8 +986,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "Burn-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 9
-* group[=].stratifier[0].id = "Burn-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "Burn Bed Status"
+* group[=].stratifier[0].id = "Burn-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Burn Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "BurnOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -999,7 +999,7 @@ TODO, will need output with summary
 
 ///////////// Group NegativePressure /////////////
 * group[+].id = "NegativePressure-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#NegativePressure "Neg Pressure Bed Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#NegativePressure "Neg Pressure Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -1013,8 +1013,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "NegativePressure-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "NegativePressure-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "NegativePressure Bed Status"
+* group[=].stratifier[0].id = "NegativePressure-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Neg Pressure Unoccupied Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "NegativePressureOccupied"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -1026,7 +1026,7 @@ TODO, will need output with summary
 
 ///////////// Group AdultED /////////////
 * group[+].id = "AdultED-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultED "Adult ED Total Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#AdultED "Adult ED Total Beds"
 * group[=].measureScore.value = 33.33333333333333
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -1040,8 +1040,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "AdultED-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 20
-* group[=].stratifier[0].id = "AdultED-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "AdultED Bed Status"
+* group[=].stratifier[0].id = "AdultED-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Adult ED Admitted Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "AdultEDCensus"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -1053,7 +1053,7 @@ TODO, will need output with summary
 
 ///////////// Group PedsED /////////////
 * group[+].id = "PedsED-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsED "Peds ED Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#PedsED "Peds ED Beds"
 * group[=].measureScore.value = 0
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -1067,8 +1067,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "PedsED-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 0
-* group[=].stratifier[0].id = "PedsED-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "PedsED Bed Status"
+* group[=].stratifier[0].id = "PedsED-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Peds ED Admitted Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "PedsEDCensus"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -1080,7 +1080,7 @@ TODO, will need output with summary
 
 ///////////// Group TotalED /////////////
 * group[+].id = "TotalED-bed-capacity-group"
-* group[=].code = SAFRHealthareCapacityGroupCSExample#TotalED "Total ED Census"
+* group[=].code = SAFRHealthareCapacityGroupCSExample#TotalED "Total ED Beds"
 * group[=].measureScore.value = 33.33333333333333
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -1094,8 +1094,8 @@ TODO, will need output with summary
 * group[=].population[+].id = "TotalED-measure-observation" 
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
 * group[=].population[=].count = 20
-* group[=].stratifier[0].id = "TotalED-bed-status-stratifier"
-* group[=].stratifier[0].code.text = "TotalED Bed Status"
+* group[=].stratifier[0].id = "TotalED-beds-status-stratifier"
+* group[=].stratifier[0].code.text = "Total ED Admitted Beds Status"
 * group[=].stratifier[0].stratum[0].value.text = "Occupied"
 * group[=].stratifier[0].stratum[0].population[0].id = "TotalEDCensus"
 * group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
@@ -1104,4 +1104,3 @@ TODO, will need output with summary
 * group[=].stratifier[0].stratum[1].population[0].id = "TotalEDAdmittedCensus"
 * group[=].stratifier[0].stratum[1].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
 * group[=].stratifier[0].stratum[1].population[0].count = 20
-

@@ -12,9 +12,10 @@ Alias: $organization-type = http://terminology.hl7.org/CodeSystem/organization-t
 
 Alias: $MeasureTypeCS = http://terminology.hl7.org/CodeSystem/measure-type
 
-
+Alias: $communication-category = http://terminology.hl7.org/CodeSystem/communication-category
 Alias: $measure-report-status = http://hl7.org/fhir/measure-report-status
 Alias: $measure-report-type = http://hl7.org/fhir/measure-report-type
+Alias: $usage-context-type = http://terminology.hl7.org/CodeSystem/usage-context-type
 
 Alias: $cqfm-scoringUnit = http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-scoringUnit
 
@@ -23,6 +24,9 @@ Alias: $cqfm-criteriaReference = http://hl7.org/fhir/us/cqfmeasures/StructureDef
 Alias: $cqfm-aggregateMethod = http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-aggregateMethod
 Alias: $reporting-frequency = http://hl7.org/fhir/us/safr/StructureDefinition/reporting-frequency
 Alias: $emergency-activation = http://hl7.org/fhir/us/safr/StructureDefinition/emergency-activation
+
+Alias: $loinc = http://loinc.org
+Alias: $sct = http://snomed.info/sct
 Alias: $ucum = http://unitsofmeasure.org
 
 Alias: $MeasureImprovementNotation = http://terminology.hl7.org/CodeSystem/measure-improvement-notation 

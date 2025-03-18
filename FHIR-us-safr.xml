@@ -8,6 +8,7 @@
 <artifact id="Bundle/BedCapacityMeasure-bundle-example1" key="Bundle-BedCapacityMeasure-bundle-example1" name="Bed Capacity Measure Bundle Example 1"/>
 <artifact id="Device/cqf-tooling" key="Device-cqf-tooling" name="CQF Tooling Device"/>
 <artifact id="Library/BedCapacityLibrary" key="Library-BedCapacityLibrary" name="Example Library of Bed Capacity Measure"/>
+<artifact id="Bundle/HrdMeasure-bundle-example1" key="Bundle-HrdMeasure-bundle-example1" name="HRD Measure Bundle Example 1"/>
 <artifact id="CodeSystem/SAFRHealthareCapacityCSExample" key="CodeSystem-SAFRHealthareCapacityCSExample" name="Healthcare Capacity Reporting Code System"/>
 <artifact id="CodeSystem/SAFRHealthareCapacityGroupCSExample" key="CodeSystem-SAFRHealthareCapacityGroupCSExample" name="Healthcare Capacity Reporting Group Code System"/>
 <artifact id="Bundle/HospitalBedCapacityReportBundle" key="Bundle-HospitalBedCapacityReportBundle" name="Hospital Bed Capacity Report Bundle"/>
@@ -15,6 +16,8 @@
 <artifact id="Measure/BedCapacityMeasure" key="Measure-BedCapacityMeasure" name="Hospital Multi-Bed Type Capacity Measure Example"/>
 <artifact id="CodeSystem/SAFRHRDCS" key="CodeSystem-SAFRHRDCS" name="Hospital Respiratory Data Reporting Code System"/>
 <artifact id="CodeSystem/HRDSupplyDaysCS" key="CodeSystem-HRDSupplyDaysCS" name="Hospital Respiratory Data Supply Days Code System"/>
+<artifact id="Library/HRDMeasureStructureLibrary" key="Library-HRDMeasureStructureLibrary" name="Hospital Respiratory Disease Measure Structure Library"/>
+<artifact id="Measure/HospitalRespiratoryDataMeasure" key="Measure-HospitalRespiratoryDataMeasure" name="Measure - Hospital Respiratory Data Initial Population"/>
 <artifact id="Location/MemorialHospitalFacility" key="Location-MemorialHospitalFacility" name="MemorialHospitalFacility"/>
 <artifact id="Organization/MemorialHospitalOrganization" key="Organization-MemorialHospitalOrganization" name="Organization - Example Hospital Organization"/>
 <artifact id="Organization/organization-example-submitting-organization" key="Organization-organization-example-submitting-organization" name="Organization - Example Submitting Organization"/>

@@ -162,7 +162,7 @@ Usage: #example
 * date = "2025-03-05"
 * publisher = "National Healthcare Safety Network (NHSN)"
 * description = "This measure tracks hospital bed capacity including occupied and unoccupied beds across ICU, ED, and Pediatric bed types for emergency response coordination."
-* useContext.code = http://terminology.hl7.org/CodeSystem/usage-context-type#task "Workflow Task"
+* useContext.code = $usage-context-typee#task "Workflow Task"
 * useContext.valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ActCode#EMER "emergency"
 * purpose = "To provide situational awareness, support capacity planning, and enable load balancing during normal operations and emergencies."
 
