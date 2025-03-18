@@ -14,8 +14,8 @@
 <artifact id="Bundle/hrd-bundle-example-hosp" key="Bundle-hrd-bundle-example-hosp" name="HRD MeasureReport Bundle Example 1"/>
 <artifact id="CodeSystem/SAFRHealthareCapacityCS" key="CodeSystem-SAFRHealthareCapacityCS" name="Healthcare Capacity Reporting Code System"/>
 <artifact id="Measure/HRDMeasure" key="Measure-HRDMeasure" name="Hospital Respiratory Data Measure for US Situational Awareness Framework for Reporting"/>
-<artifact id="CodeSystem/SAFRHRDCS" key="CodeSystem-SAFRHRDCS" name="Hospital Respiratory Data Reporting Code System"/>
-<artifact id="CodeSystem/HRDSupplyDaysCS" key="CodeSystem-HRDSupplyDaysCS" name="Hospital Respiratory Data Supply Days Code System"/>
+<artifact id="CodeSystem/HRDExampleCS" key="CodeSystem-HRDExampleCS" name="Hospital Respiratory Data Reporting Code System"/>
+<artifact id="CodeSystem/HRDSupplyDaysExampleCS" key="CodeSystem-HRDSupplyDaysExampleCS" name="Hospital Respiratory Data Supply Days Code System"/>
 <artifact id="Library/HRDMeasureLibrary" key="Library-HRDMeasureLibrary" name="HRDMeasureLibrary"/>
 <artifact id="MeasureReport/bed-capacity-measurereport-example-chld" key="MeasureReport-bed-capacity-measurereport-example-chld" name="MeasureReport - Children's Hospital Bed Capacity Individual Measure Report"/>
 <artifact id="MeasureReport/bed-capacity-measurereport-example-hosp" key="MeasureReport-bed-capacity-measurereport-example-hosp" name="MeasureReport - Hospital Bed Capacity Individual Measure Report"/>

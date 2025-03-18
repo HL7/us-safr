@@ -1,5 +1,5 @@
-CodeSystem: SAFRHealthareCapacityGroupCSExample
-//Id: healthcare-capacity-codes
+CodeSystem: BedCapacityGroupExampleCS
+Id: us-safr-bed-capacity-group-example-codes
 Title: "Healthcare Capacity Reporting Group Code System"
 * ^copyright = "This CodeSystem is not copyrighted."
 * ^experimental = true

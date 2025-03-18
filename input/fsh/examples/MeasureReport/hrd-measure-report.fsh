@@ -50,7 +50,7 @@ TODO, will need output with summary
 
 ///////////// Group numInPtBedsAdult /////////////
 * group[+].id = "numInPtBedsAdult-capacity-group"
-* group[=].code = SAFRHRDCS#numInPtBedsAdult "Number Inpatient Adult Beds"
+* group[=].code = HRDExampleCS#numInPtBedsAdult "Number Inpatient Adult Beds"
 * group[=].measureScore.value = 66.67
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -68,7 +68,7 @@ TODO, will need output with summary
 
 ///////////// Group numInPtBedsPed /////////////
 * group[+].id = "numInPtBedsPed-capacity-group"
-* group[=].code = SAFRHRDCS#numInPtBedsPed "Number Inpatient Ped Beds"
+* group[=].code = HRDExampleCS#numInPtBedsPed "Number Inpatient Ped Beds"
 * group[=].measureScore.value = 66.67
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -86,7 +86,7 @@ TODO, will need output with summary
 
 ///////////// Group numInPtBedsOcc /////////////
 * group[+].id = "numInPtBedsOcc-capacity-group"
-* group[=].code = SAFRHRDCS#numInPtBedsOcc "Number Inpatient Occupancy Beds"
+* group[=].code = HRDExampleCS#numInPtBedsOcc "Number Inpatient Occupancy Beds"
 * group[=].measureScore.value = 55.56
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -104,7 +104,7 @@ TODO, will need output with summary
 
 ///////////// Group numInPtBedsOccAdult /////////////
 * group[+].id = "numInPtBedsOccAdult-capacity-group"
-* group[=].code = SAFRHRDCS#numInPtBedsOccAdult "Number Inpatient Occupancy Adult Beds"
+* group[=].code = HRDExampleCS#numInPtBedsOccAdult "Number Inpatient Occupancy Adult Beds"
 * group[=].measureScore.value = 66.67
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -122,7 +122,7 @@ TODO, will need output with summary
 
 ///////////// Group numInPtBedsOccPed /////////////
 * group[+].id = "numInPtBedsOccPed-capacity-group"
-* group[=].code = SAFRHRDCS#numInPtBedsOccPed "Number Inpatient Occupancy Ped Beds"
+* group[=].code = HRDExampleCS#numInPtBedsOccPed "Number Inpatient Occupancy Ped Beds"
 * group[=].measureScore.value = 66.67
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -140,7 +140,7 @@ TODO, will need output with summary
 
 ///////////// Group numConfC19HospPatsAdult /////////////
 * group[+].id = "numConfC19HospPatsAdult-capacity-group"
-* group[=].code = SAFRHRDCS#numConfC19HospPatsAdult "numConfC19HospPatsAdult"
+* group[=].code = HRDExampleCS#numConfC19HospPatsAdult "Number confirmed Covid-19 adult hospital patients"
 * group[=].measureScore.value = 88.89
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -158,7 +158,7 @@ TODO, will need output with summary
 
 ///////////// Group numConfC19HospPatsPed /////////////
 * group[+].id = "numConfC19HospPatsPed-capacity-group"
-* group[=].code = SAFRHRDCS#numConfC19HospPatsPed "numConfC19HospPatsPed"
+* group[=].code = HRDExampleCS#numConfC19HospPatsPed "Number confirmed Covid-19 pediatric hospital patients"
 * group[=].measureScore.value = 95.24
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -176,7 +176,7 @@ TODO, will need output with summary
 
 ///////////// Group numConfFluHospPatsAdult /////////////
 * group[+].id = "numConfFluHospPatsAdult-capacity-group"
-* group[=].code = SAFRHRDCS#numConfFluHospPatsAdult "numConfFluHospPatsAdult"
+* group[=].code = HRDExampleCS#numConfFluHospPatsAdult "Number confirmed Flu adult hospital patients"
 * group[=].measureScore.value = 93.02
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -194,7 +194,7 @@ TODO, will need output with summary
 
 ///////////// Group numConfFluHospPatsPed /////////////
 * group[+].id = "numConfFluHospPatsPed-capacity-group"
-* group[=].code = SAFRHRDCS#numConfFluHospPatsPed "numConfFluHospPatsPed"
+* group[=].code = HRDExampleCS#numConfFluHospPatsPed "Number confirmed Flu pediatric hospital patients"
 * group[=].measureScore.value = 91.95
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -212,7 +212,7 @@ TODO, will need output with summary
 
 ///////////// Group numConfRSVHospPatsAdult /////////////
 * group[+].id = "numConfRSVHospPatsAdult-capacity-group"
-* group[=].code = SAFRHRDCS#numConfRSVHospPatsAdult "numConfRSVHospPatsAdult"
+* group[=].code = HRDExampleCS#numConfRSVHospPatsAdult "Number confirmed RSV adult hospital patients"
 * group[=].measureScore.value = 94.12
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -230,7 +230,7 @@ TODO, will need output with summary
 
 ///////////// Group numConfRSVHospPatsPed /////////////
 * group[+].id = "numConfRSVHospPatsPed-capacity-group"
-* group[=].code = SAFRHRDCS#numConfRSVHospPatsPed "numConfRSVHospPatsPed"
+* group[=].code = HRDExampleCS#numConfRSVHospPatsPed "Number confirmed RSV pediatric hospital patients"
 * group[=].measureScore.value = 86.58
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -248,7 +248,7 @@ TODO, will need output with summary
 
 ///////////// Group numICUBedsAdult /////////////
 * group[+].id = "numICUBedsAdult-capacity-group"
-* group[=].code = SAFRHRDCS#numICUBedsAdult "Number ICU Adult Beds"
+* group[=].code = HRDExampleCS#numICUBedsAdult "Number ICU Adult Beds"
 * group[=].measureScore.value = 66.67
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -266,7 +266,7 @@ TODO, will need output with summary
 
 ///////////// Group numICUBedsPed /////////////
 * group[+].id = "numICUBedsPed-capacity-group"
-* group[=].code = SAFRHRDCS#numICUBedsPed "Number ICU Ped Beds"
+* group[=].code = HRDExampleCS#numICUBedsPed "Number ICU Ped Beds"
 * group[=].measureScore.value = 66.67
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -284,7 +284,7 @@ TODO, will need output with summary
 
 ///////////// Group numICUBedsOcc /////////////
 * group[+].id = "numICUBedsOcc-capacity-group"
-* group[=].code = SAFRHRDCS#numICUBedsOcc "Number ICU Occupancy Beds"
+* group[=].code = HRDExampleCS#numICUBedsOcc "Number ICU Occupancy Beds"
 * group[=].measureScore.value = 62.50
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -302,7 +302,7 @@ TODO, will need output with summary
 
 ///////////// Group numICUBedsOccAdult /////////////
 * group[+].id = "numICUBedsOccAdult-capacity-group"
-* group[=].code = SAFRHRDCS#numICUBedsOccAdult "Number ICU Occupancy Adult Beds"
+* group[=].code = HRDExampleCS#numICUBedsOccAdult "Number ICU Occupancy Adult Beds"
 * group[=].measureScore.value = 62.50
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -320,7 +320,7 @@ TODO, will need output with summary
 
 ///////////// Group numICUBedsOccPed /////////////
 * group[+].id = "numICUBedsOccPed-capacity-group"
-* group[=].code = SAFRHRDCS#numICUBedsOccPed "numICUBedsOccPed"
+* group[=].code = HRDExampleCS#numICUBedsOccPed "Number ICU Occupancy Pediatric Beds"
 * group[=].measureScore.value = 62.50
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -338,7 +338,7 @@ TODO, will need output with summary
 
 ///////////// Group numConfC19ICUPatsAdult /////////////
 * group[+].id = "numConfC19ICUPatsAdult-capacity-group"
-* group[=].code = SAFRHRDCS#numConfC19ICUPatsAdult "numConfC19ICUPatsAdult"
+* group[=].code = HRDExampleCS#numConfC19ICUPatsAdult "Number confirmed Covid-19 adult ICU patients"
 * group[=].measureScore.value = 71.43
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -356,7 +356,7 @@ TODO, will need output with summary
 
 ///////////// Group numConfC19ICUPatsPed /////////////
 * group[+].id = "numConfC19ICUPatsPed-capacity-group"
-* group[=].code = SAFRHRDCS#numConfC19ICUPatsPed "numConfC19ICUPatsPed"
+* group[=].code = HRDExampleCS#numConfC19ICUPatsPed "Number confirmed Covid-19 pediatric ICU patients"
 * group[=].measureScore.value = 93.75
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -374,7 +374,7 @@ TODO, will need output with summary
 
 ///////////// Group numConfFluICUPatsAdult /////////////
 * group[+].id = "numConfFluICUPatsAdult-capacity-group"
-* group[=].code = SAFRHRDCS#numConfFluICUPatsAdult "numConfFluICUPatsAdult"
+* group[=].code = HRDExampleCS#numConfFluICUPatsAdult "Number confirmed Flu adult ICU patients"
 * group[=].measureScore.value = 90.91
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -392,7 +392,7 @@ TODO, will need output with summary
 
 ///////////// Group numConfFluICUPatsPed /////////////
 * group[+].id = "numConfFluICUPatsPed-capacity-group"
-* group[=].code = SAFRHRDCS#numConfFluICUPatsPed "numConfFluICUPatsPed"
+* group[=].code = HRDExampleCS#numConfFluICUPatsPed "Number confirmed Flu pediatric ICU patients"
 * group[=].measureScore.value = 85.71
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -410,7 +410,7 @@ TODO, will need output with summary
 
 ///////////// Group numConfRSVICUPatsAdult /////////////
 * group[+].id = "numConfRSVICUPatsAdult-capacity-group"
-* group[=].code = SAFRHRDCS#numConfRSVICUPatsAdult "numConfRSVICUPatsAdult"
+* group[=].code = HRDExampleCS#numConfRSVICUPatsAdult "Number confirmed RSV adult ICU patients"
 * group[=].measureScore.value = 83.33
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
@@ -428,7 +428,7 @@ TODO, will need output with summary
 
 ///////////// Group numConfRSVICUPatsPed /////////////
 * group[+].id = "numConfRSVICUPatsPed-capacity-group"
-* group[=].code = SAFRHRDCS#numConfRSVICUPatsPed "numConfRSVICUPatsPed"
+* group[=].code = HRDExampleCS#numConfRSVICUPatsPed "Number confirmed RSV pediatric ICU patients"
 * group[=].measureScore.value = 76.92
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%

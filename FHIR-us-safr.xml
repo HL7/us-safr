@@ -11,13 +11,13 @@
 <artifact id="Bundle/HRDMeasureReportBundle" key="Bundle-HRDMeasureReportBundle" name="HRD Capacity Measure Report Bundle"/>
 <artifact id="Bundle/HRDMeasureBundle" key="Bundle-HRDMeasureBundle" name="HRD Measure Bundle Example 1"/>
 <artifact id="MeasureReport/HRDMeasureReport" key="MeasureReport-HRDMeasureReport" name="HRD MeasureReport Example"/>
-<artifact id="CodeSystem/SAFRHealthareCapacityCSExample" key="CodeSystem-SAFRHealthareCapacityCSExample" name="Healthcare Capacity Reporting Code System"/>
-<artifact id="CodeSystem/SAFRHealthareCapacityGroupCSExample" key="CodeSystem-SAFRHealthareCapacityGroupCSExample" name="Healthcare Capacity Reporting Group Code System"/>
+<artifact id="CodeSystem/us-safr-bed-capacity-example-codes" key="CodeSystem-us-safr-bed-capacity-example-codes" name="Healthcare Capacity Reporting Code System"/>
+<artifact id="CodeSystem/us-safr-bed-capacity-group-example-codes" key="CodeSystem-us-safr-bed-capacity-group-example-codes" name="Healthcare Capacity Reporting Group Code System"/>
 <artifact id="Bundle/HospitalBedCapacityReportBundle" key="Bundle-HospitalBedCapacityReportBundle" name="Hospital Bed Capacity Report Bundle"/>
 <artifact id="MeasureReport/BedCapacityMeasureReport" key="MeasureReport-BedCapacityMeasureReport" name="Hospital Bed Capacity Report Example for March 5, 2025"/>
 <artifact id="Measure/BedCapacityMeasure" key="Measure-BedCapacityMeasure" name="Hospital Multi-Bed Type Capacity Measure Example"/>
-<artifact id="CodeSystem/SAFRHRDCS" key="CodeSystem-SAFRHRDCS" name="Hospital Respiratory Data Reporting Code System"/>
-<artifact id="CodeSystem/HRDSupplyDaysCS" key="CodeSystem-HRDSupplyDaysCS" name="Hospital Respiratory Data Supply Days Code System"/>
+<artifact id="CodeSystem/us-safr-hrd-example-codes" key="CodeSystem-us-safr-hrd-example-codes" name="Hospital Respiratory Data Reporting Code System"/>
+<artifact id="CodeSystem/us-safr-hrd-supply-days-example-codes" key="CodeSystem-us-safr-hrd-supply-days-example-codes" name="Hospital Respiratory Data Supply Days Code System"/>
 <artifact id="Library/HRDMeasureLibrary" key="Library-HRDMeasureLibrary" name="Hospital Respiratory Disease Measure Library"/>
 <artifact id="Measure/HospitalRespiratoryDataMeasure" key="Measure-HospitalRespiratoryDataMeasure" name="Measure - Hospital Respiratory Data Initial Population"/>
 <artifact id="Location/MemorialHospitalFacility" key="Location-MemorialHospitalFacility" name="MemorialHospitalFacility"/>

@@ -30,7 +30,7 @@ Usage: #inline
 * identifier.value = "123"
 * status = #active
 * name = "XYZ Hospital"
-* type = SAFRHealthareCapacityCSExample#HOSP "Hospital"
+* type = BedCapacityExampleCS#HOSP "Hospital"
 
 Instance: IPFLocation
 InstanceOf: QICoreLocation|6.0.0
@@ -42,7 +42,7 @@ Usage: #inline
 * identifier.value = "456"
 * status = #active
 * name = "Inpatient Psych at XYZ Hospital"
-* type = SAFRHealthareCapacityCSExample#IPF "Inpatient Psychiatric"
+* type = BedCapacityExampleCS#IPF "Inpatient Psychiatric"
 
 Instance: PediatricLocation
 InstanceOf: QICoreLocation|6.0.0
@@ -54,4 +54,4 @@ Usage: #inline
 * identifier.value = "789"
 * status = #active
 * name = "Children's/Pediatrics at XYZ Hospital"
-* type = SAFRHealthareCapacityCSExample#CHLD "Children's or Pediatric"
+* type = BedCapacityExampleCS#CHLD "Children's or Pediatric"

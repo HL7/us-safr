@@ -47,7 +47,7 @@ Usage: #example
 
 ///////////// Group numInPtBedsAdult /////////////
 * group[+].id = "numInPtBedsAdult-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numInPtBedsAdult "Number Inpatient Adult Beds"
+* group[=].code = HRDExampleCS#numInPtBedsAdult "Number Inpatient Adult Beds"
 * group[=].description = "Number Inpatient Adult Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numInPtBedsAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -72,7 +72,7 @@ Usage: #example
 
 ///////////// Group numInPtBedsPed /////////////
 * group[+].id = "numInPtBedsPed-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numInPtBedsPed "Number Inpatient Ped Beds"
+* group[=].code = HRDExampleCS#numInPtBedsPed "Number Inpatient Ped Beds"
 * group[=].description = "Number Inpatient Ped Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numInPtBedsPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -97,7 +97,7 @@ Usage: #example
 
 ///////////// Group numInPtBedsOcc /////////////
 * group[+].id = "numInPtBedsOcc-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numInPtBedsOcc "Number Inpatient Occupancy Beds"
+* group[=].code = HRDExampleCS#numInPtBedsOcc "Number Inpatient Occupancy Beds"
 * group[=].description = "Number Inpatient Occupancy Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numInPtBedsOcc-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -122,7 +122,7 @@ Usage: #example
 
 ///////////// Group numInPtBedsOccAdult /////////////
 * group[+].id = "numInPtBedsOccAdult-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numInPtBedsOccAdult "Number Inpatient Occupancy Adult Beds"
+* group[=].code = HRDExampleCS#numInPtBedsOccAdult "Number Inpatient Occupancy Adult Beds"
 * group[=].description = "Number Inpatient Occupancy Adult Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numInPtBedsOccAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -147,7 +147,7 @@ Usage: #example
 
 ///////////// Group numInPtBedsOccPed /////////////
 * group[+].id = "numInPtBedsOccPed-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numInPtBedsOccPed "Number Inpatient Occupancy Ped Beds"
+* group[=].code = HRDExampleCS#numInPtBedsOccPed "Number Inpatient Occupancy Ped Beds"
 * group[=].description = "Number Inpatient Occupancy Ped Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numInPtBedsOccPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -172,7 +172,7 @@ Usage: #example
 
 ///////////// Group numConfC19HospPatsAdult /////////////
 * group[+].id = "numConfC19HospPatsAdult-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numConfC19HospPatsAdult "numConfC19HospPatsAdult"
+* group[=].code = HRDExampleCS#numConfC19HospPatsAdult "Number confirmed Covid-19 adult hospital patients"
 * group[=].description = "numConfC19HospPatsAdult Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfC19HospPatsAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -186,7 +186,7 @@ Usage: #example
 * group[=].population[measurePopulation].criteria.expression = "numInPtBedsOccAdult"
 * group[=].population[measureObservation].id = "numConfC19HospPatsAdult-measure-observation"
 * group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
-* group[=].population[measureObservation].description = "numConfC19HospPatsAdult"
+* group[=].population[measureObservation].description = "Number confirmed Covid-19 adult hospital patients"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfC19HospPatsAdult"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
@@ -197,7 +197,7 @@ Usage: #example
 
 ///////////// Group numConfC19HospPatsPed /////////////
 * group[+].id = "numConfC19HospPatsPed-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numConfC19HospPatsPed "numConfC19HospPatsPed"
+* group[=].code = HRDExampleCS#numConfC19HospPatsPed "Number confirmed Covid-19 pediatric hospital patients"
 * group[=].description = "numConfC19HospPatsPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfC19HospPatsPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -211,7 +211,7 @@ Usage: #example
 * group[=].population[measurePopulation].criteria.expression = "numInPtBedsOccPed"
 * group[=].population[measureObservation].id = "numConfC19HospPatsPed-measure-observation"
 * group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
-* group[=].population[measureObservation].description = "numConfC19HospPatsPed"
+* group[=].population[measureObservation].description = "Number confirmed Covid-19 pediatric hospital patients"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfC19HospPatsPed"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
@@ -222,7 +222,7 @@ Usage: #example
 
 ///////////// Group numConfFluHospPatsAdult /////////////
 * group[+].id = "numConfFluHospPatsAdult-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numConfFluHospPatsAdult "numConfFluHospPatsAdult"
+* group[=].code = HRDExampleCS#numConfFluHospPatsAdult "Number confirmed Flu adult hospital patients"
 * group[=].description = "numConfFluHospPatsAdult Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfFluHospPatsAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -236,7 +236,7 @@ Usage: #example
 * group[=].population[measurePopulation].criteria.expression = "numInPtBedsOccAdult"
 * group[=].population[measureObservation].id = "numConfFluHospPatsAdult-measure-observation"
 * group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
-* group[=].population[measureObservation].description = "numConfFluHospPatsAdult"
+* group[=].population[measureObservation].description = "Number confirmed Flu adult hospital patients"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfFluHospPatsAdult"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
@@ -247,7 +247,7 @@ Usage: #example
 
 ///////////// Group numConfFluHospPatsPed /////////////
 * group[+].id = "numConfFluHospPatsPed-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numConfFluHospPatsPed "numConfFluHospPatsPed"
+* group[=].code = HRDExampleCS#numConfFluHospPatsPed "Number confirmed Flu pediatric hospital patients"
 * group[=].description = "numConfFluHospPatsPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfFluHospPatsPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -261,7 +261,7 @@ Usage: #example
 * group[=].population[measurePopulation].criteria.expression = "numInPtBedsOccPed"
 * group[=].population[measureObservation].id = "numConfFluHospPatsPed-measure-observation"
 * group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
-* group[=].population[measureObservation].description = "numConfFluHospPatsPed"
+* group[=].population[measureObservation].description = "Number confirmed Flu pediatric hospital patients"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfFluHospPatsPed"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
@@ -272,7 +272,7 @@ Usage: #example
 
 ///////////// Group numConfRSVHospPatsAdult /////////////
 * group[+].id = "numConfRSVHospPatsAdult-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numConfRSVHospPatsAdult "numConfRSVHospPatsAdult"
+* group[=].code = HRDExampleCS#numConfRSVHospPatsAdult "Number confirmed RSV adult hospital patients"
 * group[=].description = "numConfRSVHospPatsAdult Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfRSVHospPatsAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -286,7 +286,7 @@ Usage: #example
 * group[=].population[measurePopulation].criteria.expression = "numInPtBedsOccAdult"
 * group[=].population[measureObservation].id = "numConfRSVHospPatsAdult-measure-observation"
 * group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
-* group[=].population[measureObservation].description = "numConfRSVHospPatsAdult"
+* group[=].population[measureObservation].description = "Number confirmed RSV adult hospital patients"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfRSVHospPatsAdult"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
@@ -297,7 +297,7 @@ Usage: #example
 
 ///////////// Group numConfRSVHospPatsPed /////////////
 * group[+].id = "numConfRSVHospPatsPed-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numConfRSVHospPatsPed "numConfRSVHospPatsPed"
+* group[=].code = HRDExampleCS#numConfRSVHospPatsPed "Number confirmed RSV pediatric hospital patients"
 * group[=].description = "numConfRSVHospPatsPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfRSVHospPatsPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -311,7 +311,7 @@ Usage: #example
 * group[=].population[measurePopulation].criteria.expression = "numInPtBedsOccPed"
 * group[=].population[measureObservation].id = "numConfRSVHospPatsPed-measure-observation"
 * group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
-* group[=].population[measureObservation].description = "numConfRSVHospPatsPed"
+* group[=].population[measureObservation].description = "Number confirmed RSV pediatric hospital patients"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfRSVHospPatsPed"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
@@ -322,7 +322,7 @@ Usage: #example
 
 ///////////// Group numICUBedsAdult /////////////
 * group[+].id = "numICUBedsAdult-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numICUBedsAdult "Number ICU Adult Beds"
+* group[=].code = HRDExampleCS#numICUBedsAdult "Number ICU Adult Beds"
 * group[=].description = "Number ICU Adult Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numICUBedsAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -347,7 +347,7 @@ Usage: #example
 
 ///////////// Group numICUBedsPed /////////////
 * group[+].id = "numICUBedsPed-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numICUBedsPed "Number ICU Ped Beds"
+* group[=].code = HRDExampleCS#numICUBedsPed "Number ICU Ped Beds"
 * group[=].description = "Number ICU Ped Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numICUBedsPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -372,7 +372,7 @@ Usage: #example
 
 ///////////// Group numICUBedsOcc /////////////
 * group[+].id = "numICUBedsOcc-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numICUBedsOcc "Number ICU Occupancy Beds"
+* group[=].code = HRDExampleCS#numICUBedsOcc "Number ICU Occupancy Beds"
 * group[=].description = "Number ICU Occupancy Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numICUBedsOcc-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -397,7 +397,7 @@ Usage: #example
 
 ///////////// Group numICUBedsOccAdult /////////////
 * group[+].id = "numICUBedsOccAdult-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numICUBedsOccAdult "Number ICU Occupancy Adult Beds"
+* group[=].code = HRDExampleCS#numICUBedsOccAdult "Number ICU Occupancy Adult Beds"
 * group[=].description = "Number ICU Occupancy Adult Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numICUBedsOccAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -422,7 +422,7 @@ Usage: #example
 
 ///////////// Group numICUBedsOccPed /////////////
 * group[+].id = "numICUBedsOccPed-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numICUBedsOccPed "numICUBedsOccPed"
+* group[=].code = HRDExampleCS#numICUBedsOccPed "Number ICU Occupancy Pediatric Beds"
 * group[=].description = "numICUBedsOccPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numICUBedsOccPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -436,7 +436,7 @@ Usage: #example
 * group[=].population[measurePopulation].criteria.expression = "numICUBedsPed"
 * group[=].population[measureObservation].id = "numICUBedsOccPed-measure-observation"
 * group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
-* group[=].population[measureObservation].description = "numICUBedsOccPed"
+* group[=].population[measureObservation].description = "Number ICU Occupancy Pediatric Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numICUBedsOccPed"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
@@ -447,7 +447,7 @@ Usage: #example
 
 ///////////// Group numConfC19ICUPatsAdult /////////////
 * group[+].id = "numConfC19ICUPatsAdult-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numConfC19ICUPatsAdult "numConfC19ICUPatsAdult"
+* group[=].code = HRDExampleCS#numConfC19ICUPatsAdult "Number confirmed Covid-19 adult ICU patients"
 * group[=].description = "numConfC19ICUPatsAdult Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfC19ICUPatsAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -461,7 +461,7 @@ Usage: #example
 * group[=].population[measurePopulation].criteria.expression = "numICUBedsOccAdult"
 * group[=].population[measureObservation].id = "numConfC19ICUPatsAdult-measure-observation"
 * group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
-* group[=].population[measureObservation].description = "numConfC19ICUPatsAdult"
+* group[=].population[measureObservation].description = "Number confirmed Covid-19 adult ICU patients"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfC19ICUPatsAdult"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
@@ -472,7 +472,7 @@ Usage: #example
 
 ///////////// Group numConfC19ICUPatsPed /////////////
 * group[+].id = "numConfC19ICUPatsPed-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numConfC19ICUPatsPed "numConfC19ICUPatsPed"
+* group[=].code = HRDExampleCS#numConfC19ICUPatsPed "Number confirmed Covid-19 pediatric ICU patients"
 * group[=].description = "numConfC19ICUPatsPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfC19ICUPatsPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -481,12 +481,12 @@ Usage: #example
 * group[=].population[initialPopulation].criteria.expression = "numICUBedsOccPedInitialPopulation"
 * group[=].population[measurePopulation].id = "numConfC19ICUPatsPed-measure-population"
 * group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
-* group[=].population[measurePopulation].description = "numICUBedsOccPed"
+* group[=].population[measurePopulation].description = "Number ICU Occupancy Pediatric Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numICUBedsOccPed"
 * group[=].population[measureObservation].id = "numConfC19ICUPatsPed-measure-observation"
 * group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
-* group[=].population[measureObservation].description = "numConfC19ICUPatsPed"
+* group[=].population[measureObservation].description = "Number confirmed Covid-19 pediatric ICU patients"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfC19ICUPatsPed"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
@@ -497,7 +497,7 @@ Usage: #example
 
 ///////////// Group numConfFluICUPatsAdult /////////////
 * group[+].id = "numConfFluICUPatsAdult-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numConfFluICUPatsAdult "numConfFluICUPatsAdult"
+* group[=].code = HRDExampleCS#numConfFluICUPatsAdult "Number confirmed Flu adult ICU patients"
 * group[=].description = "numConfFluICUPatsAdult Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfFluICUPatsAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -511,7 +511,7 @@ Usage: #example
 * group[=].population[measurePopulation].criteria.expression = "numICUBedsOccAdult"
 * group[=].population[measureObservation].id = "numConfFluICUPatsAdult-measure-observation"
 * group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
-* group[=].population[measureObservation].description = "numConfFluICUPatsAdult"
+* group[=].population[measureObservation].description = "Number confirmed Flu adult ICU patients"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfFluICUPatsAdult"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
@@ -522,7 +522,7 @@ Usage: #example
 
 ///////////// Group numConfFluICUPatsPed /////////////
 * group[+].id = "numConfFluICUPatsPed-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numConfFluICUPatsPed "numConfFluICUPatsPed"
+* group[=].code = HRDExampleCS#numConfFluICUPatsPed "Number confirmed Flu pediatric ICU patients"
 * group[=].description = "numConfFluICUPatsPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfFluICUPatsPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -531,12 +531,12 @@ Usage: #example
 * group[=].population[initialPopulation].criteria.expression = "numICUBedsOccPedInitialPopulation"
 * group[=].population[measurePopulation].id = "numConfFluICUPatsPed-measure-population"
 * group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
-* group[=].population[measurePopulation].description = "numICUBedsOccPed"
+* group[=].population[measurePopulation].description = "Number ICU Occupancy Pediatric Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numICUBedsOccPed"
 * group[=].population[measureObservation].id = "numConfFluICUPatsPed-measure-observation"
 * group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
-* group[=].population[measureObservation].description = "numConfFluICUPatsPed"
+* group[=].population[measureObservation].description = "Number confirmed Flu pediatric ICU patients"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfFluICUPatsPed"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
@@ -547,7 +547,7 @@ Usage: #example
 
 ///////////// Group numConfRSVICUPatsAdult /////////////
 * group[+].id = "numConfRSVICUPatsAdult-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numConfRSVICUPatsAdult "numConfRSVICUPatsAdult"
+* group[=].code = HRDExampleCS#numConfRSVICUPatsAdult "Number confirmed RSV adult ICU patients"
 * group[=].description = "numConfRSVICUPatsAdult Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfRSVICUPatsAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -561,7 +561,7 @@ Usage: #example
 * group[=].population[measurePopulation].criteria.expression = "numICUBedsOccAdult"
 * group[=].population[measureObservation].id = "numConfRSVICUPatsAdult-measure-observation"
 * group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
-* group[=].population[measureObservation].description = "numConfRSVICUPatsAdult"
+* group[=].population[measureObservation].description = "Number confirmed RSV adult ICU patients"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfRSVICUPatsAdult"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
@@ -572,7 +572,7 @@ Usage: #example
 
 ///////////// Group numConfRSVICUPatsPed /////////////
 * group[+].id = "numConfRSVICUPatsPed-hrd-capacity-group"
-* group[=].code = SAFRHRDCS#numConfRSVICUPatsPed "numConfRSVICUPatsPed"
+* group[=].code = HRDExampleCS#numConfRSVICUPatsPed "Number confirmed RSV pediatric ICU patients"
 * group[=].description = "numConfRSVICUPatsPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfRSVICUPatsPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -581,12 +581,12 @@ Usage: #example
 * group[=].population[initialPopulation].criteria.expression = "numICUBedsOccPedInitialPopulation"
 * group[=].population[measurePopulation].id = "numConfRSVICUPatsPed-measure-population"
 * group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
-* group[=].population[measurePopulation].description = "numICUBedsOccPed"
+* group[=].population[measurePopulation].description = "Number ICU Occupancy Pediatric Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numICUBedsOccPed"
 * group[=].population[measureObservation].id = "numConfRSVICUPatsPed-measure-observation"
 * group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
-* group[=].population[measureObservation].description = "numConfRSVICUPatsPed"
+* group[=].population[measureObservation].description = "Number confirmed RSV pediatric ICU patients"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfRSVICUPatsPed"
 * group[=].population[measureObservation].extension[+].url = $cqfm-criteriaReference
