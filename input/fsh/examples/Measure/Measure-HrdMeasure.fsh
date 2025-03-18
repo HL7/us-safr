@@ -50,14 +50,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numInPtBedsAdult "Number Inpatient Adult Beds"
 * group[=].description = "Number Inpatient Adult Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numInPtBedsAdult-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number Inpatient Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numInPtBedsInitialPopulation"
 * group[=].population[measurePopulation].id = "numInPtBedsAdult-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number Inpatient Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numInPtBeds"
 * group[=].population[measureObservation].id = "numInPtBedsAdult-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "Number Inpatient Adult Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numInPtBedsAdult"
@@ -72,14 +75,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numInPtBedsPed "Number Inpatient Ped Beds"
 * group[=].description = "Number Inpatient Ped Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numInPtBedsPed-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number Inpatient Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numInPtBedsInitialPopulation"
 * group[=].population[measurePopulation].id = "numInPtBedsPed-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number Inpatient Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numInPtBeds"
 * group[=].population[measureObservation].id = "numInPtBedsPed-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "Number Inpatient Ped Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numInPtBedsPed"
@@ -94,14 +100,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numInPtBedsOcc "Number Inpatient Occupancy Beds"
 * group[=].description = "Number Inpatient Occupancy Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numInPtBedsOcc-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number Inpatient Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numInPtBedsInitialPopulation"
 * group[=].population[measurePopulation].id = "numInPtBedsOcc-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number Inpatient Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numInPtBeds"
 * group[=].population[measureObservation].id = "numInPtBedsOcc-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "Number Inpatient Occupancy Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numInPtBedsOcc"
@@ -116,14 +125,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numInPtBedsOccAdult "Number Inpatient Occupancy Adult Beds"
 * group[=].description = "Number Inpatient Occupancy Adult Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numInPtBedsOccAdult-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number Inpatient Occupancy Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numInPtBedsOccInitialPopulation"
 * group[=].population[measurePopulation].id = "numInPtBedsOccAdult-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number Inpatient Occupancy Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numInPtBedsOcc"
 * group[=].population[measureObservation].id = "numInPtBedsOccAdult-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "Number Inpatient Occupancy Adult Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numInPtBedsOccAdult"
@@ -138,14 +150,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numInPtBedsOccPed "Number Inpatient Occupancy Ped Beds"
 * group[=].description = "Number Inpatient Occupancy Ped Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numInPtBedsOccPed-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number Inpatient Occupancy Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numInPtBedsOccInitialPopulation"
 * group[=].population[measurePopulation].id = "numInPtBedsOccPed-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number Inpatient Occupancy Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numInPtBedsOcc"
 * group[=].population[measureObservation].id = "numInPtBedsOccPed-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "Number Inpatient Occupancy Ped Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numInPtBedsOccPed"
@@ -160,14 +175,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numConfC19HospPatsAdult "numConfC19HospPatsAdult"
 * group[=].description = "numConfC19HospPatsAdult Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfC19HospPatsAdult-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number Inpatient Occupancy Adult Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numInPtBedsOccAdultInitialPopulation"
 * group[=].population[measurePopulation].id = "numConfC19HospPatsAdult-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number Inpatient Occupancy Adult Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numInPtBedsOccAdult"
 * group[=].population[measureObservation].id = "numConfC19HospPatsAdult-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "numConfC19HospPatsAdult"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfC19HospPatsAdult"
@@ -182,14 +200,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numConfC19HospPatsPed "numConfC19HospPatsPed"
 * group[=].description = "numConfC19HospPatsPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfC19HospPatsPed-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number Inpatient Occupancy Ped Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numInPtBedsOccPedInitialPopulation"
 * group[=].population[measurePopulation].id = "numConfC19HospPatsPed-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number Inpatient Occupancy Ped Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numInPtBedsOccPed"
 * group[=].population[measureObservation].id = "numConfC19HospPatsPed-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "numConfC19HospPatsPed"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfC19HospPatsPed"
@@ -204,14 +225,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numConfFluHospPatsAdult "numConfFluHospPatsAdult"
 * group[=].description = "numConfFluHospPatsAdult Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfFluHospPatsAdult-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number Inpatient Occupancy Adult Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numInPtBedsOccAdultInitialPopulation"
 * group[=].population[measurePopulation].id = "numConfFluHospPatsAdult-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number Inpatient Occupancy Adult Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numInPtBedsOccAdult"
 * group[=].population[measureObservation].id = "numConfFluHospPatsAdult-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "numConfFluHospPatsAdult"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfFluHospPatsAdult"
@@ -226,14 +250,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numConfFluHospPatsPed "numConfFluHospPatsPed"
 * group[=].description = "numConfFluHospPatsPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfFluHospPatsPed-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number Inpatient Occupancy Ped Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numInPtBedsOccPedInitialPopulation"
 * group[=].population[measurePopulation].id = "numConfFluHospPatsPed-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number Inpatient Occupancy Ped Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numInPtBedsOccPed"
 * group[=].population[measureObservation].id = "numConfFluHospPatsPed-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "numConfFluHospPatsPed"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfFluHospPatsPed"
@@ -248,14 +275,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numConfRSVHospPatsAdult "numConfRSVHospPatsAdult"
 * group[=].description = "numConfRSVHospPatsAdult Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfRSVHospPatsAdult-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number Inpatient Occupancy Adult Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numInPtBedsOccAdultInitialPopulation"
 * group[=].population[measurePopulation].id = "numConfRSVHospPatsAdult-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number Inpatient Occupancy Adult Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numInPtBedsOccAdult"
 * group[=].population[measureObservation].id = "numConfRSVHospPatsAdult-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "numConfRSVHospPatsAdult"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfRSVHospPatsAdult"
@@ -270,14 +300,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numConfRSVHospPatsPed "numConfRSVHospPatsPed"
 * group[=].description = "numConfRSVHospPatsPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfRSVHospPatsPed-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number Inpatient Occupancy Ped Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numInPtBedsOccPedInitialPopulation"
 * group[=].population[measurePopulation].id = "numConfRSVHospPatsPed-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number Inpatient Occupancy Ped Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numInPtBedsOccPed"
 * group[=].population[measureObservation].id = "numConfRSVHospPatsPed-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "numConfRSVHospPatsPed"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfRSVHospPatsPed"
@@ -292,14 +325,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numICUBedsAdult "Number ICU Adult Beds"
 * group[=].description = "Number ICU Adult Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numICUBedsAdult-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number ICU Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numICUBedsInitialPopulation"
 * group[=].population[measurePopulation].id = "numICUBedsAdult-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number ICU Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numICUBeds"
 * group[=].population[measureObservation].id = "numICUBedsAdult-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "Number ICU Adult Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numICUBedsAdult"
@@ -314,14 +350,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numICUBedsPed "Number ICU Ped Beds"
 * group[=].description = "Number ICU Ped Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numICUBedsPed-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number ICU Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numICUBedsInitialPopulation"
 * group[=].population[measurePopulation].id = "numICUBedsPed-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number ICU Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numICUBeds"
 * group[=].population[measureObservation].id = "numICUBedsPed-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "Number ICU Ped Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numICUBedsPed"
@@ -336,14 +375,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numICUBedsOcc "Number ICU Occupancy Beds"
 * group[=].description = "Number ICU Occupancy Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numICUBedsOcc-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number ICU Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numICUBedsInitialPopulation"
 * group[=].population[measurePopulation].id = "numICUBedsOcc-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number ICU Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numICUBeds"
 * group[=].population[measureObservation].id = "numICUBedsOcc-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "Number ICU Occupancy Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numICUBedsOcc"
@@ -358,14 +400,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numICUBedsOccAdult "Number ICU Occupancy Adult Beds"
 * group[=].description = "Number ICU Occupancy Adult Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numICUBedsOccAdult-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number ICU Adult Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numICUBedsAdultInitialPopulation"
 * group[=].population[measurePopulation].id = "numICUBedsOccAdult-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number ICU Adult Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numICUBedsAdult"
 * group[=].population[measureObservation].id = "numICUBedsOccAdult-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "Number ICU Occupancy Adult Beds"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numICUBedsOccAdult"
@@ -380,14 +425,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numICUBedsOccPed "numICUBedsOccPed"
 * group[=].description = "numICUBedsOccPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numICUBedsOccPed-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number ICU Ped Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numICUBedsPedInitialPopulation"
 * group[=].population[measurePopulation].id = "numICUBedsOccPed-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number ICU Ped Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numICUBedsPed"
 * group[=].population[measureObservation].id = "numICUBedsOccPed-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "numICUBedsOccPed"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numICUBedsOccPed"
@@ -402,14 +450,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numConfC19ICUPatsAdult "numConfC19ICUPatsAdult"
 * group[=].description = "numConfC19ICUPatsAdult Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfC19ICUPatsAdult-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number ICU Occupancy Adult Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numICUBedsOccAdultInitialPopulation"
 * group[=].population[measurePopulation].id = "numConfC19ICUPatsAdult-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number ICU Occupancy Adult Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numICUBedsOccAdult"
 * group[=].population[measureObservation].id = "numConfC19ICUPatsAdult-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "numConfC19ICUPatsAdult"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfC19ICUPatsAdult"
@@ -424,14 +475,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numConfC19ICUPatsPed "numConfC19ICUPatsPed"
 * group[=].description = "numConfC19ICUPatsPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfC19ICUPatsPed-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All numICUBedsOccPed"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numICUBedsOccPedInitialPopulation"
 * group[=].population[measurePopulation].id = "numConfC19ICUPatsPed-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "numICUBedsOccPed"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numICUBedsOccPed"
 * group[=].population[measureObservation].id = "numConfC19ICUPatsPed-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "numConfC19ICUPatsPed"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfC19ICUPatsPed"
@@ -446,14 +500,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numConfFluICUPatsAdult "numConfFluICUPatsAdult"
 * group[=].description = "numConfFluICUPatsAdult Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfFluICUPatsAdult-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number ICU Occupancy Adult Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numICUBedsOccAdultInitialPopulation"
 * group[=].population[measurePopulation].id = "numConfFluICUPatsAdult-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number ICU Occupancy Adult Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numICUBedsOccAdult"
 * group[=].population[measureObservation].id = "numConfFluICUPatsAdult-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "numConfFluICUPatsAdult"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfFluICUPatsAdult"
@@ -468,14 +525,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numConfFluICUPatsPed "numConfFluICUPatsPed"
 * group[=].description = "numConfFluICUPatsPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfFluICUPatsPed-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All numICUBedsOccPed"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numICUBedsOccPedInitialPopulation"
 * group[=].population[measurePopulation].id = "numConfFluICUPatsPed-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "numICUBedsOccPed"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numICUBedsOccPed"
 * group[=].population[measureObservation].id = "numConfFluICUPatsPed-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "numConfFluICUPatsPed"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfFluICUPatsPed"
@@ -490,14 +550,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numConfRSVICUPatsAdult "numConfRSVICUPatsAdult"
 * group[=].description = "numConfRSVICUPatsAdult Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfRSVICUPatsAdult-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All Number ICU Occupancy Adult Beds"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numICUBedsOccAdultInitialPopulation"
 * group[=].population[measurePopulation].id = "numConfRSVICUPatsAdult-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "Number ICU Occupancy Adult Beds"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numICUBedsOccAdult"
 * group[=].population[measureObservation].id = "numConfRSVICUPatsAdult-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "numConfRSVICUPatsAdult"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfRSVICUPatsAdult"
@@ -512,14 +575,17 @@ Usage: #example
 * group[=].code = SAFRHRDCS#numConfRSVICUPatsPed "numConfRSVICUPatsPed"
 * group[=].description = "numConfRSVICUPatsPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfRSVICUPatsPed-initial-population"
+* group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
 * group[=].population[initialPopulation].description = "All numICUBedsOccPed"  // TODO Replace with a Group Display
 * group[=].population[initialPopulation].criteria.language = #text/cql-identifier
 * group[=].population[initialPopulation].criteria.expression = "numICUBedsOccPedInitialPopulation"
 * group[=].population[measurePopulation].id = "numConfRSVICUPatsPed-measure-population"
+* group[=].population[measurePopulation].code = $measure-population#measure-population "Measure Population"
 * group[=].population[measurePopulation].description = "numICUBedsOccPed"
 * group[=].population[measurePopulation].criteria.language = #text/cql-identifier
 * group[=].population[measurePopulation].criteria.expression = "numICUBedsOccPed"
 * group[=].population[measureObservation].id = "numConfRSVICUPatsPed-measure-observation"
+* group[=].population[measureObservation].code = $measure-population#measure-observation "Measure Observation"
 * group[=].population[measureObservation].description = "numConfRSVICUPatsPed"
 * group[=].population[measureObservation].criteria.language = #text/cql-identifier
 * group[=].population[measureObservation].criteria.expression = "numConfRSVICUPatsPed"

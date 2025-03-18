@@ -55,7 +55,7 @@ TODO, will need output with summary
 ///////////// Group Beds /////////////
 * group[+].id = "AllBeds-bed-capacity-group"
 * group[=].code = SAFRHealthareCapacityGroupCSExample#AllBeds "All Beds"
-* group[=].measureScore.value = 97.25274725274726
+* group[=].measureScore.value = 97.25
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
 * group[=].measureScore.system = "http://unitsofmeasure.org"
@@ -82,7 +82,7 @@ TODO, will need output with summary
 ///////////// Group AdultTotal /////////////
 * group[+].id = "AdultTotal-bed-capacity-group"
 * group[=].code = SAFRHealthareCapacityGroupCSExample#AdultTotal "Adult Total Beds"
-* group[=].measureScore.value = 97.25274725274726
+* group[=].measureScore.value = 97.25
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
 * group[=].measureScore.system = "http://unitsofmeasure.org"
@@ -109,7 +109,7 @@ TODO, will need output with summary
 ///////////// Group AdultICU /////////////
 * group[+].id = "AdultICU-bed-capacity-group"
 * group[=].code = SAFRHealthareCapacityGroupCSExample#AdultICU "Adult ICU Beds"
-* group[=].measureScore.value = 94.11764705882352
+* group[=].measureScore.value = 94.12
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
 * group[=].measureScore.system = "http://unitsofmeasure.org"
@@ -136,7 +136,7 @@ TODO, will need output with summary
 ///////////// Group AdultICULOC /////////////
 * group[+].id = "AdultICULOC-bed-capacity-group"
 * group[=].code = SAFRHealthareCapacityGroupCSExample#AdultICULOC "Adult ICU-LOC Beds"
-* group[=].measureScore.value = 91.42857142857143
+* group[=].measureScore.value = 91.43
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
 * group[=].measureScore.system = "http://unitsofmeasure.org"
@@ -163,7 +163,7 @@ TODO, will need output with summary
 ///////////// Group AdultNonICU /////////////
 * group[+].id = "AdultNonICU-bed-capacity-group"
 * group[=].code = SAFRHealthareCapacityGroupCSExample#AdultNonICU "Adult Non-ICU Beds"
-* group[=].measureScore.value = 84.76821192052981
+* group[=].measureScore.value = 84.77
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
 * group[=].measureScore.system = "http://unitsofmeasure.org"
@@ -190,7 +190,7 @@ TODO, will need output with summary
 ///////////// Group AdultPCU /////////////
 * group[+].id = "AdultPCU-bed-capacity-group"
 * group[=].code = SAFRHealthareCapacityGroupCSExample#AdultPCU "Adult PCU Beds"
-* group[=].measureScore.value = 0.0
+* group[=].measureScore.value = 0.00
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
 * group[=].measureScore.system = "http://unitsofmeasure.org"
@@ -217,7 +217,7 @@ TODO, will need output with summary
 ///////////// Group AdultMTMS /////////////
 * group[+].id = "AdultMTMS-bed-capacity-group"
 * group[=].code = SAFRHealthareCapacityGroupCSExample#AdultMTMS "Adult MT/MS Beds"
-* group[=].measureScore.value = 100.0
+* group[=].measureScore.value = 100.00
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
 * group[=].measureScore.system = "http://unitsofmeasure.org"
@@ -244,7 +244,7 @@ TODO, will need output with summary
 ///////////// Group AdultObs /////////////
 * group[+].id = "AdultObs-bed-capacity-group"
 * group[=].code = SAFRHealthareCapacityGroupCSExample#AdultObs "Adult OBS Beds"
-* group[=].measureScore.value = 68.96551724137932
+* group[=].measureScore.value = 68.97
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
 * group[=].measureScore.system = "http://unitsofmeasure.org"
@@ -460,7 +460,7 @@ TODO, will need output with summary
 ///////////// Group SpecialtyTotal /////////////
 * group[+].id = "SpecialtyTotal-bed-capacity-group"
 * group[=].code = SAFRHealthareCapacityGroupCSExample#SpecialtyTotal "Specialty Total Beds"
-* group[=].measureScore.value = 66.66666666666666
+* group[=].measureScore.value = 66.67
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
 * group[=].measureScore.system = "http://unitsofmeasure.org"
@@ -730,7 +730,7 @@ TODO, will need output with summary
 ///////////// Group AdultPsych /////////////
 * group[+].id = "AdultPsych-bed-capacity-group"
 * group[=].code = SAFRHealthareCapacityGroupCSExample#AdultPsych "Specialty Adult Psych Beds"
-* group[=].measureScore.value = 10.0
+* group[=].measureScore.value = 10.00
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
 * group[=].measureScore.system = "http://unitsofmeasure.org"
@@ -784,7 +784,7 @@ TODO, will need output with summary
 ///////////// Group Rehab /////////////
 * group[+].id = "Rehab-bed-capacity-group"
 * group[=].code = SAFRHealthareCapacityGroupCSExample#Rehab "Specialty Rehab Beds"
-* group[=].measureScore.value = 50.0
+* group[=].measureScore.value = 50.00
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
 * group[=].measureScore.system = "http://unitsofmeasure.org"
@@ -811,7 +811,7 @@ TODO, will need output with summary
 ///////////// Group SurgeActiveTotal /////////////
 * group[+].id = "SurgeActiveTotal-bed-capacity-group"
 * group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeActiveTotal "Surge Total Active Beds"
-* group[=].measureScore.value = 50.0
+* group[=].measureScore.value = 50.00
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
 * group[=].measureScore.system = "http://unitsofmeasure.org"
@@ -865,7 +865,7 @@ TODO, will need output with summary
 ///////////// Group SurgeActiveICU /////////////
 * group[+].id = "SurgeActiveICU-bed-capacity-group"
 * group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeActiveICU "Surge ICU Active Beds"
-* group[=].measureScore.value = 20.0
+* group[=].measureScore.value = 20.00
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
 * group[=].measureScore.system = "http://unitsofmeasure.org"
@@ -919,7 +919,7 @@ TODO, will need output with summary
 ///////////// Group SurgeActiveNonICU /////////////
 * group[+].id = "SurgeActiveNonICU-bed-capacity-group"
 * group[=].code = SAFRHealthareCapacityGroupCSExample#SurgeActiveNonICU "Surge Non-ICU Active Beds"
-* group[=].measureScore.value = 40.0
+* group[=].measureScore.value = 40.00
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
 * group[=].measureScore.system = "http://unitsofmeasure.org"
@@ -973,7 +973,7 @@ TODO, will need output with summary
 ///////////// Group Burn /////////////
 * group[+].id = "Burn-bed-capacity-group"
 * group[=].code = SAFRHealthareCapacityGroupCSExample#Burn "Burn Beds"
-* group[=].measureScore.value = 10.0
+* group[=].measureScore.value = 10.00
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
 * group[=].measureScore.system = "http://unitsofmeasure.org"
@@ -1027,7 +1027,7 @@ TODO, will need output with summary
 ///////////// Group AdultED /////////////
 * group[+].id = "AdultED-bed-capacity-group"
 * group[=].code = SAFRHealthareCapacityGroupCSExample#AdultED "Adult ED Total Beds"
-* group[=].measureScore.value = 33.33333333333333
+* group[=].measureScore.value = 33.33
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
 * group[=].measureScore.system = "http://unitsofmeasure.org"
@@ -1081,7 +1081,7 @@ TODO, will need output with summary
 ///////////// Group TotalED /////////////
 * group[+].id = "TotalED-bed-capacity-group"
 * group[=].code = SAFRHealthareCapacityGroupCSExample#TotalED "Total ED Beds"
-* group[=].measureScore.value = 33.33333333333333
+* group[=].measureScore.value = 33.33
 * group[=].measureScore.unit = "%"
 * group[=].measureScore.code = #%
 * group[=].measureScore.system = "http://unitsofmeasure.org"

@@ -9,6 +9,7 @@
 <artifact id="Device/cqf-tooling" key="Device-cqf-tooling" name="CQF Tooling Device"/>
 <artifact id="Library/BedCapacityLibrary" key="Library-BedCapacityLibrary" name="Example Library of Bed Capacity Measure"/>
 <artifact id="Bundle/HrdMeasure-bundle-example1" key="Bundle-HrdMeasure-bundle-example1" name="HRD Measure Bundle Example 1"/>
+<artifact id="MeasureReport/HRDMeasureReport" key="MeasureReport-HRDMeasureReport" name="HRD MeasureReport Example"/>
 <artifact id="CodeSystem/SAFRHealthareCapacityCSExample" key="CodeSystem-SAFRHealthareCapacityCSExample" name="Healthcare Capacity Reporting Code System"/>
 <artifact id="CodeSystem/SAFRHealthareCapacityGroupCSExample" key="CodeSystem-SAFRHealthareCapacityGroupCSExample" name="Healthcare Capacity Reporting Group Code System"/>
 <artifact id="Bundle/HospitalBedCapacityReportBundle" key="Bundle-HospitalBedCapacityReportBundle" name="Hospital Bed Capacity Report Bundle"/>

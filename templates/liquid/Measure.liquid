@@ -347,10 +347,10 @@
                     <th scope="row"><b>Population Criteria: </b></th>
                     <td style="padding-left: 4px;">
                         {% for group in Measure.group %}
-                            <table class="grid-dict">
+                            <table class="grid-dict" width="100%">
                                 {% if group.id.exists() %}
                                     <tr>
-                                        <th><b>{{group.id}}</b></th>
+                                        <th colspan="2"><b>{{group.id}}</b></th>
                                     </tr>
                                 {% endif %}
                                 {% for population in group.population %}

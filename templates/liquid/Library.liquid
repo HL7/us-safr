@@ -354,12 +354,12 @@
           <th scope="row"><b>Data Requirements:</b></th>
           <td style="padding-left: 4px;">
             <table class="grid-dict">
-              <tr><th><b>Type</b></th><th><b>Profile</b></th><th><b>MS</b></th><th><b>Code Filter</b></th></tr>
+              <tr><th><b>Type</b></th><th><b>Profile</b></th><th><b>Must Support</b></th><th><b>Code Filter</b></th></tr>
               {% for requirement in Library.dataRequirement %}
                 <tr>
                   <th>{{requirement.type.value}}</th>
-                  <th>{% for profile in requirement.profile %}{{profile.value}}{% endfor %}</th>
-                  <th>{% for support in requirement.mustSupport %}{{mustSupport}};{% endfor %}</th>
+                  <th>{% for profile in requirement.profile %}{{profile}}{% endfor %}</th>
+                  <th>{% for support in requirement.mustSupport %}{{support}}; {% endfor %}</th>
                   <th>
                     {% for cfilter in requirement.codeFilter %}
                       <b>code filter: </b>

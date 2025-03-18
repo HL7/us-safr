@@ -14,202 +14,451 @@ Usage: #example
 * entry[measurereport][+].fullUrl = "http://example.org/fhir/MeasureReport/hrd-measurereport-example-1"
 * entry[measurereport][=].resource = hrd-measurereport-example-1
 
-
-Instance: hrd-location-1
-InstanceOf: QICoreLocation|6.0.0
-Title: "Location - Entire Hospital"
-Description: "Hospital-wide"
-Usage: #inline
-* meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
-* identifier.system = "http://www.example.org/location"
-* identifier.value = "123"
-* status = #active
-* name = "XYZ Hospital"
-* type = SAFRHealthareCapacityCSExample#HOSP "Hospital"
-
-
-Instance: hrd-measurereport-example-1
-InstanceOf: DEQMIndividualMeasureReportProfile // TODO, needs to change to an HRD MeasureReport profile
-Title: "MeasureReport - Hospital Respiratory Data Example 1"
-Description: "This MeasureReport resource is an example of a Hospital Respiratory Data (HRD) Measure Report for the US SAFR IG."
-Usage: #example
-* extension[location].url = "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"
-* extension[location].valueReference = Reference(hrd-location-1)
-* extension[1].url = "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring"
-* extension[=].valueCodeableConcept = $measure-scoring#cohort "Cohort"
-* contained[0] = hrd-location-1
-* status = #complete
-* type = #individual
-* measure = Canonical(NHSNSAFRHospitalRespiratoryDataInitialPopulation)
-* subject.identifier.system = "http://www.example.org/location"
-* subject.identifier.value = "123"
-* date = "2023-08-28T07:01:07.563Z"
-* reporter = Reference(organization-example-submitting-organization)
-* period.start = "2024-12-14T07:01:07.563Z"
-* period.end = "2024-12-14T19:01:07.561Z"
-* group[0].code = SAFRHRDCS#numInPtBeds "number Inpatient Beds"
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 200
-* group[+].code = SAFRHRDCS#numInPtBedsAdult
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 100
-* group[+].code = SAFRHRDCS#numInPtBedsPed
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 100
-* group[+].code = SAFRHRDCS#numInPtBedsOcc
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 150
-* group[+].code = SAFRHRDCS#numInPtBedsOccAdult
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 75
-* group[+].code = SAFRHRDCS#numInPtBedsOccPed
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 75
-* group[+].code = SAFRHRDCS#numICUBeds
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 50
-* group[+].code = SAFRHRDCS#numICUBedsAdult
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 25
-* group[+].code = SAFRHRDCS#numICUBedsPed
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 25
-* group[+].code = SAFRHRDCS#numICUBedsOcc
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 30
-* group[+].code = SAFRHRDCS#numICUBedsOccAdult
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 15
-* group[+].code = SAFRHRDCS#numICUBedsOccPed
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 15
-* group[+].code = SAFRHRDCS#numConfC19HospPatsAdult
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 10
-* group[+].code = SAFRHRDCS#numConfC19HospPatsPed
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 5
-* group[+].code = SAFRHRDCS#numConfC19ICUPatsAdult
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 2
-* group[+].code = SAFRHRDCS#numConfC19ICUPatsPed
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 1
-* group[+].code = SAFRHRDCS#numConfFluHospPatsAdult
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 20
-* group[+].code = SAFRHRDCS#numConfFluHospPatsPed
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 10
-* group[+].code = SAFRHRDCS#numConfFluICUPatsAdult
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 4
-* group[+].code = SAFRHRDCS#numConfFluICUPatsPed
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 2
-* group[+].code = SAFRHRDCS#numConfRSVHospPatsAdult
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 15
-* group[+].code = SAFRHRDCS#numConfRSVHospPatsPed
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 5
-* group[+].code = SAFRHRDCS#numConfRSVICUPatsAdult
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 3
-* group[+].code = SAFRHRDCS#numConfRSVICUPatsPed
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 1
-* group[+].code = SAFRHRDCS#numConfC19NewAdmPed0to4
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 1
-* group[+].code = SAFRHRDCS#numConfC19NewAdmPed5to17
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 2
-* group[+].code = SAFRHRDCS#numConfC19NewAdmAdult18to49
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 3
-* group[+].code = SAFRHRDCS#numConfC19NewAdmAdult50to64
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 4
-* group[+].code = SAFRHRDCS#numConfC19NewAdmAdult65to74
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 5
-* group[+].code = SAFRHRDCS#numConfC19NewAdmAdult75plus
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 6
-* group[+].code = SAFRHRDCS#numConfC19NewAdmUnk
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 7
-* group[+].code = SAFRHRDCS#numConfFluNewAdmPed0to4
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 1
-* group[+].code = SAFRHRDCS#numConfFluNewAdmPed5to17
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 2
-* group[+].code = SAFRHRDCS#numConfFluNewAdmAdult18to49
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 3
-* group[+].code = SAFRHRDCS#numConfFluNewAdmAdult50to64
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 4
-* group[+].code = SAFRHRDCS#numConfFluNewAdmAdult65to74
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 5
-* group[+].code = SAFRHRDCS#numConfFluNewAdmAdult75plus
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 6
-* group[+].code = SAFRHRDCS#numConfFluNewAdmUnk
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 7
-* group[+].code = SAFRHRDCS#numConfRSVNewAdmPed0to4
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 1
-* group[+].code = SAFRHRDCS#numConfRSVNewAdmPed5to17
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 2
-* group[+].code = SAFRHRDCS#numConfRSVNewAdmAdult18to49
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 3
-* group[+].code = SAFRHRDCS#numConfRSVNewAdmAdult50to64
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 4
-* group[+].code = SAFRHRDCS#numConfRSVNewAdmAdult65to74
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 5
-* group[+].code = SAFRHRDCS#numConfRSVNewAdmAdult75plus
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 6
-* group[+].code = SAFRHRDCS#numConfRSVNewAdmUnk
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 7
-* group[+].code = SAFRHRDCS#N95MaskSupplyDays
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 30
-* group[+].code = SAFRHRDCS#surgMaskSupplyDays
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 30
-* group[+].code = SAFRHRDCS#shieldSupplyDays
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 30
-* group[+].code = SAFRHRDCS#gownSupplyDays
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 30
-* group[+].code = SAFRHRDCS#gloveSupplyDays
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 30
-* group[+].code = SAFRHRDCS#N95Mask3DaySupply
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 1
-* group[+].code = SAFRHRDCS#surgMask3DaySupply
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 1
-* group[+].code = SAFRHRDCS#shield3DaySupply
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 1
-* group[+].code = SAFRHRDCS#gown3DaySupply
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 1
-* group[+].code = SAFRHRDCS#glove3DaySupply
-* group[=].population[0].code = $measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 1
 */
+
+// NHSN HRD  MeasureReport Instance
+
+Instance: HRDMeasureReport
+InstanceOf: DEQMSummaryMeasureReportProfile
+Title: "HRD MeasureReport Example"
+Description: "This Bundle resource is an example of a Hospital Respiratory Data (HRD) MeasureReport for the US SAFR IG."
+Usage: #example
+// Basic metadata
+* status = $measure-report-status#complete
+* type = $measure-report-type#summary
+* measure = Canonical(HospitalRespiratoryDataMeasure|1.0.0-ballot)
+* date = "2025-03-05T08:15:00-05:00"
+// Reporting period
+* period.start = "2025-03-05T00:00:00-05:00"
+* period.end = "2025-03-05T23:59:59-05:00"
+// Reporter and subject
+* reporter.reference = "urn:uuid:4c83e586-1277-4132-9b4e-3d1c14d38981" //Reference(MemorialHospitalOrganization)
+* reporter.display = "Memorial Hospital"
+//* subject = Reference(MemorialHospitalFacility)
+//* subject.display = "Memorial Hospital Facility"
+
+* extension[scoring].url = "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring"
+* extension[scoring].valueCodeableConcept = $measure-scoring#continuous-variable "Continuous Variable"
+
+* extension[location].url = "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"
+* extension[location].valueReference.reference = "urn:uuid:4c83e586-1277-4132-9b4e-3d1c14d38983" //Reference(MemorialHospitalFacility)
+
+// NHSN extensions
+/*
+* extension[+].url = "http://hl7.org/fhir/us/safr/StructureDefinition/reporting-frequency"
+* extension[=].valueCodeableConcept = http://unitsofmeasure.org#d "day"
+* extension[+].url = "http://hl7.org/fhir/us/safr/StructureDefinition/emergency-activation"
+* extension[=].valueBoolean = false
+* extension[+].url = "http://hl7.org/fhir/us/nhsn-bed-measures/StructureDefinition/reporting-timestamp"
+* extension[=].valueDateTime = "2025-03-05T08:00:00-05:00"
+*/
+/*
+TODO, will need output with summary
+
+* extension[+].url = "http://hl7.org/fhir/us/nhsn-bed-measures/StructureDefinition/facility-bed-summary"
+* extension[=].extension[totalBeds].url = "totalBeds"
+* extension[=].extension[totalBeds].valueInteger = 102
+* extension[=].extension[occupiedBeds].url = "occupiedBeds"
+* extension[=].extension[occupiedBeds].valueInteger = 76
+* extension[=].extension[availableBeds].url = "availableBeds"
+* extension[=].extension[availableBeds].valueInteger = 26
+* extension[=].extension[overallOccupancyRate].url = "overallOccupancyRate"
+* extension[=].extension[overallOccupancyRate].valueDecimal = 74.5
+
+*/
+* improvementNotation = $MeasureImprovementNotation#increase "Increased score indicates improvement"
+
+///////////// Group numInPtBedsAdult /////////////
+* group[+].id = "numInPtBedsAdult-capacity-group"
+* group[=].code = SAFRHRDCS#numInPtBedsAdult "Number Inpatient Adult Beds"
+* group[=].measureScore.value = 66.67
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numInPtBedsAdult-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 1500
+* group[=].population[+].id = "numInPtBedsAdult-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 1500
+* group[=].population[+].id = "numInPtBedsAdult-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 500
+
+
+///////////// Group numInPtBedsPed /////////////
+* group[+].id = "numInPtBedsPed-capacity-group"
+* group[=].code = SAFRHRDCS#numInPtBedsPed "Number Inpatient Ped Beds"
+* group[=].measureScore.value = 66.67
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numInPtBedsPed-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 1500
+* group[=].population[+].id = "numInPtBedsPed-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 1500
+* group[=].population[+].id = "numInPtBedsPed-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 500
+
+
+///////////// Group numInPtBedsOcc /////////////
+* group[+].id = "numInPtBedsOcc-capacity-group"
+* group[=].code = SAFRHRDCS#numInPtBedsOcc "Number Inpatient Occupancy Beds"
+* group[=].measureScore.value = 55.56
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numInPtBedsOcc-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 1800
+* group[=].population[+].id = "numInPtBedsOcc-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 1800
+* group[=].population[+].id = "numInPtBedsOcc-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 800
+
+
+///////////// Group numInPtBedsOccAdult /////////////
+* group[+].id = "numInPtBedsOccAdult-capacity-group"
+* group[=].code = SAFRHRDCS#numInPtBedsOccAdult "Number Inpatient Occupancy Adult Beds"
+* group[=].measureScore.value = 66.67
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numInPtBedsOccAdult-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 1200
+* group[=].population[+].id = "numInPtBedsOccAdult-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 1200
+* group[=].population[+].id = "numInPtBedsOccAdult-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 400
+
+
+///////////// Group numInPtBedsOccPed /////////////
+* group[+].id = "numInPtBedsOccPed-capacity-group"
+* group[=].code = SAFRHRDCS#numInPtBedsOccPed "Number Inpatient Occupancy Ped Beds"
+* group[=].measureScore.value = 66.67
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numInPtBedsOccPed-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 1200
+* group[=].population[+].id = "numInPtBedsOccPed-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 1200
+* group[=].population[+].id = "numInPtBedsOccPed-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 400
+
+
+///////////// Group numConfC19HospPatsAdult /////////////
+* group[+].id = "numConfC19HospPatsAdult-capacity-group"
+* group[=].code = SAFRHRDCS#numConfC19HospPatsAdult "numConfC19HospPatsAdult"
+* group[=].measureScore.value = 88.89
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numConfC19HospPatsAdult-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 450
+* group[=].population[+].id = "numConfC19HospPatsAdult-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 450
+* group[=].population[+].id = "numConfC19HospPatsAdult-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 50
+
+
+///////////// Group numConfC19HospPatsPed /////////////
+* group[+].id = "numConfC19HospPatsPed-capacity-group"
+* group[=].code = SAFRHRDCS#numConfC19HospPatsPed "numConfC19HospPatsPed"
+* group[=].measureScore.value = 95.24
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numConfC19HospPatsPed-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 420
+* group[=].population[+].id = "numConfC19HospPatsPed-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 420
+* group[=].population[+].id = "numConfC19HospPatsPed-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 20
+
+
+///////////// Group numConfFluHospPatsAdult /////////////
+* group[+].id = "numConfFluHospPatsAdult-capacity-group"
+* group[=].code = SAFRHRDCS#numConfFluHospPatsAdult "numConfFluHospPatsAdult"
+* group[=].measureScore.value = 93.02
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numConfFluHospPatsAdult-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 430
+* group[=].population[+].id = "numConfFluHospPatsAdult-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 430
+* group[=].population[+].id = "numConfFluHospPatsAdult-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 30
+
+
+///////////// Group numConfFluHospPatsPed /////////////
+* group[+].id = "numConfFluHospPatsPed-capacity-group"
+* group[=].code = SAFRHRDCS#numConfFluHospPatsPed "numConfFluHospPatsPed"
+* group[=].measureScore.value = 91.95
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numConfFluHospPatsPed-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 435
+* group[=].population[+].id = "numConfFluHospPatsPed-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 435
+* group[=].population[+].id = "numConfFluHospPatsPed-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 35
+
+
+///////////// Group numConfRSVHospPatsAdult /////////////
+* group[+].id = "numConfRSVHospPatsAdult-capacity-group"
+* group[=].code = SAFRHRDCS#numConfRSVHospPatsAdult "numConfRSVHospPatsAdult"
+* group[=].measureScore.value = 94.12
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numConfRSVHospPatsAdult-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 425
+* group[=].population[+].id = "numConfRSVHospPatsAdult-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 425
+* group[=].population[+].id = "numConfRSVHospPatsAdult-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 25
+
+
+///////////// Group numConfRSVHospPatsPed /////////////
+* group[+].id = "numConfRSVHospPatsPed-capacity-group"
+* group[=].code = SAFRHRDCS#numConfRSVHospPatsPed "numConfRSVHospPatsPed"
+* group[=].measureScore.value = 86.58
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numConfRSVHospPatsPed-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 462
+* group[=].population[+].id = "numConfRSVHospPatsPed-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 462
+* group[=].population[+].id = "numConfRSVHospPatsPed-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 62
+
+
+///////////// Group numICUBedsAdult /////////////
+* group[+].id = "numICUBedsAdult-capacity-group"
+* group[=].code = SAFRHRDCS#numICUBedsAdult "Number ICU Adult Beds"
+* group[=].measureScore.value = 66.67
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numICUBedsAdult-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 150
+* group[=].population[+].id = "numICUBedsAdult-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 150
+* group[=].population[+].id = "numICUBedsAdult-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 50
+
+
+///////////// Group numICUBedsPed /////////////
+* group[+].id = "numICUBedsPed-capacity-group"
+* group[=].code = SAFRHRDCS#numICUBedsPed "Number ICU Ped Beds"
+* group[=].measureScore.value = 66.67
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numICUBedsPed-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 150
+* group[=].population[+].id = "numICUBedsPed-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 150
+* group[=].population[+].id = "numICUBedsPed-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 50
+
+
+///////////// Group numICUBedsOcc /////////////
+* group[+].id = "numICUBedsOcc-capacity-group"
+* group[=].code = SAFRHRDCS#numICUBedsOcc "Number ICU Occupancy Beds"
+* group[=].measureScore.value = 62.50
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numICUBedsOcc-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 160
+* group[=].population[+].id = "numICUBedsOcc-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 160
+* group[=].population[+].id = "numICUBedsOcc-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 60
+
+
+///////////// Group numICUBedsOccAdult /////////////
+* group[+].id = "numICUBedsOccAdult-capacity-group"
+* group[=].code = SAFRHRDCS#numICUBedsOccAdult "Number ICU Occupancy Adult Beds"
+* group[=].measureScore.value = 62.50
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numICUBedsOccAdult-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 80
+* group[=].population[+].id = "numICUBedsOccAdult-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 80
+* group[=].population[+].id = "numICUBedsOccAdult-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 30
+
+
+///////////// Group numICUBedsOccPed /////////////
+* group[+].id = "numICUBedsOccPed-capacity-group"
+* group[=].code = SAFRHRDCS#numICUBedsOccPed "numICUBedsOccPed"
+* group[=].measureScore.value = 62.50
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numICUBedsOccPed-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 80
+* group[=].population[+].id = "numICUBedsOccPed-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 80
+* group[=].population[+].id = "numICUBedsOccPed-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 30
+
+
+///////////// Group numConfC19ICUPatsAdult /////////////
+* group[+].id = "numConfC19ICUPatsAdult-capacity-group"
+* group[=].code = SAFRHRDCS#numConfC19ICUPatsAdult "numConfC19ICUPatsAdult"
+* group[=].measureScore.value = 71.43
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numConfC19ICUPatsAdult-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 42
+* group[=].population[+].id = "numConfC19ICUPatsAdult-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 42
+* group[=].population[+].id = "numConfC19ICUPatsAdult-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 12
+
+
+///////////// Group numConfC19ICUPatsPed /////////////
+* group[+].id = "numConfC19ICUPatsPed-capacity-group"
+* group[=].code = SAFRHRDCS#numConfC19ICUPatsPed "numConfC19ICUPatsPed"
+* group[=].measureScore.value = 93.75
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numConfC19ICUPatsPed-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 32
+* group[=].population[+].id = "numConfC19ICUPatsPed-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 32
+* group[=].population[+].id = "numConfC19ICUPatsPed-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 2
+
+
+///////////// Group numConfFluICUPatsAdult /////////////
+* group[+].id = "numConfFluICUPatsAdult-capacity-group"
+* group[=].code = SAFRHRDCS#numConfFluICUPatsAdult "numConfFluICUPatsAdult"
+* group[=].measureScore.value = 90.91
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numConfFluICUPatsAdult-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 33
+* group[=].population[+].id = "numConfFluICUPatsAdult-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 33
+* group[=].population[+].id = "numConfFluICUPatsAdult-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 3
+
+
+///////////// Group numConfFluICUPatsPed /////////////
+* group[+].id = "numConfFluICUPatsPed-capacity-group"
+* group[=].code = SAFRHRDCS#numConfFluICUPatsPed "numConfFluICUPatsPed"
+* group[=].measureScore.value = 85.71
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numConfFluICUPatsPed-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 35
+* group[=].population[+].id = "numConfFluICUPatsPed-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 35
+* group[=].population[+].id = "numConfFluICUPatsPed-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 5
+
+
+///////////// Group numConfRSVICUPatsAdult /////////////
+* group[+].id = "numConfRSVICUPatsAdult-capacity-group"
+* group[=].code = SAFRHRDCS#numConfRSVICUPatsAdult "numConfRSVICUPatsAdult"
+* group[=].measureScore.value = 83.33
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numConfRSVICUPatsAdult-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 36
+* group[=].population[+].id = "numConfRSVICUPatsAdult-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 36
+* group[=].population[+].id = "numConfRSVICUPatsAdult-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 6
+
+
+///////////// Group numConfRSVICUPatsPed /////////////
+* group[+].id = "numConfRSVICUPatsPed-capacity-group"
+* group[=].code = SAFRHRDCS#numConfRSVICUPatsPed "numConfRSVICUPatsPed"
+* group[=].measureScore.value = 76.92
+* group[=].measureScore.unit = "%"
+* group[=].measureScore.code = #%
+* group[=].measureScore.system = "http://unitsofmeasure.org"
+* group[=].population[+].id = "numConfRSVICUPatsPed-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 39
+* group[=].population[+].id = "numConfRSVICUPatsPed-measure-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].population[=].count = 39
+* group[=].population[+].id = "numConfRSVICUPatsPed-measure-observation" 
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
+* group[=].population[=].count = 9
