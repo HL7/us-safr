@@ -1,5 +1,5 @@
-Instance: BedCapacityMeasure-bundle-example1
-InstanceOf: SafrMeasureBundle
+Instance: BedCapacityMeasureBundle
+InstanceOf: USSafrMeasureBundle
 Title: "Bed Capacity Measure Bundle Example 1"
 Description: "This Bundle resource is an example of a Bed Capacity Measure Bundle for the US SAFR IG."
 Usage: #example

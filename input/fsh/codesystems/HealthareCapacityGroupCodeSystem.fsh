@@ -1,7 +1,7 @@
 CodeSystem: SAFRHealthareCapacityGroupCSExample
 //Id: healthcare-capacity-codes
 Title: "Healthcare Capacity Reporting Group Code System"
-* ^copyright = "This Valueset is not copyrighted."
+* ^copyright = "This CodeSystem is not copyrighted."
 * ^experimental = true
 * ^description = "This CodeSystem defines coded concepts for Healthcare Capacity Group reporting to US SAFR. This CodeSystem is experimental, and is expected to be replaced by LOINC codes once they have been assigned."
 * ^caseSensitive = false

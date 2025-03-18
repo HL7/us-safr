@@ -20,7 +20,7 @@ Usage: #example
 
 
 
-Instance: hosp-location-example-bed-capacity
+Instance: XYZHospitalLocation
 InstanceOf: QICoreLocation|6.0.0
 Title: "Location - Entire Hospital"
 Description: "Hospital-wide"
@@ -32,7 +32,7 @@ Usage: #inline
 * name = "XYZ Hospital"
 * type = SAFRHealthareCapacityCSExample#HOSP "Hospital"
 
-Instance: ipf-location-example-bed-capacity
+Instance: IPFLocation
 InstanceOf: QICoreLocation|6.0.0
 Title: "Location - Inpatient Psychiatric"
 Description: "Inpatient Psych (IPF)"
@@ -44,7 +44,7 @@ Usage: #inline
 * name = "Inpatient Psych at XYZ Hospital"
 * type = SAFRHealthareCapacityCSExample#IPF "Inpatient Psychiatric"
 
-Instance: chld-location-example-bed-capacity
+Instance: PediatricLocation
 InstanceOf: QICoreLocation|6.0.0
 Title: "Location - Children's or Pediatrics Dept."
 Description: "Pediatric (CHLD)"

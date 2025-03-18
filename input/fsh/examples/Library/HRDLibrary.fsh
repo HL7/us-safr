@@ -3,14 +3,14 @@
 Alias: $location-physical-type = http://terminology.hl7.org/CodeSystem/location-physical-type
 
 */
-Instance: HRDMeasureStructureLibrary
+Instance: HRDMeasureLibrary
 InstanceOf: CRMIComputableLibrary|1.0.0
 Usage: #example
 * meta.profile[+] = Canonical(CRMIComputableLibrary|1.0.0)
-* url = "http://example.org/fhir/Library/HRDMeasureStructureLibrary"
+* url = "http://example.org/fhir/Library/HRDMeasureLibrary"
 * version = "1.0.0"
-* name = "HRDMeasureStructureLibrary"
-* title = "Hospital Respiratory Disease Measure Structure Library"
+* name = "HRDMeasureLibrary"
+* title = "Hospital Respiratory Disease Measure Library"
 * status = #active
 * experimental = false
 * type = $library-type#logic-library

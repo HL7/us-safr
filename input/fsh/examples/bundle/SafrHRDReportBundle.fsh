@@ -1,10 +1,10 @@
 // NHSN Bed Capacity Measure Report Bundle
 // This represents a complete package for submitting bed capacity data
-/*
-Instance: HRDReportBundle
+
+Instance: HRDMeasureReportBundle
 InstanceOf: SafrMeasureReportBundle
-Title: "HRD Capacity Report Bundle"
-Description: "Bundle containing a measure report and all referenced resources for NHSN bed capacity reporting"
+Title: "HRD Capacity Measure Report Bundle"
+Description: "Bundle containing a measure report and all referenced resources for NHSN HRD reporting"
 Usage: #example
 
 * type = #collection
@@ -21,11 +21,10 @@ Usage: #example
 
 
 // Entry 3: The Measure Report
-* entry[measurereport].resource = BedCapacityMeasureReport
-* entry[measurereport].fullUrl = "urn:uuid:4c83e586-1277-4132-9b4e-3d1c14d38984"
+* entry[measurereport].resource = HRDMeasureReport
+* entry[measurereport].fullUrl = "urn:uuid:4c83e586-1277-4132-9b4e-3d1c14d38985"
 
 
 // Entry 4: Hospital Facility Location
 * entry[+].resource = MemorialHospitalFacility
 * entry[=].fullUrl = "urn:uuid:4c83e586-1277-4132-9b4e-3d1c14d38983"
-*/

@@ -1,6 +1,6 @@
 /*
 Instance: BedCapacityMeasure-bundle-example1
-InstanceOf: SafrMeasureBundle
+InstanceOf: USSafrMeasureBundle
 Title: "Bed Capacity Measure Bundle Example 1"
 Description: "This Bundle resource is an example of a Bed Capacity Measure Bundle for the US SAFR IG."
 Usage: #example
@@ -10,9 +10,9 @@ Usage: #example
 
 
 Instance: BedCapacityMeasure
-InstanceOf: CQFMContinuousVariableMeasure|5.0.0
+InstanceOf: CQFMContinuousVariableMeasure|4.0.0
 Usage: #example
-* meta.profile[+] = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cv-measure-cqfm|5.0.0"
+* meta.profile[+] = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cv-measure-cqfm|4.0.0"
 * contained[+] = cqf-tooling
 * contained[+] = bed-capacity-effective-data-requirements
 * extension[0].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"

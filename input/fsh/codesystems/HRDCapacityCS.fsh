@@ -1,8 +1,8 @@
 CodeSystem: SAFRHRDCS
 //Id: healthcare-capacity-codes
 Title: "Hospital Respiratory Data Reporting Code System"
-* ^copyright = "This Valueset is not copyrighted."
-* ^experimental = false
+* ^copyright = "This CodeSystem is not copyrighted."
+* ^experimental = true
 * ^description = "This CodeSystem defines coded concepts for Hospital Respiratory Data reporting for US SAFR IG. This CodeSystem is experimental, and is expected to be replaced by LOINC codes once they have been assigned."
 * ^caseSensitive = false
 * #numInPtBeds "Number Inpatient Beds" "All hospital inpatient beds"

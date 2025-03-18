@@ -1,6 +1,6 @@
 Profile: SafrMeasureReportBundle
 Parent: Bundle
-Id: safr-measurereport-bundle
+Id: us-safr-measurereport-bundle
 Title: "US SAFR Measure Report Bundle"
 Description: "This profile defines a valid Submission Bundle to NHSN with all resources contained within. The Bundle is comprised of entry slices representing the data 
 submitting organization, submitting device, individual MeasureReports."
@@ -20,7 +20,7 @@ submitting organization, submitting device, individual MeasureReports."
 * entry[submitting-organization]
   * ^short = "The Submitting Organization: the organization that is the source of the data"
   * resource 1..
-  * resource only SafrSubmittingOrganization
+  * resource only USSafrSubmittingOrganization
     * ^short = "Bundle entry for submitting organization"
 * entry[submitting-device]
   * ^short = "The Submitting Device: the device that is the source of the data"

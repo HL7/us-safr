@@ -1,23 +1,3 @@
-/*
-Instance: hrd-measurereport-bundle-example-hosp1
-InstanceOf: SafrMeasureReportBundle
-Title: "Bundle - Hospital Respiratory Data MeasureReport Bundle Example 1"
-Description: "This Bundle resource is an example of a Hospital Respiratory Data (HRD) MeasureReport Bundle for the US SAFR IG."
-Usage: #example
-* type = #collection
-* entry[submitting-organization][+].fullUrl = "http://example.org/fhir/Organization/organization-example-submitting-organization"
-* entry[submitting-organization][=].resource = organization-example-submitting-organization
-
-* entry[submitting-device][+].fullUrl = "http://example.org/fhir/Device/cqf-tooling"
-* entry[submitting-device][=].resource = cqf-tooling
-
-* entry[measurereport][+].fullUrl = "http://example.org/fhir/MeasureReport/hrd-measurereport-example-1"
-* entry[measurereport][=].resource = hrd-measurereport-example-1
-
-*/
-
-// NHSN HRD  MeasureReport Instance
-
 Instance: HRDMeasureReport
 InstanceOf: DEQMSummaryMeasureReportProfile
 Title: "HRD MeasureReport Example"

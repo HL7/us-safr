@@ -1,4 +1,4 @@
-Profile: SafrMeasureBundle
+Profile: USSafrMeasureBundle
 Parent: Bundle
 Id: us-safr-measure-bundle
 Title: "US SAFR Measure Bundle"
@@ -13,5 +13,5 @@ Description: "This profile defines a Bundle provided by the MeasureServer contai
     measure 1..1
 * entry[measure] ^short = "The Measure resource"
   * resource 1..
-  * resource only CQFMContinuousVariableMeasure|5.0.0
+  * resource only CQFMContinuousVariableMeasure|4.0.0
   * ^short = "Bundle entry for the Measure resource"

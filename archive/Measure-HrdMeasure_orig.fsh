@@ -1,6 +1,6 @@
 /*
 Instance: HrdMeasure-bundle-example1
-InstanceOf: SafrMeasureBundle
+InstanceOf: USSafrMeasureBundle
 Title: "HRD Measure Bundle Example 1"
 Description: "This Bundle resource is an example of a Hospital Respiratory Data (HRD) Measure Bundle for the US SAFR IG."
 Usage: #example
@@ -11,9 +11,9 @@ Usage: #example
 
 
 Instance: NHSNSAFRHospitalRespiratoryDataInitialPopulation
-InstanceOf: CQFMContinuousVariableMeasure|5.0.0
+InstanceOf: CQFMContinuousVariableMeasure|4.0.0
 Usage: #example
-* meta.profile[+] = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cv-measure-cqfm|5.0.0"
+* meta.profile[+] = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cv-measure-cqfm|4.0.0"
 * contained[+] = cqf-tooling
 * contained[+] = bed-capacity-effective-data-requirements
 * extension[0].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"

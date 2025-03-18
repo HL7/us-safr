@@ -5,10 +5,11 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="Bundle/BedCapacityMeasure-bundle-example1" key="Bundle-BedCapacityMeasure-bundle-example1" name="Bed Capacity Measure Bundle Example 1"/>
+<artifact id="Bundle/BedCapacityMeasureBundle" key="Bundle-BedCapacityMeasureBundle" name="Bed Capacity Measure Bundle Example 1"/>
 <artifact id="Device/cqf-tooling" key="Device-cqf-tooling" name="CQF Tooling Device"/>
 <artifact id="Library/BedCapacityLibrary" key="Library-BedCapacityLibrary" name="Example Library of Bed Capacity Measure"/>
-<artifact id="Bundle/HrdMeasure-bundle-example1" key="Bundle-HrdMeasure-bundle-example1" name="HRD Measure Bundle Example 1"/>
+<artifact id="Bundle/HRDMeasureReportBundle" key="Bundle-HRDMeasureReportBundle" name="HRD Capacity Measure Report Bundle"/>
+<artifact id="Bundle/HRDMeasureBundle" key="Bundle-HRDMeasureBundle" name="HRD Measure Bundle Example 1"/>
 <artifact id="MeasureReport/HRDMeasureReport" key="MeasureReport-HRDMeasureReport" name="HRD MeasureReport Example"/>
 <artifact id="CodeSystem/SAFRHealthareCapacityCSExample" key="CodeSystem-SAFRHealthareCapacityCSExample" name="Healthcare Capacity Reporting Code System"/>
 <artifact id="CodeSystem/SAFRHealthareCapacityGroupCSExample" key="CodeSystem-SAFRHealthareCapacityGroupCSExample" name="Healthcare Capacity Reporting Group Code System"/>
@@ -17,19 +18,19 @@
 <artifact id="Measure/BedCapacityMeasure" key="Measure-BedCapacityMeasure" name="Hospital Multi-Bed Type Capacity Measure Example"/>
 <artifact id="CodeSystem/SAFRHRDCS" key="CodeSystem-SAFRHRDCS" name="Hospital Respiratory Data Reporting Code System"/>
 <artifact id="CodeSystem/HRDSupplyDaysCS" key="CodeSystem-HRDSupplyDaysCS" name="Hospital Respiratory Data Supply Days Code System"/>
-<artifact id="Library/HRDMeasureStructureLibrary" key="Library-HRDMeasureStructureLibrary" name="Hospital Respiratory Disease Measure Structure Library"/>
+<artifact id="Library/HRDMeasureLibrary" key="Library-HRDMeasureLibrary" name="Hospital Respiratory Disease Measure Library"/>
 <artifact id="Measure/HospitalRespiratoryDataMeasure" key="Measure-HospitalRespiratoryDataMeasure" name="Measure - Hospital Respiratory Data Initial Population"/>
 <artifact id="Location/MemorialHospitalFacility" key="Location-MemorialHospitalFacility" name="MemorialHospitalFacility"/>
 <artifact id="Organization/MemorialHospitalOrganization" key="Organization-MemorialHospitalOrganization" name="Organization - Example Hospital Organization"/>
-<artifact id="Organization/organization-example-submitting-organization" key="Organization-organization-example-submitting-organization" name="Organization - Example Submitting Organization"/>
+<artifact id="Organization/ProviderSubmittingOrganization" key="Organization-ProviderSubmittingOrganization" name="Organization - Example Submitting Organization"/>
 <artifact id="CapabilityStatement/SafrCapabilityStatementDataAggregator" key="CapabilityStatement-SafrCapabilityStatementDataAggregator" name="US SAFR Data Aggregator CapabilityStatement"/>
 <artifact id="CapabilityStatement/SafrCapabilityStatementEvaluationEngine" key="CapabilityStatement-SafrCapabilityStatementEvaluationEngine" name="US SAFR Data Evaluation Engine CapabilityStatement"/>
 <artifact id="CapabilityStatement/SafrCapabilityStatementDataSource" key="CapabilityStatement-SafrCapabilityStatementDataSource" name="US SAFR Data Source CapabilityStatement"/>
 <artifact id="StructureDefinition/us-safr-measure-bundle" key="StructureDefinition-us-safr-measure-bundle" name="US SAFR Measure Bundle"/>
-<artifact id="StructureDefinition/safr-measurereport-bundle" key="StructureDefinition-safr-measurereport-bundle" name="US SAFR Measure Report Bundle"/>
+<artifact id="StructureDefinition/us-safr-measurereport-bundle" key="StructureDefinition-us-safr-measurereport-bundle" name="US SAFR Measure Report Bundle"/>
 <artifact id="CapabilityStatement/SafrCapabilityStatementMeasureSource" key="CapabilityStatement-SafrCapabilityStatementMeasureSource" name="US SAFR Measure Source CapabilityStatement"/>
 <artifact id="CapabilityStatement/SafrCapabilityStatementMeasureReportRecipient" key="CapabilityStatement-SafrCapabilityStatementMeasureReportRecipient" name="US SAFR MeasureReport Recipient CapabilityStatement"/>
-<artifact id="StructureDefinition/nhsn-submitting-organization" key="StructureDefinition-nhsn-submitting-organization" name="US SAFR Submitting Organization"/>
+<artifact id="StructureDefinition/us-safr-submitting-organization" key="StructureDefinition-us-safr-submitting-organization" name="US SAFR Submitting Organization"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="actors" name="Actors"/>

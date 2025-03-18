@@ -2,7 +2,7 @@
 // Fixing extension URL issues
 
 Profile: UsSafrMultiBedTypeMeasure
-Parent: CQFMContinuousVariableMeasure|5.0.0
+Parent: CQFMContinuousVariableMeasure|4.0.0
 Id: us-safr-multi-bed-type-measure
 Title: "US SAFR Multi-Bed Type Measure"
 Description: "This profile defines a measure for monitoring hospital capacity across multiple bed types (ICU, ED, and Pediatric) for the NHSN Connectivity Initiative. It tracks occupied and unoccupied beds to support situational awareness, capacity planning, and load balancing during normal operations and emergencies."
