@@ -1,6 +1,8 @@
 Instance: MemorialHospitalFacility
+Title: "Location - Hospital Facility Example"
+Description: "Example of a Hospital Facility for NHSN reporting."
 InstanceOf: QICoreLocation
-Usage: #example
+Usage: #inline
 * identifier.system = "http://example.org/fhir/location-identifier"
 * identifier.value = "MEM-MAIN"
 * name = "Memorial Hospital Main Campus"
@@ -19,11 +21,11 @@ Usage: #example
 
 
 
-
+/*
 Instance: XYZHospitalLocation
 InstanceOf: QICoreLocation|6.0.0
-Title: "Location - Entire Hospital"
-Description: "Hospital-wide"
+Title: "Location - Hospital Location Example"
+Description: "Example of a Hospital Location for NHSN reporting."
 Usage: #inline
 * meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
 * identifier.system = "http://www.example.org/location"
@@ -31,6 +33,7 @@ Usage: #inline
 * status = #active
 * name = "XYZ Hospital"
 * type = BedCapacityExampleCS#HOSP "Hospital"
+
 
 Instance: IPFLocation
 InstanceOf: QICoreLocation|6.0.0
@@ -55,3 +58,5 @@ Usage: #inline
 * status = #active
 * name = "Children's/Pediatrics at XYZ Hospital"
 * type = BedCapacityExampleCS#CHLD "Children's or Pediatric"
+
+*/

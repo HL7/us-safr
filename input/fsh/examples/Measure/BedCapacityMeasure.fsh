@@ -1,7 +1,7 @@
 Instance: BedCapacityMeasureBundle
 InstanceOf: USSafrMeasureBundle
-Title: "Bed Capacity Measure Bundle Example 1"
-Description: "This Bundle resource is an example of a Bed Capacity Measure Bundle for the US SAFR IG."
+Title: "Bundle - Bed Capacity Measure Bundle Example"
+Description: "This Bundle resource is an example of a Bed Capacity Measure Bundle."
 Usage: #example
 * type = #collection
 * entry[measure][+].fullUrl = "http://example.org/fhir/Measure/BedCapacityMeasure"
@@ -10,8 +10,8 @@ Usage: #example
 
 Instance: BedCapacityMeasure
 InstanceOf: CQFMContinuousVariableMeasure
-Title: "Hospital Multi-Bed Type Capacity Measure Example"
-Description: "Example of a bed capacity measure for ICU, ED, and Pediatric beds for NHSN reporting"
+Title: "Measure - Bed Capacity Measure Example"
+Description: "Example of a bed capacity measure for ICU, ED, and Pediatric beds for NHSN reporting."
 Usage: #example
 
 * extension[+].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis"
@@ -20,7 +20,7 @@ Usage: #example
 * url = Canonical(BedCapacityMeasure)
 * version = "1.0.0"
 * name = "BedCapacityMeasure"
-* title = "Hospital Multi-Bed Type Capacity Measure"
+* title = "Measure - Bed Capacity Measure Example"
 * status = #active
 * experimental = false
 * date = "2025-03-05"

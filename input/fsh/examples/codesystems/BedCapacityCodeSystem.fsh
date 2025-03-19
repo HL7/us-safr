@@ -3,7 +3,7 @@ Id: us-safr-bed-capacity-example-codes
 Title: "Healthcare Capacity Reporting Code System"
 * ^copyright = "This CodeSystem is not copyrighted."
 * ^experimental = true
-* ^description = "This CodeSystem defines coded concepts for Healthcare Capacity reporting to US SAFR. This CodeSystem is experimental, and is expected to be replaced by LOINC codes once they have been assigned."
+* ^description = "This CodeSystem defines coded concepts for Healthcare Capacity reporting to US SAFR. This is an example CodeSystem and is experimental, and is expected to be replaced by LOINC codes once they have been assigned."
 * ^caseSensitive = false
 * #HOSP "Hospital" "Hospital Facility"
 * #IRF "Inpatient Rehabilitation" "Inpatient Rehabilitation Facility"

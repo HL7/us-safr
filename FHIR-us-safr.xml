@@ -5,24 +5,22 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="Bundle/BedCapacityMeasureBundle" key="Bundle-BedCapacityMeasureBundle" name="Bed Capacity Measure Bundle Example 1"/>
-<artifact id="Device/cqf-tooling" key="Device-cqf-tooling" name="CQF Tooling Device"/>
-<artifact id="Library/BedCapacityLibrary" key="Library-BedCapacityLibrary" name="Example Library of Bed Capacity Measure"/>
-<artifact id="Bundle/HRDMeasureReportBundle" key="Bundle-HRDMeasureReportBundle" name="HRD Capacity Measure Report Bundle"/>
-<artifact id="Bundle/HRDMeasureBundle" key="Bundle-HRDMeasureBundle" name="HRD Measure Bundle Example 1"/>
-<artifact id="MeasureReport/HRDMeasureReport" key="MeasureReport-HRDMeasureReport" name="HRD MeasureReport Example"/>
+<artifact id="Bundle/BedCapacityMeasureBundle" key="Bundle-BedCapacityMeasureBundle" name="Bundle - Bed Capacity Measure Bundle Example"/>
+<artifact id="Bundle/HospitalBedCapacityReportBundle" key="Bundle-HospitalBedCapacityReportBundle" name="Bundle - Bed Capacity Report Bundle Example"/>
+<artifact id="Bundle/HRDMeasureBundle" key="Bundle-HRDMeasureBundle" name="Bundle - HRD Measure Bundle Example"/>
+<artifact id="Bundle/HRDMeasureReportBundle" key="Bundle-HRDMeasureReportBundle" name="Bundle - HRD Measure Report Bundle Example"/>
+<artifact id="Device/cqf-tooling" key="Device-cqf-tooling" name="Device - CQF Tooling System Example"/>
 <artifact id="CodeSystem/us-safr-bed-capacity-example-codes" key="CodeSystem-us-safr-bed-capacity-example-codes" name="Healthcare Capacity Reporting Code System"/>
 <artifact id="CodeSystem/us-safr-bed-capacity-group-example-codes" key="CodeSystem-us-safr-bed-capacity-group-example-codes" name="Healthcare Capacity Reporting Group Code System"/>
-<artifact id="Bundle/HospitalBedCapacityReportBundle" key="Bundle-HospitalBedCapacityReportBundle" name="Hospital Bed Capacity Report Bundle"/>
-<artifact id="MeasureReport/BedCapacityMeasureReport" key="MeasureReport-BedCapacityMeasureReport" name="Hospital Bed Capacity Report Example for March 5, 2025"/>
-<artifact id="Measure/BedCapacityMeasure" key="Measure-BedCapacityMeasure" name="Hospital Multi-Bed Type Capacity Measure Example"/>
 <artifact id="CodeSystem/us-safr-hrd-example-codes" key="CodeSystem-us-safr-hrd-example-codes" name="Hospital Respiratory Data Reporting Code System"/>
 <artifact id="CodeSystem/us-safr-hrd-supply-days-example-codes" key="CodeSystem-us-safr-hrd-supply-days-example-codes" name="Hospital Respiratory Data Supply Days Code System"/>
-<artifact id="Library/HRDMeasureLibrary" key="Library-HRDMeasureLibrary" name="Hospital Respiratory Disease Measure Library"/>
-<artifact id="Measure/HospitalRespiratoryDataMeasure" key="Measure-HospitalRespiratoryDataMeasure" name="Measure - Hospital Respiratory Data Initial Population"/>
-<artifact id="Location/MemorialHospitalFacility" key="Location-MemorialHospitalFacility" name="MemorialHospitalFacility"/>
-<artifact id="Organization/MemorialHospitalOrganization" key="Organization-MemorialHospitalOrganization" name="Organization - Example Hospital Organization"/>
-<artifact id="Organization/ProviderSubmittingOrganization" key="Organization-ProviderSubmittingOrganization" name="Organization - Example Submitting Organization"/>
+<artifact id="Library/HRDMeasureLibrary" key="Library-HRDMeasureLibrary" name="Library - HRD Measure Example"/>
+<artifact id="Library/BedCapacityLibrary" key="Library-BedCapacityLibrary" name="Library - Library of Bed Capacity Measure Example"/>
+<artifact id="Measure/BedCapacityMeasure" key="Measure-BedCapacityMeasure" name="Measure - Bed Capacity Measure Example"/>
+<artifact id="Measure/HospitalRespiratoryDataMeasure" key="Measure-HospitalRespiratoryDataMeasure" name="Measure - HRD Measure Example"/>
+<artifact id="MeasureReport/BedCapacityMeasureReport" key="MeasureReport-BedCapacityMeasureReport" name="MeasureReport - Bed Capacity MeasureReport Example"/>
+<artifact id="MeasureReport/HRDMeasureReport" key="MeasureReport-HRDMeasureReport" name="MeasureReport - HRD MeasureReport Example"/>
+<artifact id="Organization/MemorialHospitalOrganization" key="Organization-MemorialHospitalOrganization" name="Organization - Submitting Hospital Organization Example"/>
 <artifact id="CapabilityStatement/SafrCapabilityStatementDataAggregator" key="CapabilityStatement-SafrCapabilityStatementDataAggregator" name="US SAFR Data Aggregator CapabilityStatement"/>
 <artifact id="CapabilityStatement/SafrCapabilityStatementEvaluationEngine" key="CapabilityStatement-SafrCapabilityStatementEvaluationEngine" name="US SAFR Data Evaluation Engine CapabilityStatement"/>
 <artifact id="CapabilityStatement/SafrCapabilityStatementDataSource" key="CapabilityStatement-SafrCapabilityStatementDataSource" name="US SAFR Data Source CapabilityStatement"/>

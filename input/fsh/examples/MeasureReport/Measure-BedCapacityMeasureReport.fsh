@@ -3,7 +3,7 @@
 // Based on the NHSNBedCapacityMeasureReport profile
 Instance: BedCapacityMeasureReport
 InstanceOf: DEQMSummaryMeasureReportProfile
-Title: "Hospital Bed Capacity Report Example for March 5, 2025"
+Title: "MeasureReport - Bed Capacity MeasureReport Example"
 Description: "Example MeasureReport for NHSN bed capacity monitoring showing ICU, ED, and Pediatric bed capacity"
 Usage: #example
 // Basic metadata

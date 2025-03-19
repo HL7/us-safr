@@ -1,8 +1,8 @@
 
 Instance: HRDMeasureBundle
 InstanceOf: USSafrMeasureBundle
-Title: "HRD Measure Bundle Example 1"
-Description: "This Bundle resource is an example of a Hospital Respiratory Data (HRD) Measure Bundle for the US SAFR IG."
+Title: "Bundle - HRD Measure Bundle Example"
+Description: "This Bundle resource is an example of a Hospital Respiratory Data (HRD) Measure Bundle."
 Usage: #example
 * type = #collection
 * entry[measure][+].fullUrl = "http://example.org/fhir/Measure/HospitalRespiratoryDataMeasure"
@@ -12,6 +12,8 @@ Usage: #example
 
 Instance: HospitalRespiratoryDataMeasure
 InstanceOf: CQFMContinuousVariableMeasure|4.0.0
+Title: "Measure - HRD Measure Example"
+Description: "Example of a Hospital Respiratory Disease (HRD) Measure for NHSN reporting."
 Usage: #example
 //* meta.profile[+] = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cv-measure-cqfm|4.0.0"
 //* contained[+] = cqf-tooling
@@ -28,7 +30,7 @@ Usage: #example
 * url = "http://hl7.org/fhir/us/us/safr/Measure/HospitalRespiratoryDataMeasure"
 * version = "1.0.0"
 * name = "HospitalRespiratoryDataMeasure"
-* title = "Measure - Hospital Respiratory Data Initial Population"
+* title = "Measure - HRD Measure Example"
 * status = #draft
 * experimental = true
 * date = "2024-12-14T17:37:47-04:00"
@@ -36,7 +38,7 @@ Usage: #example
 * contact.name = "HL7 International / Public Health"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://www.hl7.org/Special/committees/pher"
-* description = "US Situational Awareness Framework for Reporting - Hospital Respiratory Data Measure"
+* description = "Example of a Hospital Respiratory Disease (HRD) Measure for NHSN reporting."
 * jurisdiction = urn:iso:std:iso:3166#US "United States of America"
 * library = Canonical(HRDMeasureLibrary)
 * scoring = $measure-scoring#continuous-variable

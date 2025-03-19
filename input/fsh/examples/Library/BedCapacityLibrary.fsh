@@ -2,7 +2,8 @@
 
 Instance: BedCapacityLibrary
 InstanceOf: CRMIComputableLibrary|1.0.0
-Description: "Example Library of Bed Capacity Measure"
+Title: "Library - Library of Bed Capacity Measure Example"
+Description: "This library contains CQL logic for evaluating structural measures related to bed capacity reporting capabilities."
 Usage: #example
 * meta.profile[+] = Canonical(CRMIComputableLibrary|1.0.0)
 * contained = bed-capacity-options
@@ -12,12 +13,12 @@ Usage: #example
 * version = "1.0.0"
 * status = #active 
 * name = "BedCapacityMeasure"
-* title = "Example Library of Bed Capacity Measure"
+* title = "Library - Library of Bed Capacity Measure Example"
 * type = $library-type#logic-library
 * subjectCodeableConcept = $resource-type#Location "Location"
 * date = "2025-03-12T07:01:07.563Z"
 * publisher = "HL7 International / Public Health"
-* description = "Example Measure Library for real-time bed capacity reporting across hospitals and jurisdictions."
+* description = "This library contains CQL logic for evaluating structural measures related to bed capacity reporting capabilities."
 * relatedArtifact[0].type = #depends-on
 * relatedArtifact[=].display = "FHIR model information"
 * relatedArtifact[=].resource = "http://fhir.org/guides/cqf/common/Library/FHIR-ModelInfo|4.0.1"

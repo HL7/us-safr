@@ -5,12 +5,14 @@ Alias: $location-physical-type = http://terminology.hl7.org/CodeSystem/location-
 */
 Instance: HRDMeasureLibrary
 InstanceOf: CRMIComputableLibrary|1.0.0
+Title: "Library - HRD Measure Example"
+Description: "This library contains CQL logic for evaluating structural measures related to hospital respiratory disease reporting capabilities"
 Usage: #example
 * meta.profile[+] = Canonical(CRMIComputableLibrary|1.0.0)
 * url = "http://example.org/fhir/Library/HRDMeasureLibrary"
 * version = "1.0.0"
 * name = "HRDMeasureLibrary"
-* title = "Hospital Respiratory Disease Measure Library"
+* title = "Library - HRD Measure Example"
 * status = #active
 * experimental = false
 * type = $library-type#logic-library

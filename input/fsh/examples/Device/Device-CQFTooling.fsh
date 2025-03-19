@@ -1,6 +1,6 @@
 Instance: cqf-tooling
 InstanceOf: CRMISoftwareSystemDevice|1.0.0
-Title: "CQF Tooling Device"
+Title: "Device - CQF Tooling System Example"
 Description: "Example of a Software System Device instance for describing tooling that was used to process artifacts."
 Usage: #example
 //* meta.profile = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/device-softwaresystem-cqfm"

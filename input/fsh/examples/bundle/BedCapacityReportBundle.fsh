@@ -3,8 +3,8 @@
 
 Instance: HospitalBedCapacityReportBundle
 InstanceOf: SafrMeasureReportBundle
-Title: "Hospital Bed Capacity Report Bundle"
-Description: "Bundle containing a measure report and all referenced resources for NHSN bed capacity reporting"
+Title: "Bundle - Bed Capacity Report Bundle Example"
+Description: "Bundle containing a measure report and all referenced resources for NHSN bed capacity reporting."
 Usage: #example
 
 * type = #collection

@@ -1,3 +1,4 @@
+/*
 Instance: ProviderSubmittingOrganization
 InstanceOf: USSafrSubmittingOrganization
 Title: "Organization - Example Submitting Organization"
@@ -13,13 +14,13 @@ Usage: #example
 * telecom.system = #phone
 * telecom.value = "5555555551"
 * telecom.rank = 1
-
+*/
 
 // Define the reporting organization
 Instance: MemorialHospitalOrganization
 InstanceOf: USSafrSubmittingOrganization
-Title: "Organization - Example Hospital Organization"
-Description: "Organization - Example Hospital Organization"
+Title: "Organization - Submitting Hospital Organization Example"
+Description: "Organization - Example of a Submitting Hospital Organization"
 Usage: #example
 * identifier.system = "http://hl7.org/fhir/sid/us-npi"
 * identifier.value = "9941339100"

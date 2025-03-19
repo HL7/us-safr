@@ -3,7 +3,7 @@ Id: us-safr-bed-capacity-group-example-codes
 Title: "Healthcare Capacity Reporting Group Code System"
 * ^copyright = "This CodeSystem is not copyrighted."
 * ^experimental = true
-* ^description = "This CodeSystem defines coded concepts for Healthcare Capacity Group reporting to US SAFR. This CodeSystem is experimental, and is expected to be replaced by LOINC codes once they have been assigned."
+* ^description = "This CodeSystem defines coded concepts for Healthcare Capacity Group reporting to US SAFR. This is an example CodeSystem and is experimental, and is expected to be replaced by LOINC codes once they have been assigned."
 * ^caseSensitive = false
 * #AllBeds "All Beds" "Census across all beds, including all specialty beds (i.e., CMS-certified rehabilitation, CMS-certified psychiatric, obstetrics, NICU [all levels], and nursery beds)."
 * #AdultTotal "Adult Total Beds" "Census across all adult beds (Adult ICU, Adult PCU, Adult MT/MS and Adult OBS), excluding CMS-certified rehabilitation, CMS-certified psychiatric, and obstetrics beds."

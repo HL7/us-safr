@@ -3,8 +3,8 @@
 
 Instance: HRDMeasureReportBundle
 InstanceOf: SafrMeasureReportBundle
-Title: "HRD Capacity Measure Report Bundle"
-Description: "Bundle containing a measure report and all referenced resources for NHSN HRD reporting"
+Title: "Bundle - HRD Measure Report Bundle Example"
+Description: "Bundle containing a measure report and all referenced resources for NHSN Hospital Respiratory Disease (HRD) reporting"
 Usage: #example
 
 * type = #collection

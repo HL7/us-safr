@@ -1,7 +1,7 @@
 Instance: HRDMeasureReport
 InstanceOf: DEQMSummaryMeasureReportProfile
-Title: "HRD MeasureReport Example"
-Description: "This Bundle resource is an example of a Hospital Respiratory Data (HRD) MeasureReport for the US SAFR IG."
+Title: "MeasureReport - HRD MeasureReport Example"
+Description: "This Bundle resource is an example of a Hospital Respiratory Data (HRD) MeasureReport."
 Usage: #example
 // Basic metadata
 * status = $measure-report-status#complete

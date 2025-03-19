@@ -3,7 +3,7 @@ Id: us-safr-hrd-supply-days-example-codes
 Title: "Hospital Respiratory Data Supply Days Code System"
 * ^copyright = "This CodeSystem is not copyrighted."
 * ^experimental = true
-* ^description = "This CodeSystem defines coded concepts for supply days in Hospital Respiratory Data reporting for US SAFR IG. This CodeSystem is experimental, and is expected to be replaced when a permanent location is identified."
+* ^description = "This CodeSystem defines coded concepts for supply days in Hospital Respiratory Data reporting for US SAFR IG. This is an example CodeSystem and is experimental, and is expected to be replaced when a permanent location is identified."
 * ^caseSensitive = false
 * #"0 DAYS" "0 Days" "0 Days"
 * #"1-3 DAYS" "1-3 DAYS" "1-3 DAYS"
