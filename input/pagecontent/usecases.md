@@ -86,4 +86,55 @@ For all bed censuses and counts, the following bed types should be <u>excluded</
 - Psych Psychiatric
 - Rehab Rehabilitation
 
-#### Bed Capcity Example
+#### Bed Capacity Example
+<table class="grid">
+   <col style="width:20%" />
+   <tbody>
+      <tr>
+         <td style="column-width:30%">
+            <a href="Measure-BedCapacityMeasure.html" title="Measure/BedCapacityMeasure">Measure - Bed Capacity Measure
+               Example</a>
+         </td>
+         <td>
+            <p>Example of a bed capacity measure for ICU, ED, and Pediatric beds for NHSN reporting.</p>
+         </td>
+      </tr>
+      <tr>
+         <td style="column-width:30%">
+            <a href="Library-BedCapacityLibrary.html" title="Library/BedCapacityLibrary">Library - Library of Bed
+               Capacity Measure Example</a>
+         </td>
+         <td>
+            <p>This library contains CQL logic for evaluating structural measures related to bed capacity reporting
+               capabilities.</p>
+         </td>
+      </tr>
+      <tr>
+         <td style="column-width:30%">
+            <a href="Bundle-BedCapacityMeasureBundle.html" title="Bundle/BedCapacityMeasureBundle">Bundle - Bed Capacity
+               Measure Bundle Example</a>
+         </td>
+         <td>
+            <p>This Bundle resource is an example of a Bed Capacity Measure Bundle.</p>
+         </td>
+      </tr>
+      <tr>
+         <td style="column-width:30%">
+            <a href="MeasureReport-BedCapacityMeasureReport.html"
+               title="MeasureReport/BedCapacityMeasureReport">MeasureReport - Bed Capacity MeasureReport Example</a>
+         </td>
+         <td>
+            <p>Example MeasureReport for NHSN bed capacity monitoring showing ICU, ED, and Pediatric bed capacity</p>
+         </td>
+      </tr>      
+      <tr>
+         <td style="column-width:30%">
+            <a href="Bundle-HospitalBedCapacityReportBundle.html" title="Bundle/HospitalBedCapacityReportBundle">Bundle
+               - Bed Capacity Report Bundle Example</a>
+         </td>
+         <td>
+            <p>Bundle containing a measure report and all referenced resources for NHSN bed capacity reporting.</p>
+         </td>
+      </tr>
+   </tbody>
+</table>
