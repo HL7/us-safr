@@ -25,6 +25,8 @@ Alias: $cqfm-aggregateMethod = http://hl7.org/fhir/us/cqfmeasures/StructureDefin
 Alias: $reporting-frequency = http://hl7.org/fhir/us/safr/StructureDefinition/reporting-frequency
 Alias: $emergency-activation = http://hl7.org/fhir/us/safr/StructureDefinition/emergency-activation
 
+Alias: $hrd-example-codes = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes
+
 Alias: $loinc = http://loinc.org
 Alias: $sct = http://snomed.info/sct
 Alias: $ucum = http://unitsofmeasure.org

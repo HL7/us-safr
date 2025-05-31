@@ -9,7 +9,7 @@ Title: "Library - HRD Measure Example"
 Description: "This library contains CQL logic for evaluating structural measures related to hospital respiratory disease reporting capabilities"
 Usage: #example
 * meta.profile[+] = Canonical(CRMIComputableLibrary|1.0.0)
-* url = "http://example.org/fhir/Library/HRDMeasureLibrary"
+* url = "http://hl7.org/fhir/us-safr/Library/HRDMeasureLibrary"
 * version = "1.0.0"
 * name = "HRDMeasureLibrary"
 * title = "Library - HRD Measure Example"
