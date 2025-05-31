@@ -4,8 +4,8 @@ InstanceOf: Measure
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm"
 // * contained = bed-capacity-effective-data-requirements
-* extension[0].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"
-* extension[=].valueReference = Reference(Device/cqf-tooling)
+// * extension[0].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"
+// * extension[=].valueReference = Reference(Device/cqf-tooling)
 * extension[+].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis"
 * extension[=].valueCode = #boolean
 // * extension[+].id = "bed-capacity-effective-data-requirements"
