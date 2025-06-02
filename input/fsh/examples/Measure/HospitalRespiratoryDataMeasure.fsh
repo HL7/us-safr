@@ -15,18 +15,8 @@ InstanceOf: CQFMContinuousVariableMeasure|4.0.0
 Title: "Measure - HRD Measure Example"
 Description: "Example of a Hospital Respiratory Disease (HRD) Measure for NHSN reporting."
 Usage: #example
-//* meta.profile[+] = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cv-measure-cqfm|4.0.0"
-//* contained[+] = cqf-tooling
-//* contained[+] = bed-capacity-effective-data-requirements
-//* extension[0].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"
-//* extension[=].valueReference = Reference(cqf-tooling)
 * extension[+].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis"
 * extension[=].valueCode = #boolean
-//* extension[+].id = "bed-capacity-effective-data-requirements"
-//* extension[=].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements"
-//* extension[=].valueReference = Reference(bed-capacity-effective-data-requirements)
-// * extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
-// * extension[=].valueCode = #pher
 * url = "http://hl7.org/fhir/us/us/safr/Measure/HospitalRespiratoryDataMeasure"
 * version = "1.0.0"
 * name = "HospitalRespiratoryDataMeasure"
@@ -44,6 +34,7 @@ Usage: #example
 * scoring = $measure-scoring#continuous-variable
 //* type = http://terminology.hl7.org/CodeSystem/measure-type#structure "Structure"
 * type = $MeasureTypeCS#structure "Structure"
+* improvementNotation = http://terminology.hl7.org/CodeSystem/measure-improvement-notation#increase "Increased score indicates improvement"
 
 
 

@@ -1,14 +1,8 @@
-/*Alias: $library-type = http://terminology.hl7.org/CodeSystem/library-type
-
-Alias: $location-physical-type = http://terminology.hl7.org/CodeSystem/location-physical-type
-
-*/
 Instance: HRDMeasureLibrary
 InstanceOf: CRMIComputableLibrary|1.0.0
 Title: "Library - HRD Measure Example"
 Description: "This library contains CQL logic for evaluating structural measures related to hospital respiratory disease reporting capabilities"
 Usage: #example
-* meta.profile[+] = Canonical(CRMIComputableLibrary|1.0.0)
 * url = "http://hl7.org/fhir/us-safr/Library/HRDMeasureLibrary"
 * version = "1.0.0"
 * name = "HRDMeasureLibrary"
