@@ -31,6 +31,6 @@ submitting organization, submitting device, and individual MeasureReports."
 * entry[measurereport]
   * ^short = "Measure Report: each MeasureReport refers to one Patient and one measure included in the Measure Report List"
   * resource 1..
-  * resource only DEQMSummaryMeasureReportProfile // or DEQMIndividualMeasureReportProfile
+  * resource only DEQMIndividualMeasureReportProfile
     * ^short = "Bundle entry for a Measure Report"
 

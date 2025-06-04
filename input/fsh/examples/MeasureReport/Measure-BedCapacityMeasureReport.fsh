@@ -2,13 +2,13 @@
 // NHSN Bed Capacity MeasureReport Instance
 // Based on the NHSNBedCapacityMeasureReport profile
 Instance: BedCapacityMeasureReport
-InstanceOf: DEQMSummaryMeasureReportProfile
+InstanceOf: DEQMIndividualMeasureReportProfile
 Title: "MeasureReport - Bed Capacity MeasureReport Example"
 Description: "Example MeasureReport for NHSN bed capacity monitoring showing ICU, ED, and Pediatric bed capacity"
 Usage: #example
 // Basic metadata
 * status = $measure-report-status#complete
-* type = $measure-report-type#summary
+* type = $measure-report-type#individual
 * measure = Canonical(BedCapacityMeasure|1.0.0-ballot)
 * date = "2025-03-05T08:15:00-05:00"
 // Reporting period
@@ -18,7 +18,8 @@ Usage: #example
 * reporter.reference = "urn:uuid:4c83e586-1277-4132-9b4e-3d1c14d38981" //Reference(MemorialHospitalOrganization)
 * reporter.display = "Memorial Hospital"
 //* subject = Reference(MemorialHospitalFacility)
-//* subject.display = "Memorial Hospital Facility"
+* subject.reference = "urn:uuid:4c83e586-1277-4132-9b4e-3d1c14d38983"
+* subject.display = "Memorial Hospital Facility"
 
 * extension[scoring].url = "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring"
 * extension[scoring].valueCodeableConcept = $measure-scoring#continuous-variable "Continuous Variable"
