@@ -1,6 +1,6 @@
 The US SAFR IG includes practical use cases demonstrating its application across various levels of healthcare resource management. These use cases highlight the framework’s ability to address immediate and strategic challenges.
 
-### Unite States ituational Awareness for Facilitation of Response Measure Reporting Use Cases
+### United States Situational Awareness for Facilitation of Response Measure Reporting Use Cases
 
 #### Use Case #1: Real-Time Bed Capacity and Staffing Needs During a Flu Surge
 

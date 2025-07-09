@@ -43,7 +43,7 @@ The following reporting scenarios use the Actors defined on the [Actors](actors.
 
 #### Push to NHSN
 
-In this scenario both the Data Source and dQM evaluation engine reside at the reporting facility, and may be the same system (i.e. an EHR that performs it’s own internal measure evaluation). The dQM Evaluation Engine first retrieves the latest FHIR measures and related resources from the Measure Source and extracts the data requirements for each measure. The dQM Evaluation Engine and queries the Data Source for data that it will evaluate against a measure and prepares Bundle containing MeasureReport and supporting resources, then sends it to the Measure Report Recipient at NHSN. The Measure Report Recipient then optionally performs pre-qualification (additional FHIR validation checks against measure-specific profiles) before making the data available to NHSN back end systems.
+In this scenario both the Data Source and dQM evaluation engine reside at the reporting facility, and may be the same system (e.g., an EHR that performs it’s own internal measure evaluation). The dQM Evaluation Engine first retrieves the latest FHIR measures and related resources from the Measure Source and extracts the data requirements for each measure. The dQM Evaluation Engine and queries the Data Source for data that it will evaluate against a measure and prepares Bundle containing MeasureReport and supporting resources, then sends it to the Measure Report Recipient at NHSN. The Measure Report Recipient then optionally performs pre-qualification (additional FHIR validation checks against measure-specific profiles) before making the data available to NHSN back end systems.
 
 In this scenario the dQM Evaluation Engine SHALL perform a FHIR POST or PUT to push the measure report bundle to the Measure Report Recipient.
 <figure>
@@ -58,7 +58,7 @@ In this scenario the dQM Evaluation Engine SHALL perform a FHIR POST or PUT to p
 
 3. **Submit MeasureReport Bundle** The dQM Evaluation Engine uses an HTTP POST to submit the [SafrMeasureReportBundle](StructureDefinition-us-safr-measurereport-bundle.html) to the MeasureReport Recipient. The MeasureReport Recipient validates the Bundle and proceeds to load the data into other NHSN systems (details of such systems are out of scope for this IG).
 
-4. **Forward to NHSN Systems:** The MeasureReport Recipient fowards the validated MeasureReport Bundle content to other back-end NHSN systems (details of such systems are out of scope for this IG).
+4. **Forward to NHSN Systems:** The MeasureReport Recipient forwards the validated MeasureReport Bundle content to other back-end NHSN systems (details of such systems are out of scope for this IG).
 
 
 
