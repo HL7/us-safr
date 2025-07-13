@@ -1,6 +1,6 @@
 CodeSystem: BedCapacityGroupExampleCS
 Id: us-safr-bed-capacity-group-example-codes
-Title: "Healthcare Capacity Reporting Group Code System"
+Title: "Healthcare Bed Capacity Reporting Group Code System"
 * ^copyright = "This CodeSystem is not copyrighted."
 * ^experimental = true
 * ^description = "This CodeSystem defines coded concepts for Healthcare Capacity Group reporting to US SAFR. This is an example CodeSystem and is experimental, and is expected to be replaced by LOINC codes once they have been assigned."
