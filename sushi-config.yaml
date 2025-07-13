@@ -64,14 +64,19 @@ dependencies:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
-# pages:
-#   index.md:
-#     title: Example Home
-#   implementation.xml:
-#   examples.xml:
-#     title: Examples Overview
-#     simpleExamples.xml:
-#     complexExamples.xml:
+pages:
+  index.md:
+    title: US Situational Awareness Framework for Reporting Home
+  actors.md:
+    title: actors
+  usecases.md:
+    title: Use Cases
+  specification.md:
+    title: Specification
+  security.md:
+    title: Security
+  downloads.md:
+    title: Downloads    
 #
 #
 # The parameters property represents IG.definition.parameter. Rather
@@ -111,7 +116,7 @@ menu:
   Home: index.html
   Actors And Usecases: 
     Actors: actors.html
-    Usecases: usecases.html
+    Use Cases: usecases.html
   Specification: specification.html
   Security: security.html
   Artifacts: artifacts.html
