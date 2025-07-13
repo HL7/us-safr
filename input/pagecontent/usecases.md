@@ -8,6 +8,7 @@ The US SAFR IG includes practical use cases demonstrating its application across
 During a severe flu season, hospitals in a specific jurisdiction experience a high influx of patients with respiratory illnesses, straining bed capacity and staffing resources.
 
 **Facility/Hospital-Level Use**
+
 **1. Bed and Staffing Allocation**
 - Hospitals use US SAFR to report real-time bed occupancy and availability every 15 minutes, categorized by bed type.
 - Hospital administrators leverage this data to monitor capacity and prioritize staffing where it is most urgently needed.
@@ -16,6 +17,7 @@ During a severe flu season, hospitals in a specific jurisdiction experience a hi
 - By analyzing live bed occupancy and patient influx data, hospitals coordinate with temporary staffing agencies or reallocate internal staff to address shortages effectively.
 
 **Jurisdiction-Level Use**
+
 **1. Capacity Tracking Across Hospitals**
 - Local health departments use US SAFR to monitor bed and ICU capacity across multiple facilities, identifying hospitals under the greatest strain.
 
@@ -23,6 +25,7 @@ During a severe flu season, hospitals in a specific jurisdiction experience a hi
 - Capacity data sharing enables neighboring jurisdictions to coordinate patient transfers and resource reallocation, easing pressure on overwhelmed facilities.
 
 **Federal-Level Use**
+
 **1. National Monitoring and Resource Allocation**
 - Federal agencies, including the CDC, receive aggregated data to identify high-occupancy states and allocate emergency resources accordingly.
 
@@ -43,6 +46,7 @@ In response to an approaching hurricane on the Texas coastline, state emergency 
 - Real-time data supports collaboration with EMS and transport services, identifying available ICU and specialty care beds at inland facilities for safe patient transfers.
 
 **Jurisdiction-Level Use**
+
 **1. Cross-Hospital Coordination**
 - State health departments monitor bed capacity across facilities and direct ambulances to locations with adequate resources.
 
@@ -50,6 +54,7 @@ In response to an approaching hurricane on the Texas coastline, state emergency 
 - Aggregated data informs the deployment of critical supplies, ensuring inland hospitals are prepared to receive evacuees.
 
 **Federal-Level Use**
+
 **1. Emergency Support and Resource Allocation**
 - Federal agencies assess regional capacity and deploy FEMA medical personnel or National Guard resources as needed.
 
