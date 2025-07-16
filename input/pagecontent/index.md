@@ -1,9 +1,9 @@
 ### Overview
 
 The US Situational Awareness Framework for Reporting (US SAFR) Implementation Guide (IG) establishes a standardized, FHIR-based approach to support public health 
-decision-making during emergencies. By enhancing situational awareness, this IG aims to provide a real-time, national view of healthcare system capacity, 
-respiratory disease trends, and other critical public health metrics. The guide is designed to facilitate seamless data exchange between healthcare facilities, 
-public health authorities, and federal agencies, thereby strengthening the nation’s emergency preparedness and response capabilities.
+decision-making during emergencies. By enhancing situational awareness, this IG aims to provide a real-time, national or jurisdictional view of healthcare system capacity, 
+respiratory disease trends, and other critical public health metrics. The guide is designed to facilitate seamless data exchange between healthcare facilities and
+public health authorities (federal and/or jurisdictional),thereby strengthening the nation’s emergency preparedness and response capabilities.
 
 
 ### Purpose ###
@@ -29,13 +29,13 @@ learned during the pandemic to create a reliable, automated, and standardized re
 
 
 ### Audience ###
-This guide is intended for a broad range of stakeholders, including:
+This guide is intended for a broad range of interoperability partners, including:
 
-- **Healthcare Facilities and Jurisdictions:** Hospitals, acute care centers, and jurisdictional health departments responsible for data reporting.
-- **Federal Agencies:** CDC, ASTP, ASPR, and other public health entities.
+- **Healthcare Facilities and Jurisdictions:** Hospitals, acute care centers, and other healthcare facilities responsible for data reporting.
+- **Federal Agencies:** CDC, ASTP/ONC, CMS, ASPR, and other public health entities.
 - **EHR and Hospital System Vendors:** Certified EHR developers and other technology providers.
 - **Standards Development Organizations:** Stakeholders involved in advancing FHIR and other health data standards.
-Public Health Authorities: Decision-makers at local, state, and national levels seeking to improve situational awareness and emergency response.
+- **Public Health Authorities:** Decision-makers at state, tribal, local, territorial, and national levels seeking to improve situational awareness and emergency response.
 
 
 ### Design Considerations ###
