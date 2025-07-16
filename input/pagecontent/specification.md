@@ -41,9 +41,9 @@ The full set of profiles defined in this IG can be found by following the links 
 
 The following reporting scenarios use the Actors defined on the [Actors](actors.html) and [Use Cases](usecases.html) pages.
 
-#### Push to NHSN
+#### Push to Public Health Agency
 
-In this scenario both the Data Source and dQM evaluation engine reside at the reporting facility, and may be the same system (e.g., an EHR that performs it’s own internal measure evaluation). The dQM Evaluation Engine first retrieves the latest FHIR measures and related resources from the Measure Source and extracts the data requirements for each measure. The dQM Evaluation Engine and queries the Data Source for data that it will evaluate against a measure and prepares Bundle containing MeasureReport and supporting resources, then sends it to the Measure Report Recipient at NHSN. The Measure Report Recipient then optionally performs pre-qualification (additional FHIR validation checks against measure-specific profiles) before making the data available to NHSN back end systems.
+In this scenario both the Data Source and dQM evaluation engine reside at the reporting facility, and may be the same system (e.g., an EHR that performs it’s own internal measure evaluation). The dQM Evaluation Engine first retrieves the latest FHIR measures and related resources from the Measure Source and extracts the data requirements for each measure. The dQM Evaluation Engine and queries the Data Source for data that it will evaluate against a measure and prepares Bundle containing MeasureReport and supporting resources, then sends it to the Measure Report Recipient at the Public Health Agency. The Measure Report Recipient then optionally performs pre-qualification (additional FHIR validation checks against measure-specific profiles) before making the data available Public Health Agency to  back end systems.
 
 In this scenario the dQM Evaluation Engine SHALL perform a FHIR POST or PUT to push the measure report bundle to the Measure Report Recipient.
 <figure>
@@ -62,8 +62,8 @@ In this scenario the dQM Evaluation Engine SHALL perform a FHIR POST or PUT to p
 
 
 
-#### Pull direct from NHSN 
-In this scenario, both the Digital Quality Measure (dQM) Evaluation Engine and the Measure Report Recipient reside within an NHSN controlled environment, and may be the same system. The dQM Evaluation Engine first retrieves the latest FHIR measures and related resources from the Measure Source and extracts the data requirements for each measure. The dQM Evaluation Engine queries the Data Source for data that it will evaluate against a measure and prepares Bundle containing MeasureReport and supporting resources, and then optionally performs pre-qualification (additional FHIR validation checks against measure-specific profiles) before making the data available to NHSN back end systems.
+#### Pull direct from Public Health Agency 
+In this scenario, both the Digital Quality Measure (dQM) Evaluation Engine and the Measure Report Recipient reside within an Public Health Agency controlled environment, and may be the same system. The dQM Evaluation Engine first retrieves the latest FHIR measures and related resources from the Measure Source and extracts the data requirements for each measure. The dQM Evaluation Engine queries the Data Source for data that it will evaluate against a measure and prepares Bundle containing MeasureReport and supporting resources, and then optionally performs pre-qualification (additional FHIR validation checks against measure-specific profiles) before making the data available to NHSN back end systems.
 
 In this scenario the Data Source SHALL have a FHIR API that at a minimum provides read access to all resources required by the measure(s).
 
@@ -80,7 +80,7 @@ In this scenario the Data Source SHALL have a FHIR API that at a minimum provide
 3. **Submit MeasureReport Bundle** The dQM Evaluation Engine uses an HTTP POST to submit the [SafrMeasureReportBundle](StructureDefinition-us-safr-measurereport-bundle.html) to the MeasureReport Recipient. The MeasureReport Recipient validates the Bundle and proceeds to load the data into other NHSN systems (details of such systems are out of scope for this IG).
 
 
-#### Pull from States then send to NHSN
+#### Pull from States then send to Public Health Agency
 
 <figure>
   {% include usfr-2.svg %}
