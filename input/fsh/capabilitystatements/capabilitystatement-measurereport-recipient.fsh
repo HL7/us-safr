@@ -12,8 +12,7 @@ Usage: #definition
 * contact.telecom.system = #url
 * contact.telecom.value = "http://www.hl7.org/Special/committees/pher"
 * description = "This statement defines the expected capabilities of a system at NHSN that receives MeasureReport bundles from the dQM Evaluation Engine and validates 
-the result against the profiles in this implementation guide, and potentially other measure-specific profiles that are distributed with the measures themselves 
-(this kind of validation is referred to as “pre-qualification” at NHSN). The MeasureReport Recipient acts as a 
+the result against the profiles in this implementation guide, and potentially other measure-specific profiles that are distributed with the measures themselves. The MeasureReport Recipient acts as a 
 [DEQM Receiver Server](https://www.hl7.org/fhir/us/davinci-deqm/STU4/CapabilityStatement-receiver-server.html), provides write access to Bundle resources containing 
 MeasureReport and other related resources, and implements the $validate operation."
 * jurisdiction = urn:iso:std:iso:3166#US
