@@ -33,7 +33,7 @@ This guide is intended for a broad range of interoperability partners, including
 
 - **Healthcare Facilities and Jurisdictions:** Hospitals, acute care centers, and other healthcare facilities responsible for data reporting.
 - **Federal Agencies:** CDC, ASTP/ONC, CMS, ASPR, and other public health entities.
-- **EHR and Hospital System Vendors:** Certified EHR developers and other technology providers.
+- **Provider HIT Vendors:** Developers of provider HIT such as EHRs, administrative, and logistics systems that are the source of US SAFR measures of interest.
 - **Standards Development Organizations:** Stakeholders involved in advancing FHIR and other health data standards.
 - **Public Health Authorities:** Decision-makers at state, tribal, local, territorial, and national levels seeking to improve situational awareness and emergency response.
 
