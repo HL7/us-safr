@@ -22,8 +22,6 @@ InstanceOf: USSafrSubmittingOrganization
 Title: "Organization - Submitting Hospital Organization Example"
 Description: "Organization - Example of a Submitting Hospital Organization"
 Usage: #example
-* identifier.system = "http://hl7.org/fhir/sid/us-npi"
-* identifier.value = "9941339100"
 * active = true
 * name = "Memorial Hospital"
 * address.line = "123 Healthcare Drive"
