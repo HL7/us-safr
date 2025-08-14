@@ -22,6 +22,8 @@ InstanceOf: USSafrSubmittingOrganization
 Title: "Organization - Submitting Hospital Organization Example"
 Description: "Organization - Example of a Submitting Hospital Organization"
 Usage: #example
+* identifier[nhsn_org_id].system = "https://www.cdc.gov/nhsn/OrgID"
+* identifier[nhsn_org_id].value = "123456789"
 * active = true
 * name = "Memorial Hospital"
 * address.line = "123 Healthcare Drive"
