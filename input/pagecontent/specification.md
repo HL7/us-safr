@@ -23,7 +23,7 @@ The following rules regarding Must Support  elements apply to all Profiles in th
 
 Sender:
 
-* If the data element is available in the FHIR API/EHR, the data element *SHALL* be provided (either through submission or response to a query) for measure calculation or risk adjustment.
+* If the data element is available in through the Data Source, the data element *SHALL* be provided (either through submission or response to a query) for measure calculation or risk adjustment.
 * If the sender does not capture/store the data, the data are not available, or sharing of the data is not authorized, the system **SHOULD NOT** send the element if the element is not marked as mandatory (lower cardinality of 0).
 
 Receiver: 
