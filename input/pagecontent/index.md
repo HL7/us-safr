@@ -31,12 +31,11 @@ learned during the pandemic to create a reliable, automated, and standardized re
 ### Audience ###
 This guide is intended for a broad range of interoperability partners, including:
 
-- **Healthcare Facilities and Jurisdictions:** Hospitals, acute care centers, and other healthcare facilities responsible for data reporting.
-- **Federal Agencies:** CDC, ASTP/ONC, CMS, ASPR, and other public health entities.
-- **Provider HIT Vendors:** Developers of provider HIT such as EHRs, administrative, and logistics systems that are the source of US SAFR measures of interest.
+- **Healthcare Organizations:** Hospitals, acute care centers, and other providers with public health reporting obligations.
+- **Federal Agencies:** CDC, ASTP/ONC, CMS, ASPR, and other federal public health entities.
+- **Provider HIT Vendors:** Developers of provider HIT such as EHRs, administrative, and logistics systems that are the source of US SAFR data.
 - **Standards Development Organizations:** Stakeholders involved in advancing FHIR and other health data standards.
-- **Public Health Authorities:** Decision-makers at state, tribal, local, territorial, and national levels seeking to improve situational awareness and emergency response.
-
+- **Public Health Authorities:** State, tribal, local, and territorial (STLTs) public health agencies seeking to improve situational awareness and emergency response.
 
 ### Design Considerations ###
 The design of US SAFR emphasizes:
