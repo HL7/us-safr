@@ -14,7 +14,7 @@ During a severe flu season, hospitals in a specific jurisdiction experience a hi
 - Hospital administrators leverage this data to monitor capacity and prioritize staffing where it is most urgently needed.
 
 **2. Resource Allocation**
-- By analyzing live bed occupancy and patient influx data, hospitals coordinate with temporary staffing agencies or reallocate internal staff to address shortages effectively.
+- By analyzing near real-time bed occupancy and patient influx data, hospitals coordinate with temporary staffing agencies or reallocate internal staff to address shortages effectively.
 
 **Jurisdiction-Level Use**
 
