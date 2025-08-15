@@ -10,7 +10,7 @@ public health authorities (federal and/or jurisdictional),thereby strengthening 
 
 This specification seeks to achieve the following objectives:
 
-1. **Standardized FHIR Interfaces:** Enable interoperable data exchange with the National Healthcare Safety Network (NHSN) of the Centers for Disease Control (CDC) and Prevention and other public health agencies.
+1. **Standardized FHIR Interfaces:** Enable interoperable data exchange with the National Healthcare Safety Network (NHSN) of the Centers for Disease Control and Prevention (CDC) and other federal or jurisdictional public health agencies.
 2. **Automated Data Collection:** Minimize manual intervention through real-time data collection.
 3. **Increased Situational Awareness:** Provide a comprehensive view of healthcare capacity and trends, serving as a foundation for future data reporting needs. 
 
