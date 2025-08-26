@@ -3,8 +3,12 @@ Parent: Bundle
 Id: us-safr-measurereport-bundle
 Title: "US SAFR Measure Report Bundle"
 Description: "This profile defines a valid submission bundle to NHSN with all resources contained within. The Bundle is comprised of entry slices representing the data 
-submitting organization, submitting device, and individual MeasureReports."
-* obeys bundle-no-modifier-extensions and bundle-contain-all-measurereport-references
+submitting organization, submitting device, and individual MeasureReports.
+
+If this fails, use the following FHIRPath expression to discover missing resources: 
+Bundle.entry.resource.descendants().reference.where($this.startsWith('#').not()).where((%resource.entry.fullUrl.join('|')&'|').contains(($this&'|')).not())"
+
+* obeys bundle-no-modifier-extensions and bundle-contain-all-references
 * . ^short = "A Bundle contains a collection of Resources."
 * type = #collection (exactly)
 * entry ^slicing.discriminator.type = #profile
