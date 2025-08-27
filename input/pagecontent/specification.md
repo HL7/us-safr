@@ -43,7 +43,7 @@ The following reporting scenarios use the Actors defined on the [Actors](actors.
 
 #### Push to MeasureReport Recipient (NHSN)
 
-In this scenario both the Data Source and dQM evaluation engine reside at the reporting facility, and may be the same system (e.g., an EHR that performs it’s own internal measure evaluation). The dQM Evaluation Engine first retrieves the latest FHIR measures and related resources from the Measure Source and extracts the data requirements for each measure. The dQM Evaluation Engine and queries the Data Source for data that it will evaluate against a measure and prepares Bundle containing MeasureReport and supporting resources, then sends it to the MeasureReport Recipient (NHSN). 
+In this scenario both the Data Source and digital Quality Measure (dQM) evaluation engine reside at the reporting facility, and may be the same system (e.g., an EHR that performs it’s own internal measure evaluation). The dQM Evaluation Engine first retrieves the latest FHIR measures and related resources from the measure repository and extracts the data requirements for each measure. The dQM Evaluation Engine and queries the Data Source for data that it will evaluate against a measure and prepares Bundle containing MeasureReport and supporting resources, then sends it to the MeasureReport Recipient (NHSN). 
 
 In this scenario the dQM Evaluation Engine SHALL perform a FHIR POST or PUT to push the measure report bundle to the MeasureReport Recipient (NHSN).
 <figure>
@@ -51,7 +51,7 @@ In this scenario the dQM Evaluation Engine SHALL perform a FHIR POST or PUT to p
   <figcaption></figcaption>
 </figure>
 
-1. **Retrieve Measure Bundle:** The dQM Evaluation Engine uses an HTTP GET against the Measure Source for an [USSafrMeasureBundle](StructureDefinition-us-safr-measure-bundle.html) containing a [CQFMContinuousVariableMeasure]({{site.data.fhir.ver.cqfm}}/StructureDefinition-cv-measure-cqfm.html) <!--[CRMIShareableMeasure]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablemeasure.html)--> and related resources. The exact Bundle(s) to retrieve is determined out of band by the facility and MeasureReport Recipient (NHSN) during onboarding and subsequent discussions. After retrieving the Bundle, the dQM evaluation engine parses the contents to determine which resources are needed from the Data Source, then proceeds to step 2.
+1. **Retrieve Measure Bundle:** The dQM Evaluation Engine uses an HTTP GET against the measure repository for an [USSafrMeasureBundle](StructureDefinition-us-safr-measure-bundle.html) containing a [CQFMContinuousVariableMeasure]({{site.data.fhir.ver.cqfm}}/StructureDefinition-cv-measure-cqfm.html) <!--[CRMIShareableMeasure]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablemeasure.html)--> and related resources. The exact Bundle(s) to retrieve is determined out of band by the facility and MeasureReport Recipient (NHSN) during onboarding and subsequent discussions. After retrieving the Bundle, the dQM evaluation engine parses the contents to determine which resources are needed from the Data Source, then proceeds to step 2.
 
 2. **Query Data Sources:**
 
@@ -62,8 +62,8 @@ In this scenario the dQM Evaluation Engine SHALL perform a FHIR POST or PUT to p
 
 
 
-#### Pull Facility Data using FHIR APIs (NHSN) 
-In this scenario, both the Digital Quality Measure (dQM) Evaluation Engine and the MeasureReport Recipient reside within an Public Health Agency (NHSN) controlled environment, and may be the same system. The dQM Evaluation Engine first retrieves the latest FHIR measures and related resources from the Measure Source and extracts the data requirements for each measure. The dQM Evaluation Engine queries the Data Source for data that it will evaluate against a measure and prepares Bundle containing MeasureReport and supporting resources.
+#### Pull Direct from Healthcare Facility 
+In this scenario, both the Digital Quality Measure (dQM) Evaluation Engine and the MeasureReport Recipient reside within an Public Health Agency (NHSN) controlled environment, and may be the same system. The dQM Evaluation Engine first retrieves the latest FHIR measures and related resources from the measure repository and extracts the data requirements for each measure. The dQM Evaluation Engine queries the Data Source for data that it will evaluate against a measure and prepares Bundle containing MeasureReport and supporting resources.
 In this scenario the Data Source SHALL have a FHIR API that at a minimum provides read access to all US Core profiles. Some measures may require additional FHIR resources beyond US Core, such as MedicationAdministration.
 
 <figure>
@@ -71,7 +71,7 @@ In this scenario the Data Source SHALL have a FHIR API that at a minimum provide
   <figcaption></figcaption>
 </figure>
 
-1. **Retrieve Measure Bundle:** The dQM Evaluation Engine uses an HTTP GET against the Measure Source for an [USSafrMeasureBundle](StructureDefinition-us-safr-measure-bundle.html) containing a [CQFMContinuousVariableMeasure]({{site.data.fhir.ver.cqfm}}/StructureDefinition-cv-measure-cqfm.html)<!--[CRMIShareableMeasure]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablemeasure.html)--> and related resources. The exact Bundle(s) to retrieve is determined out of band by the facility and MeasureReport Recipient (NHSN) during onboarding and subsequent discussions. After retrieving the Bundle, the dQM evaluation engine parses the contents to determine which resources are needed from the Data Source, then proceeds to step 2.
+1. **Retrieve Measure Bundle:** The dQM Evaluation Engine uses an HTTP GET against the measure repository for an [USSafrMeasureBundle](StructureDefinition-us-safr-measure-bundle.html) containing a [CQFMContinuousVariableMeasure]({{site.data.fhir.ver.cqfm}}/StructureDefinition-cv-measure-cqfm.html)<!--[CRMIShareableMeasure]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablemeasure.html)--> and related resources. The exact Bundle(s) to retrieve is determined out of band by the facility and MeasureReport Recipient (NHSN) during onboarding and subsequent discussions. After retrieving the Bundle, the dQM evaluation engine parses the contents to determine which resources are needed from the Data Source, then proceeds to step 2.
 
 2. **Query Data Sources:**
 
@@ -80,8 +80,17 @@ In this scenario the Data Source SHALL have a FHIR API that at a minimum provide
 
 
 #### Pull from States then send to MeasureReport Recipient (NHSN)
+In this scenario, a state/jurisdiction retrieves the measure bundle from NHSN and queries for data for aggregation from one or more healthcare facility before evaluating and submitting the MeasureReport to the Measure Recipient on behalf of the facilities.
+
+In this scenario the state/jurisdiction SHALL have a FHIR API that at a minimum provides read access to all US Core profiles. Some measures may require additional FHIR resources beyond US Core, such as MedicationAdministration.
 
 <figure>
   {% include usfr-2.svg %}
   <figcaption></figcaption>
 </figure>
+
+1. **Retrieve Measure Bundle:** The state/jurisdiction dQM Evaluation Engine uses an HTTP GET to retrieve the [USSafrMeasureBundle](StructureDefinition-us-safr-measure-bundle.html) containing a [CQFMContinuousVariableMeasure]({{site.data.fhir.ver.cqfm}}/StructureDefinition-cv-measure-cqfm.html)<!--[CRMIShareableMeasure]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablemeasure.html)--> and related resources from the measure repository. The exact Bundle(s) to retrieve is determined out of band by the facility and MeasureReport Recipient (NHSN) during onboarding and subsequent discussions. After retrieving the Bundle, the dQM evaluation engine parses the contents to determine which resources are needed from the Data Source, then proceeds to step 2.
+
+2. **Query Healthcare Facility:** The state/jurisdiction query each healthcare facility EHR for data aggregation via FHIR API. 
+
+3. **Submit MeasureReport to MeasureReport Recipient** The dQM Evaluation Engine uses an HTTP POST to submit the [SafrMeasureReportBundle](StructureDefinition-us-safr-measurereport-bundle.html) to the MeasureReport Recipient (NHSN). The MeasureReport Recipient (NHSN) validates the Bundle and proceeds to load the data into other backend systems (details of such systems are out of scope for this IG).
