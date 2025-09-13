@@ -15,35 +15,35 @@
          </extension>
          <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode">
             <valueCoding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/SAFRHealthareCapacityCS"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
                <code value="HOSP"></code>
                <display value="Hospital"></display>
             </valueCoding>
          </extension>
          <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode">
             <valueCoding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/SAFRHealthareCapacityCS"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
                <code value="IRF"></code>
                <display value="Inpatient Rehabilitation"></display>
             </valueCoding>
          </extension>
          <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode">
             <valueCoding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/SAFRHealthareCapacityCS"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
                <code value="IPF"></code>
                <display value="Inpatient Psychiatric"></display>
             </valueCoding>
          </extension>
          <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode">
             <valueCoding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/SAFRHealthareCapacityCS"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
                <code value="OTH"></code>
                <display value="Other facility-within-facility or subunit"></display>
             </valueCoding>
          </extension>
          <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-directReferenceCode">
             <valueCoding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/SAFRHealthareCapacityCS"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
                <code value="CHLD"></code>
                <display value="Children's or Pediatric"></display>
             </valueCoding>
@@ -91,7 +91,7 @@ define &quot;Occupation Stratification&quot;:
             <extension url="statement">
                <valueString value="//Emergency Department Stratifier
 define &quot;Emergency Department Bed Occupied Stratification&quot;:
-  if &quot;ED Admitted Encounters At Location&quot; then
+  if &quot;ED Encounters At Location&quot; then
     'Emergency Department'
   else 'Not Emergency Department'"></valueString>
             </extension>
@@ -359,7 +359,7 @@ define &quot;Bed Type Stratification&quot;:
          <relatedArtifact>
             <type value="depends-on"></type>
             <display value="Code system HealthcareCapacity"></display>
-            <resource value="http://hl7.org/fhir/us/safr/CodeSystem/SAFRHealthareCapacityCS"></resource>
+            <resource value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></resource>
          </relatedArtifact>
          <parameter>
             <name value="Bed Initial Population"></name>
@@ -471,7 +471,7 @@ define &quot;Bed Type Stratification&quot;:
    <name value="BedCapacityMeasure"></name>
    <title value="Bed Capacity"></title>
    <experimental value="true"></experimental>
-   <date value="2025-09-13T10:35:53-04:00"></date>
+   <date value="2025-09-13T12:12:21-04:00"></date>
    <description value="Bed Capacity Measure includes counts of specific bed types within the context of a given healthcare context or setting."></description>
    <library value="http://hl7.org/fhir/us/safr/Library/BedCapacityMeasure"></library>
    <scoring>

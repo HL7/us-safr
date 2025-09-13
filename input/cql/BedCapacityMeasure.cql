@@ -5,7 +5,7 @@ using FHIR version '4.0.1'
 include FHIRHelpers version '4.0.1' called FHIRHelpers
 
 codesystem "LocationPhysicalType": 'http://terminology.hl7.org/CodeSystem/location-physical-type'
-codesystem "HealthcareCapacity": 'http://hl7.org/fhir/us/safr/CodeSystem/SAFRHealthareCapacityCS'
+codesystem "HealthcareCapacity": 'http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes'
 
 valueset "Emergency Department Visit": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.292'
 
@@ -33,13 +33,10 @@ define "Has Qualifying Encounter at Location":
 
 // Emergency Department encounters at this location
 define "ED Encounters At Location":
-  [Encounter: "Emergency Department Visit"] EDVisit
-  where EDVisit.period overlaps "Measurement Period"
-
-define "ED Admitted Encounters At Location":
   exists(
-    "ED Encounters At Location" EDVisit
-    where EDVisit.status in {'arrived', 'triaged', 'in-progress'}
+    [Encounter: "Emergency Department Visit"] EDVisit
+    where EDVisit.period overlaps "Measurement Period"
+    and EDVisit.status in {'arrived', 'triaged', 'in-progress'}
   )
 
 // Simplified location type checking functions
@@ -66,7 +63,7 @@ define "Occupation Stratification":
 
 //Emergency Department Stratifier
 define "Emergency Department Bed Occupied Stratification":
-  if "ED Admitted Encounters At Location" then
+  if "ED Encounters At Location" then
     'Emergency Department'
   else 'Not Emergency Department'
 
