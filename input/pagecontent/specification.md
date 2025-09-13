@@ -79,7 +79,7 @@ In this scenario the Data Source SHALL have a FHIR API that at a minimum provide
 3. **Submit MeasureReport Bundle** The dQM Evaluation Engine uses an HTTP POST to submit the [SafrMeasureReportBundle](StructureDefinition-us-safr-measurereport-bundle.html) to the MeasureReport Recipient. The MeasureReport Recipient (NHSN) validates the Bundle and proceeds to load the data into other backend systems (details of such systems are out of scope for this IG).
 
 
-#### Pull from States then send to MeasureReport Recipient (NHSN)
+#### Aggregate at States and Push to MeasureReport Recipient (NHSN)
 In this scenario, a state/jurisdiction retrieves the measure bundle from NHSN and queries for data for aggregation from one or more healthcare facility before evaluating and submitting the MeasureReport to the Measure Recipient on behalf of the facilities.
 
 In this scenario the state/jurisdiction SHALL have a FHIR API that at a minimum provides read access to all US Core profiles. Some measures may require additional FHIR resources beyond US Core, such as MedicationAdministration.
