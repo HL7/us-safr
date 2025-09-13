@@ -5,8 +5,6 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="Measure/BedCapacityMeasure" key="Measure-BedCapacityMeasure" name="Bed Capacity"/>
-<artifact id="Library/BedCapacityMeasure" key="Library-BedCapacityMeasure" name="BedCapacityMeasure"/>
 <artifact deprecated="true" id="Bundle/BedCapacityMeasureBundle" key="Bundle-BedCapacityMeasureBundle" name="Bundle - Bed Capacity Measure Bundle Example"/>
 <artifact id="Bundle/HospitalBedCapacityReportBundle" key="Bundle-HospitalBedCapacityReportBundle" name="Bundle - Bed Capacity Report Bundle Example"/>
 <artifact id="Bundle/HRDMeasureBundle" key="Bundle-HRDMeasureBundle" name="Bundle - HRD Measure Bundle Example"/>
@@ -20,6 +18,9 @@
 <artifact id="Library/HRDMeasureLibrary" key="Library-HRDMeasureLibrary" name="Library - HRD Measure Example"/>
 <artifact deprecated="true" id="Library/BedCapacityLibrary" key="Library-BedCapacityLibrary" name="Library - Library of Bed Capacity Measure Example"/>
 <artifact id="Location/MemorialHospitalFacility" key="Location-MemorialHospitalFacility" name="Location - Hospital Facility Example"/>
+<artifact id="Location/PediatricLocationBed1" key="Location-PediatricLocationBed1" name="Location - Pediatrics Dept. Bed 1"/>
+<artifact id="Location/PediatricLocationBed2" key="Location-PediatricLocationBed2" name="Location - Pediatrics Dept. Bed 2"/>
+<artifact deprecated="true" id="Measure/BedCapacityMeasure" key="Measure-BedCapacityMeasure" name="Measure - Bed Capacity Measure Example"/>
 <artifact id="Measure/HospitalRespiratoryDataMeasure" key="Measure-HospitalRespiratoryDataMeasure" name="Measure - HRD Measure Example"/>
 <artifact id="MeasureReport/BedCapacityMeasureReport" key="MeasureReport-BedCapacityMeasureReport" name="MeasureReport - Bed Capacity MeasureReport Example"/>
 <artifact id="MeasureReport/HRDMeasureReport" key="MeasureReport-HRDMeasureReport" name="MeasureReport - HRD MeasureReport Example"/>

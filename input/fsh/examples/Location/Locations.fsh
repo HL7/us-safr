@@ -19,6 +19,29 @@ Usage: #example
 * physicalType = $location-physical-type#bu "Building"
 
 
+Instance: EDBed1
+InstanceOf: QICoreLocation|6.0.0
+Title: "Emergency Dept. Bed 1"
+Usage: #example
+* meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
+* identifier.system = "http://www.example.org/bed-location"
+* identifier.value = "001"
+* status = #active
+* name = "ED Bed at XYZ Hospital"
+* type = BedCapacityExampleCS#ED "Emergency Department"
+* physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#bd
+
+Instance: EDBed2
+InstanceOf: QICoreLocation|6.0.0
+Title: "Emergency Dept. Bed 2"
+Usage: #example
+* meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
+* identifier.system = "http://www.example.org/bed-location"
+* identifier.value = "002"
+* status = #active
+* name = "ED Bed at XYZ Hospital"
+* type = BedCapacityExampleCS#ED "Emergency Department"
+* physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#bd
 
 
 /*

@@ -32,3 +32,6 @@ Alias: $sct = http://snomed.info/sct
 Alias: $ucum = http://unitsofmeasure.org
 
 Alias: $MeasureImprovementNotation = http://terminology.hl7.org/CodeSystem/measure-improvement-notation 
+
+Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode|9.0.0
+Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
