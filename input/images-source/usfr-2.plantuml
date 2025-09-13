@@ -19,13 +19,13 @@ package "Healthcare Facility Four" {
 }
 
 package "Jurisdiction One" {
-    node "dQM Evaluation Engine" as dQM1
+    node "MEE Evaluation Engine" as MEE1
     node "MeasureReport Recipient" as Recipient1
     node "Data Aggregator" as DA1
 }
 
 package "Jurisdiction Two" {
-    node "dQM Evaluation Engine" as dQM2
+    node "MEE Evaluation Engine" as MEE2
     node "MeasureReport Recipient" as Recipient2
 }
 
@@ -36,17 +36,17 @@ package "NHSN" {
 
 EHR1 <-- DA1 : (2)\n Query Data Source
 EHR2 <-- DA1 : (2)\n Query Data Source
-DA1 -right-> dQM1 : (2)\n Aggregate Data\nvia FHIR or other API
-dQM1 -down-> MS : (1)\n Retrieve Measure Bundle
-dQM1 -right-> Recipient1 : (3)\n Submit MeasureReport Bundle
+DA1 -right-> MEE1 : (2)\n Aggregate Data\nvia FHIR or other API
+MEE1 -down-> MS : (1)\n Retrieve Measure Bundle
+MEE1 -right-> Recipient1 : (3)\n Submit MeasureReport Bundle
 
-EHR3 <-up- dQM2 : (2)\n Query Data Source
-EHR4 <-up- dQM2 : (2)\n Query Data Source
-dQM2 -up-> MS : (1)\n Retrieve Measure Bundle
-dQM2 -right-> Recipient2 : (3) Submit MeasureReport Bundle
+EHR3 <-up- MEE2 : (2)\n Query Data Source
+EHR4 <-up- MEE2 : (2)\n Query Data Source
+MEE2 -up-> MS : (1)\n Retrieve Measure Bundle
+MEE2 -right-> Recipient2 : (3) Submit MeasureReport Bundle
 
 
-dQM1 -down--> Recipient : (4)\n Submit MeasureReport Bundle
-dQM2 -up--> Recipient : (4)\n Submit MeasureReport Bundle
+MEE1 -down--> Recipient : (4)\n Submit MeasureReport Bundle
+MEE2 -up--> Recipient : (4)\n Submit MeasureReport Bundle
 
 @enduml

@@ -5,14 +5,14 @@ package "Healthcare Facility" {
 }
 
 package "NHSN" {
-    node "dQM Evaluation Engine" as dQM
+    node "Measure Evaluation Engine" as MEE
     node "Measure Source" as MS
     node "MeasureReport Recipient and Other NHSN Systems" as Recipient
 }
 
-EHR <-- dQM : (2)\n Query Data Source
-dQM -down-> MS : (1)\n Retrieve Measure Bundle
-dQM -right-> Recipient : (3)\n Submit MeasureReport Bundle
+EHR <-- MEE : (2)\n Query Data Source
+MEE -down-> MS : (1)\n Retrieve Measure Bundle
+MEE -right-> Recipient : (3)\n Submit MeasureReport Bundle
 
 
 @enduml
