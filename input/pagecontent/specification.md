@@ -53,8 +53,7 @@ In this scenario the Measure Evaluation Engine SHALL perform a FHIR POST or PUT 
 
 1. **Retrieve Measure Bundle:** The Measure Evaluation Engine uses an HTTP GET against the measure repository for an [USSafrMeasureBundle](StructureDefinition-us-safr-measure-bundle.html) containing a [CQFMContinuousVariableMeasure]({{site.data.fhir.ver.cqfm}}/StructureDefinition-cv-measure-cqfm.html) <!--[CRMIShareableMeasure]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablemeasure.html)--> and related resources. The exact Bundle(s) to retrieve is determined out of band by the facility and MeasureReport Recipient (NHSN) during onboarding and subsequent discussions. After retrieving the Bundle, the Measure evaluation engine parses the contents to determine which resources are needed from the Data Source, then proceeds to step 2.
 
-2. **Query Data Sources:**
-
+2. **Query Data Sources:** The Measure Evaluation Engine queries the Data Source to retrieve and evaluate the data defined in the measure. 
 
 3. **Submit MeasureReport Bundle** The Measure Evaluation Engine uses an HTTP POST to submit the [SafrMeasureReportBundle](StructureDefinition-us-safr-measurereport-bundle.html) to the MeasureReport Recipient. The MeasureReport Recipient validates the Bundle and proceeds to load the data into other MeasureReport Recipient (NHSN) systems (details of such systems are out of scope for this IG).
 
@@ -73,8 +72,7 @@ In this scenario the Data Source SHALL have a FHIR API that at a minimum provide
 
 1. **Retrieve Measure Bundle:** The Measure Evaluation Engine uses an HTTP GET against the measure repository for an [USSafrMeasureBundle](StructureDefinition-us-safr-measure-bundle.html) containing a [CQFMContinuousVariableMeasure]({{site.data.fhir.ver.cqfm}}/StructureDefinition-cv-measure-cqfm.html)<!--[CRMIShareableMeasure]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablemeasure.html)--> and related resources. The exact Bundle(s) to retrieve is determined out of band by the facility and MeasureReport Recipient (NHSN) during onboarding and subsequent discussions. After retrieving the Bundle, the Measure evaluation engine parses the contents to determine which resources are needed from the Data Source, then proceeds to step 2.
 
-2. **Query Data Sources:**
-
+2. **Query Data Sources:** The MeasureReport Recipient (NHSN) queries the Data Source to retrieve and evaluate the data defined in the measure.
 
 3. **Submit MeasureReport Bundle** The Measure Evaluation Engine uses an HTTP POST to submit the [SafrMeasureReportBundle](StructureDefinition-us-safr-measurereport-bundle.html) to the MeasureReport Recipient. The MeasureReport Recipient (NHSN) validates the Bundle and proceeds to load the data into other backend systems (details of such systems are out of scope for this IG).
 
