@@ -2,7 +2,7 @@
 
 package "Healthcare Facility" {
     node "  Data Source (EHR)    " as EHR
-    node "MEE Evaluation Engine" as MEE1
+    node "Measure Evaluation Engine" as MEE1
 }
 
 package "NHSN" {

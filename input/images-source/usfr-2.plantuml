@@ -19,13 +19,13 @@ package "Healthcare Facility Four" {
 }
 
 package "Jurisdiction One" {
-    node "MEE Evaluation Engine" as MEE1
+    node "Measure Evaluation Engine" as MEE1
     node "MeasureReport Recipient" as Recipient1
     node "Data Aggregator" as DA1
 }
 
 package "Jurisdiction Two" {
-    node "MEE Evaluation Engine" as MEE2
+    node "Measure Evaluation Engine" as MEE2
     node "MeasureReport Recipient" as Recipient2
 }
 
