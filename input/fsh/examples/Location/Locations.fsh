@@ -2,7 +2,7 @@ Instance: MemorialHospitalFacility
 Title: "Location - Hospital Facility Example"
 Description: "Example of a Hospital Facility for NHSN reporting."
 InstanceOf: QICoreLocation
-Usage: #inline
+Usage: #example
 * identifier.system = "http://example.org/fhir/location-identifier"
 * identifier.value = "MEM-MAIN"
 * name = "Memorial Hospital Main Campus"
