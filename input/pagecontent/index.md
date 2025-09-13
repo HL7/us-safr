@@ -63,6 +63,9 @@ Other FHIR standard related dependencies:
 
 {% include dependency-table.xhtml %}
 
+### Out of Scope ###
+Subscriptions is not covered in this IG currently, but future versions will plan to incorporate [FHIR Subscriptions R5 Backport](https://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/) to support emergencies that require rapid changes in reporting.
+
 ### Acknowledgements ###
 
 This implementation guide is a product of the [HL7 International–Public Health Work Group](http://www.hl7.org/Special/committees/pher/).
