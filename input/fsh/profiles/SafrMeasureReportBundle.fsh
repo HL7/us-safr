@@ -2,7 +2,7 @@ Profile: SafrMeasureReportBundle
 Parent: Bundle
 Id: us-safr-measurereport-bundle
 Title: "US SAFR Measure Report Bundle"
-Description: "This profile defines a valid submission bundle to NHSN with all resources contained within. The Bundle is comprised of entry slices representing the data 
+Description: "This profile defines a valid submission bundle to NHSN, federal and jurisdictional Public Health Agencies including State, Tribal, Local and Territorial (STLT) Health Departments with all resources contained within. The Bundle is comprised of entry slices representing the data 
 submitting organization, submitting device, and individual MeasureReports.
 
 If this fails, use the following FHIRPath expression to discover missing resources: 
