@@ -70,7 +70,7 @@
   }, {
     "type": "depends-on",
     "display": "Library FHIRHelpers",
-    "resource": "http://hl7.org/fhir/us/safr/Library/FHIRHelpers|4.0.1"
+      "resource": "http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1" 
   }, {
     "type": "depends-on",
     "display": "Code system LocationPhysicalType",
@@ -78,8 +78,7 @@
   }, {
     "type": "depends-on",
     "display": "Code system HealthcareCapacity",
-    "resource": "http://hl7.org/fhir/us/safr/CodeSystem/SAFRHealthareCapacityCS"
-  }, {
+      "resource": "http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"  }, {
     "type": "depends-on",
     "display": "Value set Emergency Department Visit",
     "resource": "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.292"
