@@ -5,7 +5,9 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="Bundle/BedCapacityMeasureBundle" key="Bundle-BedCapacityMeasureBundle" name="Bundle - Bed Capacity Measure Bundle Example"/>
+<artifact id="Measure/BedCapacityMeasure" key="Measure-BedCapacityMeasure" name="Bed Capacity"/>
+<artifact id="Library/BedCapacityMeasure" key="Library-BedCapacityMeasure" name="BedCapacityMeasure"/>
+<artifact deprecated="true" id="Bundle/BedCapacityMeasureBundle" key="Bundle-BedCapacityMeasureBundle" name="Bundle - Bed Capacity Measure Bundle Example"/>
 <artifact id="Bundle/HospitalBedCapacityReportBundle" key="Bundle-HospitalBedCapacityReportBundle" name="Bundle - Bed Capacity Report Bundle Example"/>
 <artifact id="Bundle/HRDMeasureBundle" key="Bundle-HRDMeasureBundle" name="Bundle - HRD Measure Bundle Example"/>
 <artifact id="Bundle/HRDMeasureReportBundle" key="Bundle-HRDMeasureReportBundle" name="Bundle - HRD Measure Report Bundle Example"/>
@@ -16,8 +18,8 @@
 <artifact id="CodeSystem/us-safr-hrd-example-codes" key="CodeSystem-us-safr-hrd-example-codes" name="Hospital Respiratory Data Reporting Code System"/>
 <artifact id="CodeSystem/us-safr-hrd-supply-days-example-codes" key="CodeSystem-us-safr-hrd-supply-days-example-codes" name="Hospital Respiratory Data Supply Days Code System"/>
 <artifact id="Library/HRDMeasureLibrary" key="Library-HRDMeasureLibrary" name="Library - HRD Measure Example"/>
-<artifact id="Library/BedCapacityLibrary" key="Library-BedCapacityLibrary" name="Library - Library of Bed Capacity Measure Example"/>
-<artifact id="Measure/BedCapacityMeasure" key="Measure-BedCapacityMeasure" name="Measure - Bed Capacity Measure Example"/>
+<artifact deprecated="true" id="Library/BedCapacityLibrary" key="Library-BedCapacityLibrary" name="Library - Library of Bed Capacity Measure Example"/>
+<artifact id="Location/MemorialHospitalFacility" key="Location-MemorialHospitalFacility" name="Location - Hospital Facility Example"/>
 <artifact id="Measure/HospitalRespiratoryDataMeasure" key="Measure-HospitalRespiratoryDataMeasure" name="Measure - HRD Measure Example"/>
 <artifact id="MeasureReport/BedCapacityMeasureReport" key="MeasureReport-BedCapacityMeasureReport" name="MeasureReport - Bed Capacity MeasureReport Example"/>
 <artifact id="MeasureReport/HRDMeasureReport" key="MeasureReport-HRDMeasureReport" name="MeasureReport - HRD MeasureReport Example"/>
@@ -32,12 +34,12 @@
 <artifact id="StructureDefinition/us-safr-submitting-organization" key="StructureDefinition-us-safr-submitting-organization" name="US SAFR Submitting Organization"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
-<page key="actors" name="Actors"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="downloads" name="Downloads"/>
-<page key="index" name="Home"/>
 <page key="security" name="Security"/>
 <page key="specification" name="Specification"/>
 <page key="toc" name="Table of Contents"/>
-<page key="usecases" name="Usecases"/>
+<page key="index" name="US Situational Awareness Framework for Reporting Home"/>
+<page key="usecases" name="Use Cases"/>
+<page key="actors" name="actors"/>
 </specification>
