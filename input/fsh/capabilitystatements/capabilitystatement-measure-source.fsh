@@ -1,9 +1,9 @@
-Instance: SafrCapabilityStatementMeasureSource
+Instance: SafrCapabilityStatementmeasurerepository
 InstanceOf: CapabilityStatement
 Title: "US SAFR Measure Source CapabilityStatement"
 Usage: #definition
-* url = Canonical(SafrCapabilityStatementMeasureSource)
-* name = "SafrCapabilityStatementMeasureSource"
+* url = Canonical(SafrCapabilityStatementmeasurerepository)
+* name = "SafrCapabilityStatementmeasurerepository"
 * status = #active
 * experimental = false
 * date = "2024-07-30"
