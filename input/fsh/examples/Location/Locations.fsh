@@ -27,59 +27,83 @@ Usage: #example
 * identifier.system = "http://www.example.org/bed-location"
 * identifier.value = "001"
 * status = #active
-* name = "ED Bed at XYZ Hospital"
+* name = "ED Bed at Memorial Hospital"
 * type = BedCapacityExampleCS#ED "Emergency Department"
 * physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#bd
 
-Instance: EDBed2
+Instance: IRFBed2
 InstanceOf: QICoreLocation|6.0.0
-Title: "Emergency Dept. Bed 2"
+Title: "Inpatient Rehabilitation Bed 2"
 Usage: #example
 * meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
 * identifier.system = "http://www.example.org/bed-location"
 * identifier.value = "002"
 * status = #active
-* name = "ED Bed at XYZ Hospital"
-* type = BedCapacityExampleCS#ED "Emergency Department"
+* name = "Inpatient Rehabilitation Bed at Memorial Hospital"
+* type = BedCapacityExampleCS#IRF "Inpatient Rehabilitation"
 * physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#bd
 
-
-/*
-Instance: XYZHospitalLocation
+Instance: IPFBed3
 InstanceOf: QICoreLocation|6.0.0
-Title: "Location - Hospital Location Example"
-Description: "Example of a Hospital Location for NHSN reporting."
-Usage: #inline
-* meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
-* identifier.system = "http://www.example.org/location"
-* identifier.value = "123"
-* status = #active
-* name = "XYZ Hospital"
-* type = BedCapacityExampleCS#HOSP "Hospital"
-
-
-Instance: IPFLocation
-InstanceOf: QICoreLocation|6.0.0
-Title: "Location - Inpatient Psychiatric"
+Title: "Inpatient Psychiatric Bed 3"
 Description: "Inpatient Psych (IPF)"
-Usage: #inline
+Usage: #example
 * meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
-* identifier.system = "http://www.example.org/location"
-* identifier.value = "456"
+* identifier.system = "http://www.example.org/bed-location"
+* identifier.value = "003"
 * status = #active
-* name = "Inpatient Psych at XYZ Hospital"
+* name = "Inpatient Psych at Memorial Hospital"
 * type = BedCapacityExampleCS#IPF "Inpatient Psychiatric"
+* physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#bd
 
-Instance: PediatricLocation
+Instance: CHLDBed4
 InstanceOf: QICoreLocation|6.0.0
-Title: "Location - Children's or Pediatrics Dept."
-Description: "Pediatric (CHLD)"
-Usage: #inline
+Title: "Children's Bed 4"
+Description: "	Children's or Pediatric (CHLD)"
+Usage: #example
 * meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
-* identifier.system = "http://www.example.org/location"
-* identifier.value = "789"
+* identifier.system = "http://www.example.org/bed-location"
+* identifier.value = "004"
 * status = #active
-* name = "Children's/Pediatrics at XYZ Hospital"
+* name = "Children's at Memorial Hospital"
 * type = BedCapacityExampleCS#CHLD "Children's or Pediatric"
+* physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#bd
 
-*/
+Instance: OTHBed5
+InstanceOf: QICoreLocation|6.0.0
+Title: "Other Facility Bed 3"
+Description: "Inpatient Psych (IPF)"
+Usage: #example
+* meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
+* identifier.system = "http://www.example.org/bed-location"
+* identifier.value = "004"
+* status = #active
+* name = "Other Facility Within Facility Bed"
+* type = BedCapacityExampleCS#OTH "Other facility-within-facility or subunit"
+* physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#bd
+
+Instance: ICUBed6
+InstanceOf: QICoreLocation|6.0.0
+Title: "Intensive Care Unit Bed 6"
+Description: "Intensive Care Unit (ICU)"
+Usage: #example
+* meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
+* identifier.system = "http://www.example.org/bed-location"
+* identifier.value = "006"
+* status = #active
+* name = "Intensive Care Unit at Memorial Hospital"
+* type = BedCapacityExampleCS#ICU "Intensive Care Unit"
+* physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#bd
+
+Instance: PEDSBed7
+InstanceOf: QICoreLocation|6.0.0
+Title: "Pediatric Bed 7"
+Description: "Pediatric (PEDS)"
+Usage: #example
+* meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
+* identifier.system = "http://www.example.org/bed-location"
+* identifier.value = "007"
+* status = #active
+* name = "Pediatric at Memorial Hospital"
+* type = BedCapacityExampleCS#PEDS "Pediatric"
+* physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#bd
