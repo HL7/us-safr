@@ -22,6 +22,7 @@ Usage: #example
 Instance: EDBed1
 InstanceOf: QICoreLocation|6.0.0
 Title: "Emergency Dept. Bed 1"
+Description: "A bed located in the Emergency Department."
 Usage: #example
 * meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
 * identifier.system = "http://www.example.org/bed-location"
@@ -34,6 +35,7 @@ Usage: #example
 Instance: IRFBed2
 InstanceOf: QICoreLocation|6.0.0
 Title: "Inpatient Rehabilitation Bed 2"
+Description: "A bed located in Inpatient Rehabilitation department of the hospital."
 Usage: #example
 * meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
 * identifier.system = "http://www.example.org/bed-location"
@@ -46,7 +48,7 @@ Usage: #example
 Instance: IPFBed3
 InstanceOf: QICoreLocation|6.0.0
 Title: "Inpatient Psychiatric Bed 3"
-Description: "Inpatient Psych (IPF)"
+Description: "A bed located in the Inpatient Psychiatric Department of the hospital."
 Usage: #example
 * meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
 * identifier.system = "http://www.example.org/bed-location"
@@ -59,7 +61,7 @@ Usage: #example
 Instance: CHLDBed4
 InstanceOf: QICoreLocation|6.0.0
 Title: "Children's Bed 4"
-Description: "	Children's or Pediatric (CHLD)"
+Description: "A bed located in the Children's Department of the hospital."
 Usage: #example
 * meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
 * identifier.system = "http://www.example.org/bed-location"
@@ -72,7 +74,7 @@ Usage: #example
 Instance: OTHBed5
 InstanceOf: QICoreLocation|6.0.0
 Title: "Other Facility Bed 3"
-Description: "Inpatient Psych (IPF)"
+Description: "A bed located in an subunit of the facility."
 Usage: #example
 * meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
 * identifier.system = "http://www.example.org/bed-location"
@@ -85,7 +87,7 @@ Usage: #example
 Instance: ICUBed6
 InstanceOf: QICoreLocation|6.0.0
 Title: "Intensive Care Unit Bed 6"
-Description: "Intensive Care Unit (ICU)"
+Description: "A bed located in the ICU Unit of the hospital."
 Usage: #example
 * meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
 * identifier.system = "http://www.example.org/bed-location"
@@ -98,7 +100,7 @@ Usage: #example
 Instance: PEDSBed7
 InstanceOf: QICoreLocation|6.0.0
 Title: "Pediatric Bed 7"
-Description: "Pediatric (PEDS)"
+Description: "A bed located in the Pediatrics Unit of the hospital."
 Usage: #example
 * meta.profile[+] = "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-location|6.0.0"
 * identifier.system = "http://www.example.org/bed-location"

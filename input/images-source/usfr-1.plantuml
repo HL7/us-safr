@@ -10,9 +10,9 @@ package "NHSN" {
     node "MeasureReport Recipient and Other NHSN Systems" as Recipient
 }
 
-EHR <-- MEE : (2)\n Query Data Source
-MEE -down-> MS : (1)\n Retrieve Measure Bundle
-MEE -right-> Recipient : (3)\n Submit MeasureReport Bundle
+EHR --> MEE : (2)\n Query Data Source
+MEE ---> MS : (1)\n Retrieve Measure Bundle
+MEE ---> Recipient : (3)\n Submit MeasureReport Bundle
 
 
 @enduml
