@@ -28,7 +28,7 @@
 <artifact id="ValueSet/SAFRFacilityVS" key="ValueSet-SAFRFacilityVS" name="US SAFR Facility Reporting ValueSet"/>
 <artifact id="StructureDefinition/us-safr-measure-bundle" key="StructureDefinition-us-safr-measure-bundle" name="US SAFR Measure Bundle"/>
 <artifact id="StructureDefinition/safr-measurereport-bundle" key="StructureDefinition-safr-measurereport-bundle" name="US SAFR Measure Report Bundle"/>
-<artifact id="CapabilityStatement/SafrCapabilityStatementMeasureSource" key="CapabilityStatement-SafrCapabilityStatementMeasureSource" name="US SAFR Measure Source CapabilityStatement"/>
+<artifact id="CapabilityStatement/SafrCapabilityStatementmeasurerepository" key="CapabilityStatement-SafrCapabilityStatementmeasurerepository" name="US SAFR Measure Source CapabilityStatement"/>
 <artifact id="CapabilityStatement/SafrCapabilityStatementMeasureReportRecipient" key="CapabilityStatement-SafrCapabilityStatementMeasureReportRecipient" name="US SAFR MeasureReport Recipient CapabilityStatement"/>
 <artifact id="StructureDefinition/nhsn-submitting-organization" key="StructureDefinition-nhsn-submitting-organization" name="US SAFR Submitting Organization"/>
 <page key="NA" name="(NA)"/>
