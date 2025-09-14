@@ -2347,7 +2347,10 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+		 
+		 
+		 
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AllBedsOccupied"></code>
          </coding>
       </code>
@@ -2368,7 +2371,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AllBedsUnoccupied"></code>
          </coding>
       </code>
@@ -2389,7 +2392,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AdultTotalOccupied"></code>
          </coding>
       </code>
@@ -2410,7 +2413,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AdultTotalUnoccupied"></code>
          </coding>
       </code>
@@ -2431,7 +2434,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AdultICUOccupied"></code>
          </coding>
       </code>
@@ -2452,7 +2455,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AdultICUUnoccupied"></code>
          </coding>
       </code>
@@ -2473,7 +2476,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AdultICU_LOCOccupied"></code>
          </coding>
       </code>
@@ -2494,7 +2497,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AdultNonICUOccupied"></code>
          </coding>
       </code>
@@ -2515,7 +2518,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AdultNonICUUnoccupied"></code>
          </coding>
       </code>
@@ -2536,7 +2539,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AdultPCUOccupied"></code>
          </coding>
       </code>
@@ -2557,7 +2560,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AdultPCUUnoccupied"></code>
          </coding>
       </code>
@@ -2578,7 +2581,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AdultMTMSOccupied"></code>
          </coding>
       </code>
@@ -2599,7 +2602,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AdultMTMSUnoccupied"></code>
          </coding>
       </code>
@@ -2620,7 +2623,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AdultObsOccupied"></code>
          </coding>
       </code>
@@ -2641,7 +2644,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AdultObsUnoccupied"></code>
          </coding>
       </code>
@@ -2662,7 +2665,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="PedsTotalOccupied"></code>
          </coding>
       </code>
@@ -2683,7 +2686,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="PedsTotalUnoccupied"></code>
          </coding>
       </code>
@@ -2704,7 +2707,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="PedsICUOccupied"></code>
          </coding>
       </code>
@@ -2725,7 +2728,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="PedsICUUnoccupied"></code>
          </coding>
       </code>
@@ -2746,7 +2749,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="PedsICU_LOCOccupied"></code>
          </coding>
       </code>
@@ -2767,7 +2770,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="PedsNonICUOccupied"></code>
          </coding>
       </code>
@@ -2788,7 +2791,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="PedsNonICUUnoccupied"></code>
          </coding>
       </code>
@@ -2809,7 +2812,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="PedsPCUOccupied"></code>
          </coding>
       </code>
@@ -2830,7 +2833,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="PedsPCUUnoccupied"></code>
          </coding>
       </code>
@@ -2851,7 +2854,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="PedsMTMSOccupied"></code>
          </coding>
       </code>
@@ -2872,7 +2875,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="PedsMTMSUnoccupied"></code>
          </coding>
       </code>
@@ -2893,7 +2896,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="PedsObsOccupied"></code>
          </coding>
       </code>
@@ -2914,7 +2917,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="PedsObsUnoccupied"></code>
          </coding>
       </code>
@@ -2935,7 +2938,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="SpecialtyTotalOccupied"></code>
          </coding>
       </code>
@@ -2956,7 +2959,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="SpecialtyTotalUnoccupied"></code>
          </coding>
       </code>
@@ -2977,7 +2980,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="SpecialtyNonCribOccupied"></code>
          </coding>
       </code>
@@ -2998,7 +3001,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="SpecialtyNonCribUnoccupied"></code>
          </coding>
       </code>
@@ -3019,7 +3022,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="OBOccupied"></code>
          </coding>
       </code>
@@ -3040,7 +3043,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="OBUnoccupied"></code>
          </coding>
       </code>
@@ -3061,7 +3064,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="NICUOccupied"></code>
          </coding>
       </code>
@@ -3082,7 +3085,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="NICUUnoccupied"></code>
          </coding>
       </code>
@@ -3103,7 +3106,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="NICU4Occupied"></code>
          </coding>
       </code>
@@ -3124,7 +3127,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="NICU4Unoccupied"></code>
          </coding>
       </code>
@@ -3145,7 +3148,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="NICU3PlusOccupied"></code>
          </coding>
       </code>
@@ -3166,7 +3169,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="NICU3PlusUnoccupied"></code>
          </coding>
       </code>
@@ -3187,7 +3190,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="NICU3Occupied"></code>
          </coding>
       </code>
@@ -3208,7 +3211,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="NICU3Unoccupied"></code>
          </coding>
       </code>
@@ -3229,7 +3232,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="NICU2Occupied"></code>
          </coding>
       </code>
@@ -3250,7 +3253,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="NICU2Unoccupied"></code>
          </coding>
       </code>
@@ -3271,7 +3274,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="NICU1Occupied"></code>
          </coding>
       </code>
@@ -3292,7 +3295,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="NICU1Unoccupied"></code>
          </coding>
       </code>
@@ -3313,7 +3316,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="NurseryOccupied"></code>
          </coding>
       </code>
@@ -3334,7 +3337,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="NurseryUnoccupied"></code>
          </coding>
       </code>
@@ -3355,7 +3358,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AdultPsychOccupied"></code>
          </coding>
       </code>
@@ -3376,7 +3379,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AdultPsychUnoccupied"></code>
          </coding>
       </code>
@@ -3397,7 +3400,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="PedsPsychOccupied"></code>
          </coding>
       </code>
@@ -3418,7 +3421,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="PedsPsychUnoccupied"></code>
          </coding>
       </code>
@@ -3439,7 +3442,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="RehabOccupied"></code>
          </coding>
       </code>
@@ -3460,7 +3463,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="RehabUnoccupied"></code>
          </coding>
       </code>
@@ -3481,7 +3484,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="SurgeActiveTotalOccupied"></code>
          </coding>
       </code>
@@ -3502,7 +3505,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="SurgeActiveTotalUnoccupied"></code>
          </coding>
       </code>
@@ -3523,7 +3526,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="SurgeInactiveTotalOccupied"></code>
          </coding>
       </code>
@@ -3544,7 +3547,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="SurgeInactiveTotalUnoccupied"></code>
          </coding>
       </code>
@@ -3565,7 +3568,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="SurgeActiveICUOccupied"></code>
          </coding>
       </code>
@@ -3586,7 +3589,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="SurgeActiveICUUnoccupied"></code>
          </coding>
       </code>
@@ -3607,7 +3610,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="SurgeInactiveICUUnoccupied"></code>
          </coding>
       </code>
@@ -3628,7 +3631,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="SurgeActiveNonICUOccupied"></code>
          </coding>
       </code>
@@ -3649,7 +3652,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="SurgeActiveNonICUUnoccupied"></code>
          </coding>
       </code>
@@ -3670,7 +3673,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="SurgeInactiveNonICUOccupied"></code>
          </coding>
       </code>
@@ -3691,7 +3694,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="SurgeInactiveNonICUUnoccupied"></code>
          </coding>
       </code>
@@ -3712,7 +3715,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="BurnOccupied"></code>
          </coding>
       </code>
@@ -3733,7 +3736,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="BurnUnoccupied"></code>
          </coding>
       </code>
@@ -3754,7 +3757,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="NegativePressureOccupied"></code>
          </coding>
       </code>
@@ -3775,7 +3778,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="NegativePressureUnoccupied"></code>
          </coding>
       </code>
@@ -3796,7 +3799,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AdultEDCensus"></code>
          </coding>
       </code>
@@ -3817,7 +3820,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="AdultEDAdmittedCensus"></code>
          </coding>
       </code>
@@ -3838,7 +3841,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="PedsEDCensus"></code>
          </coding>
       </code>
@@ -3859,7 +3862,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="PedsEDAdmittedCensus"></code>
          </coding>
       </code>
@@ -3880,7 +3883,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="TotalEDCensus"></code>
          </coding>
       </code>
@@ -3901,7 +3904,7 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="TotalEDAdmittedCensus"></code>
          </coding>
       </code>
