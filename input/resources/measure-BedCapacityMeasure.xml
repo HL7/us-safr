@@ -1653,6 +1653,7 @@
                <valueInteger value="86"></valueInteger>
             </extension>
          </extension>
+		 <url value="http://hl7.org/fhir/us/safr/Library/EffectiveDataRequirements"/>
          <name value="EffectiveDataRequirements"></name>
          <status value="active"></status>
          <type>
@@ -1664,7 +1665,7 @@
          <relatedArtifact>
             <type value="depends-on"></type>
             <display value="Library FHIRHelpers"></display>
-            <resource value="http://hl7.org/fhir/us/safr/Library/FHIRHelpers|4.0.1"></resource>
+            <resource value="http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1"></resource>
          </relatedArtifact>
          <relatedArtifact>
             <type value="depends-on"></type>
@@ -2316,7 +2317,7 @@
          </dataRequirement>
       </Library>
    </contained>
-   <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem">
+   <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-softwaresystem">
       <valueReference>
          <reference value="Device/cqf-tooling"></reference>
       </valueReference>
@@ -2324,10 +2325,8 @@
    <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis">
       <valueCode value="boolean"></valueCode>
    </extension>
-   <extension id="effective-data-requirements" url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-effectiveDataRequirements">
-      <valueReference>
-         <reference value="#effective-data-requirements"></reference>
-      </valueReference>
+   <extension id="effective-data-requirements" url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-effectiveDataRequirements">
+      <valueCanonical value="#effective-data-requirements"/>
    </extension>
    <url value="http://hl7.org/fhir/us/safr/Measure/BedCapacityMeasure"></url>
    <version value="1.0.0"></version>
@@ -2477,7 +2476,7 @@
       <code>
          <coding>
             <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AdultICU_LOCOccupied"></code>
+            <code value="AdultICULOCOccupied"></code>
          </coding>
       </code>
       <population id="d2e4764">
@@ -2750,7 +2749,7 @@
       <code>
          <coding>
             <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="PedsICU_LOCOccupied"></code>
+            <code value="PedsICULOCOccupied"></code>
          </coding>
       </code>
       <population id="d2e5844">
