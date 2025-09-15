@@ -6,6 +6,9 @@
    <contained>
       <Library xmlns="http://hl7.org/fhir">
          <id value="effective-data-requirements"></id>
+         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+            <valueCode value="pher"/>
+         </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-directReferenceCode">
             <valueCoding>
                <system value="http://terminology.hl7.org/CodeSystem/location-physical-type"></system>
