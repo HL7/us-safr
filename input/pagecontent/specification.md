@@ -43,9 +43,9 @@ The following reporting scenarios use the Actors defined on the [Actors](actors.
 
 #### Push to MeasureReport Recipient (NHSN)
 
-In this scenario both the Data Source and digital Quality Measure (Measure) evaluation engine reside at the reporting facility, and may be the same system (e.g., an EHR that performs it’s own internal measure evaluation). The Measure Evaluation Engine first retrieves the latest FHIR measures and related resources from the measure repository and extracts the data requirements for each measure. The Measure Evaluation Engine and queries the Data Source for data that it will evaluate against a measure and prepares Bundle containing MeasureReport and supporting resources, then sends it to the MeasureReport Recipient (NHSN). 
+In this scenario both the Data Source and digital Quality Measure (Measure) evaluation engine reside at the reporting facility, and may be the same system (e.g., an EHR that performs it’s own internal measure evaluation). The Measure Evaluation Engine first retrieves the latest FHIR measures and related resources from the measure repository and extracts the data requirements for each measure. The Measure Evaluation Engine queries the Data Source for data that it will evaluate against a measure and prepares Bundle containing MeasureReport and supporting resources, then sends it to the MeasureReport Recipient (NHSN). 
 
-In this scenario the Measure Evaluation Engine SHALL perform a FHIR POST or PUT to push the measure report bundle to the MeasureReport Recipient (NHSN).
+In this scenario the Measure Evaluation Engine SHALL perform a FHIR POST or PUT to push the MeasureReport Bundle to the MeasureReport Recipient (NHSN).
 <figure>
   {% include usfr-push-1.svg %}
   <figcaption></figcaption>
@@ -53,7 +53,7 @@ In this scenario the Measure Evaluation Engine SHALL perform a FHIR POST or PUT 
 
 1. **Retrieve Measure Bundle:** The Measure Evaluation Engine uses an HTTP GET against the measure repository for an [USSafrMeasureBundle](StructureDefinition-us-safr-measure-bundle.html) containing a [CQFMContinuousVariableMeasure]({{site.data.fhir.ver.cqfm}}/StructureDefinition-cv-measure-cqfm.html) <!--[CRMIShareableMeasure]({{site.data.fhir.ver.crmi}}/StructureDefinition-crmi-shareablemeasure.html)--> and related resources. The exact Bundle(s) to retrieve is determined out of band by the facility and MeasureReport Recipient (NHSN) during onboarding and subsequent discussions. After retrieving the Bundle, the Measure evaluation engine parses the contents to determine which resources are needed from the Data Source, then proceeds to step 2.
 
-2. **Query Data Sources:** The Measure Evaluation Engine queries the Data Source to retrieve and evaluate the data defined in the measure. 
+2. **Query Data Sources:** The Measure Evaluation Engine queries the Data Source to retrieve and evaluate the data defined in the measure. It is acceptable for an EHR to query it's own internal data store using non-FHIR methods or import data from other systems that are not FHIR-enabled.
 
 3. **Submit MeasureReport Bundle** The Measure Evaluation Engine uses an HTTP POST to submit the [SafrMeasureReportBundle](StructureDefinition-us-safr-measurereport-bundle.html) to the MeasureReport Recipient. The MeasureReport Recipient validates the Bundle and proceeds to load the data into other MeasureReport Recipient (NHSN) systems (details of such systems are out of scope for this IG).
 
