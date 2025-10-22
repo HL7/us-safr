@@ -1,52 +1,55 @@
 @startuml
-
-
+' --- Stabilize layout/look across renderers ---
+skinparam defaultFontName Monospace
+skinparam dpi 120
+skinparam ArrowThickness 1
+skinparam ArrowColor #333333
+skinparam PackageStyle rectangle
+skinparam RectangleBackgroundColor white
+skinparam roundcorner 8
+left to right direction
 
 package "Healthcare Facility One" {
-    node "Data Source (EHR)" as EHR1
+  node "Data Source (EHR)" as EHR1
 }
-
 package "Healthcare Facility Two" {
-    node "Data Source (EHR)" as EHR2
+  node "Data Source (EHR)" as EHR2
 }
-
 package "Healthcare Facility Three" {
-    node "Data Source (EHR)" as EHR3
+  node "Data Source (EHR)" as EHR3
 }
-
 package "Healthcare Facility Four" {
-    node "Data Source (EHR)" as EHR4
+  node "Data Source (EHR)" as EHR4
 }
 
 package "Jurisdiction One" {
-    node "Measure Evaluation Engine" as MEE1
-    node "MeasureReport Recipient" as Recipient1
-    node "Data Aggregator" as DA1
+  node "Measure Evaluation Engine" as MEE1
+  node "MeasureReport Recipient" as Recipient1
+  node "Data Aggregator" as DA1
 }
 
 package "Jurisdiction Two" {
-    node "Measure Evaluation Engine" as MEE2
-    node "MeasureReport Recipient" as Recipient2
+  node "Measure Evaluation Engine" as MEE2
+  node "MeasureReport Recipient" as Recipient2
 }
 
 package "NHSN" {
-    node "MeasureReport Recipient and Other NHSN Systems" as Recipient
-    node "Measure Source" as MS
+  node "MeasureReport Recipient and Other NHSN Systems" as Recipient
+  node "Measure Source" as MS
 }
 
-MEE1 <->      MS         : (1)\n Retrieve Measure Bundle
-EHR1 <-       DA1        : (2)\n Query Data Source
-EHR2 <-       DA1             : (2)\n Query Data Source
-DA1  ->       MEE1       : (2)\n Aggregate Data\nvia FHIR or other API
-MEE1 ->       Recipient1 : (3)\n Submit MeasureReport Bundle
+' --- Don’t rely on spaces to align; just write arrows normally ---
+MEE1 <-> MS : (1)\\nRetrieve Measure Bundle
+DA1  -> EHR1 : (2)\\nQuery Data Source
+DA1  -> EHR2 : (2)\\nQuery Data Source
+DA1  -> MEE1 : (2)\\nAggregate Data\\nvia FHIR or other API
+MEE1 -> Recipient1 : (3)\\nSubmit MeasureReport Bundle
 
-MEE2 <->      MS         : (1)\n Retrieve Measure Bundle
-EHR3 <-up     MEE2       : (2)\n Query Data Source
-EHR4 <-up     MEE2       : (2)\n Query Data Source
-MEE2 ->       Recipient2 : (3) Submit MeasureReport Bundle
+MEE2 <-> MS : (1)\\nRetrieve Measure Bundle
+MEE2 -> EHR3 : (2)\\nQuery Data Source
+MEE2 -> EHR4 : (2)\\nQuery Data Source
+MEE2 -> Recipient2 : (3)\\nSubmit MeasureReport Bundle
 
-
-MEE1 down->   Recipient : (4)\n Submit MeasureReport Bundle
-MEE2 up->     Recipient : (4)\n Submit MeasureReport Bundle
-
+MEE1 --> Recipient : (4)\\nSubmit MeasureReport Bundle
+MEE2 --> Recipient : (4)\\nSubmit MeasureReport Bundle
 @enduml
