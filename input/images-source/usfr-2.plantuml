@@ -37,12 +37,12 @@ package "NHSN" {
 EHR1 <-- DA1 : (2)\n Query Data Source
 EHR2 <-- DA1 : (2)\n Query Data Source
 DA1 -right-> MEE1 : (2)\n Aggregate Data\nvia FHIR or other API
-MEE1 -down-> MS : (1)\n Retrieve Measure Bundle
+MEE1 <-> MS : (1)\n Retrieve Measure Bundle
 MEE1 -right-> Recipient1 : (3)\n Submit MeasureReport Bundle
 
 EHR3 <-up- MEE2 : (2)\n Query Data Source
 EHR4 <-up- MEE2 : (2)\n Query Data Source
-MEE2 -up-> MS : (1)\n Retrieve Measure Bundle
+MEE2 <-> MS : (1)\n Retrieve Measure Bundle
 MEE2 -right-> Recipient2 : (3) Submit MeasureReport Bundle
 
 

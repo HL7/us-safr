@@ -11,7 +11,7 @@ package "NHSN" {
     node "MeasureReport Recipient" as Recipient
 }
 
-EHR <--- MEE1 : (2)\n Query Data Source\n (FHIR or other API)
+EHR <->  MEE1 : (2)\n Query Data Source\n (FHIR or other API)
 
 MEE1 ---> MS : (1)\n Retrieve Measure Bundle
 MEE1 ---> Recipient : (3)\n Submit MeasureReport Bundle

@@ -43,7 +43,7 @@ The following reporting scenarios use the Actors defined on the [Actors](actors.
 
 #### Push to MeasureReport Recipient (NHSN)
 
-In this scenario both the Data Source and digital Quality Measure (Measure) evaluation engine reside at the reporting facility, and may be the same system (e.g., an EHR that performs it’s own internal measure evaluation). The Measure Evaluation Engine first retrieves the latest FHIR measures and related resources from the measure repository and extracts the data requirements for each measure. The Measure Evaluation Engine queries the Data Source for data that it will evaluate against a measure and prepares Bundle containing MeasureReport and supporting resources, then sends it to the MeasureReport Recipient (NHSN). 
+In this scenario both the Data Source and Digital Quality Measure Evaluation Engine reside at the reporting facility, and may be the same system (e.g., an EHR that performs it’s own internal measure evaluation). The Measure Evaluation Engine first retrieves the latest FHIR measures and related resources from the measure repository and extracts the data requirements for each measure. The Measure Evaluation Engine queries the Data Source for data that it will evaluate against a measure and prepares Bundle containing MeasureReport and supporting resources, then sends it to the MeasureReport Recipient (NHSN). 
 
 In this scenario the Measure Evaluation Engine SHALL perform a FHIR POST or PUT to push the MeasureReport Bundle to the MeasureReport Recipient (NHSN).
 <figure>
@@ -62,7 +62,7 @@ In this scenario the Measure Evaluation Engine SHALL perform a FHIR POST or PUT 
 
 
 #### Pull Direct from Healthcare Facility 
-In this scenario, both the Digital Quality Measure (Measure) Evaluation Engine and the MeasureReport Recipient reside within an Public Health Agency (NHSN) controlled environment, and may be the same system. The Measure Evaluation Engine first retrieves the latest FHIR measures and related resources from the measure repository and extracts the data requirements for each measure. The Measure Evaluation Engine queries the Data Source for data that it will evaluate against a measure and prepares Bundle containing MeasureReport and supporting resources.
+In this scenario, both the Digital Quality Measure Evaluation Engine and the MeasureReport Recipient reside within an Public Health Agency (NHSN) controlled environment, and may be the same system. The Measure Evaluation Engine first retrieves the latest FHIR measures and related resources from the measure repository and extracts the data requirements for each measure. The Measure Evaluation Engine queries the Data Source for data that it will evaluate against a measure and prepares Bundle containing MeasureReport and supporting resources.
 In this scenario the Data Source SHALL have a FHIR API that at a minimum provides read access to all US Core profiles. Some measures may require additional FHIR resources beyond US Core, such as MedicationAdministration.
 
 <figure>
