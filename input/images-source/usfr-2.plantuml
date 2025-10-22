@@ -34,19 +34,19 @@ package "NHSN" {
     node "Measure Source" as MS
 }
 
-EHR1 <-- DA1 : (2)\n Query Data Source
-EHR2 <-- DA1 : (2)\n Query Data Source
-DA1 -right-> MEE1 : (2)\n Aggregate Data\nvia FHIR or other API
-MEE1 <-> MS : (1)\n Retrieve Measure Bundle
-MEE1 -right-> Recipient1 : (3)\n Submit MeasureReport Bundle
+MEE1 <->      MS         : (1)\n Retrieve Measure Bundle
+EHR1 <-       DA1        : (2)\n Query Data Source
+EHR2 <-       DA1             : (2)\n Query Data Source
+DA1  ->       MEE1       : (2)\n Aggregate Data\nvia FHIR or other API
+MEE1 ->       Recipient1 : (3)\n Submit MeasureReport Bundle
 
-EHR3 <-up- MEE2 : (2)\n Query Data Source
-EHR4 <-up- MEE2 : (2)\n Query Data Source
-MEE2 <-> MS : (1)\n Retrieve Measure Bundle
-MEE2 -right-> Recipient2 : (3) Submit MeasureReport Bundle
+MEE2 <->      MS         : (1)\n Retrieve Measure Bundle
+EHR3 <-up     MEE2       : (2)\n Query Data Source
+EHR4 <-up     MEE2       : (2)\n Query Data Source
+MEE2 ->       Recipient2 : (3) Submit MeasureReport Bundle
 
 
-MEE1 -down--> Recipient : (4)\n Submit MeasureReport Bundle
-MEE2 -up--> Recipient : (4)\n Submit MeasureReport Bundle
+MEE1 down->   Recipient : (4)\n Submit MeasureReport Bundle
+MEE2 up->     Recipient : (4)\n Submit MeasureReport Bundle
 
 @enduml
