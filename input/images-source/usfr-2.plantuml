@@ -39,17 +39,17 @@ package "NHSN" {
 }
 
 ' --- Don’t rely on spaces to align; just write arrows normally ---
-MEE1 <-> MS : (1)\\nRetrieve Measure Bundle
-DA1  -> EHR1 : (2)\\nQuery Data Source
-DA1  -> EHR2 : (2)\\nQuery Data Source
-DA1  -> MEE1 : (2)\\nAggregate Data\\nvia FHIR or other API
-MEE1 -> Recipient1 : (3)\\nSubmit MeasureReport Bundle
+MEE1 <-> MS : (1)\nRetrieve Measure Bundle
+DA1  -> EHR1 : (2)\nQuery Data Source
+DA1  -> EHR2 : (2)\nQuery Data Source
+DA1  -> MEE1 : (2)\nAggregate Data\nvia FHIR or other API
+MEE1 -> Recipient1 : (3)\nSubmit MeasureReport Bundle
 
-MEE2 <-> MS : (1)\\nRetrieve Measure Bundle
-MEE2 -> EHR3 : (2)\\nQuery Data Source
-MEE2 -> EHR4 : (2)\\nQuery Data Source
-MEE2 -> Recipient2 : (3)\\nSubmit MeasureReport Bundle
+MEE2 <-> MS : (1)\nRetrieve Measure Bundle
+MEE2 -> EHR3 : (2)\nQuery Data Source
+MEE2 -> EHR4 : (2)\nQuery Data Source
+MEE2 -> Recipient2 : (3)\nSubmit MeasureReport Bundle
 
-MEE1 --> Recipient : (4)\\nSubmit MeasureReport Bundle
-MEE2 --> Recipient : (4)\\nSubmit MeasureReport Bundle
+MEE1 --> Recipient : (4)\nSubmit MeasureReport Bundle
+MEE2 --> Recipient : (4)\nSubmit MeasureReport Bundle
 @enduml
