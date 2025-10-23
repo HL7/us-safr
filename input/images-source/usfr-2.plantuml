@@ -4,7 +4,7 @@ left to right direction
 skinparam linetype ortho
 skinparam PackageStyle rectangle
 skinparam defaultFontName Monospace
-skinparam dpi 120
+skinparam dpi 80
 
 package "Healthcare Facility One"   { node "Data Source (EHR)" as EHR1 }
 package "Healthcare Facility Two"   { node "Data Source (EHR)" as EHR2 }
