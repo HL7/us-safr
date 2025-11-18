@@ -10,11 +10,13 @@ codesystem "HealthcareCapacity": 'http://hl7.org/fhir/us/safr/CodeSystem/us-safr
 valueset "Emergency Department Visit": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.292'
 
 code "Bed": 'bd' from "LocationPhysicalType" display 'Bed'
+
 code "HOSP": 'HOSP' from "HealthcareCapacity" display 'Hospital'
 code "IRF": 'IRF' from "HealthcareCapacity" display 'Inpatient Rehabilitation'
 code "IPF": 'IPF' from "HealthcareCapacity" display 'Inpatient Psychiatric'
 code "CHLD": 'CHLD' from "HealthcareCapacity" display 'Children\'s or Pediatric'
 code "OTH": 'OTH' from "HealthcareCapacity" display 'Other facility-within-facility or subunit'
+code "PEDS": 'PEDS' from "HealthcareCapacity" display 'Pediatric'
 
 
 parameter "Measurement Period" Interval<DateTime>
@@ -25,524 +27,265 @@ context Location
 define "IsBedLocation":
   Location.physicalType ~ "Bed"
 
-define "All Beds Occupied Initial Population":
+define "Bed Capacity Initial Population":
+  IsBedLocation
+
+define "All Beds Initial Population":
   IsBedLocation
   and EncounterCheck
 
-define "All Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-
-define "Adult Beds Occupied Initial Population":
+define "Adult Beds Initial Population":
   IsBedLocation
   and EncounterCheck
   and LocationIsHOSP
-  and "LocationIsIRF"
-  and "LocationIsIPF"
+  and LocationIsIRF
+  and LocationIsIPF
 
-define "Adult Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsIPF"
-
-define "Adult ICU Beds Occupied Initial Population":
+define "Adult ICU Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
+  and LocationIsHOSP
 
-define "Adult ICU Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-
-define "Adult ICULOC Beds Occupied Initial Population":
+define "Adult ICULOC Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIPF"
+  and LocationIsHOSP
+  and LocationIsIPF
+
+define "Adult NonICU Beds Initial Population":
+  IsBedLocation
+  and EncounterCheck
+  and LocationIsHOSP
+  and LocationIsOTH
   
-
-define "Adult ICULOC Beds Unoccupied Initial Population":
+define "Adult PCU Beds Initial Population":
   IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIPF"
+  and EncounterCheck
+  and LocationIsIPF
+  and LocationIsOTH
   
-
-define "Adult NonICU Beds Occupied Initial Population":
+define "Adult MTMS Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsOTH"
+  and LocationIsHOSP
+  and LocationIsIRF
+  and LocationIsOTH
   
-define "Adult NonICU Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsOTH"
-
-define "Adult PCU Beds Occupied Initial Population":
+define "Adult Obs Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsIPF"
-  and "LocationIsOTH"
+  and LocationIsOTH
   
-define "Adult PCU Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsIPF"
-  and "LocationIsOTH"
-
-define "Adult MTMS Beds Occupied Initial Population":
+define "Peds Total Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsOTH"
+  and (LocationIsCHLD or LocationIsPEDS)
   
-define "Adult MTMS Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsOTH"
-
-define "Adult Obs Beds Occupied Initial Population":
+define "Peds ICU Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsOTH"
+  and LocationIsHOSP
+  and (LocationIsCHLD or LocationIsPEDS)
   
-define "Adult Obs Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsOTH"
-
-define "Peds Total Beds Occupied Initial Population":
+define "Peds ICULOC Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsCHLD"
+  and LocationIsHOSP
+  and (LocationIsCHLD or LocationIsPEDS)
+  and LocationIsOTH
   
-define "Peds Total Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsCHLD"
-
-define "Peds ICU Beds Occupied Initial Population":
+define "Peds NonICU Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsCHLD"
+  and LocationIsIPF
+  and (LocationIsCHLD or LocationIsPEDS)
+  and LocationIsOTH
   
-define "Peds ICU Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsCHLD"
-
-define "Peds ICULOC Beds Occupied Initial Population":
+define "Peds PCU Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
+  and (LocationIsCHLD or LocationIsPEDS)
+  and LocationIsOTH
   
-define "Peds ICULOC Beds Unoccupied Initial Population":
+define "Peds MTMS Beds Initial Population":
   IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
+  and EncounterCheck
+  and LocationIsHOSP
+  and LocationIsIRF
+  and (LocationIsCHLD or LocationIsPEDS)
+  and LocationIsOTH
   
-define "Peds NonICU Beds Occupied Initial Population":
+define "Peds Obs Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsIPF"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
+  and LocationIsHOSP
+  and LocationIsIRF
+  and (LocationIsCHLD or LocationIsPEDS)
+  and LocationIsOTH
   
-define "Peds NonICU Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsIPF"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
-
-define "Peds PCU Beds Occupied Initial Population":
+define "Specialty Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
+  and LocationIsOTH
   
-define "Peds PCU Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
-
-define "Peds MTMS Beds Occupied Initial Population":
+define "Specialty NonCrib Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
+  and LocationIsHOSP
+  and LocationIsIRF
+  and LocationIsOTH
   
-define "Peds MTMS Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
-
-define "Peds Obs Beds Occupied Initial Population":
+define "OB Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
+  and LocationIsIRF
+  and (LocationIsCHLD or LocationIsPEDS)
+  and LocationIsOTH
+
+define "NICU Beds Initial Population":
+  IsBedLocation
+  and EncounterCheck
+  and LocationIsHOSP
+  and LocationIsIRF
+  and LocationIsOTH
   
-define "Peds Obs Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
-
-define "Specialty Beds Occupied Initial Population":
+define "NICU4 Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsOTH"
+  and LocationIsHOSP
+  and LocationIsIRF
+  and LocationIsOTH
   
-define "Specialty Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsOTH"
-
-define "Specialty NonCrib Beds Occupied Initial Population":
+define "NICU3Plus Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsOTH"
+  and LocationIsHOSP
+  and LocationIsIRF
+  and (LocationIsCHLD or LocationIsPEDS)
   
-define "Specialty NonCrib Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsOTH"
-
-define "OB Beds Occupied Initial Population":
+define "NICU3 Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsIRF"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
+  and LocationIsHOSP
+  and LocationIsIRF
+  and (LocationIsCHLD or LocationIsPEDS)
   
-define "OB Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsIRF"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
-
-define "NICU Beds Occupied Initial Population":
+define "NICU2 Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsOTH"
+  and LocationIsHOSP
+  and LocationIsIRF
+  and (LocationIsCHLD or LocationIsPEDS)
   
-define "NICU Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsOTH"
-
-define "NICU4 Beds Occupied Initial Population":
+define "NICU1 Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsOTH"
+  and LocationIsHOSP
+  and LocationIsIRF
+  and (LocationIsCHLD or LocationIsPEDS)
+  and LocationIsOTH
   
-define "NICU4 Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsOTH"
-
-define "NICU3Plus Beds Occupied Initial Population":
+define "Nursery Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsCHLD"
+  and LocationIsIRF
+  and (LocationIsCHLD or LocationIsPEDS)
   
-define "NICU3Plus Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsCHLD"
-
-define "NICU3 Beds Occupied Initial Population":
+define "Adult Psych Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsCHLD"
+  and LocationIsHOSP
+  and LocationIsIPF
+  and LocationIsOTH
   
-define "NICU3 Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsCHLD"
-
-define "NICU2 Beds Occupied Initial Population":
+define "Peds Psych Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsCHLD"
-  
-define "NICU2 Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsCHLD"
+  and LocationIsHOSP
+  and LocationIsIPF
+  and (LocationIsCHLD or LocationIsPEDS)
+  and LocationIsOTH
 
-define "NICU1 Beds Occupied Initial Population":
+define "Rehab Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
-  
-define "NICU1 Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIRF"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
+  and LocationIsIRF
 
-define "Nursery Beds Occupied Initial Population":
+define "Surge Active Total Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsIRF"
-  and "LocationIsCHLD"
-  
-define "Nursery Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsIRF"
-  and "LocationIsCHLD"
+  and LocationIsHOSP
+  and (LocationIsCHLD or LocationIsPEDS)
+  and LocationIsOTH
 
-define "Adult Psych Beds Occupied Initial Population":
+define "Surge Inactive Total Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIPF"
-  and "LocationIsOTH"
-  
-define "Adult Psych Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIPF"
-  and "LocationIsOTH"
+  and LocationIsHOSP
+  and (LocationIsCHLD or LocationIsPEDS)
+  and LocationIsOTH
 
-define "Peds Psych Beds Occupied Initial Population":
+define "Surge Active ICU Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIPF"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
+  and LocationIsHOSP
+  and LocationIsOTH
 
-define "Peds Psych Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsIPF"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
-
-define "Rehab Beds Occupied Initial Population":
+define "Surge Inactive ICU Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsIRF"
+  and LocationIsHOSP
+  and LocationIsOTH
 
-define "Rehab Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsIRF"
-
-define "Surge Active Total Beds Occupied Initial Population":
+define "Surge Active NonICU Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
+  and LocationIsHOSP
+  and (LocationIsCHLD or LocationIsPEDS)
 
-define "Surge Active Total Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
-
-define "Surge Inactive Total Beds Occupied Initial Population":
+define "Surge Inactive NonICU Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
+  and LocationIsHOSP
+  and (LocationIsCHLD or LocationIsPEDS)
 
-define "Surge Inactive Total Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
-
-define "Surge Active ICU Beds Occupied Initial Population":
+define "Burn Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsOTH"
+  and LocationIsHOSP
+  and LocationIsOTH
 
-define "Surge Active ICU Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsOTH"
-
-define "Surge Inactive ICU Beds Occupied Initial Population":
+define "Negative Pressure Beds Initial Population":
   IsBedLocation
   and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsOTH"
+  and LocationIsHOSP
 
-define "Surge Inactive ICU Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsOTH"
-
-define "Surge Active NonICU Beds Occupied Initial Population":
-  IsBedLocation
-  and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsCHLD"
-
-define "Surge Active NonICU Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsCHLD"
-
-define "Surge Inactive NonICU Beds Occupied Initial Population":
-  IsBedLocation
-  and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsCHLD"
-
-define "Surge Inactive NonICU Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsCHLD"
-
-define "Burn Beds Occupied Initial Population":
-  IsBedLocation
-  and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsOTH"
-
-define "Burn Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsOTH"
-
-define "Negative Pressure Beds Occupied Initial Population":
-  IsBedLocation
-  and EncounterCheck
-  and "LocationIsHOSP"
-
-define "Negative Pressure Beds Unoccupied Initial Population":
-  IsBedLocation
-  and NoEncounterCheck
-  and "LocationIsHOSP"
-
-define "Adult ED Census Initial Population":
+define "Adult ED Initial Population":
   IsBedLocation
   and exists(
     [Encounter: "Emergency Department Visit"] EDVisit
     where EDVisit.period overlaps "Measurement Period"
   )
-  and "LocationIsHOSP"
-  and "LocationIsOTH"
+  and LocationIsHOSP
+  and LocationIsOTH
 
-define "Adult ED Admitted Census Initial Population":
-  IsBedLocation
-  and exists(
-    [Encounter: "Emergency Department Visit"] EDVisit
-    where EDVisit.period overlaps "Measurement Period"
-      and EDVisit.status in {'arrived', 'triaged', 'in-progress'}
-  )
-  and "LocationIsHOSP"
-  and "LocationIsOTH"
-
-define "Peds ED Census Initial Population":
+define "Peds ED Initial Population":
   IsBedLocation
   and exists(
     [Encounter: "Emergency Department Visit"] EDVisit
     where EDVisit.period overlaps "Measurement Period"
   )
-  and "LocationIsCHLD"
+  and (LocationIsCHLD or LocationIsPEDS)
 
-define "Peds ED Admitted Census Initial Population":
-  IsBedLocation
-  and exists(
-    [Encounter: "Emergency Department Visit"] EDVisit
-    where EDVisit.period overlaps "Measurement Period"
-      and EDVisit.status in {'arrived', 'triaged', 'in-progress'}
-  )
-  and "LocationIsCHLD"
-
-define "Total ED Census Initial Population":
+define "Total ED Initial Population":
   IsBedLocation
   and exists(
     [Encounter: "Emergency Department Visit"] EDVisit
     where EDVisit.period overlaps "Measurement Period"
   )
-  and "LocationIsHOSP"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
-
-define "Total ED Admitted Census Initial Population":
-  IsBedLocation
-  and exists(
-    [Encounter: "Emergency Department Visit"] EDVisit
-    where EDVisit.period overlaps "Measurement Period"
-      and EDVisit.status in {'arrived', 'triaged', 'in-progress'}
-  )
-  and "LocationIsHOSP"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
+  and LocationIsHOSP
+  and (LocationIsCHLD or LocationIsPEDS)
+  and LocationIsOTH
 
 define "Encounters":
   [Encounter]
@@ -577,9 +320,12 @@ define "LocationIsOTH":
     where types ~ "OTH"
   )
 
-define EncounterCheck:
+define "LocationIsPEDS":
+  exists(
+    Location.type types
+    where types ~ "PEDS"
+  )
+
+define "EncounterCheck":
   exists("Encounters" Encounters
   where Encounters.period overlaps "Measurement Period")
-
-define NoEncounterCheck:
-  not EncounterCheck
