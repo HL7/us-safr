@@ -1,12 +1,12 @@
-Instance: HRDMeasureLibrary
+Instance: hrdMeasureLibrary
 InstanceOf: CRMIComputableLibrary|1.0.0
-Title: "Library - HRD Measure Example"
+Title: "Library - hrd Measure Example"
 Description: "This library contains CQL logic for evaluating structural measures related to hospital respiratory disease reporting capabilities"
 Usage: #example
-* url = "http://hl7.org/fhir/us-safr/Library/HRDMeasureLibrary"
+* url = "http://hl7.org/fhir/us-safr/Library/hrdMeasureLibrary"
 * version = "1.0.0"
-* name = "HRDMeasureLibrary"
-* title = "Library - HRD Measure Example"
+* name = "hrdMeasureLibrary"
+* title = "Library - hrd Measure Example"
 * status = #active
 * experimental = false
 * type = $library-type#logic-library

@@ -1,5 +1,5 @@
 <Measure xmlns="http://hl7.org/fhir">
-   <id value="HRDMeasure"></id>
+   <id value="hrdMeasure"></id>
    <meta>
       <profile value="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm"></profile>
    </meta>
@@ -99,7 +99,7 @@
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Devices"></valueString>
@@ -114,7 +114,7 @@
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="OR Surgical Mask Supply in Days Stratifier"></valueString>
@@ -132,7 +132,7 @@
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="IsBedLocation"></valueString>
@@ -147,7 +147,7 @@
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="LocationIsCHLD"></valueString>
@@ -165,7 +165,7 @@
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="LocationIsHOSP"></valueString>
@@ -183,7 +183,7 @@
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="LocationIsOTH"></valueString>
@@ -201,7 +201,7 @@
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Pediatric ICU Beds Initial Population"></valueString>
@@ -221,7 +221,7 @@
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Encounters"></valueString>
@@ -236,7 +236,7 @@
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="EncounterCheck"></valueString>
@@ -252,7 +252,7 @@
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Occupied Pediatric ICU Beds Initial Population"></valueString>
@@ -268,7 +268,7 @@
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Adult ICU Beds Initial Population"></valueString>
@@ -288,7 +288,7 @@
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Adult ICU Beds Initial Population"></valueString>
@@ -308,7 +308,7 @@
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Occupied Adult ICU Beds Initial Population"></valueString>
@@ -324,7 +324,7 @@
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="COVID_19 Observations"></valueString>
@@ -341,7 +341,7 @@ define &quot;COVID_19 Observations&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Count Confirmed COVID_19 Patients in Bed Location"></valueString>
@@ -358,7 +358,7 @@ define &quot;COVID_19 Observations&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Adult ICU COVID_19 Patients Stratifier"></valueString>
@@ -375,7 +375,7 @@ define &quot;COVID_19 Observations&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Glove Supply in Days Stratifier"></valueString>
@@ -393,7 +393,7 @@ define &quot;COVID_19 Observations&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="LocationIsIPF"></valueString>
@@ -411,7 +411,7 @@ define &quot;COVID_19 Observations&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="LocationIsIRF"></valueString>
@@ -429,7 +429,7 @@ define &quot;COVID_19 Observations&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Pediatric Inpatient Beds Initial Population"></valueString>
@@ -450,7 +450,7 @@ define &quot;COVID_19 Observations&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Occupied Pediatric Inpatient Beds Initial Population"></valueString>
@@ -466,7 +466,7 @@ define &quot;COVID_19 Observations&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Influenza Observations"></valueString>
@@ -482,7 +482,7 @@ define &quot;COVID_19 Observations&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Count Confirmed Influenza Patients in Bed Location"></valueString>
@@ -499,7 +499,7 @@ define &quot;COVID_19 Observations&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Pediatric Inpatient Influenza Patients Stratifier"></valueString>
@@ -516,7 +516,7 @@ define &quot;COVID_19 Observations&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Occupied Pediatric ICU Beds Initial Population"></valueString>
@@ -532,7 +532,7 @@ define &quot;COVID_19 Observations&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="RSV Observations"></valueString>
@@ -548,7 +548,7 @@ define &quot;COVID_19 Observations&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Count Confirmed RSV Patients in Bed Location"></valueString>
@@ -565,7 +565,7 @@ define &quot;COVID_19 Observations&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Pediatric ICU RSV Patients Stratifier"></valueString>
@@ -582,7 +582,7 @@ define &quot;COVID_19 Observations&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Adult Inpatient Beds Initial Population"></valueString>
@@ -603,7 +603,7 @@ define &quot;COVID_19 Observations&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Occupied Adult Inpatient Beds Initial Population"></valueString>
@@ -619,7 +619,7 @@ define &quot;COVID_19 Observations&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Adult Inpatient COVID_19 Patients Stratifier"></valueString>
@@ -638,7 +638,7 @@ define &quot;Adult Inpatient COVID_19 Patients Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Face Shield Supply in Days Stratifier"></valueString>
@@ -656,7 +656,7 @@ define &quot;Adult Inpatient COVID_19 Patients Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Glove Supply in Days Stratifier"></valueString>
@@ -674,7 +674,7 @@ define &quot;Adult Inpatient COVID_19 Patients Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Glove 3 Day Supply Initial Population"></valueString>
@@ -689,7 +689,7 @@ define &quot;Adult Inpatient COVID_19 Patients Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Patients"></valueString>
@@ -704,7 +704,7 @@ define &quot;Adult Inpatient COVID_19 Patients Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Newly Admitted Encounters"></valueString>
@@ -720,7 +720,7 @@ define &quot;Adult Inpatient COVID_19 Patients Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Newly Admitted RSV Patient IDs"></valueString>
@@ -735,7 +735,7 @@ define &quot;Adult Inpatient COVID_19 Patients Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New RSV Patients with Unknown Age Stratifier"></valueString>
@@ -752,7 +752,7 @@ define &quot;Adult Inpatient COVID_19 Patients Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Inpatient Beds Initial Population"></valueString>
@@ -774,7 +774,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Occupied Inpatient Beds Initial Population"></valueString>
@@ -790,7 +790,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Face Shield Supply in Days Stratifier"></valueString>
@@ -808,7 +808,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Face Shield 3 Day Supply Initial Population"></valueString>
@@ -823,7 +823,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Pediatric ICU COVID_19 Patients Stratifier"></valueString>
@@ -840,7 +840,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Gown Supply in Days Stratifier"></valueString>
@@ -858,7 +858,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Adult RSV Patients Between 65 to 74 Stratifier"></valueString>
@@ -875,7 +875,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Adult ICU Influenza Patients Stratifier"></valueString>
@@ -892,7 +892,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Newly Admitted COVID_19 Patient IDs"></valueString>
@@ -907,7 +907,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Adult COVID_19 Patients Between 50 to 64 Stratifier"></valueString>
@@ -924,7 +924,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Occupied Adult ICU Beds Initial Population"></valueString>
@@ -940,7 +940,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Adult Inpatient Influenza Patients Stratifier"></valueString>
@@ -958,7 +958,7 @@ define &quot;Adult Inpatient Influenza Patients Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Pediatric COVID_19 Patients Between 0 to 4 Stratifier"></valueString>
@@ -975,7 +975,7 @@ define &quot;Adult Inpatient Influenza Patients Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Pediatric Inpatient RSV Patients Stratifier"></valueString>
@@ -992,7 +992,7 @@ define &quot;Adult Inpatient Influenza Patients Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Pediatric RSV Patients Between 0 to 4 Stratifier"></valueString>
@@ -1009,7 +1009,7 @@ define &quot;Adult Inpatient Influenza Patients Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Pediatric COVID_19 Patients Between 5 to 17 Stratifier"></valueString>
@@ -1026,7 +1026,7 @@ define &quot;Adult Inpatient Influenza Patients Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="N95 Mask Supply in Days Stratifier"></valueString>
@@ -1045,7 +1045,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Adult RSV Patients Between 50 to 64 Stratifier"></valueString>
@@ -1062,7 +1062,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Adult COVID_19 Patients Between 65 to 74 Stratifier"></valueString>
@@ -1079,7 +1079,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Newly Admitted Influenza Patient IDs"></valueString>
@@ -1094,7 +1094,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Pediatric Influenza Patients Between 5 to 17 Stratifier"></valueString>
@@ -1111,7 +1111,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="ICU Beds Initial Population"></valueString>
@@ -1130,7 +1130,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Adult ICU RSV Patients Stratifier"></valueString>
@@ -1147,7 +1147,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Adult Influenza Patients Between 18 to 49 Stratifier"></valueString>
@@ -1164,7 +1164,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Adult RSV Patients 75 and Above Stratifier"></valueString>
@@ -1181,7 +1181,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Pediatric Inpatient Beds Initial Population"></valueString>
@@ -1202,7 +1202,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Adult Influenza Patients Between 50 to 64 Stratifier"></valueString>
@@ -1219,7 +1219,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Pediatric Influenza Patients Between 0 to 4 Stratifier"></valueString>
@@ -1236,7 +1236,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Adult Inpatient RSV Patients Stratifier"></valueString>
@@ -1254,7 +1254,7 @@ define &quot;Adult Inpatient RSV Patients Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="N95 Mask Supply in Days Stratifier"></valueString>
@@ -1273,7 +1273,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="N95 Mask 3 Day Supply Initial Population"></valueString>
@@ -1288,7 +1288,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Pediatric ICU Beds Initial Population"></valueString>
@@ -1308,7 +1308,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Adult RSV Patients Between 18 to 49 Stratifier"></valueString>
@@ -1325,7 +1325,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Occupied Adult Inpatient Beds Initial Population"></valueString>
@@ -1341,7 +1341,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Adult COVID_19 Patients Between 18 to 49 Stratifier"></valueString>
@@ -1358,7 +1358,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Adult Inpatient Beds Initial Population"></valueString>
@@ -1379,7 +1379,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="ICU Beds Initial Population"></valueString>
@@ -1398,7 +1398,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Occupied ICU Beds Initial Population"></valueString>
@@ -1414,7 +1414,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Influenza Patients with Unknown Age Stratifier"></valueString>
@@ -1431,7 +1431,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Pediatric ICU Influenza Patients Stratifier"></valueString>
@@ -1448,7 +1448,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Adult Influenza Patients Between 65 to 74 Stratifier"></valueString>
@@ -1465,7 +1465,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Pediatric RSV Patients Between 5 to 17 Stratifier"></valueString>
@@ -1482,7 +1482,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Pediatric Inpatient COVID_19 Patients Stratifier"></valueString>
@@ -1499,7 +1499,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Occupied Pediatric Inpatient Beds Initial Population"></valueString>
@@ -1515,7 +1515,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Inpatient Beds Initial Population"></valueString>
@@ -1537,7 +1537,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Adult COVID_19 Patients 75 and Above Stratifier"></valueString>
@@ -1554,7 +1554,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="OR Surgical Mask Supply in Days Stratifier"></valueString>
@@ -1572,7 +1572,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="OR Surgical Mask 3 Day Supply Initial Population"></valueString>
@@ -1587,7 +1587,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New COVID_19 Patients with Unknown Age Stratifier"></valueString>
@@ -1604,7 +1604,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="New Adult Influenza Patients 75 and Above Stratifier"></valueString>
@@ -1621,7 +1621,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Gown Supply in Days Stratifier"></valueString>
@@ -1639,7 +1639,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Gown 3 Day Supply Initial Population"></valueString>
@@ -1719,7 +1719,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Get Confirmed Patient IDs"></valueString>
@@ -1747,7 +1747,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Normalize Interval"></valueString>
@@ -1801,7 +1801,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Get Confirmed Patient IDs in Bed Location and Unknown Age"></valueString>
@@ -1835,7 +1835,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="GetId"></valueString>
@@ -1864,7 +1864,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Get Confirmed Patient IDs in Bed Location Between Specified Ages"></valueString>
@@ -1900,7 +1900,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
+               <valueString value="hrdMeasure"></valueString>
             </extension>
             <extension url="name">
                <valueString value="Get Confirmed Patient IDs in Bed Location Above Specified Age"></valueString>
@@ -2587,14 +2587,14 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-effectiveDataRequirements">
       <valueCanonical value="#effective-data-requirements"></valueCanonical>
    </extension>
-   <url value="http://hl7.org/fhir/us/safr/Measure/HRDMeasure"></url>
+   <url value="http://hl7.org/fhir/us/safr/Measure/hrdMeasure"></url>
    <version value="1.0.0"></version>
-   <name value="HRDMeasure"></name>
-   <title value="HRD Measure"></title>
+   <name value="hrdMeasure"></name>
+   <title value="hrd Measure"></title>
    <experimental value="true"></experimental>
    <date value="2025-11-07T11:10:22-04:00"></date>
-   <description value="HRD Measure description."></description>
-   <library value="http://hl7.org/fhir/us/safr/Library/HRDMeasure"></library>
+   <description value="hrd Measure description."></description>
+   <library value="http://hl7.org/fhir/us/safr/Library/hrdMeasure"></library>
    <scoring>
       <coding>
          <system value="http://terminology.hl7.org/CodeSystem/measure-scoring"></system>

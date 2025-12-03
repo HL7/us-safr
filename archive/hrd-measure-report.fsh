@@ -2,7 +2,7 @@
 Instance: hrd-measurereport-bundle-example-hosp1
 InstanceOf: SafrMeasureReportBundle
 Title: "Bundle - Hospital Respiratory Data MeasureReport Bundle Example 1"
-Description: "This Bundle resource is an example of a Hospital Respiratory Data (HRD) MeasureReport Bundle for the US SAFR IG."
+Description: "This Bundle resource is an example of a Hospital Respiratory Data (hrd) MeasureReport Bundle for the US SAFR IG."
 Usage: #example
 * type = #collection
 * entry[submitting-organization][+].fullUrl = "http://example.org/fhir/Organization/organization-example-submitting-organization"
@@ -29,9 +29,9 @@ Usage: #inline
 
 
 Instance: hrd-measurereport-example-1
-InstanceOf: DEQMIndividualMeasureReportProfile // TODO, needs to change to an HRD MeasureReport profile
+InstanceOf: DEQMIndividualMeasureReportProfile // TODO, needs to change to an hrd MeasureReport profile
 Title: "MeasureReport - Hospital Respiratory Data Example 1"
-Description: "This MeasureReport resource is an example of a Hospital Respiratory Data (HRD) Measure Report for the US SAFR IG."
+Description: "This MeasureReport resource is an example of a Hospital Respiratory Data (hrd) Measure Report for the US SAFR IG."
 Usage: #example
 * extension[location].url = "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"
 * extension[location].valueReference = Reference(hrd-location-1)
@@ -47,169 +47,169 @@ Usage: #example
 * reporter = Reference(organization-example-submitting-organization)
 * period.start = "2024-12-14T07:01:07.563Z"
 * period.end = "2024-12-14T19:01:07.561Z"
-* group[0].code = SAFRHRDCS#numInPtBeds "number Inpatient Beds"
+* group[0].code = SAFRhrdCS#numInPtBeds "number Inpatient Beds"
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 200
-* group[+].code = SAFRHRDCS#numInPtBedsAdult
+* group[+].code = SAFRhrdCS#numInPtBedsAdult
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 100
-* group[+].code = SAFRHRDCS#numInPtBedsPed
+* group[+].code = SAFRhrdCS#numInPtBedsPed
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 100
-* group[+].code = SAFRHRDCS#numInPtBedsOcc
+* group[+].code = SAFRhrdCS#numInPtBedsOcc
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 150
-* group[+].code = SAFRHRDCS#numInPtBedsOccAdult
+* group[+].code = SAFRhrdCS#numInPtBedsOccAdult
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 75
-* group[+].code = SAFRHRDCS#numInPtBedsOccPed
+* group[+].code = SAFRhrdCS#numInPtBedsOccPed
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 75
-* group[+].code = SAFRHRDCS#numICUBeds
+* group[+].code = SAFRhrdCS#numICUBeds
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 50
-* group[+].code = SAFRHRDCS#numICUBedsAdult
+* group[+].code = SAFRhrdCS#numICUBedsAdult
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 25
-* group[+].code = SAFRHRDCS#numICUBedsPed
+* group[+].code = SAFRhrdCS#numICUBedsPed
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 25
-* group[+].code = SAFRHRDCS#numICUBedsOcc
+* group[+].code = SAFRhrdCS#numICUBedsOcc
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 30
-* group[+].code = SAFRHRDCS#numICUBedsOccAdult
+* group[+].code = SAFRhrdCS#numICUBedsOccAdult
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 15
-* group[+].code = SAFRHRDCS#numICUBedsOccPed
+* group[+].code = SAFRhrdCS#numICUBedsOccPed
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 15
-* group[+].code = SAFRHRDCS#numConfC19HospPatsAdult
+* group[+].code = SAFRhrdCS#numConfC19HospPatsAdult
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 10
-* group[+].code = SAFRHRDCS#numConfC19HospPatsPed
+* group[+].code = SAFRhrdCS#numConfC19HospPatsPed
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 5
-* group[+].code = SAFRHRDCS#numConfC19ICUPatsAdult
+* group[+].code = SAFRhrdCS#numConfC19ICUPatsAdult
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 2
-* group[+].code = SAFRHRDCS#numConfC19ICUPatsPed
+* group[+].code = SAFRhrdCS#numConfC19ICUPatsPed
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 1
-* group[+].code = SAFRHRDCS#numConfFluHospPatsAdult
+* group[+].code = SAFRhrdCS#numConfFluHospPatsAdult
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 20
-* group[+].code = SAFRHRDCS#numConfFluHospPatsPed
+* group[+].code = SAFRhrdCS#numConfFluHospPatsPed
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 10
-* group[+].code = SAFRHRDCS#numConfFluICUPatsAdult
+* group[+].code = SAFRhrdCS#numConfFluICUPatsAdult
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 4
-* group[+].code = SAFRHRDCS#numConfFluICUPatsPed
+* group[+].code = SAFRhrdCS#numConfFluICUPatsPed
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 2
-* group[+].code = SAFRHRDCS#numConfRSVHospPatsAdult
+* group[+].code = SAFRhrdCS#numConfRSVHospPatsAdult
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 15
-* group[+].code = SAFRHRDCS#numConfRSVHospPatsPed
+* group[+].code = SAFRhrdCS#numConfRSVHospPatsPed
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 5
-* group[+].code = SAFRHRDCS#numConfRSVICUPatsAdult
+* group[+].code = SAFRhrdCS#numConfRSVICUPatsAdult
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 3
-* group[+].code = SAFRHRDCS#numConfRSVICUPatsPed
+* group[+].code = SAFRhrdCS#numConfRSVICUPatsPed
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 1
-* group[+].code = SAFRHRDCS#numConfC19NewAdmPed0to4
+* group[+].code = SAFRhrdCS#numConfC19NewAdmPed0to4
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 1
-* group[+].code = SAFRHRDCS#numConfC19NewAdmPed5to17
+* group[+].code = SAFRhrdCS#numConfC19NewAdmPed5to17
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 2
-* group[+].code = SAFRHRDCS#numConfC19NewAdmAdult18to49
+* group[+].code = SAFRhrdCS#numConfC19NewAdmAdult18to49
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 3
-* group[+].code = SAFRHRDCS#numConfC19NewAdmAdult50to64
+* group[+].code = SAFRhrdCS#numConfC19NewAdmAdult50to64
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 4
-* group[+].code = SAFRHRDCS#numConfC19NewAdmAdult65to74
+* group[+].code = SAFRhrdCS#numConfC19NewAdmAdult65to74
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 5
-* group[+].code = SAFRHRDCS#numConfC19NewAdmAdult75plus
+* group[+].code = SAFRhrdCS#numConfC19NewAdmAdult75plus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 6
-* group[+].code = SAFRHRDCS#numConfC19NewAdmUnk
+* group[+].code = SAFRhrdCS#numConfC19NewAdmUnk
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 7
-* group[+].code = SAFRHRDCS#numConfFluNewAdmPed0to4
+* group[+].code = SAFRhrdCS#numConfFluNewAdmPed0to4
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 1
-* group[+].code = SAFRHRDCS#numConfFluNewAdmPed5to17
+* group[+].code = SAFRhrdCS#numConfFluNewAdmPed5to17
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 2
-* group[+].code = SAFRHRDCS#numConfFluNewAdmAdult18to49
+* group[+].code = SAFRhrdCS#numConfFluNewAdmAdult18to49
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 3
-* group[+].code = SAFRHRDCS#numConfFluNewAdmAdult50to64
+* group[+].code = SAFRhrdCS#numConfFluNewAdmAdult50to64
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 4
-* group[+].code = SAFRHRDCS#numConfFluNewAdmAdult65to74
+* group[+].code = SAFRhrdCS#numConfFluNewAdmAdult65to74
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 5
-* group[+].code = SAFRHRDCS#numConfFluNewAdmAdult75plus
+* group[+].code = SAFRhrdCS#numConfFluNewAdmAdult75plus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 6
-* group[+].code = SAFRHRDCS#numConfFluNewAdmUnk
+* group[+].code = SAFRhrdCS#numConfFluNewAdmUnk
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 7
-* group[+].code = SAFRHRDCS#numConfRSVNewAdmPed0to4
+* group[+].code = SAFRhrdCS#numConfRSVNewAdmPed0to4
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 1
-* group[+].code = SAFRHRDCS#numConfRSVNewAdmPed5to17
+* group[+].code = SAFRhrdCS#numConfRSVNewAdmPed5to17
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 2
-* group[+].code = SAFRHRDCS#numConfRSVNewAdmAdult18to49
+* group[+].code = SAFRhrdCS#numConfRSVNewAdmAdult18to49
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 3
-* group[+].code = SAFRHRDCS#numConfRSVNewAdmAdult50to64
+* group[+].code = SAFRhrdCS#numConfRSVNewAdmAdult50to64
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 4
-* group[+].code = SAFRHRDCS#numConfRSVNewAdmAdult65to74
+* group[+].code = SAFRhrdCS#numConfRSVNewAdmAdult65to74
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 5
-* group[+].code = SAFRHRDCS#numConfRSVNewAdmAdult75plus
+* group[+].code = SAFRhrdCS#numConfRSVNewAdmAdult75plus
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 6
-* group[+].code = SAFRHRDCS#numConfRSVNewAdmUnk
+* group[+].code = SAFRhrdCS#numConfRSVNewAdmUnk
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 7
-* group[+].code = SAFRHRDCS#N95MaskSupplyDays
+* group[+].code = SAFRhrdCS#N95MaskSupplyDays
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 30
-* group[+].code = SAFRHRDCS#surgMaskSupplyDays
+* group[+].code = SAFRhrdCS#surgMaskSupplyDays
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 30
-* group[+].code = SAFRHRDCS#shieldSupplyDays
+* group[+].code = SAFRhrdCS#shieldSupplyDays
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 30
-* group[+].code = SAFRHRDCS#gownSupplyDays
+* group[+].code = SAFRhrdCS#gownSupplyDays
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 30
-* group[+].code = SAFRHRDCS#gloveSupplyDays
+* group[+].code = SAFRhrdCS#gloveSupplyDays
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 30
-* group[+].code = SAFRHRDCS#N95Mask3DaySupply
+* group[+].code = SAFRhrdCS#N95Mask3DaySupply
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 1
-* group[+].code = SAFRHRDCS#surgMask3DaySupply
+* group[+].code = SAFRhrdCS#surgMask3DaySupply
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 1
-* group[+].code = SAFRHRDCS#shield3DaySupply
+* group[+].code = SAFRhrdCS#shield3DaySupply
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 1
-* group[+].code = SAFRHRDCS#gown3DaySupply
+* group[+].code = SAFRhrdCS#gown3DaySupply
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 1
-* group[+].code = SAFRHRDCS#glove3DaySupply
+* group[+].code = SAFRhrdCS#glove3DaySupply
 * group[=].population[0].code = $measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 1
 */

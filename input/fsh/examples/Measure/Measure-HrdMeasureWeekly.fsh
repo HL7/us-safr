@@ -1,5 +1,5 @@
 
-Instance: HrdMeasure
+Instance: hrdMeasure
 InstanceOf: Measure
 Usage: #example
 * meta.profile = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm"
@@ -13,9 +13,9 @@ Usage: #example
 // * extension[=].valueReference = Reference(bed-capacity-effective-data-requirements)
 // * extension[+].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"
 // * extension[=].valueCode = #pher
-* url = "http://hl7.org/fhir/us/us-safr/Measure/HrdMeasureWeekly"
+* url = "http://hl7.org/fhir/us/us-safr/Measure/hrdMeasureWeekly"
 * version = "1.0.0"
-* name = "HRDMeasure"
+* name = "hrdMeasure"
 * title = "Hospital Respiratory Data Measure for US Situational Awareness Framework for Reporting"
 * status = #draft
 * experimental = true
@@ -26,7 +26,7 @@ Usage: #example
 * contact.telecom.value = "http://www.hl7.org/Special/committees/pher"
 * description = "US Situational Awareness Framework for Reporting - Hospital Respiratory Data Measure"
 * jurisdiction = urn:iso:std:iso:3166#US "United States of America"
-* library = "http://hl7.org/fhir/us-safr/Library/HrdMeasureLibrary"
+* library = "http://hl7.org/fhir/us-safr/Library/hrdMeasureLibrary"
 * scoring = $measure-scoring#cohort "Cohort"
 * type = $MeasureTypeCS#structure "Structure"
 * group[0].code = $hrd-example-codes#numInPtBeds

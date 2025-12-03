@@ -25,8 +25,8 @@ Usage: #example
 * relatedArtifact[=].display = "Code system LocationPhysicalType"
 * relatedArtifact[=].resource = "http://terminology.hl7.org/CodeSystem/location-physical-type|2.0.1"
 * relatedArtifact[+].type = #depends-on
-* relatedArtifact[=].display = "Code system SAFRHRDCS"
-* relatedArtifact[=].resource = Canonical(SAFRHRDCS)
+* relatedArtifact[=].display = "Code system SAFRhrdCS"
+* relatedArtifact[=].resource = Canonical(SAFRhrdCS)
 //* relatedArtifact[+].type = #depends-on
 //* relatedArtifact[=].display = "Value set Emergency Department Visit"
 //* relatedArtifact[=].resource = "http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.292"
