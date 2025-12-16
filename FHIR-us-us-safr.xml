@@ -8,15 +8,15 @@
 <artifact id="Measure/BedCapacityMeasure" key="Measure-BedCapacityMeasure" name="Bed Capacity for US Situational Awareness Framework for Reporting"/>
 <artifact id="Library/BedCapacityLibrary" key="Library-BedCapacityLibrary" name="BedCapacityLibrary"/>
 <artifact id="Device/cqf-tooling" key="Device-cqf-tooling" name="CQF Tooling Device"/>
-<artifact id="Bundle/hrdMeasure-bundle-example" key="Bundle-hrdMeasure-bundle-example" name="hrd Measure Bundle Example 1"/>
-<artifact id="MeasureReport/hrd-measurereport-example-1" key="MeasureReport-hrd-measurereport-example-1" name="hrd Measure Report Example 1"/>
-<artifact id="Bundle/bed-capacity-bundle-example" key="Bundle-bed-capacity-bundle-example" name="hrd MeasureReport Bundle Example 1"/>
-<artifact id="Bundle/hrd-bundle-example-hosp" key="Bundle-hrd-bundle-example-hosp" name="hrd MeasureReport Bundle Example 1"/>
+<artifact id="Bundle/HRDMeasure-bundle-example" key="Bundle-HRDMeasure-bundle-example" name="HRD Measure Bundle Example 1"/>
+<artifact id="MeasureReport/HRD-measurereport-example-1" key="MeasureReport-HRD-measurereport-example-1" name="HRD Measure Report Example 1"/>
+<artifact id="Bundle/bed-capacity-bundle-example" key="Bundle-bed-capacity-bundle-example" name="HRD MeasureReport Bundle Example 1"/>
+<artifact id="Bundle/HRD-bundle-example-hosp" key="Bundle-HRD-bundle-example-hosp" name="HRD MeasureReport Bundle Example 1"/>
 <artifact id="CodeSystem/SAFRHealthareCapacityCS" key="CodeSystem-SAFRHealthareCapacityCS" name="Healthcare Capacity Reporting Code System"/>
-<artifact id="Measure/hrdMeasure" key="Measure-hrdMeasure" name="Hospital Respiratory Data Measure for US Situational Awareness Framework for Reporting"/>
-<artifact id="CodeSystem/hrdExampleCS" key="CodeSystem-hrdExampleCS" name="Hospital Respiratory Data Reporting Code System"/>
-<artifact id="CodeSystem/hrdSupplyDaysExampleCS" key="CodeSystem-hrdSupplyDaysExampleCS" name="Hospital Respiratory Data Supply Days Code System"/>
-<artifact id="Library/hrdMeasureLibrary" key="Library-hrdMeasureLibrary" name="hrdMeasureLibrary"/>
+<artifact id="Measure/HRDMeasure" key="Measure-HRDMeasure" name="Hospital Respiratory Data Measure for US Situational Awareness Framework for Reporting"/>
+<artifact id="CodeSystem/HRDExampleCS" key="CodeSystem-HRDExampleCS" name="Hospital Respiratory Data Reporting Code System"/>
+<artifact id="CodeSystem/HRDSupplyDaysExampleCS" key="CodeSystem-HRDSupplyDaysExampleCS" name="Hospital Respiratory Data Supply Days Code System"/>
+<artifact id="Library/HRDMeasureLibrary" key="Library-HRDMeasureLibrary" name="HRDMeasureLibrary"/>
 <artifact id="MeasureReport/bed-capacity-measurereport-example-chld" key="MeasureReport-bed-capacity-measurereport-example-chld" name="MeasureReport - Children's Hospital Bed Capacity Individual Measure Report"/>
 <artifact id="MeasureReport/bed-capacity-measurereport-example-hosp" key="MeasureReport-bed-capacity-measurereport-example-hosp" name="MeasureReport - Hospital Bed Capacity Individual Measure Report"/>
 <artifact id="MeasureReport/bed-capacity-measurereport-example-ipf" key="MeasureReport-bed-capacity-measurereport-example-ipf" name="MeasureReport - Inpatient Psychiatric Facility Bed Capacity Individual Measure Report"/>

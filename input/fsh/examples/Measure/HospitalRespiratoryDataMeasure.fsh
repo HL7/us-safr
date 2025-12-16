@@ -1,8 +1,8 @@
 
-Instance: hrdMeasureBundle
+Instance: HRDMeasureBundle
 InstanceOf: USSafrMeasureBundle
-Title: "Bundle - hrd Measure Bundle Example"
-Description: "This Bundle resource is an example of a Hospital Respiratory Data (hrd) Measure Bundle."
+Title: "Bundle - HRD Measure Bundle Example"
+Description: "This Bundle resource is an example of a Hospital Respiratory Data (HRD) Measure Bundle."
 Usage: #example
 * type = #collection
 * entry[measure][+].fullUrl = "http://example.org/fhir/Measure/HospitalRespiratoryDataMeasure"
@@ -12,15 +12,15 @@ Usage: #example
 
 Instance: HospitalRespiratoryDataMeasure
 InstanceOf: CQFMContinuousVariableMeasure|4.0.0
-Title: "Measure - hrd Measure Example"
-Description: "Example of a Hospital Respiratory Disease (hrd) Measure for NHSN reporting."
+Title: "Measure - HRD Measure Example"
+Description: "Example of a Hospital Respiratory Disease (HRD) Measure for NHSN reporting."
 Usage: #example
 * extension[+].url = "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis"
 * extension[=].valueCode = #boolean
 * url = "http://hl7.org/fhir/us/us/safr/Measure/HospitalRespiratoryDataMeasure"
 * version = "1.0.0"
 * name = "HospitalRespiratoryDataMeasure"
-* title = "Measure - hrd Measure Example"
+* title = "Measure - HRD Measure Example"
 * status = #draft
 * experimental = true
 * date = "2024-12-14T17:37:47-04:00"
@@ -28,9 +28,9 @@ Usage: #example
 * contact.name = "HL7 International / Public Health"
 * contact.telecom.system = #url
 * contact.telecom.value = "http://www.hl7.org/Special/committees/pher"
-* description = "Example of a Hospital Respiratory Disease (hrd) Measure for NHSN reporting."
+* description = "Example of a Hospital Respiratory Disease (HRD) Measure for NHSN reporting."
 * jurisdiction = urn:iso:std:iso:3166#US "United States of America"
-* library = Canonical(hrdMeasureLibrary)
+* library = Canonical(HRDMeasureLibrary)
 * scoring = $measure-scoring#continuous-variable
 //* type = http://terminology.hl7.org/CodeSystem/measure-type#structure "Structure"
 * type = $MeasureTypeCS#structure "Structure"
@@ -39,8 +39,8 @@ Usage: #example
 
 
 ///////////// Group numInPtBedsAdult /////////////
-* group[+].id = "numInPtBedsAdult-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numInPtBedsAdult "Number Inpatient Adult Beds"
+* group[+].id = "numInPtBedsAdult-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numInPtBedsAdult "Number Inpatient Adult Beds"
 * group[=].description = "Number Inpatient Adult Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numInPtBedsAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -64,8 +64,8 @@ Usage: #example
 
 
 ///////////// Group numInPtBedsPed /////////////
-* group[+].id = "numInPtBedsPed-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numInPtBedsPed "Number Inpatient Ped Beds"
+* group[+].id = "numInPtBedsPed-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numInPtBedsPed "Number Inpatient Ped Beds"
 * group[=].description = "Number Inpatient Ped Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numInPtBedsPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -89,8 +89,8 @@ Usage: #example
 
 
 ///////////// Group numInPtBedsOcc /////////////
-* group[+].id = "numInPtBedsOcc-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numInPtBedsOcc "Number Inpatient Occupancy Beds"
+* group[+].id = "numInPtBedsOcc-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numInPtBedsOcc "Number Inpatient Occupancy Beds"
 * group[=].description = "Number Inpatient Occupancy Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numInPtBedsOcc-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -114,8 +114,8 @@ Usage: #example
 
 
 ///////////// Group numInPtBedsOccAdult /////////////
-* group[+].id = "numInPtBedsOccAdult-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numInPtBedsOccAdult "Number Inpatient Occupancy Adult Beds"
+* group[+].id = "numInPtBedsOccAdult-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numInPtBedsOccAdult "Number Inpatient Occupancy Adult Beds"
 * group[=].description = "Number Inpatient Occupancy Adult Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numInPtBedsOccAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -139,8 +139,8 @@ Usage: #example
 
 
 ///////////// Group numInPtBedsOccPed /////////////
-* group[+].id = "numInPtBedsOccPed-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numInPtBedsOccPed "Number Inpatient Occupancy Ped Beds"
+* group[+].id = "numInPtBedsOccPed-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numInPtBedsOccPed "Number Inpatient Occupancy Ped Beds"
 * group[=].description = "Number Inpatient Occupancy Ped Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numInPtBedsOccPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -164,8 +164,8 @@ Usage: #example
 
 
 ///////////// Group numConfC19HospPatsAdult /////////////
-* group[+].id = "numConfC19HospPatsAdult-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numConfC19HospPatsAdult "Number confirmed Covid-19 adult hospital patients"
+* group[+].id = "numConfC19HospPatsAdult-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numConfC19HospPatsAdult "Number confirmed Covid-19 adult hospital patients"
 * group[=].description = "numConfC19HospPatsAdult Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfC19HospPatsAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -189,8 +189,8 @@ Usage: #example
 
 
 ///////////// Group numConfC19HospPatsPed /////////////
-* group[+].id = "numConfC19HospPatsPed-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numConfC19HospPatsPed "Number confirmed Covid-19 pediatric hospital patients"
+* group[+].id = "numConfC19HospPatsPed-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numConfC19HospPatsPed "Number confirmed Covid-19 pediatric hospital patients"
 * group[=].description = "numConfC19HospPatsPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfC19HospPatsPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -214,8 +214,8 @@ Usage: #example
 
 
 ///////////// Group numConfFluHospPatsAdult /////////////
-* group[+].id = "numConfFluHospPatsAdult-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numConfFluHospPatsAdult "Number confirmed Flu adult hospital patients"
+* group[+].id = "numConfFluHospPatsAdult-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numConfFluHospPatsAdult "Number confirmed Flu adult hospital patients"
 * group[=].description = "numConfFluHospPatsAdult Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfFluHospPatsAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -239,8 +239,8 @@ Usage: #example
 
 
 ///////////// Group numConfFluHospPatsPed /////////////
-* group[+].id = "numConfFluHospPatsPed-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numConfFluHospPatsPed "Number confirmed Flu pediatric hospital patients"
+* group[+].id = "numConfFluHospPatsPed-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numConfFluHospPatsPed "Number confirmed Flu pediatric hospital patients"
 * group[=].description = "numConfFluHospPatsPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfFluHospPatsPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -264,8 +264,8 @@ Usage: #example
 
 
 ///////////// Group numConfRSVHospPatsAdult /////////////
-* group[+].id = "numConfRSVHospPatsAdult-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numConfRSVHospPatsAdult "Number confirmed RSV adult hospital patients"
+* group[+].id = "numConfRSVHospPatsAdult-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numConfRSVHospPatsAdult "Number confirmed RSV adult hospital patients"
 * group[=].description = "numConfRSVHospPatsAdult Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfRSVHospPatsAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -289,8 +289,8 @@ Usage: #example
 
 
 ///////////// Group numConfRSVHospPatsPed /////////////
-* group[+].id = "numConfRSVHospPatsPed-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numConfRSVHospPatsPed "Number confirmed RSV pediatric hospital patients"
+* group[+].id = "numConfRSVHospPatsPed-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numConfRSVHospPatsPed "Number confirmed RSV pediatric hospital patients"
 * group[=].description = "numConfRSVHospPatsPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfRSVHospPatsPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -314,8 +314,8 @@ Usage: #example
 
 
 ///////////// Group numICUBedsAdult /////////////
-* group[+].id = "numICUBedsAdult-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numICUBedsAdult "Number ICU Adult Beds"
+* group[+].id = "numICUBedsAdult-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numICUBedsAdult "Number ICU Adult Beds"
 * group[=].description = "Number ICU Adult Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numICUBedsAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -339,8 +339,8 @@ Usage: #example
 
 
 ///////////// Group numICUBedsPed /////////////
-* group[+].id = "numICUBedsPed-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numICUBedsPed "Number ICU Ped Beds"
+* group[+].id = "numICUBedsPed-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numICUBedsPed "Number ICU Ped Beds"
 * group[=].description = "Number ICU Ped Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numICUBedsPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -364,8 +364,8 @@ Usage: #example
 
 
 ///////////// Group numICUBedsOcc /////////////
-* group[+].id = "numICUBedsOcc-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numICUBedsOcc "Number ICU Occupancy Beds"
+* group[+].id = "numICUBedsOcc-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numICUBedsOcc "Number ICU Occupancy Beds"
 * group[=].description = "Number ICU Occupancy Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numICUBedsOcc-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -389,8 +389,8 @@ Usage: #example
 
 
 ///////////// Group numICUBedsOccAdult /////////////
-* group[+].id = "numICUBedsOccAdult-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numICUBedsOccAdult "Number ICU Occupancy Adult Beds"
+* group[+].id = "numICUBedsOccAdult-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numICUBedsOccAdult "Number ICU Occupancy Adult Beds"
 * group[=].description = "Number ICU Occupancy Adult Beds Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numICUBedsOccAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -414,8 +414,8 @@ Usage: #example
 
 
 ///////////// Group numICUBedsOccPed /////////////
-* group[+].id = "numICUBedsOccPed-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numICUBedsOccPed "Number ICU Occupancy Pediatric Beds"
+* group[+].id = "numICUBedsOccPed-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numICUBedsOccPed "Number ICU Occupancy Pediatric Beds"
 * group[=].description = "numICUBedsOccPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numICUBedsOccPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -439,8 +439,8 @@ Usage: #example
 
 
 ///////////// Group numConfC19ICUPatsAdult /////////////
-* group[+].id = "numConfC19ICUPatsAdult-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numConfC19ICUPatsAdult "Number confirmed Covid-19 adult ICU patients"
+* group[+].id = "numConfC19ICUPatsAdult-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numConfC19ICUPatsAdult "Number confirmed Covid-19 adult ICU patients"
 * group[=].description = "numConfC19ICUPatsAdult Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfC19ICUPatsAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -464,8 +464,8 @@ Usage: #example
 
 
 ///////////// Group numConfC19ICUPatsPed /////////////
-* group[+].id = "numConfC19ICUPatsPed-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numConfC19ICUPatsPed "Number confirmed Covid-19 pediatric ICU patients"
+* group[+].id = "numConfC19ICUPatsPed-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numConfC19ICUPatsPed "Number confirmed Covid-19 pediatric ICU patients"
 * group[=].description = "numConfC19ICUPatsPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfC19ICUPatsPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -489,8 +489,8 @@ Usage: #example
 
 
 ///////////// Group numConfFluICUPatsAdult /////////////
-* group[+].id = "numConfFluICUPatsAdult-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numConfFluICUPatsAdult "Number confirmed Flu adult ICU patients"
+* group[+].id = "numConfFluICUPatsAdult-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numConfFluICUPatsAdult "Number confirmed Flu adult ICU patients"
 * group[=].description = "numConfFluICUPatsAdult Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfFluICUPatsAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -514,8 +514,8 @@ Usage: #example
 
 
 ///////////// Group numConfFluICUPatsPed /////////////
-* group[+].id = "numConfFluICUPatsPed-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numConfFluICUPatsPed "Number confirmed Flu pediatric ICU patients"
+* group[+].id = "numConfFluICUPatsPed-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numConfFluICUPatsPed "Number confirmed Flu pediatric ICU patients"
 * group[=].description = "numConfFluICUPatsPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfFluICUPatsPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -539,8 +539,8 @@ Usage: #example
 
 
 ///////////// Group numConfRSVICUPatsAdult /////////////
-* group[+].id = "numConfRSVICUPatsAdult-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numConfRSVICUPatsAdult "Number confirmed RSV adult ICU patients"
+* group[+].id = "numConfRSVICUPatsAdult-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numConfRSVICUPatsAdult "Number confirmed RSV adult ICU patients"
 * group[=].description = "numConfRSVICUPatsAdult Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfRSVICUPatsAdult-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
@@ -564,8 +564,8 @@ Usage: #example
 
 
 ///////////// Group numConfRSVICUPatsPed /////////////
-* group[+].id = "numConfRSVICUPatsPed-hrd-capacity-group"
-* group[=].code = hrdExampleCS#numConfRSVICUPatsPed "Number confirmed RSV pediatric ICU patients"
+* group[+].id = "numConfRSVICUPatsPed-HRD-capacity-group"
+* group[=].code = HRDExampleCS#numConfRSVICUPatsPed "Number confirmed RSV pediatric ICU patients"
 * group[=].description = "numConfRSVICUPatsPed Hospital Respiratory Data measurement"
 * group[=].population[initialPopulation].id = "numConfRSVICUPatsPed-initial-population"
 * group[=].population[initialPopulation].code = $measure-population#initial-population "Initial Population"
