@@ -6,7 +6,8 @@ Usage: #example
 // Basic metadata
 * status = $measure-report-status#complete
 * type = $measure-report-type#individual
-* measure = Canonical(HospitalRespiratoryDataMeasure|1.0.0-ballot)
+* measure = Canonical(http://hl7.org/fhir/us/safr/Measure/HRDMeasure|1.0.0)
+// * measure = Canonical(HospitalRespiratoryDataMeasure|1.0.0-ballot)
 * date = "2025-03-05T08:15:00-05:00"
 // Reporting period
 * period.start = "2025-03-05T00:00:00-05:00"

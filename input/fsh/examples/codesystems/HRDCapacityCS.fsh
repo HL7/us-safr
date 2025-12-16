@@ -1,4 +1,4 @@
-CodeSystem: hrdExampleCS
+CodeSystem: HRDExampleCS
 Id: us-safr-hrd-example-codes
 Title: "Hospital Respiratory Data Reporting Code System"
 * ^copyright = "This CodeSystem is not copyrighted."

@@ -88,20 +88,21 @@ pages:
 # For parameters defined by the FHIR Tools IG see:
 # http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 #
-
-
-
-# parameters:
-#  path-expansion-params: '../../exp-params.json'  #Support for US SNOMED CT - path is relative to [base]/fsh-generated/resources
-#  apply-jurisdiction: true
-#  apply-publisher: true
-#  excludettl: true
-#  path-liquid: templates\liquid
-#  path-pages:
-#    - input/pagecontent
-#    - input/intro-notes
-#    - fsh-generated/includes
-#  auto-oid-root: 2.16.840.1.113883.4.642.40.53
+parameters:
+  path-expansion-params: '../../exp-params.json'  #Support for US SNOMED CT - path is relative to [base]/fsh-generated/resources
+  apply-jurisdiction: true
+  apply-publisher: true
+  excludettl: true
+  path-liquid: templates\liquid
+  #path-resource:
+    #- input/resources
+    #- fsh-generated/resources
+  path-pages:
+    - input/pagecontent
+    - input/intro-notes
+    - fsh-generated/includes
+  auto-oid-root: 2.16.840.1.113883.4.642.40.53
+# validation: [allow-any-extensions, no-broken-links]
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
