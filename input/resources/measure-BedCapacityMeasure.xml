@@ -1030,7 +1030,7 @@
          <relatedArtifact>
             <type value="depends-on"></type>
             <display value="Library FHIRHelpers"></display>
-            <resource value="http://hl7.org/fhir/us/safr/Library/FHIRHelpers|4.0.1"></resource>
+            <resource value="http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1"></resource>
          </relatedArtifact>
          <relatedArtifact>
             <type value="depends-on"></type>
@@ -1432,11 +1432,11 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
             <code value="BedCapacityReporting"></code>
          </coding>
       </code>
-      <population id="d2e4301">
+      <population id="d2e4301-bed-cap">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -1457,7 +1457,7 @@
             <code value="AllBeds"></code>
          </coding>
       </code>
-      <population id="d2e4301">
+      <population id="d2e4301-all-beds">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -2087,7 +2087,7 @@
             <code value="SurgeActiveICU"></code>
          </coding>
       </code>
-      <population id="d2e8931">
+      <population id="d2e8931-surge-active">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -2108,7 +2108,7 @@
             <code value="SurgeInactiveICU"></code>
          </coding>
       </code>
-      <population id="d2e8931">
+      <population id="d2e8931-surge-inactive">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
