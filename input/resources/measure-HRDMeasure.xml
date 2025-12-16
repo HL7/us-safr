@@ -1935,7 +1935,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          <relatedArtifact>
             <type value="depends-on"></type>
             <display value="Library FHIRHelpers"></display>
-            <resource value="http://hl7.org/fhir/us/safr/Library/FHIRHelpers|4.0.1"></resource>
+            <resource value="http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1"></resource>
          </relatedArtifact>
          <relatedArtifact>
             <type value="depends-on"></type>
@@ -2576,7 +2576,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </dataRequirement>
       </Library>
    </contained>
-   <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem">
+   <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-softwaresystem">
       <valueReference>
          <reference value="Device/cqf-tooling"></reference>
       </valueReference>
@@ -2605,7 +2605,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
             <code value="numInPtBeds"></code>
          </coding>
       </code>
@@ -2626,11 +2626,11 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
             <code value="numInPtBedsOcc"></code>
          </coding>
       </code>
-      <population id="d2e4301">
+      <population id="d2e4301-occupied">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -2646,7 +2646,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19HospPatsAdult"></code>
             </coding>
          </code>
@@ -2658,7 +2658,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19HospPatsPed"></code>
             </coding>
          </code>
@@ -2670,7 +2670,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluHospPatsAdult"></code>
             </coding>
          </code>
@@ -2682,7 +2682,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluHospPatsPed"></code>
             </coding>
          </code>
@@ -2694,7 +2694,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVHospPatsAdult"></code>
             </coding>
          </code>
@@ -2706,7 +2706,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVHospPatsPed"></code>
             </coding>
          </code>
@@ -2718,7 +2718,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmPed0to4"></code>
             </coding>
          </code>
@@ -2730,7 +2730,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmPed5to17"></code>
             </coding>
          </code>
@@ -2742,7 +2742,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmAdult18to49"></code>
             </coding>
          </code>
@@ -2754,7 +2754,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmAdult50to64"></code>
             </coding>
          </code>
@@ -2766,7 +2766,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmAdult65to74"></code>
             </coding>
          </code>
@@ -2778,7 +2778,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmAdult75plus"></code>
             </coding>
          </code>
@@ -2790,7 +2790,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmUnk"></code>
             </coding>
          </code>
@@ -2802,7 +2802,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmPed0to4"></code>
             </coding>
          </code>
@@ -2814,7 +2814,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmPed5to17"></code>
             </coding>
          </code>
@@ -2826,7 +2826,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmAdult18to49"></code>
             </coding>
          </code>
@@ -2838,7 +2838,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmAdult50to64"></code>
             </coding>
          </code>
@@ -2850,7 +2850,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmAdult65to74"></code>
             </coding>
          </code>
@@ -2862,7 +2862,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmAdult75plus"></code>
             </coding>
          </code>
@@ -2874,7 +2874,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmUnk"></code>
             </coding>
          </code>
@@ -2886,7 +2886,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmPed0to4"></code>
             </coding>
          </code>
@@ -2898,7 +2898,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmPed5to17"></code>
             </coding>
          </code>
@@ -2910,7 +2910,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmAdult18to49"></code>
             </coding>
          </code>
@@ -2922,7 +2922,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmAdult50to64"></code>
             </coding>
          </code>
@@ -2934,7 +2934,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmAdult65to74"></code>
             </coding>
          </code>
@@ -2946,7 +2946,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmAdult75plus"></code>
             </coding>
          </code>
@@ -2958,7 +2958,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmUnk"></code>
             </coding>
          </code>
@@ -2971,11 +2971,11 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
             <code value="numInPtBedsAdult"></code>
          </coding>
       </code>
-      <population id="d2e4301">
+      <population id="d2e4301-adult-inpatient">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -2992,11 +2992,11 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
             <code value="numInPtBedsOccAdult"></code>
          </coding>
       </code>
-      <population id="d2e4301">
+      <population id="d2e4301-occupied-adult-inpatient">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -3012,7 +3012,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19HospPatsAdult"></code>
             </coding>
          </code>
@@ -3024,7 +3024,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluHospPatsAdult"></code>
             </coding>
          </code>
@@ -3036,7 +3036,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVHospPatsAdult"></code>
             </coding>
          </code>
@@ -3048,7 +3048,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmAdult18to49"></code>
             </coding>
          </code>
@@ -3060,7 +3060,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmAdult50to64"></code>
             </coding>
          </code>
@@ -3072,7 +3072,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmAdult65to74"></code>
             </coding>
          </code>
@@ -3084,7 +3084,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmAdult75plus"></code>
             </coding>
          </code>
@@ -3096,7 +3096,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmUnk"></code>
             </coding>
          </code>
@@ -3108,7 +3108,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmAdult18to49"></code>
             </coding>
          </code>
@@ -3120,7 +3120,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmAdult50to64"></code>
             </coding>
          </code>
@@ -3132,7 +3132,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmAdult65to74"></code>
             </coding>
          </code>
@@ -3144,7 +3144,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmAdult75plus"></code>
             </coding>
          </code>
@@ -3156,7 +3156,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmUnk"></code>
             </coding>
          </code>
@@ -3168,7 +3168,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmAdult18to49"></code>
             </coding>
          </code>
@@ -3180,7 +3180,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmAdult50to64"></code>
             </coding>
          </code>
@@ -3192,7 +3192,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmAdult65to74"></code>
             </coding>
          </code>
@@ -3204,7 +3204,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmAdult75plus"></code>
             </coding>
          </code>
@@ -3216,7 +3216,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmUnk"></code>
             </coding>
          </code>
@@ -3229,11 +3229,11 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
             <code value="numInPtBedsPed"></code>
          </coding>
       </code>
-      <population id="d2e4301">
+      <population id="d2e4301-ped-inpatient">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -3250,11 +3250,11 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
             <code value="numInPtBedsOccPed"></code>
          </coding>
       </code>
-      <population id="d2e4301">
+      <population id="d2e4301-occupied-ped-inpatient">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -3270,7 +3270,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19HospPatsPed"></code>
             </coding>
          </code>
@@ -3282,7 +3282,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluHospPatsPed"></code>
             </coding>
          </code>
@@ -3294,7 +3294,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVHospPatsPed"></code>
             </coding>
          </code>
@@ -3306,7 +3306,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmPed0to4"></code>
             </coding>
          </code>
@@ -3318,7 +3318,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmPed5to17"></code>
             </coding>
          </code>
@@ -3330,7 +3330,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmUnk"></code>
             </coding>
          </code>
@@ -3342,7 +3342,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmPed0to4"></code>
             </coding>
          </code>
@@ -3354,7 +3354,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmPed5to17"></code>
             </coding>
          </code>
@@ -3366,7 +3366,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmUnk"></code>
             </coding>
          </code>
@@ -3378,7 +3378,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmPed0to4"></code>
             </coding>
          </code>
@@ -3390,7 +3390,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmPed5to17"></code>
             </coding>
          </code>
@@ -3402,7 +3402,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmUnk"></code>
             </coding>
          </code>
@@ -3415,11 +3415,11 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
             <code value="numICUBeds"></code>
          </coding>
       </code>
-      <population id="d2e4301">
+      <population id="d2e4301-icu">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -3436,11 +3436,11 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
             <code value="numICUBedsOcc"></code>
          </coding>
       </code>
-      <population id="d2e4301">
+      <population id="d2e4301-occupied-icu">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -3456,7 +3456,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19ICUPatsAdult"></code>
             </coding>
          </code>
@@ -3468,7 +3468,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19ICUPatsPed"></code>
             </coding>
          </code>
@@ -3480,7 +3480,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluICUPatsAdult"></code>
             </coding>
          </code>
@@ -3492,7 +3492,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluICUPatsPed"></code>
             </coding>
          </code>
@@ -3504,7 +3504,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVICUPatsAdult"></code>
             </coding>
          </code>
@@ -3516,7 +3516,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVICUPatsPed"></code>
             </coding>
          </code>
@@ -3528,7 +3528,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmPed0to4"></code>
             </coding>
          </code>
@@ -3540,7 +3540,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmPed5to17"></code>
             </coding>
          </code>
@@ -3552,7 +3552,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmAdult18to49"></code>
             </coding>
          </code>
@@ -3564,7 +3564,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmAdult50to64"></code>
             </coding>
          </code>
@@ -3576,7 +3576,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmAdult65to74"></code>
             </coding>
          </code>
@@ -3588,7 +3588,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmAdult75plus"></code>
             </coding>
          </code>
@@ -3600,7 +3600,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmUnk"></code>
             </coding>
          </code>
@@ -3612,7 +3612,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmPed0to4"></code>
             </coding>
          </code>
@@ -3624,7 +3624,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmPed5to17"></code>
             </coding>
          </code>
@@ -3636,7 +3636,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmAdult18to49"></code>
             </coding>
          </code>
@@ -3648,7 +3648,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmAdult50to64"></code>
             </coding>
          </code>
@@ -3660,7 +3660,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmAdult65to74"></code>
             </coding>
          </code>
@@ -3672,7 +3672,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmAdult75plus"></code>
             </coding>
          </code>
@@ -3684,7 +3684,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmUnk"></code>
             </coding>
          </code>
@@ -3696,7 +3696,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmPed0to4"></code>
             </coding>
          </code>
@@ -3708,7 +3708,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmPed5to17"></code>
             </coding>
          </code>
@@ -3720,7 +3720,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmAdult18to49"></code>
             </coding>
          </code>
@@ -3732,7 +3732,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmAdult50to64"></code>
             </coding>
          </code>
@@ -3744,7 +3744,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmAdult65to74"></code>
             </coding>
          </code>
@@ -3756,7 +3756,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmAdult75plus"></code>
             </coding>
          </code>
@@ -3768,7 +3768,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmUnk"></code>
             </coding>
          </code>
@@ -3781,11 +3781,11 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
             <code value="numICUBedsAdult"></code>
          </coding>
       </code>
-      <population id="d2e4301">
+      <population id="d2e4301-adult-icu">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -3802,11 +3802,11 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
             <code value="numICUBedsOccAdult"></code>
          </coding>
       </code>
-      <population id="d2e4301">
+      <population id="d2e4301-occupied-adult-icu">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -3822,7 +3822,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19ICUPatsAdult"></code>
             </coding>
          </code>
@@ -3834,7 +3834,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluICUPatsAdult"></code>
             </coding>
          </code>
@@ -3846,7 +3846,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVICUPatsAdult"></code>
             </coding>
          </code>
@@ -3858,7 +3858,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmAdult18to49"></code>
             </coding>
          </code>
@@ -3870,7 +3870,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmAdult50to64"></code>
             </coding>
          </code>
@@ -3882,7 +3882,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmAdult65to74"></code>
             </coding>
          </code>
@@ -3894,7 +3894,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmAdult75plus"></code>
             </coding>
          </code>
@@ -3906,7 +3906,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmUnk"></code>
             </coding>
          </code>
@@ -3918,7 +3918,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmAdult18to49"></code>
             </coding>
          </code>
@@ -3930,7 +3930,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmAdult50to64"></code>
             </coding>
          </code>
@@ -3942,7 +3942,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmAdult65to74"></code>
             </coding>
          </code>
@@ -3954,7 +3954,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmAdult75plus"></code>
             </coding>
          </code>
@@ -3966,7 +3966,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmUnk"></code>
             </coding>
          </code>
@@ -3978,7 +3978,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmAdult18to49"></code>
             </coding>
          </code>
@@ -3990,7 +3990,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmAdult50to64"></code>
             </coding>
          </code>
@@ -4002,7 +4002,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmAdult65to74"></code>
             </coding>
          </code>
@@ -4014,7 +4014,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmAdult75plus"></code>
             </coding>
          </code>
@@ -4026,7 +4026,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmUnk"></code>
             </coding>
          </code>
@@ -4039,11 +4039,11 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
             <code value="numICUBedsPed"></code>
          </coding>
       </code>
-      <population id="d2e4301">
+      <population id="d2e4301-ped-icu">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -4060,11 +4060,11 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
             <code value="numICUBedsOccPed"></code>
          </coding>
       </code>
-      <population id="d2e4301">
+      <population id="d2e4301-occupied-ped-icu">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -4080,7 +4080,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19ICUPatsPed"></code>
             </coding>
          </code>
@@ -4092,7 +4092,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluICUPatsPed"></code>
             </coding>
          </code>
@@ -4104,7 +4104,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVICUPatsPed"></code>
             </coding>
          </code>
@@ -4116,7 +4116,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmPed0to4"></code>
             </coding>
          </code>
@@ -4128,7 +4128,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmPed5to17"></code>
             </coding>
          </code>
@@ -4140,7 +4140,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfC19NewAdmUnk"></code>
             </coding>
          </code>
@@ -4152,7 +4152,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmPed0to4"></code>
             </coding>
          </code>
@@ -4164,7 +4164,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmPed5to17"></code>
             </coding>
          </code>
@@ -4176,7 +4176,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfFluNewAdmUnk"></code>
             </coding>
          </code>
@@ -4188,7 +4188,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmPed0to4"></code>
             </coding>
          </code>
@@ -4200,7 +4200,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmPed5to17"></code>
             </coding>
          </code>
@@ -4212,7 +4212,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="numConfRSVNewAdmUnk"></code>
             </coding>
          </code>
@@ -4225,11 +4225,11 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
             <code value="N95Mask3DaySupply"></code>
          </coding>
       </code>
-      <population id="d2e4301">
+      <population id="d2e4301-n95-3day">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -4245,7 +4245,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="N95MaskSupplyDays"></code>
             </coding>
          </code>
@@ -4258,11 +4258,11 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
             <code value="surgMask3DaySupply"></code>
          </coding>
       </code>
-      <population id="d2e4301">
+      <population id="d2e4301-or-surgical-mask-3day">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -4278,7 +4278,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="surgMaskSupplyDays"></code>
             </coding>
          </code>
@@ -4291,11 +4291,11 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
             <code value="shield3DaySupply"></code>
          </coding>
       </code>
-      <population id="d2e4301">
+      <population id="d2e4301-face-shield-3-day">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -4311,7 +4311,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="shieldSupplyDays"></code>
             </coding>
          </code>
@@ -4324,11 +4324,11 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
             <code value="gown3DaySupply"></code>
          </coding>
       </code>
-      <population id="d2e4301">
+      <population id="d2e4301-gown-3-day">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -4344,7 +4344,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="gownSupplyDays"></code>
             </coding>
          </code>
@@ -4357,11 +4357,11 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
             <code value="glove3DaySupply"></code>
          </coding>
       </code>
-      <population id="d2e4301">
+      <population id="d2e4301-glove-3-day">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -4377,7 +4377,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
       <stratifier>
          <code>
             <coding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-HRD-example-codes"></system>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes"></system>
                <code value="gloveSupplyDays"></code>
             </coding>
          </code>
