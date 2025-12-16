@@ -1,4 +1,6 @@
-The US SAFR IG includes practical use cases demonstrating its application across various levels of healthcare resource management. These use cases highlight the framework’s ability to address immediate and strategic challenges. For more context, see [Reporting Scenarios](specification.html).
+The US SAFR IG includes example use cases demonstrating its application across various levels of healthcare resource management. These use cases highlight the framework’s ability to address immediate and strategic challenges. For more context, see [Reporting Scenarios](specification.html) where the data exchange methods are detailed. Federal agencies will typically receive data from NHSN.
+
+Note: the use cases here are examples only, and are specific to the example measures included in this IG for Bed Capacity and Hospital Repiratory Data reporting. However, the framework that this IG creates can be used for other situational awareness use cases beyond bed capacity and HRD.
 
 ### United States Situational Awareness for Facilitation of Response Measure Reporting Use Cases
 
@@ -11,7 +13,7 @@ During a severe flu season, hospitals in a specific jurisdiction experience a hi
 
 **1. Bed and Staffing Allocation**
 - Hospitals use US SAFR to report real-time bed occupancy and availability every 15 minutes, categorized by bed type.
-- Hospital administrators leverage this data to monitor capacity and prioritize staffing where it is most urgently needed.
+- Hospital administrators leverage this data to monitor hospital capacity and prioritize staffing where it is most urgently needed.
 
 **2. Resource Allocation**
 - By analyzing near real-time bed occupancy and patient influx data, hospitals coordinate with temporary staffing agencies or reallocate internal staff to address shortages effectively.
@@ -35,12 +37,12 @@ During a severe flu season, hospitals in a specific jurisdiction experience a hi
 #### Use Case #2: Emergency Response Coordination for Natural Disaster Evacuations
 
 **Scenario**
-In response to an approaching hurricane on the Texas coastline, state emergency management and health departments plan for hospital evacuations and patient redistribution to inland facilities.
+In response to an approaching hurricane on the Texas coastline, local and state emergency management and health departments plan for hospital evacuations of patients to inland facilities.
 
 **Facility/Hospital-Level Use**
 
 **1. Resource Mobilization and Preparedness**
-- Coastal hospitals report real-time bed availability and anticipated needs using US SAFR, enabling inland hospitals to prepare and allocate space in advance.
+- Coastal hospitals report real-time bed availability and anticipated needs using US SAFR to local and state officials, enabling inland hospitals to prepare and allocate resources in advance.
 
 **2. Evacuation Logistics**
 - Real-time data supports collaboration with EMS and transport services, identifying available ICU and specialty care beds at inland facilities for safe patient transfers.
@@ -48,7 +50,7 @@ In response to an approaching hurricane on the Texas coastline, state emergency 
 **Jurisdiction-Level Use**
 
 **1. Cross-Hospital Coordination**
-- State health departments monitor bed capacity across facilities and direct ambulances to locations with adequate resources.
+- Local and state officials monitor bed capacity across facilities and direct ambulances to locations with adequate resources.
 
 **2. Resource Allocation Across Jurisdictions**
 - Aggregated data informs the deployment of critical supplies, ensuring inland hospitals are prepared to receive evacuees.
@@ -56,7 +58,7 @@ In response to an approaching hurricane on the Texas coastline, state emergency 
 **Federal-Level Use**
 
 **1. Emergency Support and Resource Allocation**
-- Federal agencies assess regional capacity and deploy FEMA medical personnel or National Guard resources as needed.
+- Federal agencies assess regional capacity and deploy FEMA medical personnel or National Guard resources as needed. 
 
 **2.Unified Federal and State Response**
 - US SAFR facilitates coordinated federal-state responses, optimizing resource distribution and avoiding redundancies.
@@ -66,14 +68,6 @@ In response to an approaching hurricane on the Texas coastline, state emergency 
 For all bed censuses and counts, the following bed types should be <u>included</u>:
 1. All inpatient staffed and unblocked beds
 2. Observation beds
-
-#### Bed Exclusion Criteria
-
-For all bed censuses and counts, the following bed types should be <u>excluded</u>:
-1. Virtual beds or locations in the EMR that are not physical spaces (i.e., beds used for interoperative phase of care or in certain operative settings or virtual staging areas for admissions.)
-2. Beds no longer in use, even in case of surge
-3. Blocked beds (i.e., beds blocked due to logistical or maintenance challenges, staffing restrictions, isolation, etc.) 
-
 
 #### Unit Inclusion Criteria
 
@@ -90,6 +84,14 @@ For all bed censuses and counts, the following bed types should be <u>excluded</
 - PICU  Pediatric intensive care unit
 - Psych Psychiatric
 - Rehab Rehabilitation
+
+#### Bed Exclusion Criteria
+
+For all bed censuses and counts, the following bed types should be <u>excluded</u>:
+1. Virtual beds or locations in the EMR that are not physical spaces (i.e., beds used for interoperative phase of care or in certain operative settings or virtual staging areas for admissions.)
+2. Beds no longer in use, even in case of surge
+3. Blocked beds (i.e., beds blocked due to logistical or maintenance challenges, staffing restrictions, isolation, etc.) 
+
 
 #### Bed Capacity Example
 <table class="grid">
