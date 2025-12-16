@@ -47,7 +47,7 @@ In this scenario both the Data Source and Digital Quality Measure Evaluation Eng
 
 In this scenario the Measure Evaluation Engine SHALL perform a FHIR POST or PUT to push the MeasureReport Bundle to the MeasureReport Recipient (NHSN).
 <figure>
-  {% include usfr-push-1.svg %}
+  {% include usfr-push-1_mermaid.svg %}
   <figcaption></figcaption>
 </figure>
 
@@ -66,7 +66,7 @@ In this scenario, both the Digital Quality Measure Evaluation Engine and the Mea
 In this scenario the Data Source SHALL have a FHIR API that at a minimum provides read access to all US Core profiles. Some measures may require additional FHIR resources beyond US Core, such as MedicationAdministration.
 
 <figure>
-  {%include usfr-1.svg %}
+  {%include usfr-1_mermaid.svg %}
   <figcaption></figcaption>
 </figure>
 
@@ -83,7 +83,7 @@ In this scenario, a state/jurisdiction retrieves the measure bundle from NHSN an
 In this scenario the state/jurisdiction SHALL have a FHIR API that at a minimum provides read access to all US Core profiles. Some measures may require additional FHIR resources beyond US Core, such as MedicationAdministration.
 
 <figure>
-  {% include usfr-2.svg %}
+  {% include usfr-2_mermaid.svg %}
   <figcaption></figcaption>
 </figure>
 

@@ -1,0 +1,15 @@
+flowchart RL
+
+subgraph HF["Healthcare Facility"]
+  EHR["Data Source (EHR)"]
+end
+
+subgraph NHSN["NHSN"]
+  MEE["Measure Evaluation Engine"]
+  MS["Measure Source"]
+  Recipient["MeasureReport Recipient and Other NHSN Systems"]
+end
+
+MS -->|"(1)<br/>Retrieve Measure Bundle"| MEE
+EHR <--> |"(2)<br/>Query Data Source"| MEE
+MEE -->|"(3)<br/>Submit MeasureReport Bundle"| Recipient

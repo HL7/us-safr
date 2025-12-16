@@ -1,0 +1,17 @@
+flowchart RL
+
+subgraph HF["Healthcare Facility"]
+  EHR["Data Source (EHR)"]
+  MEE1["Measure Evaluation Engine"]
+end
+
+subgraph NHSN["NHSN"]
+  MS["Measure Source"]
+  Recipient["MeasureReport Recipient"]
+  other["Other NHSN System<br/>(out of scope for this IG)"]
+end
+
+MEE1 -->|"(1)<br/>Retrieve Measure Bundle"| MS
+EHR <--> |"(2)<br/>Query Data Source<br/>(FHIR or other API)"| MEE1
+MEE1 -->|"(3)<br/>Submit MeasureReport Bundle"| Recipient
+Recipient -->|"(4)<br/>Forward to NHSN Systems"| other
