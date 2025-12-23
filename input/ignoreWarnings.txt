@@ -1,0 +1,4 @@
+== Suppressed Messages ==
+
+# Error due to cross version extension slicing issue in tooling. See https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Cross-Version.20Extension.20Slicing.20issue.20in.20dependent.20IGs/with/516557595
+Slicing cannot be evaluated: Unable to resolve profile CanonicalType[http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.supplementalData]

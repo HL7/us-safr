@@ -1,0 +1,2 @@
+Where does the Bed Capacity Measure define unoccupied peds, etc.?
+What does the BedsCapacityReporting group include? Is it duplicative of "AllBeds"?
