@@ -16,22 +16,8 @@
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-directReferenceCode">
             <valueCoding>
                <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-               <code value="HOSP"></code>
-               <display value="Hospital"></display>
-            </valueCoding>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-directReferenceCode">
-            <valueCoding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-               <code value="OTH"></code>
-               <display value="Other facility-within-facility or subunit"></display>
-            </valueCoding>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-directReferenceCode">
-            <valueCoding>
-               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-               <code value="IRF"></code>
-               <display value="Inpatient Rehabilitation"></display>
+               <code value="CHLD"></code>
+               <display value="Children's or Pediatric"></display>
             </valueCoding>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-directReferenceCode">
@@ -44,15 +30,22 @@
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-directReferenceCode">
             <valueCoding>
                <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-               <code value="CHLD"></code>
-               <display value="Children's or Pediatric"></display>
+               <code value="OTH"></code>
+               <display value="Other facility-within-facility or subunit"></display>
             </valueCoding>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-directReferenceCode">
             <valueCoding>
                <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-               <code value="PEDS"></code>
-               <display value="Pediatric"></display>
+               <code value="HOSP"></code>
+               <display value="Hospital"></display>
+            </valueCoding>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-directReferenceCode">
+            <valueCoding>
+               <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+               <code value="IRF"></code>
+               <display value="Inpatient Rehabilitation"></display>
             </valueCoding>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -93,139 +86,12 @@
                <valueString value="EncounterCheck"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;EncounterCheck&quot;:
+               <valueString value="define EncounterCheck:
   exists(&quot;Encounters&quot; Encounters
   where Encounters.period overlaps &quot;Measurement Period&quot;)"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="2"></valueInteger>
-            </extension>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
-            <extension url="libraryName">
-               <valueString value="BedCapacityMeasure"></valueString>
-            </extension>
-            <extension url="name">
-               <valueString value="LocationIsHOSP"></valueString>
-            </extension>
-            <extension url="statement">
-               <valueString value="define &quot;LocationIsHOSP&quot;:
-  exists(
-    Location.type types
-    where types ~ &quot;HOSP&quot;
-  )"></valueString>
-            </extension>
-            <extension url="displaySequence">
-               <valueInteger value="3"></valueInteger>
-            </extension>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
-            <extension url="libraryName">
-               <valueString value="BedCapacityMeasure"></valueString>
-            </extension>
-            <extension url="name">
-               <valueString value="LocationIsOTH"></valueString>
-            </extension>
-            <extension url="statement">
-               <valueString value="define &quot;LocationIsOTH&quot;:
-  exists(
-    Location.type types
-    where types ~ &quot;OTH&quot;
-  )"></valueString>
-            </extension>
-            <extension url="displaySequence">
-               <valueInteger value="4"></valueInteger>
-            </extension>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
-            <extension url="libraryName">
-               <valueString value="BedCapacityMeasure"></valueString>
-            </extension>
-            <extension url="name">
-               <valueString value="Burn Beds Initial Population"></valueString>
-            </extension>
-            <extension url="statement">
-               <valueString value="define &quot;Burn Beds Initial Population&quot;:
-  IsBedLocation
-  and EncounterCheck
-  and LocationIsHOSP
-  and LocationIsOTH"></valueString>
-            </extension>
-            <extension url="displaySequence">
-               <valueInteger value="5"></valueInteger>
-            </extension>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
-            <extension url="libraryName">
-               <valueString value="BedCapacityMeasure"></valueString>
-            </extension>
-            <extension url="name">
-               <valueString value="LocationIsIRF"></valueString>
-            </extension>
-            <extension url="statement">
-               <valueString value="define &quot;LocationIsIRF&quot;:
-  exists(
-    Location.type types
-    where types ~ &quot;IRF&quot;
-  )"></valueString>
-            </extension>
-            <extension url="displaySequence">
-               <valueInteger value="6"></valueInteger>
-            </extension>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
-            <extension url="libraryName">
-               <valueString value="BedCapacityMeasure"></valueString>
-            </extension>
-            <extension url="name">
-               <valueString value="NICU Beds Initial Population"></valueString>
-            </extension>
-            <extension url="statement">
-               <valueString value="define &quot;NICU Beds Initial Population&quot;:
-  IsBedLocation
-  and EncounterCheck
-  and LocationIsHOSP
-  and LocationIsIRF
-  and LocationIsOTH"></valueString>
-            </extension>
-            <extension url="displaySequence">
-               <valueInteger value="7"></valueInteger>
-            </extension>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
-            <extension url="libraryName">
-               <valueString value="BedCapacityMeasure"></valueString>
-            </extension>
-            <extension url="name">
-               <valueString value="Surge Active ICU Beds Initial Population"></valueString>
-            </extension>
-            <extension url="statement">
-               <valueString value="define &quot;Surge Active ICU Beds Initial Population&quot;:
-  IsBedLocation
-  and EncounterCheck
-  and LocationIsHOSP
-  and LocationIsOTH"></valueString>
-            </extension>
-            <extension url="displaySequence">
-               <valueInteger value="8"></valueInteger>
-            </extension>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
-            <extension url="libraryName">
-               <valueString value="BedCapacityMeasure"></valueString>
-            </extension>
-            <extension url="name">
-               <valueString value="LocationIsIPF"></valueString>
-            </extension>
-            <extension url="statement">
-               <valueString value="define &quot;LocationIsIPF&quot;:
-  exists(
-    Location.type types
-    where types ~ &quot;IPF&quot;
-  )"></valueString>
-            </extension>
-            <extension url="displaySequence">
-               <valueInteger value="9"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -243,6 +109,128 @@
   )"></valueString>
             </extension>
             <extension url="displaySequence">
+               <valueInteger value="3"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Peds Total Beds Occupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Peds Total Beds Occupied Initial Population&quot;:
+  IsBedLocation
+  and EncounterCheck
+  and &quot;LocationIsCHLD&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="4"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="NoEncounterCheck"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define NoEncounterCheck:
+  not EncounterCheck"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="5"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="All Beds Unoccupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;All Beds Unoccupied Initial Population&quot;:
+  IsBedLocation
+  and NoEncounterCheck"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="6"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Peds ED Census Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Peds ED Census Initial Population&quot;:
+  IsBedLocation
+  and exists(
+    [Encounter: &quot;Emergency Department Visit&quot;] EDVisit
+    where EDVisit.period overlaps &quot;Measurement Period&quot;
+  )
+  and &quot;LocationIsCHLD&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="7"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="LocationIsIPF"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;LocationIsIPF&quot;:
+  exists(
+    Location.type types
+    where types ~ &quot;IPF&quot;
+  )"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="8"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="LocationIsOTH"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;LocationIsOTH&quot;:
+  exists(
+    Location.type types
+    where types ~ &quot;OTH&quot;
+  )"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="9"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Adult PCU Beds Unoccupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Adult PCU Beds Unoccupied Initial Population&quot;:
+  IsBedLocation
+  and NoEncounterCheck
+  and &quot;LocationIsIPF&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
                <valueInteger value="10"></valueInteger>
             </extension>
          </extension>
@@ -251,13 +239,13 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="LocationIsPEDS"></valueString>
+               <valueString value="LocationIsHOSP"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;LocationIsPEDS&quot;:
+               <valueString value="define &quot;LocationIsHOSP&quot;:
   exists(
     Location.type types
-    where types ~ &quot;PEDS&quot;
+    where types ~ &quot;HOSP&quot;
   )"></valueString>
             </extension>
             <extension url="displaySequence">
@@ -269,16 +257,14 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Peds Psych Beds Initial Population"></valueString>
+               <valueString value="Peds ICU Beds Unoccupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Peds Psych Beds Initial Population&quot;:
+               <valueString value="define &quot;Peds ICU Beds Unoccupied Initial Population&quot;:
   IsBedLocation
-  and EncounterCheck
-  and LocationIsHOSP
-  and LocationIsIPF
-  and (LocationIsCHLD or LocationIsPEDS)
-  and LocationIsOTH"></valueString>
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsCHLD&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="12"></valueInteger>
@@ -289,13 +275,13 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Specialty Beds Initial Population"></valueString>
+               <valueString value="Negative Pressure Beds Unoccupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Specialty Beds Initial Population&quot;:
+               <valueString value="define &quot;Negative Pressure Beds Unoccupied Initial Population&quot;:
   IsBedLocation
-  and EncounterCheck
-  and LocationIsOTH"></valueString>
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="13"></valueInteger>
@@ -306,15 +292,14 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Surge Active Total Beds Initial Population"></valueString>
+               <valueString value="Adult PCU Beds Occupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Surge Active Total Beds Initial Population&quot;:
+               <valueString value="define &quot;Adult PCU Beds Occupied Initial Population&quot;:
   IsBedLocation
   and EncounterCheck
-  and LocationIsHOSP
-  and (LocationIsCHLD or LocationIsPEDS)
-  and LocationIsOTH"></valueString>
+  and &quot;LocationIsIPF&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="14"></valueInteger>
@@ -325,16 +310,14 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Peds ED Initial Population"></valueString>
+               <valueString value="Peds PCU Beds Unoccupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Peds ED Initial Population&quot;:
+               <valueString value="define &quot;Peds PCU Beds Unoccupied Initial Population&quot;:
   IsBedLocation
-  and exists(
-    [Encounter: &quot;Emergency Department Visit&quot;] EDVisit
-    where EDVisit.period overlaps &quot;Measurement Period&quot;
-  )
-  and (LocationIsCHLD or LocationIsPEDS)"></valueString>
+  and NoEncounterCheck
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="15"></valueInteger>
@@ -345,13 +328,14 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Adult ICU Beds Initial Population"></valueString>
+               <valueString value="LocationIsIRF"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Adult ICU Beds Initial Population&quot;:
-  IsBedLocation
-  and EncounterCheck
-  and LocationIsHOSP"></valueString>
+               <valueString value="define &quot;LocationIsIRF&quot;:
+  exists(
+    Location.type types
+    where types ~ &quot;IRF&quot;
+  )"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="16"></valueInteger>
@@ -362,15 +346,15 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Adult MTMS Beds Initial Population"></valueString>
+               <valueString value="OB Beds Occupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Adult MTMS Beds Initial Population&quot;:
+               <valueString value="define &quot;OB Beds Occupied Initial Population&quot;:
   IsBedLocation
   and EncounterCheck
-  and LocationIsHOSP
-  and LocationIsIRF
-  and LocationIsOTH"></valueString>
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="17"></valueInteger>
@@ -381,15 +365,14 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="NICU4 Beds Initial Population"></valueString>
+               <valueString value="Surge Inactive NonICU Beds Unoccupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;NICU4 Beds Initial Population&quot;:
+               <valueString value="define &quot;Surge Inactive NonICU Beds Unoccupied Initial Population&quot;:
   IsBedLocation
-  and EncounterCheck
-  and LocationIsHOSP
-  and LocationIsIRF
-  and LocationIsOTH"></valueString>
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsCHLD&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="18"></valueInteger>
@@ -400,13 +383,15 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Rehab Beds Initial Population"></valueString>
+               <valueString value="NICU3 Beds Unoccupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Rehab Beds Initial Population&quot;:
+               <valueString value="define &quot;NICU3 Beds Unoccupied Initial Population&quot;:
   IsBedLocation
-  and EncounterCheck
-  and LocationIsIRF"></valueString>
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsCHLD&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="19"></valueInteger>
@@ -417,14 +402,15 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Adult NonICU Beds Initial Population"></valueString>
+               <valueString value="Peds ICULOC Beds Occupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Adult NonICU Beds Initial Population&quot;:
+               <valueString value="define &quot;Peds ICULOC Beds Occupied Initial Population&quot;:
   IsBedLocation
   and EncounterCheck
-  and LocationIsHOSP
-  and LocationIsOTH"></valueString>
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="20"></valueInteger>
@@ -435,14 +421,15 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Surge Inactive ICU Beds Initial Population"></valueString>
+               <valueString value="Surge Inactive Total Beds Occupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Surge Inactive ICU Beds Initial Population&quot;:
+               <valueString value="define &quot;Surge Inactive Total Beds Occupied Initial Population&quot;:
   IsBedLocation
   and EncounterCheck
-  and LocationIsHOSP
-  and LocationIsOTH"></valueString>
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="21"></valueInteger>
@@ -453,13 +440,15 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Adult Obs Beds Initial Population"></valueString>
+               <valueString value="Peds NonICU Beds Unoccupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Adult Obs Beds Initial Population&quot;:
+               <valueString value="define &quot;Peds NonICU Beds Unoccupied Initial Population&quot;:
   IsBedLocation
-  and EncounterCheck
-  and LocationIsOTH"></valueString>
+  and NoEncounterCheck
+  and &quot;LocationIsIPF&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="22"></valueInteger>
@@ -470,14 +459,16 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Surge Inactive NonICU Beds Initial Population"></valueString>
+               <valueString value="Peds MTMS Beds Unoccupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Surge Inactive NonICU Beds Initial Population&quot;:
+               <valueString value="define &quot;Peds MTMS Beds Unoccupied Initial Population&quot;:
   IsBedLocation
-  and EncounterCheck
-  and LocationIsHOSP
-  and (LocationIsCHLD or LocationIsPEDS)"></valueString>
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="23"></valueInteger>
@@ -488,13 +479,15 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Peds Total Beds Initial Population"></valueString>
+               <valueString value="Peds NonICU Beds Occupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Peds Total Beds Initial Population&quot;:
+               <valueString value="define &quot;Peds NonICU Beds Occupied Initial Population&quot;:
   IsBedLocation
   and EncounterCheck
-  and (LocationIsCHLD or LocationIsPEDS)"></valueString>
+  and &quot;LocationIsIPF&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="24"></valueInteger>
@@ -505,16 +498,16 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Peds MTMS Beds Initial Population"></valueString>
+               <valueString value="Peds Psych Beds Occupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Peds MTMS Beds Initial Population&quot;:
+               <valueString value="define &quot;Peds Psych Beds Occupied Initial Population&quot;:
   IsBedLocation
   and EncounterCheck
-  and LocationIsHOSP
-  and LocationIsIRF
-  and (LocationIsCHLD or LocationIsPEDS)
-  and LocationIsOTH"></valueString>
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIPF&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="25"></valueInteger>
@@ -525,17 +518,15 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Adult ED Initial Population"></valueString>
+               <valueString value="Surge Inactive Total Beds Unoccupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Adult ED Initial Population&quot;:
+               <valueString value="define &quot;Surge Inactive Total Beds Unoccupied Initial Population&quot;:
   IsBedLocation
-  and exists(
-    [Encounter: &quot;Emergency Department Visit&quot;] EDVisit
-    where EDVisit.period overlaps &quot;Measurement Period&quot;
-  )
-  and LocationIsHOSP
-  and LocationIsOTH"></valueString>
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="26"></valueInteger>
@@ -546,15 +537,13 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Surge Inactive Total Beds Initial Population"></valueString>
+               <valueString value="Specialty Beds Occupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Surge Inactive Total Beds Initial Population&quot;:
+               <valueString value="define &quot;Specialty Beds Occupied Initial Population&quot;:
   IsBedLocation
   and EncounterCheck
-  and LocationIsHOSP
-  and (LocationIsCHLD or LocationIsPEDS)
-  and LocationIsOTH"></valueString>
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="27"></valueInteger>
@@ -565,13 +554,14 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Negative Pressure Beds Initial Population"></valueString>
+               <valueString value="Surge Active ICU Beds Occupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Negative Pressure Beds Initial Population&quot;:
+               <valueString value="define &quot;Surge Active ICU Beds Occupied Initial Population&quot;:
   IsBedLocation
   and EncounterCheck
-  and LocationIsHOSP"></valueString>
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="28"></valueInteger>
@@ -582,16 +572,14 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Peds Obs Beds Initial Population"></valueString>
+               <valueString value="Adult NonICU Beds Occupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Peds Obs Beds Initial Population&quot;:
+               <valueString value="define &quot;Adult NonICU Beds Occupied Initial Population&quot;:
   IsBedLocation
   and EncounterCheck
-  and LocationIsHOSP
-  and LocationIsIRF
-  and (LocationIsCHLD or LocationIsPEDS)
-  and LocationIsOTH"></valueString>
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="29"></valueInteger>
@@ -602,11 +590,15 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Bed Capacity Initial Population"></valueString>
+               <valueString value="Specialty NonCrib Beds Unoccupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Bed Capacity Initial Population&quot;:
-  IsBedLocation"></valueString>
+               <valueString value="define &quot;Specialty NonCrib Beds Unoccupied Initial Population&quot;:
+  IsBedLocation
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="30"></valueInteger>
@@ -617,16 +609,16 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="NICU1 Beds Initial Population"></valueString>
+               <valueString value="Peds Psych Beds Unoccupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;NICU1 Beds Initial Population&quot;:
+               <valueString value="define &quot;Peds Psych Beds Unoccupied Initial Population&quot;:
   IsBedLocation
-  and EncounterCheck
-  and LocationIsHOSP
-  and LocationIsIRF
-  and (LocationIsCHLD or LocationIsPEDS)
-  and LocationIsOTH"></valueString>
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIPF&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="31"></valueInteger>
@@ -637,15 +629,13 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Peds ICULOC Beds Initial Population"></valueString>
+               <valueString value="Rehab Beds Unoccupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Peds ICULOC Beds Initial Population&quot;:
+               <valueString value="define &quot;Rehab Beds Unoccupied Initial Population&quot;:
   IsBedLocation
-  and EncounterCheck
-  and LocationIsHOSP
-  and (LocationIsCHLD or LocationIsPEDS)
-  and LocationIsOTH"></valueString>
+  and NoEncounterCheck
+  and &quot;LocationIsIRF&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="32"></valueInteger>
@@ -656,18 +646,15 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Total ED Initial Population"></valueString>
+               <valueString value="Adult MTMS Beds Unoccupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Total ED Initial Population&quot;:
+               <valueString value="define &quot;Adult MTMS Beds Unoccupied Initial Population&quot;:
   IsBedLocation
-  and exists(
-    [Encounter: &quot;Emergency Department Visit&quot;] EDVisit
-    where EDVisit.period overlaps &quot;Measurement Period&quot;
-  )
-  and LocationIsHOSP
-  and (LocationIsCHLD or LocationIsPEDS)
-  and LocationIsOTH"></valueString>
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="33"></valueInteger>
@@ -678,12 +665,15 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="All Beds Initial Population"></valueString>
+               <valueString value="NICU3 Beds Occupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;All Beds Initial Population&quot;:
+               <valueString value="define &quot;NICU3 Beds Occupied Initial Population&quot;:
   IsBedLocation
-  and EncounterCheck"></valueString>
+  and EncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsCHLD&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="34"></valueInteger>
@@ -694,15 +684,15 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Adult Beds Initial Population"></valueString>
+               <valueString value="Adult Beds Unoccupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Adult Beds Initial Population&quot;:
+               <valueString value="define &quot;Adult Beds Unoccupied Initial Population&quot;:
   IsBedLocation
-  and EncounterCheck
-  and LocationIsHOSP
-  and LocationIsIRF
-  and LocationIsIPF"></valueString>
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsIPF&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="35"></valueInteger>
@@ -713,15 +703,14 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="NICU2 Beds Initial Population"></valueString>
+               <valueString value="Burn Beds Occupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;NICU2 Beds Initial Population&quot;:
+               <valueString value="define &quot;Burn Beds Occupied Initial Population&quot;:
   IsBedLocation
   and EncounterCheck
-  and LocationIsHOSP
-  and LocationIsIRF
-  and (LocationIsCHLD or LocationIsPEDS)"></valueString>
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="36"></valueInteger>
@@ -732,14 +721,14 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Nursery Beds Initial Population"></valueString>
+               <valueString value="Peds ICU Beds Occupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Nursery Beds Initial Population&quot;:
+               <valueString value="define &quot;Peds ICU Beds Occupied Initial Population&quot;:
   IsBedLocation
   and EncounterCheck
-  and LocationIsIRF
-  and (LocationIsCHLD or LocationIsPEDS)"></valueString>
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsCHLD&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="37"></valueInteger>
@@ -750,14 +739,16 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Adult PCU Beds Initial Population"></valueString>
+               <valueString value="NICU1 Beds Occupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Adult PCU Beds Initial Population&quot;:
+               <valueString value="define &quot;NICU1 Beds Occupied Initial Population&quot;:
   IsBedLocation
   and EncounterCheck
-  and LocationIsIPF
-  and LocationIsOTH"></valueString>
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="38"></valueInteger>
@@ -768,14 +759,13 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Peds PCU Beds Initial Population"></valueString>
+               <valueString value="Negative Pressure Beds Occupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Peds PCU Beds Initial Population&quot;:
+               <valueString value="define &quot;Negative Pressure Beds Occupied Initial Population&quot;:
   IsBedLocation
   and EncounterCheck
-  and (LocationIsCHLD or LocationIsPEDS)
-  and LocationIsOTH"></valueString>
+  and &quot;LocationIsHOSP&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="39"></valueInteger>
@@ -786,14 +776,13 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Peds ICU Beds Initial Population"></valueString>
+               <valueString value="Adult ICU Beds Occupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Peds ICU Beds Initial Population&quot;:
+               <valueString value="define &quot;Adult ICU Beds Occupied Initial Population&quot;:
   IsBedLocation
   and EncounterCheck
-  and LocationIsHOSP
-  and (LocationIsCHLD or LocationIsPEDS)"></valueString>
+  and &quot;LocationIsHOSP&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="40"></valueInteger>
@@ -804,15 +793,15 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Adult Psych Beds Initial Population"></valueString>
+               <valueString value="NICU4 Beds Unoccupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Adult Psych Beds Initial Population&quot;:
+               <valueString value="define &quot;NICU4 Beds Unoccupied Initial Population&quot;:
   IsBedLocation
-  and EncounterCheck
-  and LocationIsHOSP
-  and LocationIsIPF
-  and LocationIsOTH"></valueString>
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="41"></valueInteger>
@@ -823,15 +812,13 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Specialty NonCrib Beds Initial Population"></valueString>
+               <valueString value="Adult Obs Beds Unoccupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Specialty NonCrib Beds Initial Population&quot;:
+               <valueString value="define &quot;Adult Obs Beds Unoccupied Initial Population&quot;:
   IsBedLocation
-  and EncounterCheck
-  and LocationIsHOSP
-  and LocationIsIRF
-  and LocationIsOTH"></valueString>
+  and NoEncounterCheck
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="42"></valueInteger>
@@ -842,14 +829,14 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Adult ICULOC Beds Initial Population"></valueString>
+               <valueString value="Adult NonICU Beds Unoccupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Adult ICULOC Beds Initial Population&quot;:
+               <valueString value="define &quot;Adult NonICU Beds Unoccupied Initial Population&quot;:
   IsBedLocation
-  and EncounterCheck
-  and LocationIsHOSP
-  and LocationIsIPF"></valueString>
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="43"></valueInteger>
@@ -860,15 +847,16 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="NICU3Plus Beds Initial Population"></valueString>
+               <valueString value="Peds Obs Beds Occupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;NICU3Plus Beds Initial Population&quot;:
+               <valueString value="define &quot;Peds Obs Beds Occupied Initial Population&quot;:
   IsBedLocation
   and EncounterCheck
-  and LocationIsHOSP
-  and LocationIsIRF
-  and (LocationIsCHLD or LocationIsPEDS)"></valueString>
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="44"></valueInteger>
@@ -879,15 +867,15 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Peds NonICU Beds Initial Population"></valueString>
+               <valueString value="NICU Beds Occupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Peds NonICU Beds Initial Population&quot;:
+               <valueString value="define &quot;NICU Beds Occupied Initial Population&quot;:
   IsBedLocation
   and EncounterCheck
-  and LocationIsIPF
-  and (LocationIsCHLD or LocationIsPEDS)
-  and LocationIsOTH"></valueString>
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="45"></valueInteger>
@@ -898,14 +886,15 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Surge Active NonICU Beds Initial Population"></valueString>
+               <valueString value="NICU Beds Unoccupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Surge Active NonICU Beds Initial Population&quot;:
+               <valueString value="define &quot;NICU Beds Unoccupied Initial Population&quot;:
   IsBedLocation
-  and EncounterCheck
-  and LocationIsHOSP
-  and (LocationIsCHLD or LocationIsPEDS)"></valueString>
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="46"></valueInteger>
@@ -916,15 +905,14 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="OB Beds Initial Population"></valueString>
+               <valueString value="Nursery Beds Occupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;OB Beds Initial Population&quot;:
+               <valueString value="define &quot;Nursery Beds Occupied Initial Population&quot;:
   IsBedLocation
   and EncounterCheck
-  and LocationIsIRF
-  and (LocationIsCHLD or LocationIsPEDS)
-  and LocationIsOTH"></valueString>
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsCHLD&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="47"></valueInteger>
@@ -935,18 +923,678 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="NICU3 Beds Initial Population"></valueString>
+               <valueString value="Adult Psych Beds Unoccupied Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;NICU3 Beds Initial Population&quot;:
+               <valueString value="define &quot;Adult Psych Beds Unoccupied Initial Population&quot;:
   IsBedLocation
-  and EncounterCheck
-  and LocationIsHOSP
-  and LocationIsIRF
-  and (LocationIsCHLD or LocationIsPEDS)"></valueString>
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIPF&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
                <valueInteger value="48"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Adult ED Admitted Census Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Adult ED Admitted Census Initial Population&quot;:
+  IsBedLocation
+  and exists(
+    [Encounter: &quot;Emergency Department Visit&quot;] EDVisit
+    where EDVisit.period overlaps &quot;Measurement Period&quot;
+      and EDVisit.status in {'arrived', 'triaged', 'in-progress'}
+  )
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="49"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="NICU3Plus Beds Occupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;NICU3Plus Beds Occupied Initial Population&quot;:
+  IsBedLocation
+  and EncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsCHLD&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="50"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Surge Active NonICU Beds Unoccupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Surge Active NonICU Beds Unoccupied Initial Population&quot;:
+  IsBedLocation
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsCHLD&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="51"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Rehab Beds Occupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Rehab Beds Occupied Initial Population&quot;:
+  IsBedLocation
+  and EncounterCheck
+  and &quot;LocationIsIRF&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="52"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Surge Active Total Beds Occupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Surge Active Total Beds Occupied Initial Population&quot;:
+  IsBedLocation
+  and EncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="53"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Specialty NonCrib Beds Occupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Specialty NonCrib Beds Occupied Initial Population&quot;:
+  IsBedLocation
+  and EncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="54"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Adult ED Census Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Adult ED Census Initial Population&quot;:
+  IsBedLocation
+  and exists(
+    [Encounter: &quot;Emergency Department Visit&quot;] EDVisit
+    where EDVisit.period overlaps &quot;Measurement Period&quot;
+  )
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="55"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="OB Beds Unoccupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;OB Beds Unoccupied Initial Population&quot;:
+  IsBedLocation
+  and NoEncounterCheck
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="56"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Peds PCU Beds Occupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Peds PCU Beds Occupied Initial Population&quot;:
+  IsBedLocation
+  and EncounterCheck
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="57"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Peds MTMS Beds Occupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Peds MTMS Beds Occupied Initial Population&quot;:
+  IsBedLocation
+  and EncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="58"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Total ED Census Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Total ED Census Initial Population&quot;:
+  IsBedLocation
+  and exists(
+    [Encounter: &quot;Emergency Department Visit&quot;] EDVisit
+    where EDVisit.period overlaps &quot;Measurement Period&quot;
+  )
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="59"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Burn Beds Unoccupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Burn Beds Unoccupied Initial Population&quot;:
+  IsBedLocation
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="60"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Adult ICULOC Beds Occupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Adult ICULOC Beds Occupied Initial Population&quot;:
+  IsBedLocation
+  and EncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIPF&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="61"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Adult Beds Occupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Adult Beds Occupied Initial Population&quot;:
+  IsBedLocation
+  and EncounterCheck
+  and LocationIsHOSP
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsIPF&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="62"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Specialty Beds Unoccupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Specialty Beds Unoccupied Initial Population&quot;:
+  IsBedLocation
+  and NoEncounterCheck
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="63"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="NICU3Plus Beds Unoccupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;NICU3Plus Beds Unoccupied Initial Population&quot;:
+  IsBedLocation
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsCHLD&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="64"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="NICU1 Beds Unoccupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;NICU1 Beds Unoccupied Initial Population&quot;:
+  IsBedLocation
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="65"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Adult Psych Beds Occupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Adult Psych Beds Occupied Initial Population&quot;:
+  IsBedLocation
+  and EncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIPF&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="66"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Adult Obs Beds Occupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Adult Obs Beds Occupied Initial Population&quot;:
+  IsBedLocation
+  and EncounterCheck
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="67"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Surge Active Total Beds Unoccupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Surge Active Total Beds Unoccupied Initial Population&quot;:
+  IsBedLocation
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="68"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Surge Active NonICU Beds Occupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Surge Active NonICU Beds Occupied Initial Population&quot;:
+  IsBedLocation
+  and EncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsCHLD&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="69"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Surge Inactive NonICU Beds Occupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Surge Inactive NonICU Beds Occupied Initial Population&quot;:
+  IsBedLocation
+  and EncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsCHLD&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="70"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Adult ICU Beds Unoccupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Adult ICU Beds Unoccupied Initial Population&quot;:
+  IsBedLocation
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="71"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Adult MTMS Beds Occupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Adult MTMS Beds Occupied Initial Population&quot;:
+  IsBedLocation
+  and EncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="72"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Peds Total Beds Unoccupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Peds Total Beds Unoccupied Initial Population&quot;:
+  IsBedLocation
+  and NoEncounterCheck
+  and &quot;LocationIsCHLD&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="73"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Total ED Admitted Census Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Total ED Admitted Census Initial Population&quot;:
+  IsBedLocation
+  and exists(
+    [Encounter: &quot;Emergency Department Visit&quot;] EDVisit
+    where EDVisit.period overlaps &quot;Measurement Period&quot;
+      and EDVisit.status in {'arrived', 'triaged', 'in-progress'}
+  )
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="74"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Nursery Beds Unoccupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Nursery Beds Unoccupied Initial Population&quot;:
+  IsBedLocation
+  and NoEncounterCheck
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsCHLD&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="75"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="NICU4 Beds Occupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;NICU4 Beds Occupied Initial Population&quot;:
+  IsBedLocation
+  and EncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="76"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="All Beds Occupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;All Beds Occupied Initial Population&quot;:
+  IsBedLocation
+  and EncounterCheck"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="77"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Peds Obs Beds Unoccupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Peds Obs Beds Unoccupied Initial Population&quot;:
+  IsBedLocation
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsCHLD&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="78"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Surge Active ICU Beds Unoccupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Surge Active ICU Beds Unoccupied Initial Population&quot;:
+  IsBedLocation
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="79"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Surge Inactive ICU Beds Unoccupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Surge Inactive ICU Beds Unoccupied Initial Population&quot;:
+  IsBedLocation
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsOTH&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="80"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="NICU2 Beds Unoccupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;NICU2 Beds Unoccupied Initial Population&quot;:
+  IsBedLocation
+  and NoEncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsCHLD&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="81"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="NICU2 Beds Occupied Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;NICU2 Beds Occupied Initial Population&quot;:
+  IsBedLocation
+  and EncounterCheck
+  and &quot;LocationIsHOSP&quot;
+  and &quot;LocationIsIRF&quot;
+  and &quot;LocationIsCHLD&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="82"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="BedCapacityMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Peds ED Admitted Census Initial Population"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Peds ED Admitted Census Initial Population&quot;:
+  IsBedLocation
+  and exists(
+    [Encounter: &quot;Emergency Department Visit&quot;] EDVisit
+    where EDVisit.period overlaps &quot;Measurement Period&quot;
+      and EDVisit.status in {'arrived', 'triaged', 'in-progress'}
+  )
+  and &quot;LocationIsCHLD&quot;"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="83"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -967,7 +1615,7 @@
         }"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="49"></valueInteger>
+               <valueInteger value="84"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -990,7 +1638,7 @@
         }"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="50"></valueInteger>
+               <valueInteger value="85"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1011,7 +1659,21 @@
             Interval[period.&quot;start&quot;.value, period.&quot;end&quot;.value]"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="51"></valueInteger>
+               <valueInteger value="86"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="FHIRHelpers"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="ToString"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define function ToString(value EncounterStatus): value.value"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="87"></valueInteger>
             </extension>
          </extension>
          <name value="EffectiveDataRequirements"></name>
@@ -1030,7 +1692,7 @@
          <relatedArtifact>
             <type value="depends-on"></type>
             <display value="Library FHIRHelpers"></display>
-            <resource value="http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1"></resource>
+            <resource value="http://hl7.org/fhir/us/safr/Library/FHIRHelpers|4.0.1"></resource>
          </relatedArtifact>
          <relatedArtifact>
             <type value="depends-on"></type>
@@ -1055,280 +1717,525 @@
             <type value="Period"></type>
          </parameter>
          <parameter>
-            <name value="Burn Beds Initial Population"></name>
+            <name value="Peds Total Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="NICU Beds Initial Population"></name>
+            <name value="All Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Surge Active ICU Beds Initial Population"></name>
+            <name value="Peds ED Census Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Peds Psych Beds Initial Population"></name>
+            <name value="Adult PCU Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Specialty Beds Initial Population"></name>
+            <name value="Peds ICU Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Surge Active Total Beds Initial Population"></name>
+            <name value="Negative Pressure Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Peds ED Initial Population"></name>
+            <name value="Adult PCU Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Adult ICU Beds Initial Population"></name>
+            <name value="Peds PCU Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Adult MTMS Beds Initial Population"></name>
+            <name value="OB Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="NICU4 Beds Initial Population"></name>
+            <name value="Surge Inactive NonICU Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Rehab Beds Initial Population"></name>
+            <name value="NICU3 Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Adult NonICU Beds Initial Population"></name>
+            <name value="Peds ICULOC Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Surge Inactive ICU Beds Initial Population"></name>
+            <name value="Surge Inactive Total Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Adult Obs Beds Initial Population"></name>
+            <name value="Peds NonICU Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Surge Inactive NonICU Beds Initial Population"></name>
+            <name value="Peds MTMS Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Peds Total Beds Initial Population"></name>
+            <name value="Peds NonICU Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Peds MTMS Beds Initial Population"></name>
+            <name value="Peds Psych Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Adult ED Initial Population"></name>
+            <name value="Surge Inactive Total Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Surge Inactive Total Beds Initial Population"></name>
+            <name value="Specialty Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Negative Pressure Beds Initial Population"></name>
+            <name value="Surge Active ICU Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Peds Obs Beds Initial Population"></name>
+            <name value="Adult NonICU Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Bed Capacity Initial Population"></name>
+            <name value="Specialty NonCrib Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="NICU1 Beds Initial Population"></name>
+            <name value="Peds Psych Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Peds ICULOC Beds Initial Population"></name>
+            <name value="Rehab Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Total ED Initial Population"></name>
+            <name value="Adult MTMS Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="All Beds Initial Population"></name>
+            <name value="NICU3 Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Adult Beds Initial Population"></name>
+            <name value="Adult Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="NICU2 Beds Initial Population"></name>
+            <name value="Burn Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Nursery Beds Initial Population"></name>
+            <name value="Peds ICU Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Adult PCU Beds Initial Population"></name>
+            <name value="NICU1 Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Peds PCU Beds Initial Population"></name>
+            <name value="Negative Pressure Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Peds ICU Beds Initial Population"></name>
+            <name value="Adult ICU Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Adult Psych Beds Initial Population"></name>
+            <name value="NICU4 Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Specialty NonCrib Beds Initial Population"></name>
+            <name value="Adult Obs Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Adult ICULOC Beds Initial Population"></name>
+            <name value="Adult NonICU Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="NICU3Plus Beds Initial Population"></name>
+            <name value="Peds Obs Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Peds NonICU Beds Initial Population"></name>
+            <name value="NICU Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Surge Active NonICU Beds Initial Population"></name>
+            <name value="NICU Beds Unoccupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="OB Beds Initial Population"></name>
+            <name value="Nursery Beds Occupied Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="NICU3 Beds Initial Population"></name>
+            <name value="Adult Psych Beds Unoccupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Adult ED Admitted Census Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="NICU3Plus Beds Occupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Surge Active NonICU Beds Unoccupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Rehab Beds Occupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Surge Active Total Beds Occupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Specialty NonCrib Beds Occupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Adult ED Census Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="OB Beds Unoccupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Peds PCU Beds Occupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Peds MTMS Beds Occupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Total ED Census Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Burn Beds Unoccupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Adult ICULOC Beds Occupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Adult Beds Occupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Specialty Beds Unoccupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="NICU3Plus Beds Unoccupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="NICU1 Beds Unoccupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Adult Psych Beds Occupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Adult Obs Beds Occupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Surge Active Total Beds Unoccupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Surge Active NonICU Beds Occupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Surge Inactive NonICU Beds Occupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Adult ICU Beds Unoccupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Adult MTMS Beds Occupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Peds Total Beds Unoccupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Total ED Admitted Census Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Nursery Beds Unoccupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="NICU4 Beds Occupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="All Beds Occupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Peds Obs Beds Unoccupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Surge Active ICU Beds Unoccupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Surge Inactive ICU Beds Unoccupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="NICU2 Beds Unoccupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="NICU2 Beds Occupied Initial Population"></name>
+            <use value="out"></use>
+            <min value="0"></min>
+            <max value="1"></max>
+            <type value="boolean"></type>
+         </parameter>
+         <parameter>
+            <name value="Peds ED Admitted Census Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
@@ -1352,8 +2259,14 @@
             <profile value="http://hl7.org/fhir/StructureDefinition/Location"></profile>
          </dataRequirement>
          <dataRequirement>
-            <type value="Location"></type>
-            <profile value="http://hl7.org/fhir/StructureDefinition/Location"></profile>
+            <type value="Encounter"></type>
+            <profile value="http://hl7.org/fhir/StructureDefinition/Encounter"></profile>
+            <mustSupport value="type"></mustSupport>
+            <mustSupport value="period"></mustSupport>
+            <codeFilter>
+               <path value="type"></path>
+               <valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.292"></valueSet>
+            </codeFilter>
          </dataRequirement>
          <dataRequirement>
             <type value="Location"></type>
@@ -1376,6 +2289,7 @@
             <profile value="http://hl7.org/fhir/StructureDefinition/Encounter"></profile>
             <mustSupport value="type"></mustSupport>
             <mustSupport value="period"></mustSupport>
+            <mustSupport value="status"></mustSupport>
             <codeFilter>
                <path value="type"></path>
                <valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.292"></valueSet>
@@ -1400,6 +2314,33 @@
                <path value="type"></path>
                <valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.292"></valueSet>
             </codeFilter>
+         </dataRequirement>
+         <dataRequirement>
+            <type value="Encounter"></type>
+            <profile value="http://hl7.org/fhir/StructureDefinition/Encounter"></profile>
+            <mustSupport value="type"></mustSupport>
+            <mustSupport value="period"></mustSupport>
+            <mustSupport value="status"></mustSupport>
+            <codeFilter>
+               <path value="type"></path>
+               <valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.292"></valueSet>
+            </codeFilter>
+         </dataRequirement>
+         <dataRequirement>
+            <type value="Encounter"></type>
+            <profile value="http://hl7.org/fhir/StructureDefinition/Encounter"></profile>
+            <mustSupport value="type"></mustSupport>
+            <mustSupport value="period"></mustSupport>
+            <mustSupport value="status"></mustSupport>
+            <codeFilter>
+               <path value="type"></path>
+               <valueSet value="http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.117.1.7.1.292"></valueSet>
+            </codeFilter>
+         </dataRequirement>
+         <dataRequirement>
+            <type value="Encounter"></type>
+            <profile value="http://hl7.org/fhir/StructureDefinition/Encounter"></profile>
+            <mustSupport value="period"></mustSupport>
          </dataRequirement>
       </Library>
    </contained>
@@ -1419,7 +2360,7 @@
    <name value="BedCapacityMeasure"></name>
    <title value="Bed Capacity"></title>
    <experimental value="true"></experimental>
-   <date value="2025-11-18T16:07:30-04:00"></date>
+   <date value="2026-01-20T13:35:27-04:00"></date>
    <description value="Bed Capacity Measure includes counts of specific bed types within the context of a given healthcare context or setting."></description>
    <library value="http://hl7.org/fhir/us/safr/Library/BedCapacityMeasure"></library>
    <scoring>
@@ -1433,10 +2374,10 @@
       <code>
          <coding>
             <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="BedCapacityReporting"></code>
+            <code value="AllBedsOccupied"></code>
          </coding>
       </code>
-      <population id="d2e4301-bed-cap">
+      <population id="d2e4301">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -1446,18 +2387,18 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Bed Capacity Initial Population"></expression>
+            <expression value="All Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="AllBeds"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="AllBedsUnoccupied"></code>
          </coding>
       </code>
-      <population id="d2e4301-all-beds">
+      <population id="d2e4378">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -1467,15 +2408,15 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="All Beds Initial Population"></expression>
+            <expression value="All Beds Unoccupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="AdultTotal"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="AdultTotalOccupied"></code>
          </coding>
       </code>
       <population id="d2e4455">
@@ -1488,15 +2429,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Adult Beds Initial Population"></expression>
+            <expression value="Adult Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="AdultICU"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="AdultTotalUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e4533">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Adult Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="AdultICUOccupied"></code>
          </coding>
       </code>
       <population id="d2e4610">
@@ -1509,15 +2471,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Adult ICU Beds Initial Population"></expression>
+            <expression value="Adult ICU Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="AdultICULOC"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="AdultICUUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e4687">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Adult ICU Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="AdultICULOCOccupied"></code>
          </coding>
       </code>
       <population id="d2e4764">
@@ -1530,15 +2513,15 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Adult ICULOC Beds Initial Population"></expression>
+            <expression value="Adult ICULOC Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="AdultNonICU"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="AdultNonICUOccupied"></code>
          </coding>
       </code>
       <population id="d2e4918">
@@ -1551,15 +2534,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Adult NonICU Beds Initial Population"></expression>
+            <expression value="Adult NonICU Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="AdultPCU"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="AdultNonICUUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e4996">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Adult NonICU Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="AdultPCUOccupied"></code>
          </coding>
       </code>
       <population id="d2e5073">
@@ -1572,15 +2576,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Adult PCU Beds Initial Population"></expression>
+            <expression value="Adult PCU Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="AdultMTMS"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="AdultPCUUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e5150">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Adult PCU Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="AdultMTMSOccupied"></code>
          </coding>
       </code>
       <population id="d2e5227">
@@ -1593,15 +2618,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Adult MTMS Beds Initial Population"></expression>
+            <expression value="Adult MTMS Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="AdultObs"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="AdultMTMSUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e5304">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Adult MTMS Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="AdultObsOccupied"></code>
          </coding>
       </code>
       <population id="d2e5381">
@@ -1614,15 +2660,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Adult Obs Beds Initial Population"></expression>
+            <expression value="Adult Obs Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="PedsTotal"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="AdultObsUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e5459">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Adult Obs Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="PedsTotalOccupied"></code>
          </coding>
       </code>
       <population id="d2e5536">
@@ -1635,15 +2702,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Peds Total Beds Initial Population"></expression>
+            <expression value="Peds Total Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="PedsICU"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="PedsTotalUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e5613">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Peds Total Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="PedsICUOccupied"></code>
          </coding>
       </code>
       <population id="d2e5690">
@@ -1656,15 +2744,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Peds ICU Beds Initial Population"></expression>
+            <expression value="Peds ICU Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="PedsICULOC"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="PedsICUUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e5767">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Peds ICU Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="PedsICULOCOccupied"></code>
          </coding>
       </code>
       <population id="d2e5844">
@@ -1677,15 +2786,15 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Peds ICULOC Beds Initial Population"></expression>
+            <expression value="Peds ICULOC Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="PedsNonICU"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="PedsNonICUOccupied"></code>
          </coding>
       </code>
       <population id="d2e5999">
@@ -1698,15 +2807,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Peds NonICU Beds Initial Population"></expression>
+            <expression value="Peds NonICU Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="PedsPCU"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="PedsNonICUUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e6076">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Peds NonICU Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="PedsPCUOccupied"></code>
          </coding>
       </code>
       <population id="d2e6153">
@@ -1719,15 +2849,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Peds PCU Beds Initial Population"></expression>
+            <expression value="Peds PCU Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="PedsMTMS"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="PedsPCUUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e6230">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Peds PCU Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="PedsMTMSOccupied"></code>
          </coding>
       </code>
       <population id="d2e6307">
@@ -1740,15 +2891,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Peds MTMS Beds Initial Population"></expression>
+            <expression value="Peds MTMS Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="PedsObs"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="PedsMTMSUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e6385">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Peds MTMS Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="PedsObsOccupied"></code>
          </coding>
       </code>
       <population id="d2e6462">
@@ -1761,15 +2933,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Peds Obs Beds Initial Population"></expression>
+            <expression value="Peds Obs Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="SpecialtyTotal"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="PedsObsUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e6539">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Peds Obs Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="SpecialtyTotalOccupied"></code>
          </coding>
       </code>
       <population id="d2e6616">
@@ -1782,15 +2975,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Specialty Beds Initial Population"></expression>
+            <expression value="Specialty Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="SpecialtyNonCrib"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="SpecialtyTotalUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e6693">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Specialty Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="SpecialtyNonCribOccupied"></code>
          </coding>
       </code>
       <population id="d2e6770">
@@ -1803,15 +3017,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Specialty NonCrib Beds Initial Population"></expression>
+            <expression value="Specialty NonCrib Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="OB"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="SpecialtyNonCribUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e6848">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Specialty NonCrib Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="OBOccupied"></code>
          </coding>
       </code>
       <population id="d2e6925">
@@ -1824,15 +3059,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="OB Beds Initial Population"></expression>
+            <expression value="OB Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="NICU"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="OBUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e7002">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="OB Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="NICUOccupied"></code>
          </coding>
       </code>
       <population id="d2e7079">
@@ -1845,15 +3101,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="NICU Beds Initial Population"></expression>
+            <expression value="NICU Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="NICU4"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="NICUUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e7156">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="NICU Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="NICU4Occupied"></code>
          </coding>
       </code>
       <population id="d2e7233">
@@ -1866,15 +3143,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="NICU4 Beds Initial Population"></expression>
+            <expression value="NICU4 Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="NICU3Plus"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="NICU4Unoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e7311">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="NICU4 Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="NICU3PlusOccupied"></code>
          </coding>
       </code>
       <population id="d2e7388">
@@ -1887,15 +3185,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="NICU3Plus Beds Initial Population"></expression>
+            <expression value="NICU3Plus Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="NICU3"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="NICU3PlusUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e7465">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="NICU3Plus Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="NICU3Occupied"></code>
          </coding>
       </code>
       <population id="d2e7542">
@@ -1908,15 +3227,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="NICU3 Beds Initial Population"></expression>
+            <expression value="NICU3 Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="NICU2"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="NICU3Unoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e7619">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="NICU3 Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="NICU2Occupied"></code>
          </coding>
       </code>
       <population id="d2e7696">
@@ -1929,15 +3269,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="NICU2 Beds Initial Population"></expression>
+            <expression value="NICU2 Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="NICU1"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="NICU2Unoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e7774">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="NICU2 Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="NICU1Occupied"></code>
          </coding>
       </code>
       <population id="d2e7851">
@@ -1950,15 +3311,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="NICU1 Beds Initial Population"></expression>
+            <expression value="NICU1 Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="Nursery"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="NICU1Unoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e7928">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="NICU1 Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="NurseryOccupied"></code>
          </coding>
       </code>
       <population id="d2e8005">
@@ -1971,15 +3353,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Nursery Beds Initial Population"></expression>
+            <expression value="Nursery Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="AdultPsych"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="NurseryUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e8082">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Nursery Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="AdultPsychOccupied"></code>
          </coding>
       </code>
       <population id="d2e8159">
@@ -1992,15 +3395,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Adult Psych Beds Initial Population"></expression>
+            <expression value="Adult Psych Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="PedsPsych"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="AdultPsychUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e8237">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Adult Psych Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="PedsPsychOccupied"></code>
          </coding>
       </code>
       <population id="d2e8314">
@@ -2013,15 +3437,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Peds Psych Beds Initial Population"></expression>
+            <expression value="Peds Psych Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="Rehab"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="PedsPsychUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e8391">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Peds Psych Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="RehabOccupied"></code>
          </coding>
       </code>
       <population id="d2e8468">
@@ -2034,15 +3479,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Rehab Beds Initial Population"></expression>
+            <expression value="Rehab Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="SurgeActiveTotal"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="RehabUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e8545">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Rehab Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="SurgeActiveTotalOccupied"></code>
          </coding>
       </code>
       <population id="d2e8622">
@@ -2055,15 +3521,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Surge Active Total Beds Initial Population"></expression>
+            <expression value="Surge Active Total Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="SurgeInactiveTotal"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="SurgeActiveTotalUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e8700">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Surge Active Total Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="SurgeInactiveTotalOccupied"></code>
          </coding>
       </code>
       <population id="d2e8777">
@@ -2076,18 +3563,18 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Surge Inactive Total Beds Initial Population"></expression>
+            <expression value="Surge Inactive Total Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="SurgeActiveICU"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="SurgeInactiveTotalUnoccupied"></code>
          </coding>
       </code>
-      <population id="d2e8931-surge-active">
+      <population id="d2e8854">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -2097,18 +3584,18 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Surge Active ICU Beds Initial Population"></expression>
+            <expression value="Surge Inactive Total Beds Unoccupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="SurgeInactiveICU"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="SurgeActiveICUOccupied"></code>
          </coding>
       </code>
-      <population id="d2e8931-surge-inactive">
+      <population id="d2e8931">
          <code>
             <coding>
                <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
@@ -2118,15 +3605,57 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Surge Inactive ICU Beds Initial Population"></expression>
+            <expression value="Surge Active ICU Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="SurgeActiveNonICU"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="SurgeActiveICUUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e9008">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Surge Active ICU Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="SurgeInactiveICUUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e9163">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Surge Inactive ICU Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="SurgeActiveNonICUOccupied"></code>
          </coding>
       </code>
       <population id="d2e9240">
@@ -2139,15 +3668,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Surge Active NonICU Beds Initial Population"></expression>
+            <expression value="Surge Active NonICU Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="SurgeInactiveNonICU"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="SurgeActiveNonICUUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e9317">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Surge Active NonICU Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="SurgeInactiveNonICUOccupied"></code>
          </coding>
       </code>
       <population id="d2e9394">
@@ -2160,15 +3710,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Surge Inactive NonICU Beds Initial Population"></expression>
+            <expression value="Surge Inactive NonICU Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="Burn"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="SurgeInactiveNonICUUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e9471">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Surge Inactive NonICU Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="BurnOccupied"></code>
          </coding>
       </code>
       <population id="d2e9548">
@@ -2181,15 +3752,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Burn Beds Initial Population"></expression>
+            <expression value="Burn Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="NegativePressure"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="BurnUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e9626">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Burn Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="NegativePressureOccupied"></code>
          </coding>
       </code>
       <population id="d2e9703">
@@ -2202,15 +3794,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Negative Pressure Beds Initial Population"></expression>
+            <expression value="Negative Pressure Beds Occupied Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="AdultED"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="NegativePressureUnoccupied"></code>
+         </coding>
+      </code>
+      <population id="d2e9780">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Negative Pressure Beds Unoccupied Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="AdultEDCensus"></code>
          </coding>
       </code>
       <population id="d2e9857">
@@ -2223,15 +3836,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Adult ED Initial Population"></expression>
+            <expression value="Adult ED Census Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="PedsED"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="AdultEDAdmittedCensus"></code>
+         </coding>
+      </code>
+      <population id="d2e9934">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Adult ED Admitted Census Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="PedsEDCensus"></code>
          </coding>
       </code>
       <population id="d2e10011">
@@ -2244,15 +3878,36 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Peds ED Initial Population"></expression>
+            <expression value="Peds ED Census Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes"></system>
-            <code value="TotalED"></code>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="PedsEDAdmittedCensus"></code>
+         </coding>
+      </code>
+      <population id="d2e10089">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Peds ED Admitted Census Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="TotalEDCensus"></code>
          </coding>
       </code>
       <population id="d2e10166">
@@ -2265,7 +3920,28 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Total ED Initial Population"></expression>
+            <expression value="Total ED Census Initial Population"></expression>
+         </criteria>
+      </population>
+   </group>
+   <group>
+      <code>
+         <coding>
+            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
+            <code value="TotalEDAdmittedCensus"></code>
+         </coding>
+      </code>
+      <population id="d2e10243">
+         <code>
+            <coding>
+               <system value="http://terminology.hl7.org/CodeSystem/measure-population"></system>
+               <code value="initial-population"></code>
+               <display value="Initial Population"></display>
+            </coding>
+         </code>
+         <criteria>
+            <language value="text/cql-identifier"></language>
+            <expression value="Total ED Admitted Census Initial Population"></expression>
          </criteria>
       </population>
    </group>
