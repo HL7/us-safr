@@ -1935,7 +1935,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          <relatedArtifact>
             <type value="depends-on"></type>
             <display value="Library FHIRHelpers"></display>
-            <resource value="http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1"></resource>
+            <resource value="http://hl7.org/fhir/us/safr/Library/FHIRHelpers|4.0.1"></resource>
          </relatedArtifact>
          <relatedArtifact>
             <type value="depends-on"></type>
@@ -2592,7 +2592,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <name value="HRDMeasure"></name>
    <title value="HRD Measure"></title>
    <experimental value="true"></experimental>
-   <date value="2025-11-07T11:10:22-04:00"></date>
+   <date value="2026-01-20T13:35:27-04:00"></date>
    <description value="HRD Measure description."></description>
    <library value="http://hl7.org/fhir/us/safr/Library/HRDMeasure"></library>
    <scoring>
