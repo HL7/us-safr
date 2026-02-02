@@ -34,7 +34,7 @@ During a severe flu season, hospitals in a specific jurisdiction experience a hi
 **2. Trend Analysis and Early Warning System**
 - Analysis of surge data enables early detection of trends, guiding preventative measures like vaccination campaigns or public advisories in affected areas.
 
-#### Use Case #2: Emergency Response Coordination for Natural Disaster Evacuations
+#### Use Case #2: Emergency Response Coordination for Natural Disaster Evacuations (Declaration of Emergency)
 
 **Scenario**
 In response to an approaching hurricane on the Texas coastline, local and state emergency management and health departments plan for hospital evacuations of patients to inland facilities.
@@ -69,6 +69,13 @@ For all bed censuses and counts, the following bed types should be <u>included</
 1. All inpatient staffed and unblocked beds
 2. Observation beds
 
+#### Bed Exclusion Criteria
+
+For all bed censuses and counts, the following bed types should be <u>excluded</u>:
+1. Virtual beds or locations in the EMR that are not physical spaces (i.e., beds used for interoperative phase of care or in certain operative settings or virtual staging areas for admissions.)
+2. Beds no longer in use, even in case of surge
+3. Blocked beds (i.e., beds blocked due to logistical or maintenance challenges, staffing restrictions, isolation, etc.) 
+
 #### Unit Inclusion Criteria
 
 - ED    Emergency department
@@ -84,14 +91,6 @@ For all bed censuses and counts, the following bed types should be <u>included</
 - PICU  Pediatric intensive care unit
 - Psych Psychiatric
 - Rehab Rehabilitation
-
-#### Bed Exclusion Criteria
-
-For all bed censuses and counts, the following bed types should be <u>excluded</u>:
-1. Virtual beds or locations in the EMR that are not physical spaces (i.e., beds used for interoperative phase of care or in certain operative settings or virtual staging areas for admissions.)
-2. Beds no longer in use, even in case of surge
-3. Blocked beds (i.e., beds blocked due to logistical or maintenance challenges, staffing restrictions, isolation, etc.) 
-
 
 #### Bed Capacity Example
 <table class="grid">
