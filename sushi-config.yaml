@@ -91,7 +91,14 @@ pages:
 
 
 
-# parameters:
+parameters:
+  active-tables: false
+  apply-contact: true
+  apply-jurisdiction: true
+  apply-publisher: true
+  apply-version: true
+  show-inherited-invariants: false
+  pin-canonicals: pin-multiples
 #  path-expansion-params: '../../exp-params.json'  #Support for US SNOMED CT - path is relative to [base]/fsh-generated/resources
 #  apply-jurisdiction: true
 #  apply-publisher: true
