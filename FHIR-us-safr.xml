@@ -5,7 +5,6 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="Measure/BedCapacityMeasure" key="Measure-BedCapacityMeasure" name="Bed Capacity"/>
 <artifact id="Library/BedCapacityMeasure" key="Library-BedCapacityMeasure" name="BedCapacityMeasure"/>
 <artifact deprecated="true" id="Bundle/BedCapacityMeasureBundle" key="Bundle-BedCapacityMeasureBundle" name="Bundle - Bed Capacity Measure Bundle Example"/>
 <artifact id="Bundle/HospitalBedCapacityReportBundle" key="Bundle-HospitalBedCapacityReportBundle" name="Bundle - Bed Capacity Report Bundle Example"/>
@@ -15,7 +14,7 @@
 <artifact id="Device/cqf-tooling" key="Device-cqf-tooling" name="Device - CQF Tooling System Example"/>
 <artifact id="Location/EDBed1" key="Location-EDBed1" name="Emergency Dept. Bed 1"/>
 <artifact id="Encounter/encounter-example-ach-ach-pass2-emergency" key="Encounter-encounter-example-ach-ach-pass2-emergency" name="Encounter - Example ACH Pass2 - Emergency"/>
-<artifact id="Measure/HRDMeasure" key="Measure-HRDMeasure" name="HRD Measure"/>
+<artifact id="Library/FHIRHelpers" key="Library-FHIRHelpers" name="FHIRHelpers"/>
 <artifact id="Library/HRDMeasure" key="Library-HRDMeasure" name="HRDMeasure"/>
 <artifact id="CodeSystem/us-safr-bed-capacity-example-codes" key="CodeSystem-us-safr-bed-capacity-example-codes" name="Healthcare Bed Capacity Reporting Code System"/>
 <artifact id="CodeSystem/us-safr-bed-capacity-group-example-codes" key="CodeSystem-us-safr-bed-capacity-group-example-codes" name="Healthcare Bed Capacity Reporting Group Code System"/>
@@ -27,6 +26,7 @@
 <artifact id="Library/HRDMeasureLibrary" key="Library-HRDMeasureLibrary" name="Library - HRD Measure Example"/>
 <artifact deprecated="true" id="Library/BedCapacityLibrary" key="Library-BedCapacityLibrary" name="Library - Library of Bed Capacity Measure Example"/>
 <artifact id="Location/MemorialHospitalFacility" key="Location-MemorialHospitalFacility" name="Location - Hospital Facility Example"/>
+<artifact deprecated="true" id="Measure/BedCapacityMeasure" key="Measure-BedCapacityMeasure" name="Measure - Bed Capacity Measure Example"/>
 <artifact deprecated="true" id="Measure/HospitalRespiratoryDataMeasure" key="Measure-HospitalRespiratoryDataMeasure" name="Measure - HRD Measure Example"/>
 <artifact id="MeasureReport/BedCapacityMeasureReport" key="MeasureReport-BedCapacityMeasureReport" name="MeasureReport - Bed Capacity MeasureReport Example"/>
 <artifact id="MeasureReport/HRDMeasureReport" key="MeasureReport-HRDMeasureReport" name="MeasureReport - HRD MeasureReport Example"/>
