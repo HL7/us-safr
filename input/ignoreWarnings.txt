@@ -2,3 +2,11 @@
 
 # Error due to cross version extension slicing issue in tooling. See https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Cross-Version.20Extension.20Slicing.20issue.20in.20dependent.20IGs/with/516557595
 Slicing cannot be evaluated: Unable to resolve profile CanonicalType[http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.supplementalData]
+
+# IG Publisher does not currently support validating CQL
+The expression language text/cql-identifier is not supported, so can't be validated
+
+# Acknowledge we are using experimental code systems. Many of these codes will be replaced with LOINC codes before publication.
+Reference to experimental CodeSystem http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes|1.0.0
+Reference to experimental CodeSystem http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes|1.0.0
+Reference to experimental CodeSystem http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes|1.0.0
