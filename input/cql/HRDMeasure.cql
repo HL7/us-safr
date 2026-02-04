@@ -120,22 +120,22 @@ define "Occupied Pediatric ICU Beds Initial Population":
 //Stratifiers
 //COVID_19
 define "Adult Inpatient COVID_19 Patients Stratifier":
-  if "Occupied Adult Inpatient Beds Initial Population" then
+  if "Adult Inpatient Beds Initial Population" then
     "Count Confirmed COVID_19 Patients in Bed Location"
   else 0
 
 define "Pediatric Inpatient COVID_19 Patients Stratifier":
-  if "Occupied Pediatric Inpatient Beds Initial Population" then
+  if "Pediatric Inpatient Beds Initial Population" then
     "Count Confirmed COVID_19 Patients in Bed Location"
   else 0
 
 define "Adult ICU COVID_19 Patients Stratifier":
-  if "Occupied Adult ICU Beds Initial Population" then
+  if "Adult ICU Beds Initial Population" then
     "Count Confirmed COVID_19 Patients in Bed Location"
   else 0
 
 define "Pediatric ICU COVID_19 Patients Stratifier":
-  if "Occupied Pediatric ICU Beds Initial Population" then
+  if "Pediatric ICU Beds Initial Population" then
     "Count Confirmed COVID_19 Patients in Bed Location"
   else 0
 
@@ -176,22 +176,22 @@ define "New COVID_19 Patients with Unknown Age Stratifier":
   
 //Influenza
 define "Adult Inpatient Influenza Patients Stratifier":
-  if "Occupied Adult Inpatient Beds Initial Population" then
+  if "Adult Inpatient Beds Initial Population" then
     "Count Confirmed Influenza Patients in Bed Location"
   else 0
 
 define "Pediatric Inpatient Influenza Patients Stratifier":
-  if "Occupied Pediatric Inpatient Beds Initial Population" then
+  if "Pediatric Inpatient Beds Initial Population" then
     "Count Confirmed Influenza Patients in Bed Location"
   else 0
 
 define "Adult ICU Influenza Patients Stratifier":
-  if "Occupied Adult ICU Beds Initial Population" then
+  if "Adult ICU Beds Initial Population" then
     "Count Confirmed Influenza Patients in Bed Location"
   else 0
 
 define "Pediatric ICU Influenza Patients Stratifier":
-  if "Occupied Pediatric ICU Beds Initial Population" then
+  if "Pediatric ICU Beds Initial Population" then
     "Count Confirmed Influenza Patients in Bed Location"
   else 0
 
@@ -232,22 +232,22 @@ define "New Influenza Patients with Unknown Age Stratifier":
 
 //RSV
 define "Adult Inpatient RSV Patients Stratifier":
-  if "Occupied Adult Inpatient Beds Initial Population" then
+  if "Adult Inpatient Beds Initial Population" then
     "Count Confirmed RSV Patients in Bed Location"
   else 0
 
 define "Pediatric Inpatient RSV Patients Stratifier":
-  if "Occupied Pediatric Inpatient Beds Initial Population" then
+  if "Pediatric Inpatient Beds Initial Population" then
     "Count Confirmed RSV Patients in Bed Location"
   else 0
 
 define "Adult ICU RSV Patients Stratifier":
-  if "Occupied Adult ICU Beds Initial Population" then
+  if "Adult ICU Beds Initial Population" then
     "Count Confirmed RSV Patients in Bed Location"
   else 0
 
 define "Pediatric ICU RSV Patients Stratifier":
-  if "Occupied Pediatric ICU Beds Initial Population" then
+  if "Pediatric ICU Beds Initial Population" then
     "Count Confirmed RSV Patients in Bed Location"
   else 0
 
