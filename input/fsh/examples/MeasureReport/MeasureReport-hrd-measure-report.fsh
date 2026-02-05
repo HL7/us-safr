@@ -6,7 +6,7 @@ Usage: #example
 // Basic metadata
 * status = $measure-report-status#complete
 * type = $measure-report-type#individual
-* measure = "http://hl7.org/fhir/us/safr/Measure/HRDMeasure"
+* measure = "http://hl7.org/fhir/us/safr/Measure/HRDMeasure|1.0.0-ballot"
 // * measure = Canonical(HospitalRespiratoryDataMeasure|1.0.0-ballot)
 * date = "2025-03-05T08:15:00-05:00"
 // Reporting period
@@ -25,31 +25,40 @@ Usage: #example
 * extension[location].url = "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-dataLocation"
 * extension[location].valueReference.reference = "urn:uuid:4c83e586-1277-4132-9b4e-3d1c14d38983" //Reference(MemorialHospitalFacility)
 
-
-// NHSN extensions
-/*
-* extension[+].url = "http://hl7.org/fhir/us/safr/StructureDefinition/reporting-frequency"
-* extension[=].valueCodeableConcept = http://unitsofmeasure.org#d "day"
-* extension[+].url = "http://hl7.org/fhir/us/safr/StructureDefinition/emergency-activation"
-* extension[=].valueBoolean = false
-* extension[+].url = "http://hl7.org/fhir/us/nhsn-bed-measures/StructureDefinition/reporting-timestamp"
-* extension[=].valueDateTime = "2025-03-05T08:00:00-05:00"
-*/
-/*
-TODO, will need output with summary
-
-* extension[+].url = "http://hl7.org/fhir/us/nhsn-bed-measures/StructureDefinition/facility-bed-summary"
-* extension[=].extension[totalBeds].url = "totalBeds"
-* extension[=].extension[totalBeds].valueInteger = 102
-* extension[=].extension[occupiedBeds].url = "occupiedBeds"
-* extension[=].extension[occupiedBeds].valueInteger = 76
-* extension[=].extension[availableBeds].url = "availableBeds"
-* extension[=].extension[availableBeds].valueInteger = 26
-* extension[=].extension[overallOccupancyRate].url = "overallOccupancyRate"
-* extension[=].extension[overallOccupancyRate].valueDecimal = 74.5
-
-*/
 * improvementNotation = $MeasureImprovementNotation#increase "Increased score indicates improvement"
+
+
+
+///////////// Group numInPtBeds /////////////
+* group[+].id = "numInPtBeds-capacity-group"
+* group[=].code = HRDExampleCS#numInPtBeds "Number Inpatient Beds"
+* group[=].population[+].id = "numInPtBeds-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 1000
+
+* group[=].stratifier[+].id = "numConfC19NewAdmUnk-beds-status-stratifier"
+* group[=].stratifier[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes#numConfC19NewAdmUnk
+* group[=].stratifier[=].stratum[+].value = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes#numConfC19NewAdmUnk
+* group[=].stratifier[=].stratum[=].population[+].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].stratifier[=].stratum[=].population[=].count = 0
+
+
+
+
+
+* group[=].stratifier[+].id = "numConfFluNewAdmUnk-beds-status-stratifier"
+* group[=].stratifier[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes#numConfFluNewAdmUnk
+* group[=].stratifier[=].stratum[+].value = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes#numConfFluNewAdmUnk
+* group[=].stratifier[=].stratum[=].population[+].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].stratifier[=].stratum[=].population[=].count = 0
+
+* group[=].stratifier[+].id = "numConfRSVNewAdmUnk-beds-status-stratifier"
+* group[=].stratifier[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes#numConfRSVNewAdmUnk
+* group[=].stratifier[=].stratum[+].value = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes#numConfRSVNewAdmUnk
+* group[=].stratifier[=].stratum[=].population[+].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
+* group[=].stratifier[=].stratum[=].population[=].count = 0
+
+
 
 ///////////// Group numInPtBedsAdult /////////////
 * group[+].id = "numInPtBedsAdult-capacity-group"
