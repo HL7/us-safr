@@ -32,94 +32,50 @@ Usage: #example
 * improvementNotation = $MeasureImprovementNotation#increase "Increased score indicates improvement"
 
 
-///////////// Group Beds /////////////
-/*
-
-* group[+].id = "AllBeds-bed-capacity-group"
-* group[=].code = BedCapacityGroupExampleCS#AllBeds "All Beds"
-* group[=].population[+].id = "Beds-initial-population"
-* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 182
-* group[=].population[+].id = "Beds-measure-population"
-* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
-* group[=].population[=].count = 182
-* group[=].population[+].id = "Beds-measure-observation" 
-* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-observation "Measure Observation"
-* group[=].population[=].count = 5
-* group[=].stratifier[0].id = "Beds-status-stratifier"
-* group[=].stratifier[0].code.text = "All Unoccupied Beds Status"
-* group[=].stratifier[0].stratum[0].value.text = "Occupied"
-* group[=].stratifier[0].stratum[0].population[0].id = "AllBedsOccupied"
-* group[=].stratifier[0].stratum[0].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
-* group[=].stratifier[0].stratum[0].population[0].count = 177
-* group[=].stratifier[0].stratum[1].value.text = "Available"
-* group[=].stratifier[0].stratum[1].population[0].id = "AllBedsUnoccupied"
-* group[=].stratifier[0].stratum[1].population[0].code = http://terminology.hl7.org/CodeSystem/measure-population#measure-population "Measure Population"
-* group[=].stratifier[0].stratum[1].population[0].count = 5
-
-*/
 
 
 ///////////// Group AllBedsOccupied /////////////
 * group[+].id = "AllBedsOccupied-bed-capacity-group"
-* group[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes#AllBedsOccupied "All Beds Census"
+* group[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes#AllBedsOccupied
 * group[=].population[+].id = "AllBedsOccupied-initial-population"
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 177
+* group[=].population[=].count = 150
 
 ///////////// Group AllBedsUnoccupied /////////////
 * group[+].id = "AllBedsUnoccupied-bed-capacity-group"
-* group[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes#AllBedsUnoccupied "All Beds Unoccupied"
+* group[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes#AllBedsUnoccupied
 * group[=].population[+].id = "AllBedsUnoccupied-initial-population"
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 5
+* group[=].population[=].count = 50
+
 
 ///////////// Group AdultTotalOccupied /////////////
 * group[+].id = "AdultTotalOccupied-bed-capacity-group"
-* group[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes#AdultTotalOccupied "Adult Total Census"
+* group[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes#AdultTotalOccupied
 * group[=].population[+].id = "AdultTotalOccupied-initial-population"
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 177
+* group[=].population[=].count = 150
+
 
 ///////////// Group AdultTotalUnoccupied /////////////
 * group[+].id = "AdultTotalUnoccupied-bed-capacity-group"
-* group[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes#AdultTotalUnoccupied "Adult Total Unoccupied"
+* group[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes#AdultTotalUnoccupied
 * group[=].population[+].id = "AdultTotalUnoccupied-initial-population"
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 5
+* group[=].population[=].count = 50
+
 
 ///////////// Group AdultICUOccupied /////////////
 * group[+].id = "AdultICUOccupied-bed-capacity-group"
-* group[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes#AdultICUOccupied "Adult ICU Census"
+* group[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes#AdultICUOccupied
 * group[=].population[+].id = "AdultICUOccupied-initial-population"
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 32
+* group[=].population[=].count = 0
+
 
 ///////////// Group AdultICUUnoccupied /////////////
 * group[+].id = "AdultICUUnoccupied-bed-capacity-group"
-* group[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes#AdultICUUnoccupied "Adult ICU Unoccupied"
+* group[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes#AdultICUUnoccupied
 * group[=].population[+].id = "AdultICUUnoccupied-initial-population"
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 2
-
-
-
-
-///////////// Group AdultICULOCOccupied /////////////
-* group[+].id = "AdultICULOCOccupied-bed-capacity-group"
-* group[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes#AdultICULOCOccupied "Adult ICU Unoccupied"
-* group[=].population[+].id = "AdultICULOCOccupied-initial-population"
-* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 32
-
-
-
-///////////// Group AdultICULOCOccupied /////////////
-* group[+].id = "AdultICULOCOccupied-bed-capacity-group"
-* group[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes#AdultICULOCOccupied "Adult ICU-LOC Occupied Beds Status"
-* group[=].population[+].id = "AdultICULOCOccupied-initial-population"
-* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 32
-
-
-
+* group[=].population[=].count = 0
