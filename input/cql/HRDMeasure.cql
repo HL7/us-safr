@@ -293,8 +293,9 @@ define "N95 Mask Supply in Days Stratifier":
     where Devices.type ~ "N95 mask"
   ) / 10 )
 
-define "N95 Mask 3 Day Supply Initial Population":
-  "N95 Mask Supply in Days Stratifier" > 3
+define "N95 Mask 3 Day Supply Stratifier":
+  if "N95 Mask Supply in Days Stratifier" > 3 then 'y'
+  else 'n'
 
 define "OR Surgical Mask Supply in Days Stratifier":
   Floor( Count(
@@ -302,8 +303,9 @@ define "OR Surgical Mask Supply in Days Stratifier":
     where Devices.type ~ "Surgical mask"
   ) / 10 )
 
-define "OR Surgical Mask 3 Day Supply Initial Population":
-  "OR Surgical Mask Supply in Days Stratifier" > 3
+define "OR Surgical Mask 3 Day Supply Stratifier":
+  if "OR Surgical Mask Supply in Days Stratifier" > 3 then 'y'
+  else 'n'
 
 define "Face Shield Supply in Days Stratifier":
   Floor( Count(
@@ -311,8 +313,9 @@ define "Face Shield Supply in Days Stratifier":
     where Devices.type ~ "Face shield"
   ) / 10 )
 
-define "Face Shield 3 Day Supply Initial Population":
-  "Face Shield Supply in Days Stratifier" > 3
+define "Face Shield 3 Day Supply Stratifier":
+  if "Face Shield Supply in Days Stratifier" > 3 then 'y'
+  else 'n'
 
 define "Gown Supply in Days Stratifier":
   Floor( Count(
@@ -320,8 +323,9 @@ define "Gown Supply in Days Stratifier":
     where Devices.type ~ "Patient gown"
   ) / 5 )
 
-define "Gown 3 Day Supply Initial Population":
-  "Gown Supply in Days Stratifier" > 3
+define "Gown 3 Day Supply Stratifier":
+  if "Gown Supply in Days Stratifier" > 3 then 'y'
+  else 'n'
 
 define "Glove Supply in Days Stratifier":
   Floor( Count(
@@ -329,8 +333,9 @@ define "Glove Supply in Days Stratifier":
     where Devices.type ~ "Surgical glove"
   ) / 15 )
 
-define "Glove 3 Day Supply Initial Population":
-  "Glove Supply in Days Stratifier" > 3
+define "Glove 3 Day Supply Stratifier":
+  if "Glove Supply in Days Stratifier" > 3 then 'y'
+  else 'n'
 
 //Functions and Helpers
 define "COVID_19 Observations":

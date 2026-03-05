@@ -1686,11 +1686,6 @@
          </type>
          <relatedArtifact>
             <type value="depends-on"></type>
-            <display value="FHIR model information"></display>
-            <resource value="http://fhir.org/guides/cqf/common/Library/FHIR-ModelInfo|4.0.1"></resource>
-         </relatedArtifact>
-         <relatedArtifact>
-            <type value="depends-on"></type>
             <display value="Library FHIRHelpers"></display>
             <resource value="http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1"></resource>
          </relatedArtifact>
@@ -2344,13 +2339,13 @@
          </dataRequirement>
       </Library>
    </contained>
+   <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis">
+      <valueCode value="boolean"></valueCode>
+   </extension>
    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-softwaresystem">
       <valueReference>
          <reference value="Device/cqf-tooling"></reference>
       </valueReference>
-   </extension>
-   <extension url="http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-populationBasis">
-      <valueCode value="boolean"></valueCode>
    </extension>
    <extension url="http://hl7.org/fhir/uv/crmi/StructureDefinition/crmi-effectiveDataRequirements">
       <valueCanonical value="#effective-data-requirements"></valueCanonical>
@@ -2360,7 +2355,7 @@
    <name value="BedCapacityMeasure"></name>
    <title value="Bed Capacity"></title>
    <experimental value="true"></experimental>
-   <date value="2026-01-20T13:35:27-04:00"></date>
+   <date value="2026-03-05T18:26:30-04:00"></date>
    <description value="Bed Capacity Measure includes counts of specific bed types within the context of a given healthcare context or setting."></description>
    <library value="http://hl7.org/fhir/us/safr/Library/BedCapacityMeasure"></library>
    <scoring>
