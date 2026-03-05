@@ -41,6 +41,50 @@ Usage: #example
 
 
 
+
+* group[=].stratifier[+].id = "N95MaskSupplyDays-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#N95MaskSupplyDays 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "surgMaskSupplyDays-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#surgMaskSupplyDays 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "shieldSupplyDays-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#shieldSupplyDays 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "gownSupplyDays-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#gownSupplyDays 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "gloveSupplyDays-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#gloveSupplyDays 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+
+* group[=].stratifier[+].id = "N95Mask3DaySupply-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#N95Mask3DaySupply 
+* group[=].stratifier[=].stratum[+].value.text = "n"
+
+* group[=].stratifier[+].id = "surgMask3DaySupply-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#surgMask3DaySupply 
+* group[=].stratifier[=].stratum[+].value.text = "n"
+
+* group[=].stratifier[+].id = "shield3DaySupply-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#shield3DaySupply 
+* group[=].stratifier[=].stratum[+].value.text = "n"
+
+* group[=].stratifier[+].id = "gown3DaySupply-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#gown3DaySupply 
+* group[=].stratifier[=].stratum[+].value.text = "n"
+
+* group[=].stratifier[+].id = "glove3DaySupply-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#glove3DaySupply 
+* group[=].stratifier[=].stratum[+].value.text = "n"
+
+
+
 ///////////// Group numInPtBedsAdult /////////////
 * group[+].id = "numInPtBedsAdult-capacity-group"
 * group[=].code = HRDExampleCS#numInPtBedsAdult 
@@ -125,6 +169,96 @@ Usage: #example
 * group[=].population[=].count = 20
 
 
+* group[=].stratifier[+].id = "numConfC19HospPatsPed-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfC19HospPatsPed 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfFluHospPatsPed-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfFluHospPatsPed 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfRSVHospPatsPed-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfRSVHospPatsPed 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+
+
+* group[=].stratifier[+].id = "numConfC19NewAdmPed0to4-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfC19NewAdmPed0to4 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfC19NewAdmPed5to17-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfC19NewAdmPed5to17 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+
+* group[=].stratifier[+].id = "numConfFluNewAdmPed0to4-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfFluNewAdmPed0to4 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfFluNewAdmPed5to17-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfFluNewAdmPed5to17 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+
+* group[=].stratifier[+].id = "numConfRSVNewAdmPed0to4-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfRSVNewAdmPed0to4 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfRSVNewAdmPed5to17-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfRSVNewAdmPed5to17 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+
+///////////// Group numICUBeds /////////////
+* group[+].id = "numICUBeds-capacity-group"
+* group[=].code = HRDExampleCS#numICUBeds 
+* group[=].population[+].id = "numICUBeds-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 0
+
+
+///////////// Group numICUBedsAdult /////////////
+* group[+].id = "numICUBedsAdult-capacity-group"
+* group[=].code = HRDExampleCS#numICUBedsAdult 
+* group[=].population[+].id = "numICUBedsAdult-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 0
+
+
+* group[=].stratifier[+].id = "numConfC19ICUPatsAdult-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfC19ICUPatsAdult 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfFluICUPatsAdult-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfFluICUPatsAdult 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfRSVICUPatsAdult-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfRSVICUPatsAdult 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+
+///////////// Group numICUBedsPed /////////////
+* group[+].id = "numICUBedsPed-capacity-group"
+* group[=].code = HRDExampleCS#numICUBedsPed 
+* group[=].population[+].id = "numICUBedsPed-initial-population"
+* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
+* group[=].population[=].count = 0
+
+* group[=].stratifier[+].id = "numConfC19ICUPatsPed-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfC19ICUPatsPed 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfFluICUPatsPed-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfFluICUPatsPed 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfRSVICUPatsPed-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfRSVICUPatsPed 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+
 ///////////// Group numInPtBedsOcc /////////////
 * group[+].id = "numInPtBedsOcc-capacity-group"
 * group[=].code = HRDExampleCS#numInPtBedsOcc 
@@ -146,26 +280,7 @@ Usage: #example
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 20
 
-///////////// Group numICUBeds /////////////
-* group[+].id = "numICUBeds-capacity-group"
-* group[=].code = HRDExampleCS#numICUBeds 
-* group[=].population[+].id = "numICUBeds-initial-population"
-* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 0
 
-///////////// Group numICUBedsAdult /////////////
-* group[+].id = "numICUBedsAdult-capacity-group"
-* group[=].code = HRDExampleCS#numICUBedsAdult 
-* group[=].population[+].id = "numICUBedsAdult-initial-population"
-* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 0
-
-///////////// Group numICUBedsPed /////////////
-* group[+].id = "numICUBedsPed-capacity-group"
-* group[=].code = HRDExampleCS#numICUBedsPed 
-* group[=].population[+].id = "numICUBedsPed-initial-population"
-* group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
-* group[=].population[=].count = 0
 
 ///////////// Group numICUBedsOcc /////////////
 * group[+].id = "numICUBedsOcc-capacity-group"
