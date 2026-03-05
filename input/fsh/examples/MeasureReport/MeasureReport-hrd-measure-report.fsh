@@ -48,6 +48,74 @@ Usage: #example
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 80
 
+* group[=].stratifier[+].id = "numConfC19HospPatsAdult-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfC19HospPatsAdult 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfFluHospPatsAdult-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfFluHospPatsAdult 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfRSVHospPatsAdult-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfRSVHospPatsAdult 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+
+* group[=].stratifier[+].id = "numConfC19NewAdmAdult18to49-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfC19NewAdmAdult18to49 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfC19NewAdmAdult50to64-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfC19NewAdmAdult50to64 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfC19NewAdmAdult65to74-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfC19NewAdmAdult65to74 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfC19NewAdmAdult75plus-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfC19NewAdmAdult75plus 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+
+
+* group[=].stratifier[+].id = "numConfFluNewAdmAdult18to49-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfFluNewAdmAdult18to49 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfFluNewAdmAdult50to64-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfFluNewAdmAdult50to64 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfFluNewAdmAdult65to74-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfFluNewAdmAdult65to74 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfFluNewAdmAdult75plus-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfFluNewAdmAdult75plus 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+
+
+* group[=].stratifier[+].id = "numConfRSVNewAdmAdult18to49-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfRSVNewAdmAdult18to49 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfRSVNewAdmAdult50to64-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfRSVNewAdmAdult50to64 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfRSVNewAdmAdult65to74-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfRSVNewAdmAdult65to74 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+* group[=].stratifier[+].id = "numConfRSVNewAdmAdult75plus-stratifier"
+* group[=].stratifier[=].code = HRDExampleCS#numConfRSVNewAdmAdult75plus 
+* group[=].stratifier[=].stratum[+].value.text = "0"
+
+
+
+
 
 ///////////// Group numInPtBedsPed /////////////
 * group[+].id = "numInPtBedsPed-capacity-group"
