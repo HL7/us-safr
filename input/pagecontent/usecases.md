@@ -107,21 +107,12 @@ For all bed censuses and counts, the following bed types should be <u>excluded</
       </tr>
       <tr>
          <td style="column-width:30%">
-            <a href="Library-BedCapacityLibrary.html" title="Library/BedCapacityLibrary">Library - Library of Bed
+            <a href="Library-BedCapacityMeasure.html" title="Library/BedCapacityMeasure">Library - Library of Bed
                Capacity Measure Example</a>
          </td>
          <td>
             <p>This library contains CQL logic for evaluating structural measures related to bed capacity reporting
                capabilities.</p>
-         </td>
-      </tr>
-      <tr>
-         <td style="column-width:30%">
-            <a href="Bundle-BedCapacityMeasureBundle.html" title="Bundle/BedCapacityMeasureBundle">Bundle - Bed Capacity
-               Measure Bundle Example</a>
-         </td>
-         <td>
-            <p>This Bundle resource is an example of a Bed Capacity Measure Bundle.</p>
          </td>
       </tr>
       <tr>
