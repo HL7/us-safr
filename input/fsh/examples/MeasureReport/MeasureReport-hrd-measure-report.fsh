@@ -8,7 +8,7 @@ Usage: #example
 * extension[scoring].valueCodeableConcept = $measure-scoring#continuous-variable "Continuous Variable"
 * status = $measure-report-status#complete
 * type = $measure-report-type#individual
-* measure = "http://hl7.org/fhir/us/safr/Measure/HRDMeasure|1.0.0"
+* measure = "http://hl7.org/fhir/us/safr/Measure/HRDMeasureExample|1.0.0"
 * date = "2025-03-05T08:15:00-05:00"
 // Reporting period
 * period.start = "2025-03-05T00:00:00-05:00"

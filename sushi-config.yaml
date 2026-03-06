@@ -183,12 +183,26 @@ menu:
 # The following are simple examples to demonstrate what this might
 # look like:
 #
-# resources:
-#   Patient/my-example-patient:
-#     name: My Example Patient
-#     description: An example Patient
-#     exampleBoolean: true
-#   Patient/bad-example: omit
+
+resources:
+  Measure/BedCapacityMeasureExample:
+    name: BedCapacityMeasureExample
+    description: "Example Bed Capacity Measure"
+    exampleBoolean: true
+  Library/BedCapacityMeasure:
+    name: BedCapacityMeasure
+    description: "Example Bed Capacity Measure Library"
+    exampleBoolean: true
+  Measure/HRDMeasureExample:
+    name: HRDMeasureExample
+    description: "Example Hospital Respiratory Data Measure"
+    exampleBoolean: true
+  Library/HRDMeasure:
+    name: HRDMeasure
+    description: "Example Hospital Respiratory Data Measure Library"
+    exampleBoolean: true
+
+
 #
 #
 # Groups can control certain aspects of the IG generation.  The IG
