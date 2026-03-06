@@ -10,3 +10,10 @@ The expression language text/cql-identifier is not supported, so can't be valida
 Reference to experimental CodeSystem http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes|1.0.0
 Reference to experimental CodeSystem http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes|1.0.0
 Reference to experimental CodeSystem http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes|1.0.0
+
+# The code systems in this IG are examples only, and are not official code systems thus should not require OIDs
+ERROR: Resource: The resource CodeSystem/us-safr-bed-capacity-example-codes must have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+
+ERROR: Resource: The resource CodeSystem/us-safr-hrd-example-codes must have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+
+ERROR: Resource: The resource CodeSystem/us-safr-hrd-supply-days-example-codes must have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)

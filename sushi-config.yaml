@@ -201,6 +201,18 @@ resources:
     name: HRDMeasure
     description: "Example Hospital Respiratory Data Measure Library"
     exampleBoolean: true
+  CodeSystem/us-safr-bed-capacity-example-codes:
+    name: BedCapacityExampleCS
+    description: "Healthcare Bed Capacity Reporting Code System"
+    exampleBoolean: true
+  CodeSystem/us-safr-hrd-example-codes:
+    name: HRDExampleCS
+    description: "Hospital Respiratory Data Reporting Code System"
+    exampleBoolean: true
+  CodeSystem/us-safr-hrd-supply-days-example-codes:
+    name: HRDSupplyDaysExampleCS
+    description: "Hospital Respiratory Data Supply Days Code System"
+    exampleBoolean: true
 
 
 #
