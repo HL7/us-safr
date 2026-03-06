@@ -4,6 +4,8 @@ Title: "MeasureReport - HRD MeasureReport Example"
 Description: "This Bundle resource is an example of a Hospital Respiratory Data (HRD) MeasureReport."
 Usage: #example
 // Basic metadata
+* extension[scoring].url = "http://hl7.org/fhir/us/davinci-deqm/StructureDefinition/extension-measureScoring"
+* extension[scoring].valueCodeableConcept = $measure-scoring#continuous-variable "Continuous Variable"
 * status = $measure-report-status#complete
 * type = $measure-report-type#individual
 * measure = "http://hl7.org/fhir/us/safr/Measure/HRDMeasure|1.0.0"
@@ -17,7 +19,7 @@ Usage: #example
 //* subject = Reference(MemorialHospitalFacility)
 * subject.reference = "urn:uuid:4c83e586-1277-4132-9b4e-3d1c14d38983"
 * subject.display = "Memorial Hospital Facility"
-
+* improvementNotation = $MeasureImprovementNotation#increase "Increased score indicates improvement"
 
 
 ///////////// Group numInPtBeds /////////////
