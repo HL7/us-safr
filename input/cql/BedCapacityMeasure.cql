@@ -506,7 +506,7 @@ define "Adult ED Admitted Census Initial Population":
   and "LocationIsHOSP"
   and "LocationIsOTH"
 
-define "Peds ED Census Initial Population":
+define "Peds ED Total Census Initial Population":
   IsBedLocation
   and exists(
     [Encounter: "Emergency Department Visit"] EDVisit

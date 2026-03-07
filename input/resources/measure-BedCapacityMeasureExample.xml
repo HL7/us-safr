@@ -165,10 +165,10 @@
                <valueString value="BedCapacityMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Peds ED Census Initial Population"></valueString>
+               <valueString value="Peds ED Total Census Initial Population"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Peds ED Census Initial Population&quot;:
+               <valueString value="define &quot;Peds ED Total Census Initial Population&quot;:
   IsBedLocation
   and exists(
     [Encounter: &quot;Emergency Department Visit&quot;] EDVisit
@@ -1726,7 +1726,7 @@
             <type value="boolean"></type>
          </parameter>
          <parameter>
-            <name value="Peds ED Census Initial Population"></name>
+            <name value="Peds ED Total Census Initial Population"></name>
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
@@ -2368,8 +2368,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AllBedsOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112579-8"></code>
          </coding>
       </code>
       <population id="d2e4301">
@@ -2389,8 +2389,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AllBedsUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112578-0"></code>
          </coding>
       </code>
       <population id="d2e4378">
@@ -2410,8 +2410,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AdultTotalOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112577-2"></code>
          </coding>
       </code>
       <population id="d2e4455">
@@ -2431,8 +2431,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AdultTotalUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112576-4"></code>
          </coding>
       </code>
       <population id="d2e4533">
@@ -2452,8 +2452,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AdultICUOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112575-6"></code>
          </coding>
       </code>
       <population id="d2e4610">
@@ -2473,8 +2473,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AdultICUUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112574-9"></code>
          </coding>
       </code>
       <population id="d2e4687">
@@ -2494,8 +2494,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AdultICULOCOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112573-1"></code>
          </coding>
       </code>
       <population id="d2e4764">
@@ -2515,8 +2515,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AdultNonICUOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112572-3"></code>
          </coding>
       </code>
       <population id="d2e4918">
@@ -2536,8 +2536,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AdultNonICUUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112571-5"></code>
          </coding>
       </code>
       <population id="d2e4996">
@@ -2557,8 +2557,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AdultPCUOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112570-7"></code>
          </coding>
       </code>
       <population id="d2e5073">
@@ -2578,8 +2578,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AdultPCUUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112569-9"></code>
          </coding>
       </code>
       <population id="d2e5150">
@@ -2599,8 +2599,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AdultMTMSOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112568-1"></code>
          </coding>
       </code>
       <population id="d2e5227">
@@ -2620,8 +2620,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AdultMTMSUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112567-3"></code>
          </coding>
       </code>
       <population id="d2e5304">
@@ -2641,8 +2641,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AdultObsOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112566-5"></code>
          </coding>
       </code>
       <population id="d2e5381">
@@ -2662,8 +2662,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AdultObsUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112565-7"></code>
          </coding>
       </code>
       <population id="d2e5459">
@@ -2683,8 +2683,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="PedsTotalOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112564-0"></code>
          </coding>
       </code>
       <population id="d2e5536">
@@ -2704,8 +2704,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="PedsTotalUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112563-2"></code>
          </coding>
       </code>
       <population id="d2e5613">
@@ -2725,8 +2725,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="PedsICUOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112562-4"></code>
          </coding>
       </code>
       <population id="d2e5690">
@@ -2746,8 +2746,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="PedsICUUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112561-6"></code>
          </coding>
       </code>
       <population id="d2e5767">
@@ -2767,8 +2767,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="PedsICULOCOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112560-8"></code>
          </coding>
       </code>
       <population id="d2e5844">
@@ -2788,8 +2788,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="PedsNonICUOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112559-0"></code>
          </coding>
       </code>
       <population id="d2e5999">
@@ -2809,8 +2809,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="PedsNonICUUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112558-2"></code>
          </coding>
       </code>
       <population id="d2e6076">
@@ -2830,8 +2830,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="PedsPCUOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112557-4"></code>
          </coding>
       </code>
       <population id="d2e6153">
@@ -2851,8 +2851,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="PedsPCUUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112556-6"></code>
          </coding>
       </code>
       <population id="d2e6230">
@@ -2872,8 +2872,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="PedsMTMSOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112555-8"></code>
          </coding>
       </code>
       <population id="d2e6307">
@@ -2893,8 +2893,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="PedsMTMSUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112554-1"></code>
          </coding>
       </code>
       <population id="d2e6385">
@@ -2914,8 +2914,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="PedsObsOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112553-3"></code>
          </coding>
       </code>
       <population id="d2e6462">
@@ -2935,8 +2935,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="PedsObsUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112552-5"></code>
          </coding>
       </code>
       <population id="d2e6539">
@@ -2956,8 +2956,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="SpecialtyTotalOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112551-7"></code>
          </coding>
       </code>
       <population id="d2e6616">
@@ -2977,8 +2977,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="SpecialtyTotalUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112550-9"></code>
          </coding>
       </code>
       <population id="d2e6693">
@@ -2998,8 +2998,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="SpecialtyNonCribOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112549-1"></code>
          </coding>
       </code>
       <population id="d2e6770">
@@ -3019,8 +3019,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="SpecialtyNonCribUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112548-3"></code>
          </coding>
       </code>
       <population id="d2e6848">
@@ -3040,8 +3040,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="OBOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112547-5"></code>
          </coding>
       </code>
       <population id="d2e6925">
@@ -3061,8 +3061,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="OBUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112546-7"></code>
          </coding>
       </code>
       <population id="d2e7002">
@@ -3082,8 +3082,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="NICUOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112545-9"></code>
          </coding>
       </code>
       <population id="d2e7079">
@@ -3103,8 +3103,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="NICUUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112544-2"></code>
          </coding>
       </code>
       <population id="d2e7156">
@@ -3124,8 +3124,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="NICU4Occupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112543-4"></code>
          </coding>
       </code>
       <population id="d2e7233">
@@ -3145,8 +3145,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="NICU4Unoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112542-6"></code>
          </coding>
       </code>
       <population id="d2e7311">
@@ -3166,8 +3166,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="NICU3PlusOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112540-0"></code>
          </coding>
       </code>
       <population id="d2e7388">
@@ -3187,8 +3187,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="NICU3PlusUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112539-2"></code>
          </coding>
       </code>
       <population id="d2e7465">
@@ -3208,8 +3208,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="NICU3Occupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112538-4"></code>
          </coding>
       </code>
       <population id="d2e7542">
@@ -3229,8 +3229,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="NICU3Unoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112541-8"></code>
          </coding>
       </code>
       <population id="d2e7619">
@@ -3250,8 +3250,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="NICU2Occupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112537-6"></code>
          </coding>
       </code>
       <population id="d2e7696">
@@ -3271,8 +3271,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="NICU2Unoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112536-8"></code>
          </coding>
       </code>
       <population id="d2e7774">
@@ -3292,8 +3292,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="NICU1Occupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112533-5"></code>
          </coding>
       </code>
       <population id="d2e7851">
@@ -3313,8 +3313,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="NICU1Unoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112532-7"></code>
          </coding>
       </code>
       <population id="d2e7928">
@@ -3334,8 +3334,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="NurseryOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112535-0"></code>
          </coding>
       </code>
       <population id="d2e8005">
@@ -3355,8 +3355,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="NurseryUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112534-3"></code>
          </coding>
       </code>
       <population id="d2e8082">
@@ -3376,8 +3376,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AdultPsychOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112531-9"></code>
          </coding>
       </code>
       <population id="d2e8159">
@@ -3397,8 +3397,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AdultPsychUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112530-1"></code>
          </coding>
       </code>
       <population id="d2e8237">
@@ -3418,8 +3418,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="PedsPsychOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112529-3"></code>
          </coding>
       </code>
       <population id="d2e8314">
@@ -3439,8 +3439,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="PedsPsychUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112528-5"></code>
          </coding>
       </code>
       <population id="d2e8391">
@@ -3460,8 +3460,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="RehabOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112527-7"></code>
          </coding>
       </code>
       <population id="d2e8468">
@@ -3481,8 +3481,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="RehabUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112526-9"></code>
          </coding>
       </code>
       <population id="d2e8545">
@@ -3502,8 +3502,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="SurgeActiveTotalOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112525-1"></code>
          </coding>
       </code>
       <population id="d2e8622">
@@ -3523,8 +3523,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="SurgeActiveTotalUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112524-4"></code>
          </coding>
       </code>
       <population id="d2e8700">
@@ -3565,8 +3565,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="SurgeInactiveTotalUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112523-6"></code>
          </coding>
       </code>
       <population id="d2e8854">
@@ -3586,8 +3586,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="SurgeActiveICUOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112522-8"></code>
          </coding>
       </code>
       <population id="d2e8931">
@@ -3607,8 +3607,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="SurgeActiveICUUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112521-0"></code>
          </coding>
       </code>
       <population id="d2e9008">
@@ -3628,8 +3628,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="SurgeInactiveICUUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112520-2"></code>
          </coding>
       </code>
       <population id="d2e9163">
@@ -3649,8 +3649,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="SurgeActiveNonICUOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112519-4"></code>
          </coding>
       </code>
       <population id="d2e9240">
@@ -3670,8 +3670,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="SurgeActiveNonICUUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112518-6"></code>
          </coding>
       </code>
       <population id="d2e9317">
@@ -3712,8 +3712,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="SurgeInactiveNonICUUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112517-8"></code>
          </coding>
       </code>
       <population id="d2e9471">
@@ -3733,8 +3733,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="BurnOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112516-0"></code>
          </coding>
       </code>
       <population id="d2e9548">
@@ -3754,8 +3754,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="BurnUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112515-2"></code>
          </coding>
       </code>
       <population id="d2e9626">
@@ -3775,8 +3775,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="NegativePressureOccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112514-5"></code>
          </coding>
       </code>
       <population id="d2e9703">
@@ -3796,8 +3796,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="NegativePressureUnoccupied"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112513-7"></code>
          </coding>
       </code>
       <population id="d2e9780">
@@ -3817,8 +3817,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AdultEDCensus"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112512-9"></code>
          </coding>
       </code>
       <population id="d2e9857">
@@ -3838,8 +3838,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="AdultEDAdmittedCensus"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112511-1"></code>
          </coding>
       </code>
       <population id="d2e9934">
@@ -3859,8 +3859,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="PedsEDCensus"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112510-3"></code>
          </coding>
       </code>
       <population id="d2e10011">
@@ -3873,15 +3873,15 @@
          </code>
          <criteria>
             <language value="text/cql-identifier"></language>
-            <expression value="Peds ED Census Initial Population"></expression>
+            <expression value="Peds ED Total Census Initial Population"></expression>
          </criteria>
       </population>
    </group>
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="PedsEDAdmittedCensus"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112509-5"></code>
          </coding>
       </code>
       <population id="d2e10089">
@@ -3901,8 +3901,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="TotalEDCensus"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112508-7"></code>
          </coding>
       </code>
       <population id="d2e10166">
@@ -3922,8 +3922,8 @@
    <group>
       <code>
          <coding>
-            <system value="http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes"></system>
-            <code value="TotalEDAdmittedCensus"></code>
+            <system value="http://loinc.org"></system>
+            <code value="112507-9"></code>
          </coding>
       </code>
       <population id="d2e10243">
