@@ -1,19 +1,314 @@
 == Suppressed Messages ==
 
-# Error due to cross version extension slicing issue in tooling. See https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Cross-Version.20Extension.20Slicing.20issue.20in.20dependent.20IGs/with/516557595
+# 01. 🚩🚩🚩 ERROR: due to cross version extension slicing issue in tooling. See https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Cross-Version.20Extension.20Slicing.20issue.20in.20dependent.20IGs/with/516557595 🚩🚩🚩
 Slicing cannot be evaluated: Unable to resolve profile CanonicalType[http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.supplementalData]
 
-# IG Publisher does not currently support validating CQL
-The expression language text/cql-identifier is not supported, so can't be validated
+# 02. 🚩🚩🚩 ERROR: due to required slice resource profile not being recognized due to cross version extension slicing issue in tooling. 🚩🚩🚩
+ERROR: Bundle/HRDMeasureReportBundle: Bundle: Slice 'Bundle.entry:measurereport': a matching slice is required, but not found (from http://hl7.org/fhir/us/safr/StructureDefinition/us-safr-measurereport-bundle|1.0.0). Note that other slices are allowed in addition to this required slice
+ERROR: Bundle/HospitalBedCapacityReportBundle: Bundle: Slice 'Bundle.entry:measurereport': a matching slice is required, but not found (from http://hl7.org/fhir/us/safr/StructureDefinition/us-safr-measurereport-bundle|1.0.0). Note that other slices are allowed in addition to this required slice
 
-# Acknowledge we are using experimental code systems. Many of these codes will be replaced with LOINC codes before publication.
+# 03. 💭💭💭 INFORMATION: Resource not being recognized as a profile resource slice because the correct profile was not recognized due to cross version extension slicing issue in tooling. 💭💭💭
+INFORMATION: Bundle/HRDMeasureReportBundle: Bundle.entry[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/safr/StructureDefinition/us-safr-measurereport-bundle|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/HospitalBedCapacityReportBundle: Bundle.entry[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/safr/StructureDefinition/us-safr-measurereport-bundle|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+
+# 04. 🚩🚩🚩 ERROR: Unknown LOINC codes that were added in LOINC 2.82. See: https://loinc.org/search/?t=1&s=%3Dclasstype%3AClinical+%3Dversionfirstreleased%3A2.82++%3Dclass%3APUBLICHEALTH 🚩🚩🚩
+Unknown code '112579-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112578-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112577-2s' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112576-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112575-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112574-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112573-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112572-3' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112571-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112570-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112569-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112568-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112567-3' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112566-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112565-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112564-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112563-2' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112562-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112561-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112560-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112559-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112558-2' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112557-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112556-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112555-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112554-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112553-3' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112552-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112551-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112550-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112549-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112548-3' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112547-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112546-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112543-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112542-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112541-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112540-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112539-2' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112538-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112537-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112536-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112535-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112534-3' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112533-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112532-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112531-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112530-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112529-3' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112528-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112527-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112526-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112525-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112524-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112523-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112522-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112521-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112520-2' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112519-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112518-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112517-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112516-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112515-2' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112514-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112513-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112512-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112511-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112509-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112508-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112507-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112579-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112578-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112577-2' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112576-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112575-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112574-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112573-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112572-3' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112571-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112570-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112569-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112568-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112567-3' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112566-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112565-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112564-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112563-2' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112562-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112561-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112560-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112559-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112558-2' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112557-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112556-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112555-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112554-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112553-3' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112552-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112551-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112550-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112549-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112548-3' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112547-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112546-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112543-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112542-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112540-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112539-2' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112538-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112541-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112537-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112536-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112533-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112532-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112535-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112534-3' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112531-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112530-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112529-3' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112528-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112527-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112526-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112525-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112524-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112523-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112522-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112521-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112520-2' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112519-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112518-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112517-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112516-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112515-2' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112514-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112513-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112512-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112511-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112509-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112508-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112507-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112579-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112578-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112577-2' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112576-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112575-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112574-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112573-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112572-3' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112571-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112570-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112569-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112568-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112567-3' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112566-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112565-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112564-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112563-2' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112562-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112561-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112560-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112559-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112558-2' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112557-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112556-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112555-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112554-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112553-3' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112552-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112551-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112550-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112549-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112548-3' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112547-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112546-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112543-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112542-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112541-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112540-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112539-2' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112538-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112537-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112536-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112535-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112534-3' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112533-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112532-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112531-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112530-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112529-3' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112528-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112527-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112526-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112525-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112524-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112523-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112522-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112521-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112520-2' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112519-4' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112518-6' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112517-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112516-0' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112515-2' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112514-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112513-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112512-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112511-1' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112509-5' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112508-7' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112507-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112545-9' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112544-2' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112545-9' in the CodeSystem 'http://loinc.org' version '2.81'
+
+
+# 05. 🚩🚩🚩 This error will be present until the publication team can address it.  See this Zulip chat: https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build/with/547712458 🚩🚩🚩
+No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
+
+# 06. ⚠️⚠️⚠️ WARNING: regarding newer published versions of US Core and QI Core. The versions chosen were done so to meet the current regulatory requirement floor ⚠️⚠️⚠️
+WARNING: ImplementationGuide/hl7.fhir.us.safr: ImplementationGuide.dependsOn[1]: The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 8.0.1. This reference is getting old and the more recent version should be considered
+WARNING: ImplementationGuide/hl7.fhir.us.safr: ImplementationGuide.dependsOn[6]: The ImplementationGuide uses package hl7.fhir.us.qicore#6.0.0 released on 2024-03-01, but the most recent appropriate version is 7.0.1. This reference is getting old and the more recent version should be considered
+
+
+# 07. 💭💭💭 INFORMATION: Acknowledge we are using experimental code systems. Many of these codes will be replaced with LOINC codes before publication. 💭💭💭
 Reference to experimental CodeSystem http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-group-example-codes|1.0.0
 Reference to experimental CodeSystem http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes|1.0.0
 Reference to experimental CodeSystem http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes|1.0.0
 
-# The code systems in this IG are examples only, and are not official code systems thus should not require OIDs
-ERROR: Resource: The resource CodeSystem/us-safr-bed-capacity-example-codes must have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+# 08. 💭💭💭 INFORMATION: Example references an example (experimental) CodeSystem. This is known and the examples are not meant to be used in production. 💭💭💭
+Reference to experimental CodeSystem http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes|1.0.0
 
-ERROR: Resource: The resource CodeSystem/us-safr-hrd-example-codes must have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+# 09. 💭💭💭 INFORMATION: Conformance Language detected on a section that only explains the conformance verbs 💭💭💭
+INFORMATION: specification.html: The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: '     SHALL indicates requirements that must be met to be conformant with the specification.   '
+INFORMATION: specification.html: The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause: '     SHOULD indicates behaviors that are strongly recommended (and which may result in interoperability issues or sub-optimal behavior if not adhered to), but which do not, for this version of the specification, affect the determination of specification conformance.   '
+INFORMATION: specification.html: The html source contains the word 'MAY' but it is not in a text phrase marked as a conformance clause: '     MAY describes optional behaviors that are free to consider but are not a recommendation for or against adoption.   '
 
-ERROR: Resource: The resource CodeSystem/us-safr-hrd-supply-days-example-codes must have an OID assigned to cater for possible use with OID based terminology systems e.g. CDA usage (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
+# 10. 💭💭💭 INFORMATION: Additional resource in bundle that is not part of a slice. This is intended 💭💭💭
+INFORMATION: Bundle/HRDMeasureReportBundle: Bundle.entry[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/safr/StructureDefinition/us-safr-measurereport-bundle|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/HospitalBedCapacityReportBundle: Bundle.entry[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/safr/StructureDefinition/us-safr-measurereport-bundle|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# 11. 💭💭💭 INFORMATION: Additional extension in resource as a matter of usual tooling behavior. This is intended 💭💭💭
+INFORMATION: Measure/BedCapacityMeasureExample: Measure.extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Measure/HRDMeasureExample: Measure.extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+
+# 12. ⚠️⚠️⚠️ WARNING: message regarding requirements inherited by US Core ⚠️⚠️⚠️
+WARNING: StructureDefinition/us-safr-submitting-organization: StructureDefinition.snapshot: The slice 'CLIA' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+WARNING: StructureDefinition/us-safr-submitting-organization: StructureDefinition.snapshot: The slice 'NAIC' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
+
+# 13. ⚠️⚠️⚠️ WARNING: message regarding expression language that cannot be validated ⚠️⚠️⚠️
+The expression language text/cql-identifier is not supported, so can't be validated
+
+# 14. ⚠️⚠️⚠️ WARNING: for duplicate anchor IDs caused by auto generated Measure rendered text div and html page ⚠️⚠️⚠️
+WARNING: C:\dev\fhir\ig\nhsn\us-safr\output\Measure-HRDMeasureExample.html: The html source has duplicate anchor Ids: fhirhelpers-todatetime,fhirhelpers-tostring,hrdmeasure-adult-icu-beds-initial-population,hrdmeasure-adult-inpatient-beds-initial-population,hrdmeasure-face-shield-supply-in-days-stratifier,hrdmeasure-glove-supply-in-days-stratifier,hrdmeasure-gown-supply-in-days-stratifier,hrdmeasure-icu-beds-initial-population,hrdmeasure-inpatient-beds-initial-population,hrdmeasure-n95-mask-supply-in-days-stratifier,hrdmeasure-or-surgical-mask-supply-in-days-stratifier,hrdmeasure-pediatric-icu-beds-initial-population,hrdmeasure-pediatric-inpatient-beds-initial-population
+WARNING: Measure/HRDMeasureExample: Measure.text.div: The XHTML  the resource contains more than one node for each of the following node ids and anchor names: fhirhelpers-todatetime (2x), fhirhelpers-tostring (2x), hrdmeasure-adult-icu-beds-initial-population (2x), hrdmeasure-adult-inpatient-beds-initial-population (2x), hrdmeasure-face-shield-supply-in-days-stratifier (2x), hrdmeasure-glove-supply-in-days-stratifier (2x), hrdmeasure-gown-supply-in-days-stratifier (2x), hrdmeasure-icu-beds-initial-population (2x), hrdmeasure-inpatient-beds-initial-population (2x), hrdmeasure-n95-mask-supply-in-days-stratifier (2x), hrdmeasure-or-surgical-mask-supply-in-days-stratifier (2x), hrdmeasure-pediatric-icu-beds-initial-population (2x), hrdmeasure-pediatric-inpatient-beds-initial-population (2x)
+WARNING: Measure/HRDMeasureExample: Measure.text.div: Hyperlink '#hrdmeasure-inpatient-beds-initial-population' at 'div/table/tbody/tr/td/a' for 'Inpatient Beds Initial Population' resolves to multiple targets ($/text/div/table/tbody/tr[249]/th/a/@name, $/text/div/table/tbody/tr[341]/th/a/@name)
+WARNING: Measure/HRDMeasureExample: Measure.text.div: Hyperlink '#hrdmeasure-adult-inpatient-beds-initial-population' at 'div/table/tbody/tr/td/a' for 'Adult Inpatient Beds Initial Population' resolves to multiple targets ($/text/div/table/tbody/tr[235]/th/a/@name, $/text/div/table/tbody/tr[323]/th/a/@name)
+WARNING: Measure/HRDMeasureExample: Measure.text.div: Hyperlink '#hrdmeasure-pediatric-inpatient-beds-initial-population' at 'div/table/tbody/tr/td/a' for 'Pediatric Inpatient Beds Initial Population' resolves to multiple targets ($/text/div/table/tbody/tr[221]/th/a/@name, $/text/div/table/tbody/tr[299]/th/a/@name)
+WARNING: Measure/HRDMeasureExample: Measure.text.div: Hyperlink '#hrdmeasure-icu-beds-initial-population' at 'div/table/tbody/tr/td/a' for 'ICU Beds Initial Population' resolves to multiple targets ($/text/div/table/tbody/tr[291]/th/a/@name, $/text/div/table/tbody/tr[325]/th/a/@name)
+WARNING: Measure/HRDMeasureExample: Measure.text.div: Hyperlink '#hrdmeasure-adult-icu-beds-initial-population' at 'div/table/tbody/tr/td/a' for 'Adult ICU Beds Initial Population' resolves to multiple targets ($/text/div/table/tbody/tr[197]/th/a/@name, $/text/div/table/tbody/tr[203]/th/a/@name)
+WARNING: Measure/HRDMeasureExample: Measure.text.div: Hyperlink '#hrdmeasure-pediatric-icu-beds-initial-population' at 'div/table/tbody/tr/td/a' for 'Pediatric ICU Beds Initial Population' resolves to multiple targets ($/text/div/table/tbody/tr[189]/th/a/@name, $/text/div/table/tbody/tr[311]/th/a/@name)
+
+
+# 15. 💭💭💭 INFORMATION:  Message regarding deprecated extensions, that were inherited through the FHIR R4 standard itself and other IGs. 💭💭💭
+INFORMATION: StructureDefinition/us-safr-measure-bundle: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
+INFORMATION: StructureDefinition/us-safr-submitting-organization: StructureDefinition.snapshot.element[9].slicing.discriminator[0]: The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
+INFORMATION: StructureDefinition/us-safr-submitting-organization: StructureDefinition.snapshot.element[10].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+INFORMATION: StructureDefinition/us-safr-submitting-organization: StructureDefinition.snapshot.element[11].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+INFORMATION: StructureDefinition/us-safr-submitting-organization: StructureDefinition.snapshot.element[12].pattern.ofType(Identifier): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+
+# 16. 💭💭💭 INFORMATION: issue about automatically version pinned references. This IG pins most version where there are multiple options, but these automatically pinned versions are either from unpinned inherited requirements are from those that FSH does not provide a simple mechanism to define. 💭💭💭
+INFORMATION: Measure.contained[0].relatedArtifact[2].resource: Pinned the version of http://terminology.hl7.org/CodeSystem/location-physical-type to 2.0.1 from choices of 1.0.0 (hl7.terminology.r4#5.0.0), 2.0.0 (hl7.terminology#5.4.0), 2.0.1 (hl7.terminology.r4#6.3.0)
+INFORMATION: Measure.contained[0].relatedArtifact[4].resource: Pinned the version of http://terminology.hl7.org/CodeSystem/observation-category to 2.0.0 from choices of 0.1.0 (hl7.terminology.r4#5.0.0), 1.0.0 (hl7.terminology#5.4.0), 1.0.1 (hl7.terminology.r4#6.3.0), 2.0.0 (hl7.terminology.r4#7.0.1)
+INFORMATION: Measure.contained[0].relatedArtifact[5].resource: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1142 to 20250218 from choices of 20230125 (us.nlm.vsac#0.11.0), 20250218 (us.nlm.vsac#0.22.0)
+INFORMATION: Measure.contained[0].relatedArtifact[6].resource: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1158 to 20240123 from choices of 20210528 (us.nlm.vsac#0.11.0), 20240123 (us.nlm.vsac#0.22.0)
+INFORMATION: Measure.contained[0].relatedArtifact[7].resource: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.336 to 20250218 from choices of 20230602 (us.nlm.vsac#0.11.0), 20250218 (us.nlm.vsac#0.22.0)
+INFORMATION: Measure.contained[0].relatedArtifact[10].resource: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1312 to 20250218 from choices of 20210120 (us.nlm.vsac#0.11.0), 20250218 (us.nlm.vsac#0.22.0)
+INFORMATION: Measure.contained[0].dataRequirement[9].codeFilter[0].valueSet: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1142 to 20250218 from choices of 20230125 (us.nlm.vsac#0.11.0), 20250218 (us.nlm.vsac#0.22.0)
+INFORMATION: Measure.contained[0].dataRequirement[10].codeFilter[0].valueSet: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1158 to 20240123 from choices of 20210528 (us.nlm.vsac#0.11.0), 20240123 (us.nlm.vsac#0.22.0)
+INFORMATION: Measure.contained[0].dataRequirement[15].codeFilter[0].valueSet: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.336 to 20250218 from choices of 20230602 (us.nlm.vsac#0.11.0), 20250218 (us.nlm.vsac#0.22.0)
+INFORMATION: Measure.contained[0].dataRequirement[18].codeFilter[0].valueSet: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1312 to 20250218 from choices of 20210120 (us.nlm.vsac#0.11.0), 20250218 (us.nlm.vsac#0.22.0)
+INFORMATION: Library.relatedArtifact[5].resource: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1142 to 20250218 from choices of 20230125 (us.nlm.vsac#0.11.0), 20250218 (us.nlm.vsac#0.22.0)
+INFORMATION: Library.relatedArtifact[6].resource: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1158 to 20240123 from choices of 20210528 (us.nlm.vsac#0.11.0), 20240123 (us.nlm.vsac#0.22.0)
+INFORMATION: Library.relatedArtifact[7].resource: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.336 to 20250218 from choices of 20230602 (us.nlm.vsac#0.11.0), 20250218 (us.nlm.vsac#0.22.0)
+INFORMATION: Library.relatedArtifact[10].resource: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1312 to 20250218 from choices of 20210120 (us.nlm.vsac#0.11.0), 20250218 (us.nlm.vsac#0.22.0)
+INFORMATION: Library.dataRequirement[8].codeFilter[0].valueSet: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1142 to 20250218 from choices of 20230125 (us.nlm.vsac#0.11.0), 20250218 (us.nlm.vsac#0.22.0)
+INFORMATION: Library.dataRequirement[9].codeFilter[0].valueSet: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1158 to 20240123 from choices of 20210528 (us.nlm.vsac#0.11.0), 20240123 (us.nlm.vsac#0.22.0)
+INFORMATION: Library.dataRequirement[17].codeFilter[0].valueSet: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.336 to 20250218 from choices of 20230602 (us.nlm.vsac#0.11.0), 20250218 (us.nlm.vsac#0.22.0)
+INFORMATION: Library.dataRequirement[22].codeFilter[0].valueSet: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1312 to 20250218 from choices of 20210120 (us.nlm.vsac#0.11.0), 20250218 (us.nlm.vsac#0.22.0)
+INFORMATION: Measure.contained[0].relatedArtifact[1].resource: Pinned the version of http://terminology.hl7.org/CodeSystem/location-physical-type to 2.0.1 from choices of 1.0.0 (hl7.terminology.r4#5.0.0), 2.0.0 (hl7.terminology#5.4.0), 2.0.1 (hl7.terminology.r4#6.3.0)
+
+# 17. 💭💭💭 INFORMATION: String incorrectly identified CQL string as HTML 💭💭💭
+INFORMATION: Measure/HRDMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[103].extension[2].value.ofType(string): The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
+
+# 18. 💭💭💭 INFORMATION: Example code systems that are specific for this IG 💭💭💭
+INFORMATION: CodeSystem/us-safr-bed-capacity-example-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+INFORMATION: CodeSystem/us-safr-hrd-example-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+INFORMATION: CodeSystem/us-safr-hrd-supply-days-example-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
+

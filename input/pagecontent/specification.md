@@ -23,13 +23,13 @@ The following rules regarding Must Support  elements apply to all Profiles in th
 
 Sender:
 
-* If the data element is available in through the Data Source, the data element *SHALL* be provided (either through submission or response to a query) for measure calculation or risk adjustment.
-* If the sender does not capture/store the data, the data are not available, or sharing of the data is not authorized, the system **SHOULD NOT** send the element if the element is not marked as mandatory (lower cardinality of 0).
+* §If the data element is available in through the Data Source, the data element **SHALL** be provided (either through submission or response to a query) for measure calculation or risk adjustment.§
+* §If the sender does not capture/store the data, the data are not available, or sharing of the data is not authorized, the system **SHOULD NOT** send the element if the element is not marked as mandatory (lower cardinality of 0).§
 
 Receiver: 
 
-* The receiver **SHALL** be capable of processing resource instances containing must-support data elements without generating an error or causing the application to fail.
-* The receiver **SHALL** be able to process resource instances containing must-support data elements asserting missing information (data absent reason extension).
+* §The receiver **SHALL** be capable of processing resource instances containing must-support data elements without generating an error or causing the application to fail.§
+* §The receiver **SHALL** be able to process resource instances containing must-support data elements asserting missing information (data absent reason extension).§
 
 #### Profiles
 
@@ -45,7 +45,7 @@ The following reporting scenarios use the Actors defined on the [Actors](actors.
 
 In this scenario both the Data Source and Digital Quality Measure Evaluation Engine reside at the reporting facility, and may be the same system (e.g., an EHR that performs it’s own internal measure evaluation). The Measure Evaluation Engine first retrieves the latest FHIR measures and related resources from the measure repository and extracts the data requirements for each measure. The Measure Evaluation Engine queries the Data Source for data that it will evaluate against a measure and prepares Bundle containing MeasureReport and supporting resources, then sends it to the MeasureReport Recipient (NHSN). 
 
-In this scenario the Measure Evaluation Engine SHALL perform a FHIR POST or PUT to push the MeasureReport Bundle to the MeasureReport Recipient (NHSN).
+§In this scenario the Measure Evaluation Engine **SHALL** perform a FHIR POST or PUT to push the MeasureReport Bundle to the MeasureReport Recipient (NHSN).§
 
 ![Push to NHSN](push-to-nhsn.png){:style="float: none;width: 600px;display: block;margin: auto;"}
 
@@ -61,7 +61,7 @@ In this scenario the Measure Evaluation Engine SHALL perform a FHIR POST or PUT 
 
 #### Pull Direct from Healthcare Facility 
 In this scenario, both the Digital Quality Measure Evaluation Engine and the MeasureReport Recipient reside within an Public Health Agency (NHSN) controlled environment, and may be the same system. The Measure Evaluation Engine first retrieves the latest FHIR measures and related resources from the measure repository and extracts the data requirements for each measure. The Measure Evaluation Engine queries the Data Source for data that it will evaluate against a measure and prepares Bundle containing MeasureReport and supporting resources.
-In this scenario the Data Source SHALL have a FHIR API that at a minimum provides read access to all US Core profiles. Some measures may require additional FHIR resources beyond US Core, such as MedicationAdministration.
+§In this scenario the Data Source **SHALL** have a FHIR API that at a minimum provides read access to all US Core profiles. Some measures may require additional FHIR resources beyond US Core, such as MedicationAdministration.§
 
 ![Pull from NHSN](pull-from-nhsn.png){:style="float: none;width: 600px;display: block;margin: auto;"}
 
@@ -75,7 +75,7 @@ In this scenario the Data Source SHALL have a FHIR API that at a minimum provide
 #### Aggregate at States and Push to MeasureReport Recipient (NHSN)
 In this scenario, a state/jurisdiction retrieves the measure bundle from NHSN and queries for data for aggregation from one or more healthcare facility before evaluating and submitting the MeasureReport to the Measure Recipient on behalf of the facilities.
 
-In this scenario the state/jurisdiction SHALL have a FHIR API that at a minimum provides read access to all US Core profiles. Some measures may require additional FHIR resources beyond US Core, such as MedicationAdministration.
+§In this scenario the state/jurisdiction **SHALL** have a FHIR API that at a minimum provides read access to all US Core profiles. Some measures may require additional FHIR resources beyond US Core, such as MedicationAdministration.§
 
 ![Aggregate at States and Push to NHSN](aggregate-and-push-to-nhsn.png){:style="float: none;width: 600px;display: block;margin: auto;"}
 

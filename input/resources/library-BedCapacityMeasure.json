@@ -70,7 +70,7 @@
   }, {
     "type": "depends-on",
     "display": "Code system LocationPhysicalType",
-    "resource": "http://terminology.hl7.org/CodeSystem/location-physical-type"
+    "resource": "http://terminology.hl7.org/CodeSystem/location-physical-type|2.0.1"
   }, {
     "type": "depends-on",
     "display": "Code system HealthcareCapacity",
@@ -591,7 +591,7 @@
     "max": "1",
     "type": "boolean"
   }, {
-    "name": "Peds ED Census Initial Population",
+    "name": "Peds ED Total Census Initial Population",
     "use": "out",
     "min": 0,
     "max": "1",

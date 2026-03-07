@@ -63,6 +63,10 @@ Other FHIR standard related dependencies:
 
 {% include dependency-table.xhtml %}
 
+ValueSet Expansion Parameters
+{% lang-fragment expansion-params.xhtml %}
+
+
 ### Out of Scope ###
 Subscriptions is not covered in this IG currently, but future versions will plan to incorporate [FHIR Subscriptions R5 Backport](https://build.fhir.org/ig/HL7/fhir-subscription-backport-ig/) to support emergencies that require rapid changes in reporting.
 

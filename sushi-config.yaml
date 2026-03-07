@@ -92,6 +92,7 @@ pages:
 
 
 parameters:
+  path-expansion-params: '../../input/exp-params.json'  # for using US ed of SNOMED
   active-tables: false
   apply-contact: true
   apply-jurisdiction: true
@@ -108,7 +109,7 @@ parameters:
 #    - input/pagecontent
 #    - input/intro-notes
 #    - fsh-generated/includes
-#  auto-oid-root: 2.16.840.1.113883.4.642.40.53
+  auto-oid-root: 2.16.840.1.113883.4.642.40.53
 #
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 # │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │

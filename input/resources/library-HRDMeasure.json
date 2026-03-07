@@ -74,7 +74,7 @@
   }, {
     "type": "depends-on",
     "display": "Code system LocationPhysicalType",
-    "resource": "http://terminology.hl7.org/CodeSystem/location-physical-type"
+    "resource": "http://terminology.hl7.org/CodeSystem/location-physical-type|2.0.1"
   }, {
     "type": "depends-on",
     "display": "Code system HealthcareCapacity",
@@ -82,7 +82,7 @@
   }, {
     "type": "depends-on",
     "display": "Code system Observation Category",
-    "resource": "http://terminology.hl7.org/CodeSystem/observation-category"
+    "resource": "http://terminology.hl7.org/CodeSystem/observation-category|2.0.0"
   }, {
     "type": "depends-on",
     "display": "Value set COVID_19 (Tests for SARS_CoV_2 Nucleic Acid)",

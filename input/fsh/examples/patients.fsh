@@ -1,6 +1,7 @@
 Instance: ed-pat-1
 InstanceOf: QICorePatient
 Title: "Patient - Example ED Patient 1"
+Description: "Patient - Example of a and Emergency Department patient"
 Usage: #example
 * meta.profile = Canonical(QICorePatient|6.0.0)
 * identifier.use = #usual
