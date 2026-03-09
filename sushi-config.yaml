@@ -104,7 +104,7 @@ parameters:
 #  apply-jurisdiction: true
 #  apply-publisher: true
 #  excludettl: true
-#  path-liquid: templates\liquid
+  path-liquid: templates\liquid
 #  path-pages:
 #    - input/pagecontent
 #    - input/intro-notes

@@ -85,6 +85,7 @@ Unknown code '112576-4' in the CodeSystem 'http://loinc.org' version '2.81'
 Unknown code '112577-2' in the CodeSystem 'http://loinc.org' version '2.81'
 Unknown code '112578-0' in the CodeSystem 'http://loinc.org' version '2.81'
 Unknown code '112579-8' in the CodeSystem 'http://loinc.org' version '2.81'
+Unknown code '112510-3' in the CodeSystem 'http://loinc.org' version '2.81'
 
 
 
@@ -92,8 +93,8 @@ Unknown code '112579-8' in the CodeSystem 'http://loinc.org' version '2.81'
 No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
 
 # 06. ⚠️⚠️⚠️ WARNING: regarding newer published versions of US Core and QI Core. The versions chosen were done so to meet the current regulatory requirement floor ⚠️⚠️⚠️
-WARNING: ImplementationGuide/hl7.fhir.us.safr: ImplementationGuide.dependsOn[1]: The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 8.0.1. This reference is getting old and the more recent version should be considered
-WARNING: ImplementationGuide/hl7.fhir.us.safr: ImplementationGuide.dependsOn[6]: The ImplementationGuide uses package hl7.fhir.us.qicore#6.0.0 released on 2024-03-01, but the most recent appropriate version is 7.0.1. This reference is getting old and the more recent version should be considered
+The ImplementationGuide uses package hl7.fhir.us.core#6.1.0 released on 2023-06-30, but the most recent appropriate version is 8.0.1. This reference is getting old and the more recent version should be considered
+The ImplementationGuide uses package hl7.fhir.us.qicore#6.0.0 released on 2024-03-01, but the most recent appropriate version is 7.0.1. This reference is getting old and the more recent version should be considered
 
 
 # 07. 💭💭💭 INFORMATION: Acknowledge we are using experimental code systems. Many of these codes will be replaced with LOINC codes before publication. 💭💭💭
@@ -101,28 +102,28 @@ Reference to experimental CodeSystem http://hl7.org/fhir/us/safr/CodeSystem/us-s
 Reference to experimental CodeSystem http://hl7.org/fhir/us/safr/CodeSystem/us-safr-hrd-example-codes|1.0.0
 
 
-# 09. 💭💭💭 INFORMATION: Conformance Language detected on a section that only explains the conformance verbs 💭💭💭
+# 08. 💭💭💭 INFORMATION: Conformance Language detected on a section that only explains the conformance verbs 💭💭💭
 INFORMATION: specification.html: The html source contains the word 'SHALL' but it is not in a text phrase marked as a conformance clause: '     SHALL indicates requirements that must be met to be conformant with the specification.   '
 INFORMATION: specification.html: The html source contains the word 'SHOULD' but it is not in a text phrase marked as a conformance clause: '     SHOULD indicates behaviors that are strongly recommended (and which may result in interoperability issues or sub-optimal behavior if not adhered to), but which do not, for this version of the specification, affect the determination of specification conformance.   '
 INFORMATION: specification.html: The html source contains the word 'MAY' but it is not in a text phrase marked as a conformance clause: '     MAY describes optional behaviors that are free to consider but are not a recommendation for or against adoption.   '
 
-# 10. 💭💭💭 INFORMATION: Additional resource in bundle that is not part of a slice. This is intended 💭💭💭
+# 09. 💭💭💭 INFORMATION: Additional resource in bundle that is not part of a slice. This is intended 💭💭💭
 INFORMATION: Bundle/HRDMeasureReportBundle: Bundle.entry[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/safr/StructureDefinition/us-safr-measurereport-bundle|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Bundle/HospitalBedCapacityReportBundle: Bundle.entry[3]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/safr/StructureDefinition/us-safr-measurereport-bundle|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# 11. 💭💭💭 INFORMATION: Additional extension in resource as a matter of usual tooling behavior. This is intended 💭💭💭
+# 10. 💭💭💭 INFORMATION: Additional extension in resource as a matter of usual tooling behavior. This is intended 💭💭💭
 INFORMATION: Measure/BedCapacityMeasureExample: Measure.extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Measure/HRDMeasureExample: Measure.extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 
-# 12. ⚠️⚠️⚠️ WARNING: message regarding requirements inherited by US Core ⚠️⚠️⚠️
+# 11. ⚠️⚠️⚠️ WARNING: message regarding requirements inherited by US Core ⚠️⚠️⚠️
 WARNING: StructureDefinition/us-safr-submitting-organization: StructureDefinition.snapshot: The slice 'CLIA' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 WARNING: StructureDefinition/us-safr-submitting-organization: StructureDefinition.snapshot: The slice 'NAIC' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
 
-# 13. ⚠️⚠️⚠️ WARNING: message regarding expression language that cannot be validated ⚠️⚠️⚠️
+# 12. ⚠️⚠️⚠️ WARNING: message regarding expression language that cannot be validated ⚠️⚠️⚠️
 The expression language text/cql-identifier is not supported, so can't be validated
 
-# 14. ⚠️⚠️⚠️ WARNING: for duplicate anchor IDs caused by auto generated Measure rendered text div and html page ⚠️⚠️⚠️
+# 13. ⚠️⚠️⚠️ WARNING: for duplicate anchor IDs caused by auto generated Measure rendered text div and html page ⚠️⚠️⚠️
 WARNING: C:\dev\fhir\ig\nhsn\us-safr\output\Measure-HRDMeasureExample.html: The html source has duplicate anchor Ids: fhirhelpers-todatetime,fhirhelpers-tostring,hrdmeasure-adult-icu-beds-initial-population,hrdmeasure-adult-inpatient-beds-initial-population,hrdmeasure-face-shield-supply-in-days-stratifier,hrdmeasure-glove-supply-in-days-stratifier,hrdmeasure-gown-supply-in-days-stratifier,hrdmeasure-icu-beds-initial-population,hrdmeasure-inpatient-beds-initial-population,hrdmeasure-n95-mask-supply-in-days-stratifier,hrdmeasure-or-surgical-mask-supply-in-days-stratifier,hrdmeasure-pediatric-icu-beds-initial-population,hrdmeasure-pediatric-inpatient-beds-initial-population
 WARNING: Measure/HRDMeasureExample: Measure.text.div: The XHTML  the resource contains more than one node for each of the following node ids and anchor names: fhirhelpers-todatetime (2x), fhirhelpers-tostring (2x), hrdmeasure-adult-icu-beds-initial-population (2x), hrdmeasure-adult-inpatient-beds-initial-population (2x), hrdmeasure-face-shield-supply-in-days-stratifier (2x), hrdmeasure-glove-supply-in-days-stratifier (2x), hrdmeasure-gown-supply-in-days-stratifier (2x), hrdmeasure-icu-beds-initial-population (2x), hrdmeasure-inpatient-beds-initial-population (2x), hrdmeasure-n95-mask-supply-in-days-stratifier (2x), hrdmeasure-or-surgical-mask-supply-in-days-stratifier (2x), hrdmeasure-pediatric-icu-beds-initial-population (2x), hrdmeasure-pediatric-inpatient-beds-initial-population (2x)
 WARNING: Measure/HRDMeasureExample: Measure.text.div: Hyperlink '#hrdmeasure-inpatient-beds-initial-population' at 'div/table/tbody/tr/td/a' for 'Inpatient Beds Initial Population' resolves to multiple targets ($/text/div/table/tbody/tr[249]/th/a/@name, $/text/div/table/tbody/tr[341]/th/a/@name)
@@ -145,7 +146,6 @@ INFORMATION: StructureDefinition/us-safr-submitting-organization: StructureDefin
 
 # 16. 💭💭💭 INFORMATION: issue about automatically version pinned references. This IG pins most version where there are multiple options, but these automatically pinned versions are either from unpinned inherited requirements are from those that FSH does not provide a simple mechanism to define. 💭💭💭
 INFORMATION: Measure.contained[0].relatedArtifact[2].resource: Pinned the version of http://terminology.hl7.org/CodeSystem/location-physical-type to 2.0.1 from choices of 1.0.0 (hl7.terminology.r4#5.0.0), 2.0.0 (hl7.terminology#5.4.0), 2.0.1 (hl7.terminology.r4#6.3.0)
-INFORMATION: Measure.contained[0].relatedArtifact[4].resource: Pinned the version of http://terminology.hl7.org/CodeSystem/observation-category to 2.0.0 from choices of 0.1.0 (hl7.terminology.r4#5.0.0), 1.0.0 (hl7.terminology#5.4.0), 1.0.1 (hl7.terminology.r4#6.3.0), 2.0.0 (hl7.terminology.r4#7.0.1)
 INFORMATION: Measure.contained[0].relatedArtifact[5].resource: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1142 to 20250218 from choices of 20230125 (us.nlm.vsac#0.11.0), 20250218 (us.nlm.vsac#0.22.0)
 INFORMATION: Measure.contained[0].relatedArtifact[6].resource: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1158 to 20240123 from choices of 20210528 (us.nlm.vsac#0.11.0), 20240123 (us.nlm.vsac#0.22.0)
 INFORMATION: Measure.contained[0].relatedArtifact[7].resource: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.336 to 20250218 from choices of 20230602 (us.nlm.vsac#0.11.0), 20250218 (us.nlm.vsac#0.22.0)
@@ -163,6 +163,7 @@ INFORMATION: Library.dataRequirement[9].codeFilter[0].valueSet: Pinned the versi
 INFORMATION: Library.dataRequirement[17].codeFilter[0].valueSet: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.336 to 20250218 from choices of 20230602 (us.nlm.vsac#0.11.0), 20250218 (us.nlm.vsac#0.22.0)
 INFORMATION: Library.dataRequirement[22].codeFilter[0].valueSet: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1312 to 20250218 from choices of 20210120 (us.nlm.vsac#0.11.0), 20250218 (us.nlm.vsac#0.22.0)
 INFORMATION: Measure.contained[0].relatedArtifact[1].resource: Pinned the version of http://terminology.hl7.org/CodeSystem/location-physical-type to 2.0.1 from choices of 1.0.0 (hl7.terminology.r4#5.0.0), 2.0.0 (hl7.terminology#5.4.0), 2.0.1 (hl7.terminology.r4#6.3.0)
+INFORMATION: Measure.contained[0].relatedArtifact[4].resource: Pinned the version of http://terminology.hl7.org/CodeSystem/observation-category to 2.0.0 from choices of 0.1.0 (hl7.terminology.r4#5.0.0), 1.0.0 (hl7.terminology#5.4.0), 1.0.1 (hl7.terminology.r4#6.3.0), 2.0.0 (hl7.terminology.r4#7.1.0)
 
 # 17. 💭💭💭 INFORMATION: String incorrectly identified CQL string as HTML 💭💭💭
 INFORMATION: Measure/HRDMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[103].extension[2].value.ofType(string): The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
