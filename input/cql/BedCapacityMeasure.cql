@@ -403,13 +403,6 @@ define "Surge Active Total Beds Unoccupied Initial Population":
   and "LocationIsCHLD"
   and "LocationIsOTH"
 
-define "Surge Inactive Total Beds Occupied Initial Population":
-  IsBedLocation
-  and EncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsCHLD"
-  and "LocationIsOTH"
-
 define "Surge Inactive Total Beds Unoccupied Initial Population":
   IsBedLocation
   and NoEncounterCheck
@@ -450,12 +443,6 @@ define "Surge Active NonICU Beds Occupied Initial Population":
 define "Surge Active NonICU Beds Unoccupied Initial Population":
   IsBedLocation
   and NoEncounterCheck
-  and "LocationIsHOSP"
-  and "LocationIsCHLD"
-
-define "Surge Inactive NonICU Beds Occupied Initial Population":
-  IsBedLocation
-  and EncounterCheck
   and "LocationIsHOSP"
   and "LocationIsCHLD"
 
