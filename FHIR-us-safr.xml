@@ -24,7 +24,7 @@
 <artifact id="Location/IPFBed3" key="Location-IPFBed3" name="Inpatient Psychiatric Bed 3"/>
 <artifact id="Location/IRFBed2" key="Location-IRFBed2" name="Inpatient Rehabilitation Bed 2"/>
 <artifact id="Location/ICUBed6" key="Location-ICUBed6" name="Intensive Care Unit Bed 6"/>
-<artifact id="Library/HRDMeasureLibrary" key="Library-HRDMeasureLibrary" name="Library - HRD Measure Example"/>
+<artifact deprecated="true" id="Library/HRDMeasureLibrary" key="Library-HRDMeasureLibrary" name="Library - HRD Measure Example"/>
 <artifact deprecated="true" id="Library/BedCapacityLibrary" key="Library-BedCapacityLibrary" name="Library - Library of Bed Capacity Measure Example"/>
 <artifact id="Location/MemorialHospitalFacility" key="Location-MemorialHospitalFacility" name="Location - Hospital Facility Example"/>
 <artifact deprecated="true" id="Measure/BedCapacityMeasure" key="Measure-BedCapacityMeasure" name="Measure - Bed Capacity Measure Example"/>
