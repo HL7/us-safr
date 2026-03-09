@@ -17,5 +17,5 @@ Bundle.entry.resource.descendants().reference.where($this.startsWith('#').not())
     measure 1..1
 * entry[measure] ^short = "The Measure resource"
   * resource 1..
-  * resource only CQFMContinuousVariableMeasure|4.0.0
+  * resource only CQFMComputableMeasure|4.0.0
   * ^short = "Bundle entry for the Measure resource"

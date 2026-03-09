@@ -132,6 +132,9 @@ WARNING: Measure/HRDMeasureExample: Measure.text.div: Hyperlink '#hrdmeasure-icu
 WARNING: Measure/HRDMeasureExample: Measure.text.div: Hyperlink '#hrdmeasure-adult-icu-beds-initial-population' at 'div/table/tbody/tr/td/a' for 'Adult ICU Beds Initial Population' resolves to multiple targets ($/text/div/table/tbody/tr[197]/th/a/@name, $/text/div/table/tbody/tr[203]/th/a/@name)
 WARNING: Measure/HRDMeasureExample: Measure.text.div: Hyperlink '#hrdmeasure-pediatric-icu-beds-initial-population' at 'div/table/tbody/tr/td/a' for 'Pediatric ICU Beds Initial Population' resolves to multiple targets ($/text/div/table/tbody/tr[189]/th/a/@name, $/text/div/table/tbody/tr[311]/th/a/@name)
 
+# 14. ⚠️⚠️⚠️ WARNING: CQL and Measure processing is performed prior to the publisher, so this warning does not apply ⚠️⚠️⚠️
+WARNING: C:\dev\fhir\ig\nhsn\us-safr\input\resources\measure-BedCapacityMeasureExample.xml: Artifact library could not be found so no data requirements were inferred.
+WARNING: C:\dev\fhir\ig\nhsn\us-safr\input\resources\measure-HRDMeasureExample.xml: Artifact library could not be found so no data requirements were inferred.
 
 # 15. 💭💭💭 INFORMATION:  Message regarding deprecated extensions, that were inherited through the FHIR R4 standard itself and other IGs. 💭💭💭
 INFORMATION: StructureDefinition/us-safr-measure-bundle: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
