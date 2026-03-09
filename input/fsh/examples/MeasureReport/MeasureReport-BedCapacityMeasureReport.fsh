@@ -546,14 +546,14 @@ Usage: #example
 * group[=].population[+].id = "SurgeActiveTotalUnoccupied-initial-population"
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-
+/*
 ///////////// Group SurgeInactiveTotalOccupied /////////////
 * group[+].id = "SurgeInactiveTotalOccupied-bed-capacity-group"
 * group[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes#SurgeInactiveTotalOccupied
 * group[=].population[+].id = "SurgeInactiveTotalOccupied-initial-population"
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-
+*/
 ///////////// Group SurgeInactiveTotalUnoccupied /////////////
 ///////////// Group Surge-inactive:Num:Pt:Facility:Qn:Unoccupied.total /////////////
 * group[+].id = "SurgeInactiveTotalUnoccupied-bed-capacity-group"
@@ -601,14 +601,14 @@ Usage: #example
 * group[=].population[+].id = "SurgeActiveNonICUUnoccupied-initial-population"
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-
+/*
 ///////////// Group SurgeInactiveNonICUOccupied /////////////
 * group[+].id = "SurgeInactiveNonICUOccupied-bed-capacity-group"
 * group[=].code = http://hl7.org/fhir/us/safr/CodeSystem/us-safr-bed-capacity-example-codes#SurgeInactiveNonICUOccupied
 * group[=].population[+].id = "SurgeInactiveNonICUOccupied-initial-population"
 * group[=].population[=].code = http://terminology.hl7.org/CodeSystem/measure-population#initial-population "Initial Population"
 * group[=].population[=].count = 0
-
+*/
 ///////////// Group SurgeInactiveNonICUUnoccupied /////////////
 ///////////// Group Surge non-intensive care unit beds-inactive:Num:Pt:Facility:Qn:Unoccupied /////////////
 * group[+].id = "SurgeInactiveNonICUUnoccupied-bed-capacity-group"
