@@ -17,6 +17,10 @@ This implementation guide (IG) uses specific terminology to flag statements that
 
 * **MAY** describes optional behaviors that are free to consider but are not a recommendation for or against adoption.
 
+#### Example artifacts
+
+The measures and terminology in this guide are **examples only**, and should not be used for reporting purposes. Instead, NHSN (and potentially STLTs) will create content IGs that comply with US SAFR and will contain actual measures, terminology, and reporting guidance. 
+
 #### Must Support ###
 
 The following rules regarding Must Support  elements apply to all Profiles in this guide. The Must Support definitions are not inherited from other IGs, even for profiles in this guide derived from another guide.
@@ -36,6 +40,8 @@ Receiver:
 This specification makes significant use of [FHIR profiles]({{site.data.fhir.path}}profiling.html) and terminology artifacts to describe the content to be shared as part of measure report submissions.
 
 The full set of profiles defined in this IG can be found by following the links on the [Artifacts](artifacts.html) page.
+
+
 
 #### Reporting Scenarios
 
