@@ -1650,12 +1650,12 @@
          <relatedArtifact>
             <type value="depends-on"></type>
             <display value="Library FHIRHelpers"></display>
-            <resource value="http://hl7.org/fhir/us/safr/Library/FHIRHelpers|4.0.1"></resource>
+            <resource value="http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1"></resource>
          </relatedArtifact>
          <relatedArtifact>
             <type value="depends-on"></type>
             <display value="Code system LocationPhysicalType"></display>
-            <resource value="http://terminology.hl7.org/CodeSystem/location-physical-type"></resource>
+            <resource value="http://terminology.hl7.org/CodeSystem/location-physical-type|2.0.1"></resource>
          </relatedArtifact>
          <relatedArtifact>
             <type value="depends-on"></type>
@@ -2306,6 +2306,7 @@
    <status value="draft"></status>
    <experimental value="true"></experimental>
    <date value="2026-03-09T13:53:49-04:00"></date>
+   <publisher value="HL7 International / Public Health"></publisher>
    <description value="Bed Capacity Measure Example includes counts of specific bed types within the context of a given healthcare context or setting."></description>
    <library value="http://hl7.org/fhir/us/safr/Library/BedCapacityMeasure"></library>
    <scoring>

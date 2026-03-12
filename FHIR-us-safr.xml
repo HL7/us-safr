@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/safr/2025May" ciUrl="https://build.fhir.org/ig/HL7/us-safr" defaultVersion="1.0.0-ballot" defaultWorkgroup="pher" gitUrl="https://github.com/HL7/us-safr" url="http://hl7.org/fhir/us/safr">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.org/fhir/us/safr/2025May" ciUrl="https://build.fhir.org/ig/HL7/us-safr" defaultVersion="1.0.0" defaultWorkgroup="pher" gitUrl="https://github.com/HL7/us-safr" url="http://hl7.org/fhir/us/safr">
 <version code="current" url="https://build.fhir.org/ig/HL7/us-safr"/>
+<version code="1.0.0" url="http://hl7.org/fhir/us/safr/STU1"/>
 <version code="1.0.0-ballot" url="http://hl7.org/fhir/us/safr/2025May"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
@@ -12,6 +13,7 @@
 <artifact id="Bundle/HospitalBedCapacityReportBundle" key="Bundle-HospitalBedCapacityReportBundle" name="Bundle - Bed Capacity Report Bundle Example"/>
 <artifact deprecated="true" id="Bundle/HRDMeasureBundle" key="Bundle-HRDMeasureBundle" name="Bundle - HRD Measure Bundle Example"/>
 <artifact id="Bundle/HRDMeasureReportBundle" key="Bundle-HRDMeasureReportBundle" name="Bundle - HRD Measure Report Bundle Example"/>
+<artifact id="Bundle/USSAFRMeasureBundleExample" key="Bundle-USSAFRMeasureBundleExample" name="Bundle - US SAFR Measure Bundle Example"/>
 <artifact id="Location/CHLDBed4" key="Location-CHLDBed4" name="Children's Bed 4"/>
 <artifact id="Device/cqf-tooling" key="Device-cqf-tooling" name="Device - CQF Tooling System Example"/>
 <artifact id="Location/EDBed1" key="Location-EDBed1" name="Emergency Dept. Bed 1"/>

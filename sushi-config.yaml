@@ -11,8 +11,8 @@ description: US Situational Awareness Framework for Reporting (US SAFR)
 status: active # draft | active | retired | unknown
 version: 1.0.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-copyrightYear: 2025+
-releaseLabel: STU 1 ballot # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+copyrightYear: 2026+
+releaseLabel: STU 1 # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 extension:
@@ -293,3 +293,5 @@ instanceOptions:
   # if InstanceOf references a profile:
   #
   # setId: always # always | standalone-only
+
+#These represent example bed capacity measures to show how they are defined.  Each PHA requiring reporting on one, more, or other measures must define and publish them.  PHAs are strongly encouraged to contribute measures to LOINC to enable LOINC hosting the superset of definitions while PHAs define locally using content IGs those it needs to be reported on and when, i.e., frequency and date ranges.

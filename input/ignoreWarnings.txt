@@ -3,14 +3,16 @@
 # 01. 🚩🚩🚩 ERROR: due to cross version extension slicing issue in tooling. See https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Cross-Version.20Extension.20Slicing.20issue.20in.20dependent.20IGs/with/516557595 🚩🚩🚩
 Slicing cannot be evaluated: Unable to resolve profile CanonicalType[http://hl7.org/fhir/5.0/StructureDefinition/extension-MeasureReport.supplementalData]
 
-# 02. 🚩🚩🚩 ERROR: due to required slice resource profile not being recognized due to cross version extension slicing issue in tooling. 🚩🚩🚩
+# 02. 🚩🚩🚩 ERROR: due to required slice resource profile not being recognized due to cross version extension slicing issue in tooling and/or new LOINC codes not yet recognized by the IG Publisher. 🚩🚩🚩
 ERROR: Bundle/HRDMeasureReportBundle: Bundle: Slice 'Bundle.entry:measurereport': a matching slice is required, but not found (from http://hl7.org/fhir/us/safr/StructureDefinition/us-safr-measurereport-bundle|1.0.0). Note that other slices are allowed in addition to this required slice
 ERROR: Bundle/HospitalBedCapacityReportBundle: Bundle: Slice 'Bundle.entry:measurereport': a matching slice is required, but not found (from http://hl7.org/fhir/us/safr/StructureDefinition/us-safr-measurereport-bundle|1.0.0). Note that other slices are allowed in addition to this required slice
+ERROR: Bundle/USSAFRMeasureBundleExample: Bundle: Slice 'Bundle.entry:measure': a matching slice is required, but not found (from http://hl7.org/fhir/us/safr/StructureDefinition/us-safr-measure-bundle|1.0.0). Note that other slices are allowed in addition to this required slice
+
 
 # 03. 💭💭💭 INFORMATION: Resource not being recognized as a profile resource slice because the correct profile was not recognized due to cross version extension slicing issue in tooling. 💭💭💭
 INFORMATION: Bundle/HRDMeasureReportBundle: Bundle.entry[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/safr/StructureDefinition/us-safr-measurereport-bundle|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Bundle/HospitalBedCapacityReportBundle: Bundle.entry[2]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/safr/StructureDefinition/us-safr-measurereport-bundle|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-
+INFORMATION: Bundle/USSAFRMeasureBundleExample: Bundle.entry[0]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/safr/StructureDefinition/us-safr-measure-bundle|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # 04. 🚩🚩🚩 ERROR: Unknown LOINC codes that were added in LOINC 2.82. See: https://loinc.org/search/?t=1&s=%3Dclasstype%3AClinical+%3Dversionfirstreleased%3A2.82++%3Dclass%3APUBLICHEALTH 🚩🚩🚩
 Unknown code '112507-9' in the CodeSystem 'http://loinc.org' version '2.81'
@@ -114,7 +116,8 @@ INFORMATION: Bundle/HospitalBedCapacityReportBundle: Bundle.entry[3]: This eleme
 # 10. 💭💭💭 INFORMATION: Additional extension in resource as a matter of usual tooling behavior. This is intended 💭💭💭
 INFORMATION: Measure/BedCapacityMeasureExample: Measure.extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 INFORMATION: Measure/HRDMeasureExample: Measure.extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
-
+INFORMATION: Bundle/USSAFRMeasureBundleExample: Bundle.entry[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/safr/StructureDefinition/us-safr-measure-bundle|1.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+INFORMATION: Bundle/USSAFRMeasureBundleExample: Bundle.entry[0].resource.extension[1]: This element does not match any known slice defined in the profile http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/computable-measure-cqfm|4.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
 
 # 11. ⚠️⚠️⚠️ WARNING: message regarding requirements inherited by US Core ⚠️⚠️⚠️
 WARNING: StructureDefinition/us-safr-submitting-organization: StructureDefinition.snapshot: The slice 'CLIA' on path 'Organization.identifier' is not marked as 'must-support' which is not consistent with the element that defines the slicing, where 'must-support' is true
@@ -136,6 +139,9 @@ WARNING: Measure/HRDMeasureExample: Measure.text.div: Hyperlink '#hrdmeasure-ped
 # 14. ⚠️⚠️⚠️ WARNING: CQL and Measure processing is performed prior to the publisher, so this warning does not apply ⚠️⚠️⚠️
 WARNING: C:\dev\fhir\ig\nhsn\us-safr\input\resources\measure-BedCapacityMeasureExample.xml: Artifact library could not be found so no data requirements were inferred.
 WARNING: C:\dev\fhir\ig\nhsn\us-safr\input\resources\measure-HRDMeasureExample.xml: Artifact library could not be found so no data requirements were inferred.
+
+# 14. ⚠️⚠️⚠️ WARNING: Mot definition for identifier system. This is the system url NHSN is using and a THO request has been initiated UP-710: Add NHSN Org ID to External System Identifier's page - https://jira.hl7.org/browse/UP-710 ⚠️⚠️⚠️
+No definition could be found for URL value 'https://www.cdc.gov/nhsn/OrgID'
 
 # 15. 💭💭💭 INFORMATION:  Message regarding deprecated extensions, that were inherited through the FHIR R4 standard itself and other IGs. 💭💭💭
 INFORMATION: StructureDefinition/us-safr-measure-bundle: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated
@@ -162,8 +168,8 @@ INFORMATION: Library.dataRequirement[8].codeFilter[0].valueSet: Pinned the versi
 INFORMATION: Library.dataRequirement[9].codeFilter[0].valueSet: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1158 to 20240123 from choices of 20210528 (us.nlm.vsac#0.11.0), 20240123 (us.nlm.vsac#0.22.0)
 INFORMATION: Library.dataRequirement[17].codeFilter[0].valueSet: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.336 to 20250218 from choices of 20230602 (us.nlm.vsac#0.11.0), 20250218 (us.nlm.vsac#0.22.0)
 INFORMATION: Library.dataRequirement[22].codeFilter[0].valueSet: Pinned the version of http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1146.1312 to 20250218 from choices of 20210120 (us.nlm.vsac#0.11.0), 20250218 (us.nlm.vsac#0.22.0)
-INFORMATION: Measure.contained[0].relatedArtifact[1].resource: Pinned the version of http://terminology.hl7.org/CodeSystem/location-physical-type to 2.0.1 from choices of 1.0.0 (hl7.terminology.r4#5.0.0), 2.0.0 (hl7.terminology#5.4.0), 2.0.1 (hl7.terminology.r4#6.3.0)
 INFORMATION: Measure.contained[0].relatedArtifact[4].resource: Pinned the version of http://terminology.hl7.org/CodeSystem/observation-category to 2.0.0 from choices of 0.1.0 (hl7.terminology.r4#5.0.0), 1.0.0 (hl7.terminology#5.4.0), 1.0.1 (hl7.terminology.r4#6.3.0), 2.0.0 (hl7.terminology.r4#7.1.0)
+INFORMATION: Library.relatedArtifact[1].resource: Pinned the version of http://terminology.hl7.org/CodeSystem/location-physical-type to 2.0.1 from choices of 1.0.0 (hl7.terminology.r4#5.0.0), 2.0.0 (hl7.terminology#5.4.0), 2.0.1 (hl7.terminology.r4#6.3.0)
 
 # 17. 💭💭💭 INFORMATION: String incorrectly identified CQL string as HTML 💭💭💭
 INFORMATION: Measure/HRDMeasureExample: Measure.contained[0]/*Library/effective-data-requirements*/.extension[103].extension[2].value.ofType(string): The string value contains text that looks like embedded HTML tags. If this content is rendered to HTML without appropriate post-processing, it may be a security risk
