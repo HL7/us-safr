@@ -9,7 +9,7 @@ Usage: #example
 * description = "Main hospital campus including ICU, ED, and Pediatric units"
 * status = #active
 * mode = #instance
-* type = http://terminology.hl7.org/CodeSystem/v3-RoleCode#HOSP "Hospital"
+* type = BedCapacityExampleCS#HOSP "Hospital"
 * managingOrganization.reference = "urn:uuid:4c83e586-1277-4132-9b4e-3d1c14d38981" //Reference(MemorialHospitalOrganization)
 * address.line = "123 Healthcare Drive"
 * address.city = "Springfield"
