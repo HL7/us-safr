@@ -179,6 +179,7 @@ INFORMATION: CodeSystem/us-safr-bed-capacity-example-codes: CodeSystem: Most cod
 INFORMATION: CodeSystem/us-safr-hrd-example-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 INFORMATION: CodeSystem/us-safr-hrd-supply-days-example-codes: CodeSystem: Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
-# 19. 💭💭💭 WARNING: The library is actually a contained resource within the Measure resource
+# 19. 💭💭💭 WARNING: The library is present as a contained resource within the Measure resource
 WARNING: /scratch/repo/input/resources/measure-BedCapacityMeasureExample.xml: Artifact library could not be found so no data requirements were inferred.
+WARNING: /scratch/repo/input/resources/measure-HRDMeasureExample.xml: Artifact library could not be found so no data requirements were inferred.
 
