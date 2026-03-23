@@ -39,30 +39,27 @@ Usage: #example
 
 * group[=].stratifier[+].id = "numConfRSVNewAdmUnk-stratifier"
 * group[=].stratifier[=].code = HRDExampleCS#numConfRSVNewAdmUnk 
-* group[=].stratifier[=].stratum[+].value.text = "0"
-
-
-
+* group[=].stratifier[=].stratum[+].value = http://terminology.hl7.org/CodeSystem/time-period-ranges#P0D--0D
 
 * group[=].stratifier[+].id = "N95MaskSupplyDays-stratifier"
 * group[=].stratifier[=].code = HRDExampleCS#N95MaskSupplyDays 
-* group[=].stratifier[=].stratum[+].value.text = "0"
+* group[=].stratifier[=].stratum[+].value = http://terminology.hl7.org/CodeSystem/time-period-ranges#P0D--0D
 
 * group[=].stratifier[+].id = "surgMaskSupplyDays-stratifier"
 * group[=].stratifier[=].code = HRDExampleCS#surgMaskSupplyDays 
-* group[=].stratifier[=].stratum[+].value.text = "0"
+* group[=].stratifier[=].stratum[+].value = http://terminology.hl7.org/CodeSystem/time-period-ranges#P0D--0D
 
 * group[=].stratifier[+].id = "shieldSupplyDays-stratifier"
 * group[=].stratifier[=].code = HRDExampleCS#shieldSupplyDays 
-* group[=].stratifier[=].stratum[+].value.text = "0"
+* group[=].stratifier[=].stratum[+].value = http://terminology.hl7.org/CodeSystem/time-period-ranges#P0D--0D
 
 * group[=].stratifier[+].id = "gownSupplyDays-stratifier"
 * group[=].stratifier[=].code = HRDExampleCS#gownSupplyDays 
-* group[=].stratifier[=].stratum[+].value.text = "0"
+* group[=].stratifier[=].stratum[+].value = http://terminology.hl7.org/CodeSystem/time-period-ranges#P0D--0D
 
 * group[=].stratifier[+].id = "gloveSupplyDays-stratifier"
 * group[=].stratifier[=].code = HRDExampleCS#gloveSupplyDays 
-* group[=].stratifier[=].stratum[+].value.text = "0"
+* group[=].stratifier[=].stratum[+].value = http://terminology.hl7.org/CodeSystem/time-period-ranges#P0D--0D
 
 
 * group[=].stratifier[+].id = "N95Mask3DaySupply-stratifier"

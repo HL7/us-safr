@@ -210,9 +210,9 @@ resources:
     name: HRDExampleCS
     description: "Hospital Respiratory Data Reporting Code System"
     exampleBoolean: true
-  CodeSystem/us-safr-hrd-supply-days-example-codes:
-    name: HRDSupplyDaysExampleCS
-    description: "Hospital Respiratory Data Supply Days Code System"
+  ValueSet/us-safr-hrd-supply-days-example-codes:
+    name: USSAFRSupplyDaysExampleVS
+    description: "Hospital Respiratory Data Supply Days Value Set"
     exampleBoolean: true
 
 
