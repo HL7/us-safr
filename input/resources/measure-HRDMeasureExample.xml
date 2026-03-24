@@ -8,6 +8,48 @@
          <id value="effective-data-requirements"></id>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-directReferenceCode">
             <valueCoding>
+               <system value="http://terminology.hl7.org/CodeSystem/time-period-ranges"></system>
+               <code value="P0D--0D"></code>
+               <display value="0 DAYS"></display>
+            </valueCoding>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-directReferenceCode">
+            <valueCoding>
+               <system value="http://terminology.hl7.org/CodeSystem/time-period-ranges"></system>
+               <code value="P1D--3D"></code>
+               <display value="1-3 DAYS"></display>
+            </valueCoding>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-directReferenceCode">
+            <valueCoding>
+               <system value="http://terminology.hl7.org/CodeSystem/time-period-ranges"></system>
+               <code value="P4D--6D"></code>
+               <display value="4-6 DAYS"></display>
+            </valueCoding>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-directReferenceCode">
+            <valueCoding>
+               <system value="http://terminology.hl7.org/CodeSystem/time-period-ranges"></system>
+               <code value="P7D--14D"></code>
+               <display value="7-14 DAYS"></display>
+            </valueCoding>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-directReferenceCode">
+            <valueCoding>
+               <system value="http://terminology.hl7.org/CodeSystem/time-period-ranges"></system>
+               <code value="P15D--30D"></code>
+               <display value="15-30 DAYS"></display>
+            </valueCoding>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-directReferenceCode">
+            <valueCoding>
+               <system value="http://terminology.hl7.org/CodeSystem/time-period-ranges"></system>
+               <code value="P30D--9999D"></code>
+               <display value="0 DAYS"></display>
+            </valueCoding>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-directReferenceCode">
+            <valueCoding>
                <system value="http://snomed.info/sct"></system>
                <code value="409528009"></code>
                <display value="Surgical face mask (physical object)"></display>
@@ -117,10 +159,10 @@
                <valueString value="HRDMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="OR Surgical Mask Supply in Days Stratifier"></valueString>
+               <valueString value="OR Surgical Mask Supply in Days"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;OR Surgical Mask Supply in Days Stratifier&quot;:
+               <valueString value="define &quot;OR Surgical Mask Supply in Days&quot;:
   Floor( Count(
     &quot;Devices&quot; Devices
     where Devices.type ~ &quot;Surgical mask&quot;
@@ -135,6 +177,21 @@
                <valueString value="HRDMeasure"></valueString>
             </extension>
             <extension url="name">
+               <valueString value="OR Surgical Mask Supply in Days Stratifier"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;OR Surgical Mask Supply in Days Stratifier&quot;:
+  GetDayCode( &quot;OR Surgical Mask Supply in Days&quot; )"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="2"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="HRDMeasure"></valueString>
+            </extension>
+            <extension url="name">
                <valueString value="IsBedLocation"></valueString>
             </extension>
             <extension url="statement">
@@ -142,7 +199,7 @@
   Location.physicalType ~ &quot;Bed&quot;"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="2"></valueInteger>
+               <valueInteger value="3"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -160,7 +217,7 @@
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="3"></valueInteger>
+               <valueInteger value="4"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -178,7 +235,7 @@
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="4"></valueInteger>
+               <valueInteger value="5"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -196,7 +253,7 @@
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="5"></valueInteger>
+               <valueInteger value="6"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -216,7 +273,7 @@
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="6"></valueInteger>
+               <valueInteger value="7"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -231,7 +288,7 @@
   [Encounter]"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="7"></valueInteger>
+               <valueInteger value="8"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -247,7 +304,7 @@
   where Encounters.period overlaps &quot;Measurement Period&quot;)"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="8"></valueInteger>
+               <valueInteger value="9"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -263,7 +320,7 @@
   and EncounterCheck"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="9"></valueInteger>
+               <valueInteger value="10"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -283,7 +340,7 @@
   and not LocationIsCHLD"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="10"></valueInteger>
+               <valueInteger value="11"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -291,17 +348,17 @@
                <valueString value="HRDMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Gown Supply in Days Stratifier"></valueString>
+               <valueString value="Gown Supply in Days"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Gown Supply in Days Stratifier&quot;:
+               <valueString value="define &quot;Gown Supply in Days&quot;:
   Floor( Count(
     &quot;Devices&quot; Devices
     where Devices.type ~ &quot;Patient gown&quot;
   ) / 5 )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="11"></valueInteger>
+               <valueInteger value="12"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -313,11 +370,11 @@
             </extension>
             <extension url="statement">
                <valueString value="define &quot;Gown 3 Day Supply Stratifier&quot;:
-  if &quot;Gown Supply in Days Stratifier&quot; &gt; 3 then 'y'
+  if &quot;Gown Supply in Days&quot; &gt; 3 then 'y'
   else 'n'"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="12"></valueInteger>
+               <valueInteger value="13"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -337,7 +394,7 @@
   and not LocationIsCHLD"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="13"></valueInteger>
+               <valueInteger value="14"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -354,7 +411,7 @@ define &quot;COVID_19 Observations&quot;:
     union [Observation: &quot;COVID_19 (Tests for SARS_CoV_2 Antigen)&quot;]"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="14"></valueInteger>
+               <valueInteger value="15"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -371,7 +428,7 @@ define &quot;COVID_19 Observations&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="15"></valueInteger>
+               <valueInteger value="16"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -388,7 +445,25 @@ define &quot;COVID_19 Observations&quot;:
   else 0"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="16"></valueInteger>
+               <valueInteger value="17"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="HRDMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="Glove Supply in Days"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;Glove Supply in Days&quot;:
+  Floor( Count(
+    &quot;Devices&quot; Devices
+    where Devices.type ~ &quot;Surgical glove&quot;
+  ) / 15 )"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="18"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -400,13 +475,10 @@ define &quot;COVID_19 Observations&quot;:
             </extension>
             <extension url="statement">
                <valueString value="define &quot;Glove Supply in Days Stratifier&quot;:
-  Floor( Count(
-    &quot;Devices&quot; Devices
-    where Devices.type ~ &quot;Surgical glove&quot;
-  ) / 15 )"></valueString>
+  GetDayCode( &quot;Glove Supply in Days&quot; )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="17"></valueInteger>
+               <valueInteger value="19"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -414,17 +486,17 @@ define &quot;COVID_19 Observations&quot;:
                <valueString value="HRDMeasure"></valueString>
             </extension>
             <extension url="name">
-               <valueString value="Face Shield Supply in Days Stratifier"></valueString>
+               <valueString value="Face Shield Supply in Days"></valueString>
             </extension>
             <extension url="statement">
-               <valueString value="define &quot;Face Shield Supply in Days Stratifier&quot;:
+               <valueString value="define &quot;Face Shield Supply in Days&quot;:
   Floor( Count(
     &quot;Devices&quot; Devices
     where Devices.type ~ &quot;Face shield&quot;
   ) / 10 )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="18"></valueInteger>
+               <valueInteger value="20"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -436,11 +508,11 @@ define &quot;COVID_19 Observations&quot;:
             </extension>
             <extension url="statement">
                <valueString value="define &quot;Face Shield 3 Day Supply Stratifier&quot;:
-  if &quot;Face Shield Supply in Days Stratifier&quot; &gt; 3 then 'y'
+  if &quot;Face Shield Supply in Days&quot; &gt; 3 then 'y'
   else 'n'"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="19"></valueInteger>
+               <valueInteger value="21"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -458,7 +530,7 @@ define &quot;COVID_19 Observations&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="20"></valueInteger>
+               <valueInteger value="22"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -476,7 +548,7 @@ define &quot;COVID_19 Observations&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="21"></valueInteger>
+               <valueInteger value="23"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -497,7 +569,7 @@ define &quot;COVID_19 Observations&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="22"></valueInteger>
+               <valueInteger value="24"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -513,7 +585,7 @@ define &quot;COVID_19 Observations&quot;:
     union [Observation: &quot;Influenza (Tests for influenza A or B virus Antigen)&quot;]"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="23"></valueInteger>
+               <valueInteger value="25"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -530,7 +602,7 @@ define &quot;COVID_19 Observations&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="24"></valueInteger>
+               <valueInteger value="26"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -547,7 +619,7 @@ define &quot;COVID_19 Observations&quot;:
   else 0"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="25"></valueInteger>
+               <valueInteger value="27"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -563,7 +635,7 @@ define &quot;COVID_19 Observations&quot;:
     union [Observation: &quot;RSV (Tests for RSV Nucleic Acid)&quot;]"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="26"></valueInteger>
+               <valueInteger value="28"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -580,7 +652,7 @@ define &quot;COVID_19 Observations&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="27"></valueInteger>
+               <valueInteger value="29"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -597,7 +669,7 @@ define &quot;COVID_19 Observations&quot;:
   else 0"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="28"></valueInteger>
+               <valueInteger value="30"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -618,7 +690,7 @@ define &quot;COVID_19 Observations&quot;:
   and not LocationIsCHLD"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="29"></valueInteger>
+               <valueInteger value="31"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -637,7 +709,7 @@ define &quot;Adult Inpatient COVID_19 Patients Stratifier&quot;:
   else 0"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="30"></valueInteger>
+               <valueInteger value="32"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -649,13 +721,10 @@ define &quot;Adult Inpatient COVID_19 Patients Stratifier&quot;:
             </extension>
             <extension url="statement">
                <valueString value="define &quot;Face Shield Supply in Days Stratifier&quot;:
-  Floor( Count(
-    &quot;Devices&quot; Devices
-    where Devices.type ~ &quot;Face shield&quot;
-  ) / 10 )"></valueString>
+  GetDayCode( &quot;Face Shield Supply in Days&quot; )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="31"></valueInteger>
+               <valueInteger value="33"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -670,7 +739,7 @@ define &quot;Adult Inpatient COVID_19 Patients Stratifier&quot;:
   [Patient]"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="32"></valueInteger>
+               <valueInteger value="34"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -686,7 +755,7 @@ define &quot;Adult Inpatient COVID_19 Patients Stratifier&quot;:
   where Encounters.status in { 'in-progress', 'arrived', 'triaged' }"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="33"></valueInteger>
+               <valueInteger value="35"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -701,7 +770,7 @@ define &quot;Adult Inpatient COVID_19 Patients Stratifier&quot;:
   &quot;Get Confirmed Patient IDs&quot;( &quot;Newly Admitted Encounters&quot;, &quot;RSV Observations&quot; )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="34"></valueInteger>
+               <valueInteger value="36"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -718,7 +787,7 @@ define &quot;Adult Inpatient COVID_19 Patients Stratifier&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="35"></valueInteger>
+               <valueInteger value="37"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -740,7 +809,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="36"></valueInteger>
+               <valueInteger value="38"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -756,7 +825,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
   and EncounterCheck"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="37"></valueInteger>
+               <valueInteger value="39"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -773,7 +842,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
   else 0"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="38"></valueInteger>
+               <valueInteger value="40"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -785,13 +854,10 @@ define &quot;Inpatient Beds Initial Population&quot;:
             </extension>
             <extension url="statement">
                <valueString value="define &quot;Gown Supply in Days Stratifier&quot;:
-  Floor( Count(
-    &quot;Devices&quot; Devices
-    where Devices.type ~ &quot;Patient gown&quot;
-  ) / 5 )"></valueString>
+  GetDayCode( &quot;Gown Supply in Days&quot; )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="39"></valueInteger>
+               <valueInteger value="41"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -808,7 +874,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="40"></valueInteger>
+               <valueInteger value="42"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -825,25 +891,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
   else 0"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="41"></valueInteger>
-            </extension>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
-            <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
-            </extension>
-            <extension url="name">
-               <valueString value="Glove Supply in Days Stratifier"></valueString>
-            </extension>
-            <extension url="statement">
-               <valueString value="define &quot;Glove Supply in Days Stratifier&quot;:
-  Floor( Count(
-    &quot;Devices&quot; Devices
-    where Devices.type ~ &quot;Surgical glove&quot;
-  ) / 15 )"></valueString>
-            </extension>
-            <extension url="displaySequence">
-               <valueInteger value="42"></valueInteger>
+               <valueInteger value="43"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -855,11 +903,11 @@ define &quot;Inpatient Beds Initial Population&quot;:
             </extension>
             <extension url="statement">
                <valueString value="define &quot;Glove 3 Day Supply Stratifier&quot;:
-  if &quot;Glove Supply in Days Stratifier&quot; &gt; 3 then 'y'
+  if &quot;Glove Supply in Days&quot; &gt; 3 then 'y'
   else 'n'"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="43"></valueInteger>
+               <valueInteger value="44"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -874,7 +922,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
   &quot;Get Confirmed Patient IDs&quot;( &quot;Newly Admitted Encounters&quot;, &quot;COVID_19 Observations&quot; )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="44"></valueInteger>
+               <valueInteger value="45"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -891,7 +939,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="45"></valueInteger>
+               <valueInteger value="46"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -907,7 +955,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
   and EncounterCheck"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="46"></valueInteger>
+               <valueInteger value="47"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -925,7 +973,7 @@ define &quot;Adult Inpatient Influenza Patients Stratifier&quot;:
   else 0"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="47"></valueInteger>
+               <valueInteger value="48"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -942,7 +990,7 @@ define &quot;Adult Inpatient Influenza Patients Stratifier&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="48"></valueInteger>
+               <valueInteger value="49"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -959,7 +1007,7 @@ define &quot;Adult Inpatient Influenza Patients Stratifier&quot;:
   else 0"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="49"></valueInteger>
+               <valueInteger value="50"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -976,7 +1024,25 @@ define &quot;Adult Inpatient Influenza Patients Stratifier&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="50"></valueInteger>
+               <valueInteger value="51"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
+               <valueString value="HRDMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="N95 Mask Supply in Days"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define &quot;N95 Mask Supply in Days&quot;:
+  Floor( Count(
+    &quot;Devices&quot; Devices
+    where Devices.type ~ &quot;N95 mask&quot;
+  ) / 10 )"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="52"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -989,13 +1055,10 @@ define &quot;Adult Inpatient Influenza Patients Stratifier&quot;:
             <extension url="statement">
                <valueString value="//Devices (Supply is divided by average used per day (estimated))
 define &quot;N95 Mask Supply in Days Stratifier&quot;:
-  Floor( Count(
-    &quot;Devices&quot; Devices
-    where Devices.type ~ &quot;N95 mask&quot;
-  ) / 10 )"></valueString>
+  GetDayCode( &quot;N95 Mask Supply in Days&quot; )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="51"></valueInteger>
+               <valueInteger value="53"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1012,7 +1075,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="52"></valueInteger>
+               <valueInteger value="54"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1029,7 +1092,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="53"></valueInteger>
+               <valueInteger value="55"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1046,7 +1109,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="54"></valueInteger>
+               <valueInteger value="56"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1061,7 +1124,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
   &quot;Get Confirmed Patient IDs&quot;( &quot;Newly Admitted Encounters&quot;, &quot;Influenza Observations&quot; )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="55"></valueInteger>
+               <valueInteger value="57"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1078,7 +1141,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="56"></valueInteger>
+               <valueInteger value="58"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1097,7 +1160,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="57"></valueInteger>
+               <valueInteger value="59"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1114,7 +1177,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
   else 0"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="58"></valueInteger>
+               <valueInteger value="60"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1131,7 +1194,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="59"></valueInteger>
+               <valueInteger value="61"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1148,7 +1211,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="60"></valueInteger>
+               <valueInteger value="62"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1169,7 +1232,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="61"></valueInteger>
+               <valueInteger value="63"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1186,7 +1249,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="62"></valueInteger>
+               <valueInteger value="64"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1203,26 +1266,7 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="63"></valueInteger>
-            </extension>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
-            <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
-            </extension>
-            <extension url="name">
-               <valueString value="N95 Mask Supply in Days Stratifier"></valueString>
-            </extension>
-            <extension url="statement">
-               <valueString value="//Devices (Supply is divided by average used per day (estimated))
-define &quot;N95 Mask Supply in Days Stratifier&quot;:
-  Floor( Count(
-    &quot;Devices&quot; Devices
-    where Devices.type ~ &quot;N95 mask&quot;
-  ) / 10 )"></valueString>
-            </extension>
-            <extension url="displaySequence">
-               <valueInteger value="64"></valueInteger>
+               <valueInteger value="65"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1234,11 +1278,11 @@ define &quot;N95 Mask Supply in Days Stratifier&quot;:
             </extension>
             <extension url="statement">
                <valueString value="define &quot;N95 Mask 3 Day Supply Stratifier&quot;:
-  if &quot;N95 Mask Supply in Days Stratifier&quot; &gt; 3 then 'y'
+  if &quot;N95 Mask Supply in Days&quot; &gt; 3 then 'y'
   else 'n'"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="65"></valueInteger>
+               <valueInteger value="66"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1256,7 +1300,7 @@ define &quot;Adult Inpatient RSV Patients Stratifier&quot;:
   else 0"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="66"></valueInteger>
+               <valueInteger value="67"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1276,7 +1320,7 @@ define &quot;Adult Inpatient RSV Patients Stratifier&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="67"></valueInteger>
+               <valueInteger value="68"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1293,7 +1337,7 @@ define &quot;Adult Inpatient RSV Patients Stratifier&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="68"></valueInteger>
+               <valueInteger value="69"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1309,7 +1353,7 @@ define &quot;Adult Inpatient RSV Patients Stratifier&quot;:
   and EncounterCheck"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="69"></valueInteger>
+               <valueInteger value="70"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1326,24 +1370,6 @@ define &quot;Adult Inpatient RSV Patients Stratifier&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="70"></valueInteger>
-            </extension>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
-            <extension url="libraryName">
-               <valueString value="HRDMeasure"></valueString>
-            </extension>
-            <extension url="name">
-               <valueString value="OR Surgical Mask Supply in Days Stratifier"></valueString>
-            </extension>
-            <extension url="statement">
-               <valueString value="define &quot;OR Surgical Mask Supply in Days Stratifier&quot;:
-  Floor( Count(
-    &quot;Devices&quot; Devices
-    where Devices.type ~ &quot;Surgical mask&quot;
-  ) / 10 )"></valueString>
-            </extension>
-            <extension url="displaySequence">
                <valueInteger value="71"></valueInteger>
             </extension>
          </extension>
@@ -1356,7 +1382,7 @@ define &quot;Adult Inpatient RSV Patients Stratifier&quot;:
             </extension>
             <extension url="statement">
                <valueString value="define &quot;OR Surgical Mask 3 Day Supply Stratifier&quot;:
-  if &quot;OR Surgical Mask Supply in Days Stratifier&quot; &gt; 3 then 'y'
+  if &quot;OR Surgical Mask Supply in Days&quot; &gt; 3 then 'y'
   else 'n'"></valueString>
             </extension>
             <extension url="displaySequence">
@@ -1595,6 +1621,29 @@ define &quot;Inpatient Beds Initial Population&quot;:
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
             <extension url="libraryName">
+               <valueString value="HRDMeasure"></valueString>
+            </extension>
+            <extension url="name">
+               <valueString value="GetDayCode"></valueString>
+            </extension>
+            <extension url="statement">
+               <valueString value="define function GetDayCode(count Integer):
+  case
+    when count = 0 then &quot;0 Days&quot;
+    when count &gt;= 1 and count &lt;= 3 then &quot;1-3 Days&quot;
+    when count &gt;= 4 and count &lt;= 6 then &quot;4-6 Days&quot;
+    when count &gt;= 7 and count &lt;= 14 then &quot;7-14 Days&quot;
+    when count &gt;= 15 and count &lt;= 30 then &quot;15-30 Days&quot;
+    when count &gt; 30 then &quot;&gt;30 Days&quot;
+    else null
+  end"></valueString>
+            </extension>
+            <extension url="displaySequence">
+               <valueInteger value="86"></valueInteger>
+            </extension>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
+            <extension url="libraryName">
                <valueString value="FHIRHelpers"></valueString>
             </extension>
             <extension url="name">
@@ -1611,7 +1660,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
         }"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="86"></valueInteger>
+               <valueInteger value="87"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1634,7 +1683,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
         }"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="87"></valueInteger>
+               <valueInteger value="88"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1655,7 +1704,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
             Interval[period.&quot;start&quot;.value, period.&quot;end&quot;.value]"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="88"></valueInteger>
+               <valueInteger value="89"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1683,7 +1732,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="89"></valueInteger>
+               <valueInteger value="90"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1709,7 +1758,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
 	end"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="90"></valueInteger>
+               <valueInteger value="91"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1723,7 +1772,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
                <valueString value="define function ToDateTime(value dateTime): value.value"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="91"></valueInteger>
+               <valueInteger value="92"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1737,7 +1786,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
                <valueString value="define function ToDateTime(value instant): value.value"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="92"></valueInteger>
+               <valueInteger value="93"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1757,7 +1806,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="93"></valueInteger>
+               <valueInteger value="94"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1771,7 +1820,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
                <valueString value="define function ToString(value string): value.value"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="94"></valueInteger>
+               <valueInteger value="95"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1786,7 +1835,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
   Last(Split(uri, '/'))"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="95"></valueInteger>
+               <valueInteger value="96"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1800,7 +1849,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
                <valueString value="define function ToString(value EncounterStatus): value.value"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="96"></valueInteger>
+               <valueInteger value="97"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1822,7 +1871,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="97"></valueInteger>
+               <valueInteger value="98"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1836,7 +1885,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
                <valueString value="define function ToDate(value date): value.value"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="98"></valueInteger>
+               <valueInteger value="99"></valueInteger>
             </extension>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/cqf-logicDefinition">
@@ -1857,7 +1906,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
   )"></valueString>
             </extension>
             <extension url="displaySequence">
-               <valueInteger value="99"></valueInteger>
+               <valueInteger value="100"></valueInteger>
             </extension>
          </extension>
          <name value="EffectiveDataRequirements"></name>
@@ -1871,7 +1920,12 @@ define &quot;Inpatient Beds Initial Population&quot;:
          <relatedArtifact>
             <type value="depends-on"></type>
             <display value="Library FHIRHelpers"></display>
-            <resource value="http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1"></resource>
+            <resource value="http://hl7.org/fhir/us/safr/Library/FHIRHelpers|4.0.1"></resource>
+         </relatedArtifact>
+         <relatedArtifact>
+            <type value="depends-on"></type>
+            <display value="Code system Time Period Ranges"></display>
+            <resource value="http://terminology.hl7.org/CodeSystem/time-period-ranges"></resource>
          </relatedArtifact>
          <relatedArtifact>
             <type value="depends-on"></type>
@@ -1935,7 +1989,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
-            <type value="integer"></type>
+            <type value="Coding"></type>
          </parameter>
          <parameter>
             <name value="Occupied Pediatric ICU Beds Initial Population"></name>
@@ -1970,7 +2024,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
-            <type value="integer"></type>
+            <type value="Coding"></type>
          </parameter>
          <parameter>
             <name value="Face Shield 3 Day Supply Stratifier"></name>
@@ -2005,7 +2059,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
-            <type value="integer"></type>
+            <type value="Coding"></type>
          </parameter>
          <parameter>
             <name value="New RSV Patients with Unknown Age Stratifier"></name>
@@ -2033,7 +2087,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
-            <type value="integer"></type>
+            <type value="Coding"></type>
          </parameter>
          <parameter>
             <name value="New Adult RSV Patients Between 65 to 74 Stratifier"></name>
@@ -2103,7 +2157,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
             <use value="out"></use>
             <min value="0"></min>
             <max value="1"></max>
-            <type value="integer"></type>
+            <type value="Coding"></type>
          </parameter>
          <parameter>
             <name value="New Pediatric COVID_19 Patients Between 5 to 17 Stratifier"></name>
@@ -2427,11 +2481,6 @@ define &quot;Inpatient Beds Initial Population&quot;:
             </codeFilter>
          </dataRequirement>
          <dataRequirement>
-            <type value="Device"></type>
-            <profile value="http://hl7.org/fhir/StructureDefinition/Device"></profile>
-            <mustSupport value="type"></mustSupport>
-         </dataRequirement>
-         <dataRequirement>
             <type value="Patient"></type>
             <profile value="http://hl7.org/fhir/StructureDefinition/Patient"></profile>
          </dataRequirement>
@@ -2447,11 +2496,6 @@ define &quot;Inpatient Beds Initial Population&quot;:
             <mustSupport value="status"></mustSupport>
          </dataRequirement>
          <dataRequirement>
-            <type value="Device"></type>
-            <profile value="http://hl7.org/fhir/StructureDefinition/Device"></profile>
-            <mustSupport value="type"></mustSupport>
-         </dataRequirement>
-         <dataRequirement>
             <type value="Patient"></type>
             <profile value="http://hl7.org/fhir/StructureDefinition/Patient"></profile>
             <mustSupport value="birthDate"></mustSupport>
@@ -2463,25 +2507,10 @@ define &quot;Inpatient Beds Initial Population&quot;:
             <mustSupport value="type"></mustSupport>
          </dataRequirement>
          <dataRequirement>
-            <type value="Device"></type>
-            <profile value="http://hl7.org/fhir/StructureDefinition/Device"></profile>
-            <mustSupport value="type"></mustSupport>
-         </dataRequirement>
-         <dataRequirement>
             <type value="Patient"></type>
             <profile value="http://hl7.org/fhir/StructureDefinition/Patient"></profile>
             <mustSupport value="birthDate"></mustSupport>
             <mustSupport value="id"></mustSupport>
-         </dataRequirement>
-         <dataRequirement>
-            <type value="Device"></type>
-            <profile value="http://hl7.org/fhir/StructureDefinition/Device"></profile>
-            <mustSupport value="type"></mustSupport>
-         </dataRequirement>
-         <dataRequirement>
-            <type value="Device"></type>
-            <profile value="http://hl7.org/fhir/StructureDefinition/Device"></profile>
-            <mustSupport value="type"></mustSupport>
          </dataRequirement>
          <dataRequirement>
             <type value="Encounter"></type>
@@ -2528,7 +2557,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
    <name value="HRDMeasureExample"></name>
    <title value="HRD Measure"></title>
    <experimental value="true"></experimental>
-   <date value="2026-03-05T18:26:30-04:00"></date>
+   <date value="2026-03-24T16:44:43-04:00"></date>
    <description value="Hospital Respiratory Data Measure Example"></description>
    <library value="http://hl7.org/fhir/us/safr/Library/HRDMeasure"></library>
    <scoring>
