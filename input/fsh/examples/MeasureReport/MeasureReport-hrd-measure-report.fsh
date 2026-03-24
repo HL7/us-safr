@@ -39,7 +39,7 @@ Usage: #example
 
 * group[=].stratifier[+].id = "numConfRSVNewAdmUnk-stratifier"
 * group[=].stratifier[=].code = HRDExampleCS#numConfRSVNewAdmUnk 
-* group[=].stratifier[=].stratum[+].value = http://terminology.hl7.org/CodeSystem/time-period-ranges#P0D--0D
+* group[=].stratifier[=].stratum[+].value.text = "0"
 
 * group[=].stratifier[+].id = "N95MaskSupplyDays-stratifier"
 * group[=].stratifier[=].code = HRDExampleCS#N95MaskSupplyDays 
