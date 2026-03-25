@@ -1920,7 +1920,7 @@ define &quot;Inpatient Beds Initial Population&quot;:
          <relatedArtifact>
             <type value="depends-on"></type>
             <display value="Library FHIRHelpers"></display>
-            <resource value="http://hl7.org/fhir/us/safr/Library/FHIRHelpers|4.0.1"></resource>
+            <resource value="http://fhir.org/guides/cqf/common/Library/FHIRHelpers|4.0.1"></resource>
          </relatedArtifact>
          <relatedArtifact>
             <type value="depends-on"></type>
