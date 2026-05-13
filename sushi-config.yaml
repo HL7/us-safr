@@ -214,6 +214,10 @@ resources:
     name: USSAFRSupplyDaysExampleVS
     description: "Hospital Respiratory Data Supply Days Value Set"
     exampleBoolean: true
+  ValueSet/bed-capacity-loinc-vs:
+    name: BedCapacityLoincVS
+    description: "LOINC codes for bed capacity reporting"
+    exampleBoolean: true
 
 
 #

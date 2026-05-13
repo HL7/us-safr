@@ -7,6 +7,7 @@
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
 <artifact id="CodeSystem/us-safr-bed-capacity-example-codes" key="CodeSystem-us-safr-bed-capacity-example-codes" name="BedCapacityExampleCS"/>
+<artifact id="ValueSet/bed-capacity-loinc-vs" key="ValueSet-bed-capacity-loinc-vs" name="BedCapacityLoincVS"/>
 <artifact id="Library/BedCapacityMeasure" key="Library-BedCapacityMeasure" name="BedCapacityMeasure"/>
 <artifact id="Measure/BedCapacityMeasureExample" key="Measure-BedCapacityMeasureExample" name="BedCapacityMeasureExample"/>
 <artifact deprecated="true" id="Bundle/BedCapacityMeasureBundle" key="Bundle-BedCapacityMeasureBundle" name="Bundle - Bed Capacity Measure Bundle Example"/>
